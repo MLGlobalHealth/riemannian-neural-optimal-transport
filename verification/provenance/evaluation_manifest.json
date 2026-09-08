@@ -1,0 +1,28 @@
+{
+  "note": "Evaluation-only replays; excluded from independent training counts and five-seed aggregation.",
+  "record_count": 2,
+  "records": [
+    {
+      "all_five_batches_exactly_match_original": true,
+      "checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+      "evaluation_only": true,
+      "evaluator_sha256": "fb500e51ed9aa2da9d42d78363e9ccdb44fdf67cf3b2cf33d16d42d47c9f168c",
+      "independent_training_run": false,
+      "path": "results/checkpoint_replay/nvidia6/evaluation.json",
+      "record_type": "checkpoint_evaluation",
+      "sha256": "c1e837fc742d452059c4021c02d21017b856a0030dd622ea993ca6d149f4b2a6",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+      "evaluation_only": true,
+      "evaluator_sha256": "fb500e51ed9aa2da9d42d78363e9ccdb44fdf67cf3b2cf33d16d42d47c9f168c",
+      "independent_training_run": false,
+      "path": "results/checkpoint_replay/nvidia7/evaluation.json",
+      "record_type": "checkpoint_evaluation",
+      "sha256": "4f793206f4329ddc2a97a993839189f8e93269df6165c1dc277ea09f6fed808a",
+      "status": "evaluation_only_complete"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "scope": "Controlled same-seed source comparison, not five-seed paper reproduction",
+  "seed": 12345,
+  "manifold": "S2",
+  "landmarks": "random",
+  "historical_result": "table_ours_S2_seed12345_closest_official_cuda_jax435_d4432e52de6c/result.json",
+  "zip_result": "table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_ae44af77b0c9/result.json",
+  "historical_result_sha256": "939022699f4fedcfec11ee33e63c51ee243ae2f3c5896740ca09ade89cd1b1a6",
+  "zip_result_sha256": "65c4af460b5cb8c329abebf3c4041ffd199e55479c50ab4050adbb42ce57cc75",
+  "historical_label": "closest_official_cuda_jax435",
+  "zip_label": "zip_historical_settings_cuda_jax435",
+  "zip_configuration_overrides": {
+    "model": {
+      "n_landmarks": 128
+    },
+    "solver": {
+      "inner_lr": 0.05,
+      "inner_steps": 2500,
+      "logsumexp_gamma": 0.1,
+      "logsumexp_init": true,
+      "min_steps": 1000,
+      "use_adam": true,
+      "use_line_search": false
+    },
+    "training": {
+      "n_steps": 1000
+    }
+  },
+  "solver_or_precision_changes_beyond_documented_settings": false,
+  "metrics": {
+    "kl": {
+      "historical_source_mean": 0.03931675014307971,
+      "configured_zip_mean": 0.03931675014307971,
+      "difference_zip_minus_historical": 0.0,
+      "historical_source_raw_batches": [
+        0.030041307045105194,
+        0.03558178625922806,
+        0.04010715796948369,
+        0.042696464006527365,
+        0.04815703543505425
+      ],
+      "configured_zip_raw_batches": [
+        0.03004130704510518,
+        0.03558178625922807,
+        0.0401071579694837,
+        0.04269646400652738,
+        0.04815703543505424
+      ],
+      "max_abs_raw_batch_difference": 1.3877787807814457e-17
+    },
+    "ess_ratio": {
+      "historical_source_mean": 0.951389850537429,
+      "configured_zip_mean": 0.9513898505374285,
+      "difference_zip_minus_historical": -4.440892098500626e-16,
+      "historical_source_raw_batches": [
+        0.9591335860637189,
+        0.9294048304663687,
+        0.9476243367884296,
+        0.9554510713222476,
+        0.9653354280463798
+      ],
+      "configured_zip_raw_batches": [
+        0.9591335860637171,
+        0.9294048304663687,
+        0.9476243367884296,
+        0.9554510713222476,
+        0.9653354280463798
+      ],
+      "max_abs_raw_batch_difference": 1.7763568394002505e-15
+    }
+  },
+  "stored_historical_reference": {
+    "file": "experiments/final_results/table_random.log",
+    "revision": "a7327bc829837c62d5e41ba222e89ea7b4900d83",
+    "seed": 12345,
+    "kl": 0.0394,
+    "ess_ratio": 0.951,
+    "status": "historical_stored_output_not_fresh_rerun"
+  },
+  "printed_training_loss_comparison": {
+    "steps": 1000,
+    "matching_steps": 1000,
+    "note": "Printed losses only; equal printed values do not establish exact internal floating-point equality."
+  }
+}

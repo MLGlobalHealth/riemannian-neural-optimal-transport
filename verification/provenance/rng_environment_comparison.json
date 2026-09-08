@@ -1,0 +1,2495 @@
+{
+  "comparisons": [
+    {
+      "a": "jax0438_native",
+      "all_outputs_bitwise_equal": false,
+      "b": "jax062_native",
+      "bitwise_equal_output_count": 2,
+      "output_count": 9,
+      "outputs": {
+        "bits_uint32": {
+          "a_sha256": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "b_sha256": "48850b92e3ff2ba21bb46e889e20ceb76f0a7f867770a8fd1f912873bec7cfcc",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3845556782,
+          "same_dtype_and_shape": true
+        },
+        "fold_in_7": {
+          "a_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "b_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "key": {
+          "a_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "b_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "normal_float32": {
+          "a_sha256": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "b_sha256": "6aa6822ae5f8f87076dc2184793adcbf7af3b040a53fa3391d46891123a3facb",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3.2584882974624634,
+          "same_dtype_and_shape": true
+        },
+        "normal_float64": {
+          "a_sha256": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "b_sha256": "9295d3e36ea60bf1b2dc71f9e2ed9fbf92d29326f84a9c6767330bf6a3e87f2e",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3.281159417644288,
+          "same_dtype_and_shape": true
+        },
+        "permutation_int32": {
+          "a_sha256": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "b_sha256": "97d162a26f948eb56137b1d0734bf1246db12f9cbca5c3ac69ad534eef6ffe99",
+          "bitwise_equal": false,
+          "different_element_count": 126,
+          "element_count": 128,
+          "max_absolute_difference": 111,
+          "same_dtype_and_shape": true
+        },
+        "split_4": {
+          "a_sha256": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "b_sha256": "6394927089a33499fe8cad903f9fe61128eedacf41fab1f59db87383fb079011",
+          "bitwise_equal": false,
+          "different_element_count": 8,
+          "element_count": 8,
+          "max_absolute_difference": 2163414658,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float32": {
+          "a_sha256": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "b_sha256": "014a2a1a511bd1853924c0c6bd3898347f833a8f9db580949aedb05ccbfc3e6e",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 0.895363450050354,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float64": {
+          "a_sha256": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "b_sha256": "7b693c419046883c4531b5cffae5eb36da19f1432fc33011a628d342950f40d1",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 0.8939853846227115,
+          "same_dtype_and_shape": true
+        }
+      }
+    },
+    {
+      "a": "jax0438_native",
+      "all_outputs_bitwise_equal": true,
+      "b": "jax062_partitionable_false",
+      "bitwise_equal_output_count": 9,
+      "output_count": 9,
+      "outputs": {
+        "bits_uint32": {
+          "a_sha256": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "b_sha256": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 48,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "fold_in_7": {
+          "a_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "b_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "key": {
+          "a_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "b_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "normal_float32": {
+          "a_sha256": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "b_sha256": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 48,
+          "max_absolute_difference": 0.0,
+          "same_dtype_and_shape": true
+        },
+        "normal_float64": {
+          "a_sha256": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "b_sha256": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 48,
+          "max_absolute_difference": 0.0,
+          "same_dtype_and_shape": true
+        },
+        "permutation_int32": {
+          "a_sha256": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "b_sha256": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 128,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "split_4": {
+          "a_sha256": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "b_sha256": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 8,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float32": {
+          "a_sha256": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "b_sha256": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 48,
+          "max_absolute_difference": 0.0,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float64": {
+          "a_sha256": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "b_sha256": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 48,
+          "max_absolute_difference": 0.0,
+          "same_dtype_and_shape": true
+        }
+      }
+    },
+    {
+      "a": "jax062_native",
+      "all_outputs_bitwise_equal": false,
+      "b": "jax062_partitionable_false",
+      "bitwise_equal_output_count": 2,
+      "output_count": 9,
+      "outputs": {
+        "bits_uint32": {
+          "a_sha256": "48850b92e3ff2ba21bb46e889e20ceb76f0a7f867770a8fd1f912873bec7cfcc",
+          "b_sha256": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3845556782,
+          "same_dtype_and_shape": true
+        },
+        "fold_in_7": {
+          "a_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "b_sha256": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "key": {
+          "a_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "b_sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "bitwise_equal": true,
+          "different_element_count": 0,
+          "element_count": 2,
+          "max_absolute_difference": 0,
+          "same_dtype_and_shape": true
+        },
+        "normal_float32": {
+          "a_sha256": "6aa6822ae5f8f87076dc2184793adcbf7af3b040a53fa3391d46891123a3facb",
+          "b_sha256": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3.2584882974624634,
+          "same_dtype_and_shape": true
+        },
+        "normal_float64": {
+          "a_sha256": "9295d3e36ea60bf1b2dc71f9e2ed9fbf92d29326f84a9c6767330bf6a3e87f2e",
+          "b_sha256": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 3.281159417644288,
+          "same_dtype_and_shape": true
+        },
+        "permutation_int32": {
+          "a_sha256": "97d162a26f948eb56137b1d0734bf1246db12f9cbca5c3ac69ad534eef6ffe99",
+          "b_sha256": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "bitwise_equal": false,
+          "different_element_count": 126,
+          "element_count": 128,
+          "max_absolute_difference": 111,
+          "same_dtype_and_shape": true
+        },
+        "split_4": {
+          "a_sha256": "6394927089a33499fe8cad903f9fe61128eedacf41fab1f59db87383fb079011",
+          "b_sha256": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "bitwise_equal": false,
+          "different_element_count": 8,
+          "element_count": 8,
+          "max_absolute_difference": 2163414658,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float32": {
+          "a_sha256": "014a2a1a511bd1853924c0c6bd3898347f833a8f9db580949aedb05ccbfc3e6e",
+          "b_sha256": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 0.895363450050354,
+          "same_dtype_and_shape": true
+        },
+        "uniform_float64": {
+          "a_sha256": "7b693c419046883c4531b5cffae5eb36da19f1432fc33011a628d342950f40d1",
+          "b_sha256": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "bitwise_equal": false,
+          "different_element_count": 48,
+          "element_count": 48,
+          "max_absolute_difference": 0.8939853846227115,
+          "same_dtype_and_shape": true
+        }
+      }
+    }
+  ],
+  "findings": [
+    "Effective native partitionable setting is False in JAX 0.4.38 on nvidia6 and True in JAX 0.6.2 on nvidia7; both use threefry2x32 and seed offset zero.",
+    "Native environments differ bitwise in split keys, raw bits, float32/float64 uniform and normal samples, and permutations. Initial key and fold_in(7) agree.",
+    "JAX 0.6.2 with partitionable=False matches JAX 0.4.38 bit-for-bit for all nine fingerprints in this probe.",
+    "This isolates a software RNG confound independently of GPU vendor and can change seeded initializations and sampling paths before any training.",
+    "No AMD probe or training trial was performed here. These checks neither quantify final metric effects nor establish that this flag explains all observed experiment differences."
+  ],
+  "generated_at": "2026-09-08T10:47:32.458279+00:00",
+  "historical_documentation": {
+    "documented_backend": "ROCm",
+    "documented_gpu": "AMD MI300X",
+    "documented_jax": "0.4.35",
+    "gpu_setup_lines": [
+      11,
+      78,
+      79,
+      80,
+      81
+    ],
+    "gpu_setup_path": "/Users/alessandromicheli/Documents/dev/ml/projects/riemannian-neural-ot/GPU_SETUP.md",
+    "gpu_setup_sha256": "4f7c3c5964351327813cce6d52074879230f30583460ccf0d7b658e96c825067",
+    "limitation": "Repository setup documentation is provenance evidence, not a captured original experiment environment. requirements.txt separately names JAX 0.4.28."
+  },
+  "method": {
+    "controlled_x64": true,
+    "floating_dtypes": [
+      "float32",
+      "float64"
+    ],
+    "floating_shapes": [
+      16,
+      3
+    ],
+    "hash_encoding": "SHA256 of contiguous C-order ndarray bytes; all probed hosts little-endian.",
+    "key_constructor": "jax.random.PRNGKey",
+    "key_reuse_note": "Every operation deliberately receives the same seed key as a standalone fingerprint; this is not a training sampling recipe.",
+    "permutation_dtype": "int32",
+    "permutation_size": 128,
+    "probe_script_path": "rng_cpu_probe.py",
+    "probe_script_sha256": "ecc5b4056150f645db46536c7528975b011e96447f1c4b5614d972b418eb6fbd",
+    "seed": 12345
+  },
+  "official_sources": [
+    {
+      "download_url": "https://raw.githubusercontent.com/jax-ml/jax/jax-v0.4.35/jax/_src/config.py",
+      "jax_default_prng_impl": "threefry2x32",
+      "jax_threefry_partitionable": false,
+      "local_path": "jax_0_4_35_official_config.py",
+      "sha256": "304db9656912f033e45d9a63220bc35aff12fc30bdefa34a03706a649e96a930",
+      "url": "https://github.com/jax-ml/jax/blob/jax-v0.4.35/jax/_src/config.py#L1028-L1036",
+      "version": "0.4.35"
+    },
+    {
+      "claim": "JAX 0.5.0 enabled jax_threefry_partitionable by default.",
+      "url": "https://docs.jax.dev/en/latest/changelog.html#jax-0-5-0-jan-17-2025"
+    },
+    {
+      "claim": "Maintainer upgrade note describes changed random values and restoring the previous behavior with partitionable=False.",
+      "url": "https://github.com/jax-ml/jax/discussions/18480"
+    }
+  ],
+  "raw_run_files": {
+    "jax0438_native": "rng_nvidia6_jax0438_native.json",
+    "jax062_native": "rng_nvidia7_jax062_native.json",
+    "jax062_partitionable_false": "rng_nvidia7_jax062_partitionable_false.json"
+  },
+  "runs": {
+    "jax0438_native": {
+      "affinity": [
+        22,
+        23
+      ],
+      "byteorder": "little",
+      "cpu_model": "Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz",
+      "devices": [
+        "TFRT_CPU_0"
+      ],
+      "effective_config": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": false
+      },
+      "environment": {
+        "JAX_DEFAULT_PRNG_IMPL": null,
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cpu",
+        "JAX_RANDOM_SEED_OFFSET": null,
+        "JAX_THREEFRY_PARTITIONABLE": null,
+        "MKL_NUM_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "XLA_FLAGS": null
+      },
+      "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+      "generated_at": "2026-09-08T10:44:47.368465+00:00",
+      "hostname": "nvidia6",
+      "installed_config_source": {
+        "path": "/home/am1118/miniforge3/envs/score_sde_expfam/lib/python3.11/site-packages/jax/_src/config.py",
+        "sha256": "27307be2de476c450e00442314c3cbbd9623c4a9a1877cc4055928ad3b266538",
+        "snippets": {
+          "default_prng_impl =": {
+            "line_1_based": 1032,
+            "text": "default_prng_impl = enum_state(\n    name='jax_default_prng_impl',\n    enum_values=['threefry2x32', 'rbg', 'unsafe_rbg'],\n    default='threefry2x32',\n    help=('Select the default PRNG implementation, used when one is not '"
+          },
+          "threefry_partitionable =": {
+            "line_1_based": 1039,
+            "text": "threefry_partitionable = bool_state(\n    name='jax_threefry_partitionable',\n    default=False,\n    upgrade=True,\n    help=('Enables internal threefry PRNG implementation changes that '"
+          }
+        }
+      },
+      "jax": "0.4.38",
+      "jaxlib": "0.4.38",
+      "mode": "native",
+      "native_config_before_override": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": false
+      },
+      "numpy": "1.24.4",
+      "outputs": {
+        "bits_uint32": {
+          "dtype": "uint32",
+          "expression": "jax.random.bits(key, (16, 3), dtype=jnp.uint32)",
+          "sha256_bytes": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              2586599716,
+              1909248975,
+              291202901
+            ],
+            [
+              2064224155,
+              2855929283,
+              1052330578
+            ],
+            [
+              1459398931,
+              2461959552,
+              2621484850
+            ],
+            [
+              686885344,
+              101156708,
+              4242342593
+            ],
+            [
+              2051107423,
+              3100429255,
+              3466778459
+            ],
+            [
+              2760762144,
+              2066718301,
+              1629078927
+            ],
+            [
+              140790969,
+              3738448320,
+              3990421948
+            ],
+            [
+              134776190,
+              881114586,
+              1656611907
+            ],
+            [
+              3393096953,
+              421038280,
+              1270708055
+            ],
+            [
+              1612619390,
+              2091075274,
+              184022827
+            ],
+            [
+              3352955521,
+              3494647753,
+              2493789754
+            ],
+            [
+              731963403,
+              1723230482,
+              2760917246
+            ],
+            [
+              2200654479,
+              442299204,
+              2301419810
+            ],
+            [
+              551566470,
+              572301549,
+              1115315477
+            ],
+            [
+              445604039,
+              492078612,
+              2564682607
+            ],
+            [
+              3889097978,
+              3309792078,
+              1215011450
+            ]
+          ]
+        },
+        "fold_in_7": {
+          "dtype": "uint32",
+          "expression": "jax.random.fold_in(key, 7)",
+          "sha256_bytes": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "shape": [
+            2
+          ],
+          "values": [
+            3645526921,
+            1314572738
+          ]
+        },
+        "key": {
+          "dtype": "uint32",
+          "expression": "jax.random.PRNGKey(12345)",
+          "sha256_bytes": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "shape": [
+            2
+          ],
+          "values": [
+            0,
+            12345
+          ]
+        },
+        "normal_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.25914841890335083,
+              -0.13948971033096313,
+              -1.4923714399337769
+            ],
+            [
+              -0.048611193895339966,
+              0.42600470781326294,
+              -0.690261721611023
+            ],
+            [
+              -0.41302886605262756,
+              0.18457695841789246,
+              0.2802625596523285
+            ],
+            [
+              -0.9947543144226074,
+              -1.9853577613830566,
+              2.249113082885742
+            ],
+            [
+              -0.05627674609422684,
+              0.5884202718734741,
+              0.8675228357315063
+            ],
+            [
+              0.3659263849258423,
+              -0.04715370759367943,
+              -0.3073212504386902
+            ],
+            [
+              -1.841413974761963,
+              1.128403663635254,
+              1.4690651893615723
+            ],
+            [
+              -1.8608882427215576,
+              -0.8233643770217896,
+              -0.2905178964138031
+            ],
+            [
+              0.8064798712730408,
+              -1.2928552627563477,
+              -0.5363460779190063
+            ],
+            [
+              -0.3174075186252594,
+              -0.03292703628540039,
+              -1.7185724973678589
+            ],
+            [
+              0.7744606137275696,
+              0.8914682865142822,
+              0.203507199883461
+            ],
+            [
+              -0.9524927735328674,
+              -0.250188410282135,
+              0.3660232126712799
+            ],
+            [
+              0.03103652596473694,
+              -1.264748454093933,
+              0.08996129781007767
+            ],
+            [
+              -1.1338841915130615,
+              -1.1111619472503662,
+              -0.6443336009979248
+            ],
+            [
+              -1.2604682445526123,
+              -1.202571988105774,
+              0.24594256281852722
+            ],
+            [
+              1.3135501146316528,
+              0.7408933639526367,
+              -0.5742719769477844
+            ]
+          ]
+        },
+        "normal_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              -1.9799547512564875,
+              -0.4029560939886927,
+              0.6507382514770659
+            ],
+            [
+              -1.0602092260483071,
+              1.814159327680657,
+              0.5844555121037746
+            ],
+            [
+              -0.06037832435417474,
+              -0.0009410198529930102,
+              0.5162079251460636
+            ],
+            [
+              -1.4380478672576331,
+              0.4363501583655598,
+              0.9660152087583773
+            ],
+            [
+              -0.6008407230402872,
+              -1.0545764170675773,
+              1.8995648457187342
+            ],
+            [
+              0.8516815999068502,
+              -2.0928803641159592,
+              -0.2700713158947152
+            ],
+            [
+              0.6227358404573954,
+              1.2459484894826267,
+              -0.6015706036399004
+            ],
+            [
+              1.681522037439116,
+              -0.5989883456049744,
+              -0.5945164114345236
+            ],
+            [
+              -0.4675759648808081,
+              0.3598329516532155,
+              1.228379501439531
+            ],
+            [
+              0.6458278218203013,
+              0.7290837144205671,
+              -0.7714947633735147
+            ],
+            [
+              0.4095572600434514,
+              -1.025548536666107,
+              -1.329578521131372
+            ],
+            [
+              -0.7381427039222589,
+              -1.2096614522146643,
+              -0.848189418354494
+            ],
+            [
+              0.47116150562653836,
+              -0.948148919274336,
+              -0.038670214474361385
+            ],
+            [
+              1.0908224934006534,
+              -0.13912451270473106,
+              1.616884579904781
+            ],
+            [
+              0.0705422060935103,
+              -0.6676998726178337,
+              0.25589785464851333
+            ],
+            [
+              -0.23976079673753825,
+              -1.6505468118291282,
+              -0.6147681358150894
+            ]
+          ]
+        },
+        "permutation_int32": {
+          "dtype": "int32",
+          "expression": "jax.random.permutation(key, jnp.arange(128, dtype=jnp.int32))",
+          "sha256_bytes": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "shape": [
+            128
+          ],
+          "values": [
+            93,
+            79,
+            102,
+            64,
+            13,
+            82,
+            78,
+            124,
+            45,
+            104,
+            1,
+            12,
+            5,
+            63,
+            62,
+            39,
+            86,
+            116,
+            7,
+            48,
+            71,
+            21,
+            112,
+            80,
+            54,
+            113,
+            24,
+            35,
+            42,
+            126,
+            58,
+            117,
+            75,
+            98,
+            111,
+            67,
+            88,
+            76,
+            31,
+            47,
+            101,
+            30,
+            90,
+            28,
+            92,
+            4,
+            34,
+            95,
+            68,
+            125,
+            61,
+            52,
+            120,
+            14,
+            57,
+            59,
+            89,
+            77,
+            81,
+            65,
+            36,
+            19,
+            22,
+            66,
+            119,
+            0,
+            23,
+            94,
+            91,
+            9,
+            50,
+            46,
+            96,
+            108,
+            123,
+            40,
+            72,
+            121,
+            2,
+            44,
+            107,
+            110,
+            27,
+            11,
+            70,
+            8,
+            69,
+            49,
+            73,
+            32,
+            84,
+            118,
+            114,
+            51,
+            74,
+            15,
+            122,
+            87,
+            99,
+            53,
+            106,
+            97,
+            17,
+            25,
+            41,
+            38,
+            37,
+            26,
+            127,
+            105,
+            43,
+            60,
+            29,
+            115,
+            18,
+            85,
+            55,
+            56,
+            33,
+            20,
+            100,
+            16,
+            83,
+            6,
+            10,
+            3,
+            103,
+            109
+          ]
+        },
+        "split_4": {
+          "dtype": "uint32",
+          "expression": "jax.random.split(key, 4)",
+          "sha256_bytes": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "shape": [
+            4,
+            2
+          ],
+          "values": [
+            [
+              305750198,
+              2603326752
+            ],
+            [
+              508404452,
+              2388836431
+            ],
+            [
+              730924241,
+              3909302951
+            ],
+            [
+              1026615260,
+              1275643062
+            ]
+          ]
+        },
+        "uniform_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.6022396087646484,
+              0.44453155994415283,
+              0.06780087947845459
+            ],
+            [
+              0.4806145429611206,
+              0.6649477481842041,
+              0.24501478672027588
+            ],
+            [
+              0.33979272842407227,
+              0.5732195377349854,
+              0.6103619337081909
+            ],
+            [
+              0.1599278450012207,
+              0.023552298545837402,
+              0.987747311592102
+            ],
+            [
+              0.4775606393814087,
+              0.7218748331069946,
+              0.8071721792221069
+            ],
+            [
+              0.6427899599075317,
+              0.481195330619812,
+              0.3792994022369385
+            ],
+            [
+              0.03278040885925293,
+              0.8704252243041992,
+              0.9290924072265625
+            ],
+            [
+              0.03137993812561035,
+              0.20515036582946777,
+              0.3857100009918213
+            ],
+            [
+              0.7900168895721436,
+              0.09803056716918945,
+              0.295859694480896
+            ],
+            [
+              0.3754671812057495,
+              0.4868663549423218,
+              0.042846083641052246
+            ],
+            [
+              0.7806707620620728,
+              0.8136609792709351,
+              0.5806306600570679
+            ],
+            [
+              0.1704235076904297,
+              0.40122079849243164,
+              0.6428260803222656
+            ],
+            [
+              0.5123797655105591,
+              0.10298073291778564,
+              0.5358409881591797
+            ],
+            [
+              0.12842154502868652,
+              0.13324928283691406,
+              0.25967955589294434
+            ],
+            [
+              0.10375022888183594,
+              0.1145709753036499,
+              0.5971366167068481
+            ],
+            [
+              0.905501127243042,
+              0.7706209421157837,
+              0.2828918695449829
+            ]
+          ]
+        },
+        "uniform_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.023854306671970527,
+              0.3434902621973197,
+              0.7423922667951313
+            ],
+            [
+              0.1445247123690887,
+              0.965173400059973,
+              0.7205430560007611
+            ],
+            [
+              0.4759271609077034,
+              0.4996245874493497,
+              0.697145402145092
+            ],
+            [
+              0.07521023648908631,
+              0.6687086524308818,
+              0.8329817146026235
+            ],
+            [
+              0.2739730388284096,
+              0.14580954708193872,
+              0.9712548753752148
+            ],
+            [
+              0.802804582091138,
+              0.018179917754900243,
+              0.3935526945042389
+            ],
+            [
+              0.7332709368345185,
+              0.8936083466721225,
+              0.27373000071255804
+            ],
+            [
+              0.9536692201908732,
+              0.27459032815837303,
+              0.2760833844850139
+            ],
+            [
+              0.32004392812865334,
+              0.6405139701916456,
+              0.8903477303955587
+            ],
+            [
+              0.7408045660760683,
+              0.7670247720705035,
+              0.2202068625676461
+            ],
+            [
+              0.6589346225961101,
+              0.15255221795772922,
+              0.09182858942200212
+            ],
+            [
+              0.23021386797046972,
+              0.1132044135789605,
+              0.19816624467766641
+            ],
+            [
+              0.6812372971161973,
+              0.17152682360798566,
+              0.4845766605227557
+            ],
+            [
+              0.8623245015696475,
+              0.4446758791267402,
+              0.9470484012241704
+            ],
+            [
+              0.5281189457022726,
+              0.2521625956709235,
+              0.6009851443862917
+            ],
+            [
+              0.4052578501217401,
+              0.049415573584859596,
+              0.2693539276625161
+            ]
+          ]
+        }
+      },
+      "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+      "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+      "seed": 12345
+    },
+    "jax062_native": {
+      "affinity": [
+        26,
+        27
+      ],
+      "byteorder": "little",
+      "cpu_model": "Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz",
+      "devices": [
+        "TFRT_CPU_0"
+      ],
+      "effective_config": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": true
+      },
+      "environment": {
+        "JAX_DEFAULT_PRNG_IMPL": null,
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cpu",
+        "JAX_RANDOM_SEED_OFFSET": null,
+        "JAX_THREEFRY_PARTITIONABLE": null,
+        "MKL_NUM_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "XLA_FLAGS": null
+      },
+      "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+      "generated_at": "2026-09-08T10:44:43.599932+00:00",
+      "hostname": "nvidia7",
+      "installed_config_source": {
+        "path": "/home/am1118/venvs/ernot-pinned/lib/python3.11/site-packages/jax/_src/config.py",
+        "sha256": "4eb7421f507f59351e62a6df54415037fcf0cab6bf0bdfaa76fb8598acf6dd85",
+        "snippets": {
+          "default_prng_impl =": {
+            "line_1_based": 1076,
+            "text": "default_prng_impl = enum_state(\n    name='jax_default_prng_impl',\n    enum_values=['threefry2x32', 'rbg', 'unsafe_rbg'],\n    default='threefry2x32',\n    help=('Select the default PRNG implementation, used when one is not '"
+          },
+          "threefry_partitionable =": {
+            "line_1_based": 1083,
+            "text": "threefry_partitionable = bool_state(\n    name='jax_threefry_partitionable',\n    default=True,\n    upgrade=True,\n    help=('Enables internal threefry PRNG implementation changes that '"
+          }
+        }
+      },
+      "jax": "0.6.2",
+      "jaxlib": "0.6.2",
+      "mode": "native",
+      "native_config_before_override": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": true
+      },
+      "numpy": "2.4.6",
+      "outputs": {
+        "bits_uint32": {
+          "dtype": "uint32",
+          "expression": "jax.random.bits(key, (16, 3), dtype=jnp.uint32)",
+          "sha256_bytes": "48850b92e3ff2ba21bb46e889e20ceb76f0a7f867770a8fd1f912873bec7cfcc",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              1382428670,
+              3548834134,
+              2792367857
+            ],
+            [
+              1229124039,
+              967337063,
+              1172193837
+            ],
+            [
+              2312155991,
+              2534447691,
+              1163331946
+            ],
+            [
+              3391869116,
+              2071325625,
+              4222239433
+            ],
+            [
+              3571738938,
+              339159739,
+              2910830059
+            ],
+            [
+              1173104025,
+              512794486,
+              1500975661
+            ],
+            [
+              2934648089,
+              458910484,
+              882082717
+            ],
+            [
+              1639979138,
+              593400309,
+              133642695
+            ],
+            [
+              1343417821,
+              3641936060,
+              3601620807
+            ],
+            [
+              1488202897,
+              3556787246,
+              4029579609
+            ],
+            [
+              2055181396,
+              2901833978,
+              705204246
+            ],
+            [
+              2154476963,
+              1754669158,
+              772314254
+            ],
+            [
+              3346579499,
+              1105445692,
+              1327833170
+            ],
+            [
+              2822428926,
+              2619044371,
+              571679751
+            ],
+            [
+              2232872751,
+              815072245,
+              322673598
+            ],
+            [
+              1374542451,
+              2306517623,
+              2329557410
+            ]
+          ]
+        },
+        "fold_in_7": {
+          "dtype": "uint32",
+          "expression": "jax.random.fold_in(key, 7)",
+          "sha256_bytes": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "shape": [
+            2
+          ],
+          "values": [
+            3645526921,
+            1314572738
+          ]
+        },
+        "key": {
+          "dtype": "uint32",
+          "expression": "jax.random.PRNGKey(12345)",
+          "sha256_bytes": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "shape": [
+            2
+          ],
+          "values": [
+            0,
+            12345
+          ]
+        },
+        "normal_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "6aa6822ae5f8f87076dc2184793adcbf7af3b040a53fa3391d46891123a3facb",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              -0.4624713659286499,
+              0.939555823802948,
+              0.38572221994400024
+            ],
+            [
+              -0.5645861625671387,
+              -0.7546625733375549,
+              -0.603997528553009
+            ],
+            [
+              0.09625434130430222,
+              0.22779475152492523,
+              -0.6102163791656494
+            ],
+            [
+              0.8054882884025574,
+              -0.044462159276008606,
+              2.121656894683838
+            ],
+            [
+              0.9605478048324585,
+              -1.4120558500289917,
+              0.46136152744293213
+            ],
+            [
+              -0.6033603549003601,
+              -1.1780204772949219,
+              -0.3867432773113251
+            ],
+            [
+              0.476879358291626,
+              -1.243464469909668,
+              -0.8225715160369873
+            ],
+            [
+              -0.3006586730480194,
+              -1.0886156558990479,
+              -1.8646384477615356
+            ],
+            [
+              -0.4879609942436218,
+              1.0276989936828613,
+              0.9885879755020142
+            ],
+            [
+              -0.3947892189025879,
+              0.9467976689338684,
+              1.5399158000946045
+            ],
+            [
+              -0.05389547720551491,
+              0.4555296301841736,
+              -0.9773691892623901
+            ],
+            [
+              0.004081278573721647,
+              -0.23130029439926147,
+              -0.916057288646698
+            ],
+            [
+              0.769447922706604,
+              -0.6514390110969543,
+              -0.49823203682899475
+            ],
+            [
+              0.4046917259693146,
+              0.2787816822528839,
+              -1.1118348836898804
+            ],
+            [
+              0.049855321645736694,
+              -0.8787304162979126,
+              -1.4386261701583862
+            ],
+            [
+              -0.4675992429256439,
+              0.09294905513525009,
+              0.10646246373653412
+            ]
+          ]
+        },
+        "normal_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "9295d3e36ea60bf1b2dc71f9e2ed9fbf92d29326f84a9c6767330bf6a3e87f2e",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              -0.5748557725921609,
+              -0.834317435425103,
+              -0.89551516543291
+            ],
+            [
+              -0.9735487378007093,
+              -1.4670000899636313,
+              -0.359082560431151
+            ],
+            [
+              0.9428254676172394,
+              1.0312592956399111,
+              0.940429879907056
+            ],
+            [
+              0.30189479531398455,
+              -0.2259462546394325,
+              0.5555985574136332
+            ],
+            [
+              0.29776842036365103,
+              -0.40581349018550045,
+              -0.4945323235439807
+            ],
+            [
+              -0.6343290940725433,
+              0.05823856248116236,
+              -1.3008181481745236
+            ],
+            [
+              -0.06581515220690949,
+              0.0930429659500204,
+              1.043874722168225
+            ],
+            [
+              -0.8638412724712742,
+              1.0816060858047225,
+              2.058709213932976
+            ],
+            [
+              0.25914852446676606,
+              -0.9483444163099021,
+              1.9300661476494825
+            ],
+            [
+              0.476627399877306,
+              -1.1111609002415934,
+              -0.8534662885321631
+            ],
+            [
+              0.04284575361156867,
+              -1.3668704324914305,
+              -0.568531968557646
+            ],
+            [
+              -0.9778797948357811,
+              1.6925922941892657,
+              -1.0017286328717452
+            ],
+            [
+              -1.1364090048057407,
+              0.9729992585366622,
+              1.2768112463739283
+            ],
+            [
+              -0.8459067768444556,
+              -0.2975275172979876,
+              0.13588702286142987
+            ],
+            [
+              0.97404756707732,
+              1.9397533327791618,
+              -0.5434617058843001
+            ],
+            [
+              0.26377041394430584,
+              0.30535090673702814,
+              -1.7926095678508274
+            ]
+          ]
+        },
+        "permutation_int32": {
+          "dtype": "int32",
+          "expression": "jax.random.permutation(key, jnp.arange(128, dtype=jnp.int32))",
+          "sha256_bytes": "97d162a26f948eb56137b1d0734bf1246db12f9cbca5c3ac69ad534eef6ffe99",
+          "shape": [
+            128
+          ],
+          "values": [
+            75,
+            119,
+            107,
+            64,
+            43,
+            56,
+            17,
+            61,
+            5,
+            9,
+            94,
+            55,
+            80,
+            33,
+            14,
+            104,
+            126,
+            15,
+            73,
+            37,
+            26,
+            62,
+            118,
+            86,
+            59,
+            45,
+            116,
+            65,
+            47,
+            19,
+            23,
+            89,
+            77,
+            88,
+            91,
+            21,
+            52,
+            35,
+            30,
+            16,
+            90,
+            82,
+            124,
+            50,
+            114,
+            102,
+            24,
+            32,
+            12,
+            68,
+            54,
+            97,
+            53,
+            69,
+            6,
+            72,
+            58,
+            7,
+            84,
+            83,
+            106,
+            109,
+            122,
+            113,
+            8,
+            95,
+            98,
+            101,
+            1,
+            74,
+            49,
+            111,
+            46,
+            120,
+            28,
+            31,
+            110,
+            96,
+            44,
+            85,
+            108,
+            78,
+            25,
+            11,
+            99,
+            103,
+            92,
+            125,
+            10,
+            40,
+            0,
+            105,
+            57,
+            13,
+            20,
+            63,
+            48,
+            127,
+            71,
+            51,
+            76,
+            87,
+            93,
+            115,
+            34,
+            22,
+            123,
+            41,
+            18,
+            81,
+            66,
+            36,
+            121,
+            112,
+            38,
+            117,
+            70,
+            60,
+            27,
+            67,
+            2,
+            4,
+            39,
+            3,
+            100,
+            42,
+            29,
+            79
+          ]
+        },
+        "split_4": {
+          "dtype": "uint32",
+          "expression": "jax.random.split(key, 4)",
+          "sha256_bytes": "6394927089a33499fe8cad903f9fe61128eedacf41fab1f59db87383fb079011",
+          "shape": [
+            4,
+            2
+          ],
+          "values": [
+            [
+              1214163296,
+              439912094
+            ],
+            [
+              867802714,
+              3762255628
+            ],
+            [
+              795667951,
+              2300365598
+            ],
+            [
+              709272294,
+              1661227809
+            ]
+          ]
+        },
+        "uniform_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "014a2a1a511bd1853924c0c6bd3898347f833a8f9db580949aedb05ccbfc3e6e",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.32187163829803467,
+              0.8262772560119629,
+              0.6501487493515015
+            ],
+            [
+              0.2861776351928711,
+              0.22522568702697754,
+              0.2729226350784302
+            ],
+            [
+              0.53834068775177,
+              0.5900970697402954,
+              0.2708592414855957
+            ],
+            [
+              0.7897310256958008,
+              0.48226797580718994,
+              0.9830666780471802
+            ],
+            [
+              0.8316102027893066,
+              0.07896673679351807,
+              0.6777303218841553
+            ],
+            [
+              0.2731344699859619,
+              0.11939418315887451,
+              0.34947311878204346
+            ],
+            [
+              0.6832759380340576,
+              0.10684835910797119,
+              0.2053757905960083
+            ],
+            [
+              0.3818373680114746,
+              0.13816165924072266,
+              0.031116008758544922
+            ],
+            [
+              0.312788724899292,
+              0.847954273223877,
+              0.8385676145553589
+            ],
+            [
+              0.3464992046356201,
+              0.8281290531158447,
+              0.9382095336914062
+            ],
+            [
+              0.47850918769836426,
+              0.675635814666748,
+              0.16419315338134766
+            ],
+            [
+              0.5016281604766846,
+              0.4085407257080078,
+              0.17981839179992676
+            ],
+            [
+              0.7791862487792969,
+              0.2573815584182739,
+              0.3091602325439453
+            ],
+            [
+              0.6571478843688965,
+              0.6097937822341919,
+              0.13310456275939941
+            ],
+            [
+              0.5198811292648315,
+              0.18977367877960205,
+              0.07512819766998291
+            ],
+            [
+              0.32003557682037354,
+              0.5370279550552368,
+              0.5423922538757324
+            ]
+          ]
+        },
+        "uniform_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "7b693c419046883c4531b5cffae5eb36da19f1432fc33011a628d342950f40d1",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.2826944217324314,
+              0.20205106466914713,
+              0.18525588129078852
+            ],
+            [
+              0.16514032482793195,
+              0.0711880154372615,
+              0.35976666377408106
+            ],
+            [
+              0.8271149085725733,
+              0.8487903795452025,
+              0.8265014492415139
+            ],
+            [
+              0.6186338682495782,
+              0.41062161095253047,
+              0.7107573410743215
+            ],
+            [
+              0.6170600406558853,
+              0.34243982291410546,
+              0.3104651421035849
+            ],
+            [
+              0.26293303655133005,
+              0.5232206977920033,
+              0.09666035423450703
+            ],
+            [
+              0.4737624963378384,
+              0.537065286322244,
+              0.851728322667076
+            ],
+            [
+              0.19383754588522795,
+              0.8602862004185181,
+              0.9802389484803191
+            ],
+            [
+              0.6022396769351364,
+              0.1714770730931945,
+              0.973200678868636
+            ],
+            [
+              0.6831862656311549,
+              0.1332495489533474,
+              0.1967003873455313
+            ],
+            [
+              0.5170877543260994,
+              0.0858329606062942,
+              0.2848369023730708
+            ],
+            [
+              0.16406688971111882,
+              0.9547334505741647,
+              0.15823733690789732
+            ],
+            [
+              0.12789271443741268,
+              0.8347231646951756,
+              0.899165552961714
+            ],
+            [
+              0.198802375841177,
+              0.38303190143604504,
+              0.5540447027158526
+            ],
+            [
+              0.8349835391425968,
+              0.973795162697455,
+              0.2934059750624811
+            ],
+            [
+              0.6040215831701976,
+              0.6199505459733803,
+              0.03651768772716579
+            ]
+          ]
+        }
+      },
+      "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "seed": 12345
+    },
+    "jax062_partitionable_false": {
+      "affinity": [
+        26,
+        27
+      ],
+      "byteorder": "little",
+      "cpu_model": "Intel(R) Xeon(R) Gold 6346 CPU @ 3.10GHz",
+      "devices": [
+        "TFRT_CPU_0"
+      ],
+      "effective_config": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": false
+      },
+      "environment": {
+        "JAX_DEFAULT_PRNG_IMPL": null,
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cpu",
+        "JAX_RANDOM_SEED_OFFSET": null,
+        "JAX_THREEFRY_PARTITIONABLE": null,
+        "MKL_NUM_THREADS": "2",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "XLA_FLAGS": null
+      },
+      "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+      "generated_at": "2026-09-08T10:45:25.447671+00:00",
+      "hostname": "nvidia7",
+      "installed_config_source": {
+        "path": "/home/am1118/venvs/ernot-pinned/lib/python3.11/site-packages/jax/_src/config.py",
+        "sha256": "4eb7421f507f59351e62a6df54415037fcf0cab6bf0bdfaa76fb8598acf6dd85",
+        "snippets": {
+          "default_prng_impl =": {
+            "line_1_based": 1076,
+            "text": "default_prng_impl = enum_state(\n    name='jax_default_prng_impl',\n    enum_values=['threefry2x32', 'rbg', 'unsafe_rbg'],\n    default='threefry2x32',\n    help=('Select the default PRNG implementation, used when one is not '"
+          },
+          "threefry_partitionable =": {
+            "line_1_based": 1083,
+            "text": "threefry_partitionable = bool_state(\n    name='jax_threefry_partitionable',\n    default=True,\n    upgrade=True,\n    help=('Enables internal threefry PRNG implementation changes that '"
+          }
+        }
+      },
+      "jax": "0.6.2",
+      "jaxlib": "0.6.2",
+      "mode": "false",
+      "native_config_before_override": {
+        "jax_default_matmul_precision": null,
+        "jax_default_prng_impl": "threefry2x32",
+        "jax_enable_x64": true,
+        "jax_legacy_prng_key": "allow",
+        "jax_random_seed_offset": 0,
+        "jax_threefry_gpu_kernel_lowering": false,
+        "jax_threefry_partitionable": true
+      },
+      "numpy": "2.4.6",
+      "outputs": {
+        "bits_uint32": {
+          "dtype": "uint32",
+          "expression": "jax.random.bits(key, (16, 3), dtype=jnp.uint32)",
+          "sha256_bytes": "4f761aa590c898d9f518b5bdd167c5a4e66b1096844e457c1eef2beaaa1d6e4f",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              2586599716,
+              1909248975,
+              291202901
+            ],
+            [
+              2064224155,
+              2855929283,
+              1052330578
+            ],
+            [
+              1459398931,
+              2461959552,
+              2621484850
+            ],
+            [
+              686885344,
+              101156708,
+              4242342593
+            ],
+            [
+              2051107423,
+              3100429255,
+              3466778459
+            ],
+            [
+              2760762144,
+              2066718301,
+              1629078927
+            ],
+            [
+              140790969,
+              3738448320,
+              3990421948
+            ],
+            [
+              134776190,
+              881114586,
+              1656611907
+            ],
+            [
+              3393096953,
+              421038280,
+              1270708055
+            ],
+            [
+              1612619390,
+              2091075274,
+              184022827
+            ],
+            [
+              3352955521,
+              3494647753,
+              2493789754
+            ],
+            [
+              731963403,
+              1723230482,
+              2760917246
+            ],
+            [
+              2200654479,
+              442299204,
+              2301419810
+            ],
+            [
+              551566470,
+              572301549,
+              1115315477
+            ],
+            [
+              445604039,
+              492078612,
+              2564682607
+            ],
+            [
+              3889097978,
+              3309792078,
+              1215011450
+            ]
+          ]
+        },
+        "fold_in_7": {
+          "dtype": "uint32",
+          "expression": "jax.random.fold_in(key, 7)",
+          "sha256_bytes": "668eade5b91ec6ed1a909cbb0384811f8980f1d241f223037bd224db7ddd8dd1",
+          "shape": [
+            2
+          ],
+          "values": [
+            3645526921,
+            1314572738
+          ]
+        },
+        "key": {
+          "dtype": "uint32",
+          "expression": "jax.random.PRNGKey(12345)",
+          "sha256_bytes": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+          "shape": [
+            2
+          ],
+          "values": [
+            0,
+            12345
+          ]
+        },
+        "normal_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "9210048972354a605214fc63bfa67ed707940d0e1b2202fe06c5c19893a0cd93",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.25914841890335083,
+              -0.13948971033096313,
+              -1.4923714399337769
+            ],
+            [
+              -0.048611193895339966,
+              0.42600470781326294,
+              -0.690261721611023
+            ],
+            [
+              -0.41302886605262756,
+              0.18457695841789246,
+              0.2802625596523285
+            ],
+            [
+              -0.9947543144226074,
+              -1.9853577613830566,
+              2.249113082885742
+            ],
+            [
+              -0.05627674609422684,
+              0.5884202718734741,
+              0.8675228357315063
+            ],
+            [
+              0.3659263849258423,
+              -0.04715370759367943,
+              -0.3073212504386902
+            ],
+            [
+              -1.841413974761963,
+              1.128403663635254,
+              1.4690651893615723
+            ],
+            [
+              -1.8608882427215576,
+              -0.8233643770217896,
+              -0.2905178964138031
+            ],
+            [
+              0.8064798712730408,
+              -1.2928552627563477,
+              -0.5363460779190063
+            ],
+            [
+              -0.3174075186252594,
+              -0.03292703628540039,
+              -1.7185724973678589
+            ],
+            [
+              0.7744606137275696,
+              0.8914682865142822,
+              0.203507199883461
+            ],
+            [
+              -0.9524927735328674,
+              -0.250188410282135,
+              0.3660232126712799
+            ],
+            [
+              0.03103652596473694,
+              -1.264748454093933,
+              0.08996129781007767
+            ],
+            [
+              -1.1338841915130615,
+              -1.1111619472503662,
+              -0.6443336009979248
+            ],
+            [
+              -1.2604682445526123,
+              -1.202571988105774,
+              0.24594256281852722
+            ],
+            [
+              1.3135501146316528,
+              0.7408933639526367,
+              -0.5742719769477844
+            ]
+          ]
+        },
+        "normal_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.normal(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "36753cfbe05c098f6889c3520b5878c3553796c914d6763b4bf1724ea27f5bfe",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              -1.9799547512564875,
+              -0.4029560939886927,
+              0.6507382514770659
+            ],
+            [
+              -1.0602092260483071,
+              1.814159327680657,
+              0.5844555121037746
+            ],
+            [
+              -0.06037832435417474,
+              -0.0009410198529930102,
+              0.5162079251460636
+            ],
+            [
+              -1.4380478672576331,
+              0.4363501583655598,
+              0.9660152087583773
+            ],
+            [
+              -0.6008407230402872,
+              -1.0545764170675773,
+              1.8995648457187342
+            ],
+            [
+              0.8516815999068502,
+              -2.0928803641159592,
+              -0.2700713158947152
+            ],
+            [
+              0.6227358404573954,
+              1.2459484894826267,
+              -0.6015706036399004
+            ],
+            [
+              1.681522037439116,
+              -0.5989883456049744,
+              -0.5945164114345236
+            ],
+            [
+              -0.4675759648808081,
+              0.3598329516532155,
+              1.228379501439531
+            ],
+            [
+              0.6458278218203013,
+              0.7290837144205671,
+              -0.7714947633735147
+            ],
+            [
+              0.4095572600434514,
+              -1.025548536666107,
+              -1.329578521131372
+            ],
+            [
+              -0.7381427039222589,
+              -1.2096614522146643,
+              -0.848189418354494
+            ],
+            [
+              0.47116150562653836,
+              -0.948148919274336,
+              -0.038670214474361385
+            ],
+            [
+              1.0908224934006534,
+              -0.13912451270473106,
+              1.616884579904781
+            ],
+            [
+              0.0705422060935103,
+              -0.6676998726178337,
+              0.25589785464851333
+            ],
+            [
+              -0.23976079673753825,
+              -1.6505468118291282,
+              -0.6147681358150894
+            ]
+          ]
+        },
+        "permutation_int32": {
+          "dtype": "int32",
+          "expression": "jax.random.permutation(key, jnp.arange(128, dtype=jnp.int32))",
+          "sha256_bytes": "059fba3d59c44073db5922c213140946f3767993ea3d630987c7859d7d5bceb4",
+          "shape": [
+            128
+          ],
+          "values": [
+            93,
+            79,
+            102,
+            64,
+            13,
+            82,
+            78,
+            124,
+            45,
+            104,
+            1,
+            12,
+            5,
+            63,
+            62,
+            39,
+            86,
+            116,
+            7,
+            48,
+            71,
+            21,
+            112,
+            80,
+            54,
+            113,
+            24,
+            35,
+            42,
+            126,
+            58,
+            117,
+            75,
+            98,
+            111,
+            67,
+            88,
+            76,
+            31,
+            47,
+            101,
+            30,
+            90,
+            28,
+            92,
+            4,
+            34,
+            95,
+            68,
+            125,
+            61,
+            52,
+            120,
+            14,
+            57,
+            59,
+            89,
+            77,
+            81,
+            65,
+            36,
+            19,
+            22,
+            66,
+            119,
+            0,
+            23,
+            94,
+            91,
+            9,
+            50,
+            46,
+            96,
+            108,
+            123,
+            40,
+            72,
+            121,
+            2,
+            44,
+            107,
+            110,
+            27,
+            11,
+            70,
+            8,
+            69,
+            49,
+            73,
+            32,
+            84,
+            118,
+            114,
+            51,
+            74,
+            15,
+            122,
+            87,
+            99,
+            53,
+            106,
+            97,
+            17,
+            25,
+            41,
+            38,
+            37,
+            26,
+            127,
+            105,
+            43,
+            60,
+            29,
+            115,
+            18,
+            85,
+            55,
+            56,
+            33,
+            20,
+            100,
+            16,
+            83,
+            6,
+            10,
+            3,
+            103,
+            109
+          ]
+        },
+        "split_4": {
+          "dtype": "uint32",
+          "expression": "jax.random.split(key, 4)",
+          "sha256_bytes": "d4e4e8b0f051ce845d62b4c5ccc9b7ca9ad791f384e33e564717ad8244d3877e",
+          "shape": [
+            4,
+            2
+          ],
+          "values": [
+            [
+              305750198,
+              2603326752
+            ],
+            [
+              508404452,
+              2388836431
+            ],
+            [
+              730924241,
+              3909302951
+            ],
+            [
+              1026615260,
+              1275643062
+            ]
+          ]
+        },
+        "uniform_float32": {
+          "dtype": "float32",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float32)",
+          "sha256_bytes": "996a60c90e04637a5cf6b924a1c3b768cae8941b1bf698da3b46a6a75596c4dc",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.6022396087646484,
+              0.44453155994415283,
+              0.06780087947845459
+            ],
+            [
+              0.4806145429611206,
+              0.6649477481842041,
+              0.24501478672027588
+            ],
+            [
+              0.33979272842407227,
+              0.5732195377349854,
+              0.6103619337081909
+            ],
+            [
+              0.1599278450012207,
+              0.023552298545837402,
+              0.987747311592102
+            ],
+            [
+              0.4775606393814087,
+              0.7218748331069946,
+              0.8071721792221069
+            ],
+            [
+              0.6427899599075317,
+              0.481195330619812,
+              0.3792994022369385
+            ],
+            [
+              0.03278040885925293,
+              0.8704252243041992,
+              0.9290924072265625
+            ],
+            [
+              0.03137993812561035,
+              0.20515036582946777,
+              0.3857100009918213
+            ],
+            [
+              0.7900168895721436,
+              0.09803056716918945,
+              0.295859694480896
+            ],
+            [
+              0.3754671812057495,
+              0.4868663549423218,
+              0.042846083641052246
+            ],
+            [
+              0.7806707620620728,
+              0.8136609792709351,
+              0.5806306600570679
+            ],
+            [
+              0.1704235076904297,
+              0.40122079849243164,
+              0.6428260803222656
+            ],
+            [
+              0.5123797655105591,
+              0.10298073291778564,
+              0.5358409881591797
+            ],
+            [
+              0.12842154502868652,
+              0.13324928283691406,
+              0.25967955589294434
+            ],
+            [
+              0.10375022888183594,
+              0.1145709753036499,
+              0.5971366167068481
+            ],
+            [
+              0.905501127243042,
+              0.7706209421157837,
+              0.2828918695449829
+            ]
+          ]
+        },
+        "uniform_float64": {
+          "dtype": "float64",
+          "expression": "jax.random.uniform(key, (16, 3), dtype=jnp.float64)",
+          "sha256_bytes": "4f427b1320702c0ebcddfd5808496b0f2a378508e8644e7851bea126aedd188a",
+          "shape": [
+            16,
+            3
+          ],
+          "values": [
+            [
+              0.023854306671970527,
+              0.3434902621973197,
+              0.7423922667951313
+            ],
+            [
+              0.1445247123690887,
+              0.965173400059973,
+              0.7205430560007611
+            ],
+            [
+              0.4759271609077034,
+              0.4996245874493497,
+              0.697145402145092
+            ],
+            [
+              0.07521023648908631,
+              0.6687086524308818,
+              0.8329817146026235
+            ],
+            [
+              0.2739730388284096,
+              0.14580954708193872,
+              0.9712548753752148
+            ],
+            [
+              0.802804582091138,
+              0.018179917754900243,
+              0.3935526945042389
+            ],
+            [
+              0.7332709368345185,
+              0.8936083466721225,
+              0.27373000071255804
+            ],
+            [
+              0.9536692201908732,
+              0.27459032815837303,
+              0.2760833844850139
+            ],
+            [
+              0.32004392812865334,
+              0.6405139701916456,
+              0.8903477303955587
+            ],
+            [
+              0.7408045660760683,
+              0.7670247720705035,
+              0.2202068625676461
+            ],
+            [
+              0.6589346225961101,
+              0.15255221795772922,
+              0.09182858942200212
+            ],
+            [
+              0.23021386797046972,
+              0.1132044135789605,
+              0.19816624467766641
+            ],
+            [
+              0.6812372971161973,
+              0.17152682360798566,
+              0.4845766605227557
+            ],
+            [
+              0.8623245015696475,
+              0.4446758791267402,
+              0.9470484012241704
+            ],
+            [
+              0.5281189457022726,
+              0.2521625956709235,
+              0.6009851443862917
+            ],
+            [
+              0.4052578501217401,
+              0.049415573584859596,
+              0.2693539276625161
+            ]
+          ]
+        }
+      },
+      "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "seed": 12345
+    }
+  },
+  "schema_version": 1,
+  "scope": "Read-only CPU RNG provenance probes. No training, no model or metric modifications, no GPU arithmetic comparison.",
+  "source_rng_setting_scan": {
+    "file_types": [
+      "*.py",
+      "*.json",
+      "*.toml",
+      "*requirements*"
+    ],
+    "interpretation": "No explicit PRNG implementation/partitionable override was found in the examined code and configuration files.",
+    "matches": 0,
+    "patterns": [
+      "JAX_THREEFRY",
+      "jax_threefry",
+      "jax_default_prng",
+      "JAX_DEFAULT_PRNG"
+    ],
+    "roots": [
+      "archive",
+      "tooling",
+      "release-stage/verification/snapshots/dbf533d"
+    ]
+  }
+}

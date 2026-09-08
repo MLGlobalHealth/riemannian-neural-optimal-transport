@@ -1,0 +1,412 @@
+{
+  "label": "cpu_initialization_provenance",
+  "status": "complete",
+  "purpose": "Native S2 random build initialization comparison, seed 12345; no training",
+  "source_root": "/home/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source",
+  "source_manifest": {
+    "sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b",
+    "files": {
+      "experiments/run_ablations.py": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+      "experiments/run_experiments.py": "c8fd45b8a01f3fd08bc2bf993b0660f9b73726cc84e1f9066e442eb94e8a0005",
+      "experiments/run_experiments_highD.py": "3d72d55acc3a6b772d328d5011ca82ce8541874574256272792834a06c1cc5b5",
+      "experiments/run_table.py": "aa70ca3914f7a989e2a1a60439cd56cc249378e02fc2e78c369eef8f77cbcacd",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "fca9ad35d914c386af35db3cb4febb434c22ffd9c2dc07c7e259e03ab6ea0261",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "a70f112285ad82afbda76204588a034569b073bbd0defd6846a789d09b5e893f",
+      "rcpm/requirements.txt": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/base.py": "72d0dc2d666bd8822a244c184be196028f1e20ac99ba45c476ca00fbd93599ac",
+      "src/densities.py": "c3e5e7bdee3449d0f6eefa9555186fe567a455e038131809ca6b5550e64122da",
+      "src/embeddings.py": "2e437a1d222e175f83d69169062112cd1112b83e5d6925fccf585bd9a748275f",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "a45510bb60eaa65297509304f6fdd82652a0a30d5d824fd7bac339261b8ae19a",
+      "src/manifolds.py": "84e08796d23a9f2ae8abdfb8aa4cd723e945459d503beb3aff031477bdf69a2b",
+      "src/metrics.py": "5293bdc3449970d22dbb448eca3fd8663fbd78b449078d5d57bfea119615e01a",
+      "src/networks.py": "ee04852119bad4c8a9b5f2d86bcfd4d4474db693e7b88c188aa84d598d7e139d",
+      "src/solvers.py": "fb92172659db911db1f696ef9e23ff3d63665baa53dd3a1041fb49e05448ee61",
+      "src/trainers.py": "fc3c2db8b9147addf83aef5d3b317b6a508e54e3e6718f7bb26db6f661c37946",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    }
+  },
+  "hostname": "nvidia6",
+  "python": "3.11.7",
+  "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+  "affinity": [
+    22,
+    23
+  ],
+  "cpu_model": "Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz",
+  "packages": {
+    "jax": "0.4.38",
+    "jaxlib": "0.4.38",
+    "flax": "0.10.0",
+    "optax": "0.2.3",
+    "numpy": "1.24.4",
+    "scipy": "1.14.1"
+  },
+  "environment": {
+    "JAX_PLATFORMS": "cpu",
+    "JAX_ENABLE_X64": null,
+    "JAX_THREEFRY_PARTITIONABLE": null,
+    "JAX_DEFAULT_PRNG_IMPL": null,
+    "JAX_DEFAULT_MATMUL_PRECISION": null,
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "XLA_FLAGS": null
+  },
+  "jax_config": {
+    "jax_enable_x64": true,
+    "jax_threefry_partitionable": false,
+    "jax_default_prng_impl": "threefry2x32",
+    "jax_default_matmul_precision": null
+  },
+  "jax_backend": "cpu",
+  "jax_devices": [
+    "TFRT_CPU_0"
+  ],
+  "prng_fingerprints": {
+    "key": {
+      "shape": [
+        2
+      ],
+      "dtype": "uint32",
+      "sha256": "0942d9a0003a21a4f402dc9f6c59c529b06f81142a4c51d4dc78a93088e1a533",
+      "first_values": [
+        0,
+        12345
+      ],
+      "nonfinite_count": 0
+    },
+    "split3": {
+      "shape": [
+        3,
+        2
+      ],
+      "dtype": "uint32",
+      "sha256": "c8603994e6a36327745a96dbb92b5740879b127943de2fdeebb7e3dd2a43ee5d",
+      "first_values": [
+        709272294,
+        379651714,
+        2709620474,
+        1661227809,
+        1077507699,
+        246929136
+      ],
+      "nonfinite_count": 0
+    },
+    "normal_float64_4x3": {
+      "shape": [
+        4,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "5e29554e6c42bfde20dff90341988087cf03391859c64ca15d82f957118d5add",
+      "first_values": [
+        0.29776842036365103,
+        -0.290085862016714,
+        -0.10329876431800335,
+        -0.44638342166574513,
+        -0.3353202341826001,
+        -0.650274671775508,
+        0.5109463499510292,
+        2.1662211466653694
+      ],
+      "nonfinite_count": 0
+    },
+    "normal_float32_4x3": {
+      "shape": [
+        4,
+        3
+      ],
+      "dtype": "float32",
+      "sha256": "55b401090165c8c3de97cb9c024eb3074bc702a5ad862cc604c69541162338fc",
+      "first_values": [
+        0.9428252577781677,
+        -0.5015149712562561,
+        1.3111776113510132,
+        0.15326836705207825,
+        -0.3406611979007721,
+        -0.3645680546760559,
+        -0.37660592794418335,
+        -1.1570560932159424
+      ],
+      "nonfinite_count": 0
+    }
+  },
+  "builds": {
+    "ours": {
+      "status": "complete",
+      "builder": "native_archive_builder",
+      "configuration": {
+        "manifold_name": "S2",
+        "base_density": "SphereUniform",
+        "target_density": "SphereWrappedNormal",
+        "jax_platform": "gpu",
+        "model": {
+          "network_type": "mlp",
+          "hidden_dims": [
+            128,
+            128
+          ],
+          "n_landmarks": 128,
+          "use_layernorm": true,
+          "last_scale": 0.01,
+          "activation": "silu",
+          "leaky_slope": 0.01,
+          "softplus_beta": 1,
+          "max_dist": 3.14159
+        },
+        "solver": {
+          "inner_steps": 2500,
+          "inner_lr": 0.05,
+          "grad_clip": null,
+          "lr_decay": false,
+          "tolerance": 1e-06,
+          "min_steps": 1000,
+          "momentum": 0.0,
+          "logsumexp_init": true,
+          "logsumexp_gamma": 0.1,
+          "use_adam": true,
+          "adam_beta1": 0.9,
+          "adam_beta2": 0.999
+        },
+        "training": {
+          "n_steps": 1000,
+          "batch_size": 256,
+          "learning_rate": 0.001,
+          "lr_decay": false,
+          "lr_decay_alpha": 0.05,
+          "log_every": 1,
+          "eval_every": null,
+          "eval_size": 1024,
+          "seed": 12345
+        }
+      },
+      "parameter_count": 33409,
+      "parameter_tree": "PyTreeDef({'Dense_0': {'bias': *, 'kernel': *}, 'Dense_1': {'bias': *, 'kernel': *}, 'Dense_2': {'bias': *, 'kernel': *}, 'LayerNorm_0': {'bias': *, 'scale': *}})",
+      "parameter_leaves": [
+        {
+          "shape": [
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "first_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "3cd5bf7827be7da2d1844acd98f2cfb3409e0c58d86bd18d6fe623201e93986d",
+          "first_values": [
+            -0.060827527195215225,
+            -0.16347557306289673,
+            0.04005757346749306,
+            0.19007253646850586,
+            0.19464550912380219,
+            0.09909454733133316,
+            -0.038804493844509125,
+            -0.25462624430656433
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "first_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "979372a7350a119d40857a9925ae5e7c34c79494826e63b3233018b60939a3c4",
+          "first_values": [
+            -0.25816255807876587,
+            -0.0017915201606228948,
+            0.13002413511276245,
+            -0.16334901750087738,
+            -0.17249809205532074,
+            -0.13903895020484924,
+            0.012470249086618423,
+            -0.01140148937702179
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            1
+          ],
+          "dtype": "float32",
+          "sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+          "first_values": [
+            0.0
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128,
+            1
+          ],
+          "dtype": "float32",
+          "sha256": "dd295f5d1831a2868f4266a453c5aa37ed61dd2741bd2b55218e4b53cbdac2c8",
+          "first_values": [
+            -0.014257626608014107,
+            0.00637151999399066,
+            0.005127914249897003,
+            0.007115609012544155,
+            0.0048666466027498245,
+            0.003114726161584258,
+            0.001866219798102975,
+            0.010281262919306755
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+          "first_values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "nonfinite_count": 0
+        },
+        {
+          "shape": [
+            128
+          ],
+          "dtype": "float32",
+          "sha256": "02722f124d0f1736a9dd7c4ddcd05630dcf16ee1ce3454e9a876005ce005d4ac",
+          "first_values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "nonfinite_count": 0
+        }
+      ],
+      "parameter_fingerprint_sha256": "b06172f374738fff845a611800caff8caf1946dd8c4d0f6fc6c1c42738190f8c",
+      "remaining_key": {
+        "shape": [
+          2
+        ],
+        "dtype": "uint32",
+        "sha256": "a2f25c7871158e11ea895b5ead35d38c30e9a8052f93cfc31c32f1fa49e5795c",
+        "first_values": [
+          1333275602,
+          1786347036
+        ],
+        "nonfinite_count": 0
+      },
+      "landmarks": {
+        "shape": [
+          128,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "4d2b8d88711584236449d507f0fc1496b1a641c3ea6a6efe2167943ff6ec53d1",
+        "first_values": [
+          0.36672511098697463,
+          0.502460136943576,
+          0.782972850382319,
+          -0.6662988026901979,
+          0.6602210166272025,
+          -0.34663250741021595,
+          -0.4491708676745036,
+          -0.6695128504435178
+        ],
+        "nonfinite_count": 0
+      },
+      "base_sample4": {
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "6f96412f2f6b7a658ed88897ef4516aacb80166b7d0e3f7a5cdc99ff49a9026e",
+        "first_values": [
+          -0.035560037512018895,
+          0.9598558794523928,
+          0.27823040916238356,
+          0.5298508985587461,
+          0.8370648078281964,
+          -0.13631039732529124,
+          0.3233375090133398,
+          -0.9410943789658126
+        ],
+        "nonfinite_count": 0
+      },
+      "target_sample4": {
+        "shape": [
+          4,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "a9c0fde7c98619818666ae596b13e7c656ab701d9ed48597793eec3a6f79864b",
+        "first_values": [
+          -0.6741418986589006,
+          -0.730819784999893,
+          0.10693518240474897,
+          -0.9372864074699251,
+          0.33007612233031886,
+          0.11199967084498826,
+          -0.8480388949537259,
+          0.289324943290288
+        ],
+        "nonfinite_count": 0
+      }
+    }
+  },
+  "seconds": 5.645996316336095,
+  "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "probe_sha256": "0e642d53a99e056d7fd2ea988ecb81bc43e58ea63ecad1decf1d2c9de5a1db5d",
+  "full_arrays": {
+    "path": "cpu_initialization_jax0438.npz",
+    "sha256": "d41c25700684406dc282826ce047fe7a33f788e42f976707801ffedf98b45da4"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "all_recorded_arrays_bitwise_equal": true,
+  "arrays": {
+    "base_sample4": {
+      "bitwise_equal": true,
+      "candidate_sha256": "6f96412f2f6b7a658ed88897ef4516aacb80166b7d0e3f7a5cdc99ff49a9026e",
+      "different_element_count": 0,
+      "dtype_descr": "<f8",
+      "element_count": 12,
+      "jax0438_sha256": "6f96412f2f6b7a658ed88897ef4516aacb80166b7d0e3f7a5cdc99ff49a9026e",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        4,
+        3
+      ]
+    },
+    "landmarks": {
+      "bitwise_equal": true,
+      "candidate_sha256": "4d2b8d88711584236449d507f0fc1496b1a641c3ea6a6efe2167943ff6ec53d1",
+      "different_element_count": 0,
+      "dtype_descr": "<f8",
+      "element_count": 384,
+      "jax0438_sha256": "4d2b8d88711584236449d507f0fc1496b1a641c3ea6a6efe2167943ff6ec53d1",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128,
+        3
+      ]
+    },
+    "parameter_0": {
+      "bitwise_equal": true,
+      "candidate_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 128,
+      "jax0438_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128
+      ]
+    },
+    "parameter_1": {
+      "bitwise_equal": true,
+      "candidate_sha256": "3cd5bf7827be7da2d1844acd98f2cfb3409e0c58d86bd18d6fe623201e93986d",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 16384,
+      "jax0438_sha256": "3cd5bf7827be7da2d1844acd98f2cfb3409e0c58d86bd18d6fe623201e93986d",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128,
+        128
+      ]
+    },
+    "parameter_2": {
+      "bitwise_equal": true,
+      "candidate_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 128,
+      "jax0438_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128
+      ]
+    },
+    "parameter_3": {
+      "bitwise_equal": true,
+      "candidate_sha256": "979372a7350a119d40857a9925ae5e7c34c79494826e63b3233018b60939a3c4",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 16384,
+      "jax0438_sha256": "979372a7350a119d40857a9925ae5e7c34c79494826e63b3233018b60939a3c4",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128,
+        128
+      ]
+    },
+    "parameter_4": {
+      "bitwise_equal": true,
+      "candidate_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 1,
+      "jax0438_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        1
+      ]
+    },
+    "parameter_5": {
+      "bitwise_equal": true,
+      "candidate_sha256": "dd295f5d1831a2868f4266a453c5aa37ed61dd2741bd2b55218e4b53cbdac2c8",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 128,
+      "jax0438_sha256": "dd295f5d1831a2868f4266a453c5aa37ed61dd2741bd2b55218e4b53cbdac2c8",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128,
+        1
+      ]
+    },
+    "parameter_6": {
+      "bitwise_equal": true,
+      "candidate_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 128,
+      "jax0438_sha256": "076a27c79e5ace2a3d47f9dd2e83e4ff6ea8872b3c2218f66c92b89b55f36560",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128
+      ]
+    },
+    "parameter_7": {
+      "bitwise_equal": true,
+      "candidate_sha256": "02722f124d0f1736a9dd7c4ddcd05630dcf16ee1ce3454e9a876005ce005d4ac",
+      "different_element_count": 0,
+      "dtype_descr": "<f4",
+      "element_count": 128,
+      "jax0438_sha256": "02722f124d0f1736a9dd7c4ddcd05630dcf16ee1ce3454e9a876005ce005d4ac",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        128
+      ]
+    },
+    "remaining_key": {
+      "bitwise_equal": true,
+      "candidate_sha256": "a2f25c7871158e11ea895b5ead35d38c30e9a8052f93cfc31c32f1fa49e5795c",
+      "different_element_count": 0,
+      "dtype_descr": "<u4",
+      "element_count": 2,
+      "jax0438_sha256": "a2f25c7871158e11ea895b5ead35d38c30e9a8052f93cfc31c32f1fa49e5795c",
+      "max_absolute_difference": 0,
+      "same_dtype_shape": true,
+      "shape": [
+        2
+      ]
+    },
+    "target_sample4": {
+      "bitwise_equal": true,
+      "candidate_sha256": "a9c0fde7c98619818666ae596b13e7c656ab701d9ed48597793eec3a6f79864b",
+      "different_element_count": 0,
+      "dtype_descr": "<f8",
+      "element_count": 12,
+      "jax0438_sha256": "a9c0fde7c98619818666ae596b13e7c656ab701d9ed48597793eec3a6f79864b",
+      "max_absolute_difference": 0.0,
+      "same_dtype_shape": true,
+      "shape": [
+        4,
+        3
+      ]
+    }
+  },
+  "controls_verified": {
+    "both_cpu_backend": true,
+    "both_two_cpu_cores": true,
+    "candidate_reproduces_existing_cpu_build_fingerprints": true,
+    "same_effective_jax_config": true,
+    "same_native_configuration": true,
+    "same_parameter_tree": true,
+    "same_probe_sha256": true,
+    "same_runner_sha256": true,
+    "same_source_manifest": true
+  },
+  "existing_candidate_reference": "jax0435_candidate/cpu_native_builds.json",
+  "generated_at": "2026-09-08T11:01:15.664094+00:00",
+  "jax_config": {
+    "jax_default_matmul_precision": null,
+    "jax_default_prng_impl": "threefry2x32",
+    "jax_enable_x64": true,
+    "jax_threefry_partitionable": false
+  },
+  "packages": {
+    "0435": {
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jaxlib": "0.4.34",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "scipy": "1.17.1"
+    },
+    "0438": {
+      "flax": "0.10.0",
+      "jax": "0.4.38",
+      "jaxlib": "0.4.38",
+      "numpy": "1.24.4",
+      "optax": "0.2.3",
+      "scipy": "1.14.1"
+    }
+  },
+  "parameter_count": 33409,
+  "parameter_fingerprint_sha256": "b06172f374738fff845a611800caff8caf1946dd8c4d0f6fc6c1c42738190f8c",
+  "preparation_note": "First candidate probe import omitted its documented CUDA_ROOT and failed before building; retry used the same documented CUDA_ROOT as the original candidate CPU probe. No package or source changes.",
+  "probe_sha256": "0e642d53a99e056d7fd2ea988ecb81bc43e58ea63ecad1decf1d2c9de5a1db5d",
+  "raw_evidence": {
+    "0435": {
+      "arrays": "cpu_initialization_jax0435.npz",
+      "arrays_sha256": "d41c25700684406dc282826ce047fe7a33f788e42f976707801ffedf98b45da4",
+      "json": "cpu_initialization_jax0435.json",
+      "json_sha256": "f3197b03378f36e0f996cfcdf3bc71ddea95a3a7a4ef1d2a4aab84399289ebf0"
+    },
+    "0438": {
+      "arrays": "cpu_initialization_jax0438.npz",
+      "arrays_sha256": "d41c25700684406dc282826ce047fe7a33f788e42f976707801ffedf98b45da4",
+      "json": "cpu_initialization_jax0438.json",
+      "json_sha256": "7f908a01bee4e8c6e942ac3f1f4c3da559c37cd2fab9c9ddfcc2084f8c560252"
+    }
+  },
+  "recorded_array_count": 12,
+  "recorded_value_count": 33819,
+  "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "schema_version": 1,
+  "scope": "Native historical dbf533d S2 random builder, seed 12345, two CPU environments; no training or GPU computation.",
+  "scope_limits": [
+    "Identical CPU initial parameters, landmarks, remaining key and sampled inputs do not prove GPU initialization is bitwise equal.",
+    "The four base and target points use the reference fingerprint recipe, not an actual training minibatch.",
+    "No training loss, gradient, optimizer update or final metric was computed; subsequent execution differences are not localized by this probe.",
+    "Original paper runtime flags and package provenance remain separate from this controlled candidate comparison."
+  ],
+  "source_hash_scope": "Verifier source_manifest covers Python source and rcpm auxiliary license/requirements; manifest retained in each raw record.",
+  "source_revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+  "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b"
+}

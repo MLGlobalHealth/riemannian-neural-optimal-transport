@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "observed_at": "2026-09-08T12:21:32.356644+00:00",
+  "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f",
+  "worker_pid": 60585,
+  "result_path": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/results/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f/result.json",
+  "result_sha256": "141df9fa4021b1ef51d52436a8fc3ad7ff45c6a572ba57523ac8863caf9ef671",
+  "checkpoint_sha256": "ed5dc1ac5b69c6419284898d4b948647af0d09843bc5cd57d6ed49d8fca543a1",
+  "worker_received_no_signal": true,
+  "interpretation": "Original queue supervisor was retired for capacity handoff; its already-running training worker completed normally."
+}

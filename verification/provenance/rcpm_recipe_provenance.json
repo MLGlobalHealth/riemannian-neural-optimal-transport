@@ -1,0 +1,729 @@
+{
+  "actual_rng_evidence": {
+    "different_recorded_evaluation_subkeys": 25,
+    "interpretation": "The prescribed seed schedule is equal, but all recorded evaluation subkeys differ between the restored JAX 0.4.35 cohort and historical-source JAX 0.6.2 cohort; changing JAX defaults changes the actual random streams.",
+    "reference": "rng_environment_comparison.json",
+    "total_recorded_evaluation_subkeys": 25
+  },
+  "conclusion": "The applicable native RCPM table construction, data distributions, training recipe and evaluation/aggregation recipe are unchanged between these source snapshots, and all five paired T2 effective configurations agree. Actual executions differ in software/PRNG behavior and XLA graph flags. Coarse precision settings agree: both x64=True with mixed float32/float64 parameters. This does not establish the exact source/environment used in the original paper logs.",
+  "environments": {
+    "historical_source_jax062": {
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "2",
+        "JAX_ENABLE_X64": null,
+        "JAX_PLATFORMS": "cuda",
+        "MPLBACKEND": "Agg",
+        "OMP_NUM_THREADS": "2",
+        "XLA_FLAGS": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+      "hostname": "nvidia7",
+      "jax_default_backend": "gpu",
+      "jax_devices": [
+        "cuda:0"
+      ],
+      "jax_enable_x64": true,
+      "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+      "packages": {
+        "cartopy": "0.25.0",
+        "flax": "0.10.6",
+        "jax": "0.6.2",
+        "jax-cuda12-pjrt": "0.6.2",
+        "jax-cuda12-plugin": "0.6.2",
+        "jax-cuda13-plugin": null,
+        "jaxlib": "0.6.2",
+        "matplotlib": "3.11.1",
+        "numpy": "2.4.6",
+        "optax": "0.2.4",
+        "pandas": "3.0.5",
+        "scipy": "1.17.1",
+        "spherical-kde": "0.1.2"
+      },
+      "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+    },
+    "zip": {
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "2",
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cuda",
+        "MPLBACKEND": "Agg",
+        "OMP_NUM_THREADS": "2",
+        "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+      "hostname": "nvidia7",
+      "jax_default_backend": "gpu",
+      "jax_devices": [
+        "cuda:0"
+      ],
+      "jax_enable_x64": true,
+      "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+      "packages": {
+        "cartopy": "0.25.0",
+        "flax": "0.8.4",
+        "jax": "0.4.35",
+        "jax-cuda12-pjrt": "0.4.35",
+        "jax-cuda12-plugin": "0.4.35",
+        "jax-cuda13-plugin": null,
+        "jaxlib": "0.4.34",
+        "matplotlib": "3.11.1",
+        "numpy": "2.4.6",
+        "optax": "0.2.3",
+        "pandas": null,
+        "scipy": "1.17.1",
+        "spherical-kde": "0.1.2"
+      },
+      "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+    }
+  },
+  "evidence_path_base": "report_directory",
+  "generated_at": "2026-09-08T11:42:45.069100+00:00",
+  "identical_function_and_class_asts": [
+    {
+      "ast_identical": true,
+      "ast_sha256": "5719c2031e89574c909b1e0ebed29d34e326a234f1d8439f7d94a05508a25517",
+      "file": "experiments/run_table.py",
+      "historical_line": 278,
+      "symbol": "build_rcpm_experiment",
+      "zip_line": 284
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "17b537cf5eb5e1325bef15ba0bf1938211a10ade49f95c13625cf2190ee26be8",
+      "file": "experiments/run_table.py",
+      "historical_line": 326,
+      "symbol": "train_rcpm",
+      "zip_line": 332
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "fef312c7f87a61eedb6e4bb4a34be88f8f8d56650fed3846d272d1356fcf6f1f",
+      "file": "experiments/run_table.py",
+      "historical_line": 361,
+      "symbol": "compute_kl_rcpm",
+      "zip_line": 367
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "990667c49661447489cf85a5c9690dcaf497f2ee58feb47cfbc661882202f416",
+      "file": "experiments/run_table.py",
+      "historical_line": 380,
+      "symbol": "main",
+      "zip_line": 386
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "652559b07c503ca69550fa8f147389e53cbd5f21b396700059ba2a027d03d606",
+      "file": "src/densities.py",
+      "historical_line": 87,
+      "symbol": "Density",
+      "zip_line": 134
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "87bc0b158a2e3c2c71e24e0f2844363b40aaed919f95c2b087e03ba536ffb223",
+      "file": "src/densities.py",
+      "historical_line": 102,
+      "symbol": "SphereUniform",
+      "zip_line": 149
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "231e7c887f70549e49994baeb2931e2d9af91956dd0dcc26098d511559f2fb0f",
+      "file": "src/densities.py",
+      "historical_line": 121,
+      "symbol": "WrappedNormal",
+      "zip_line": 238
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "37dd12165b338f7d7335a91796e16ad0fe0fff35e7f203d1a9241447abc4b77b",
+      "file": "src/densities.py",
+      "historical_line": 192,
+      "symbol": "ProductUniformComponents",
+      "zip_line": 309
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "652559b07c503ca69550fa8f147389e53cbd5f21b396700059ba2a027d03d606",
+      "file": "rcpm/densities.py",
+      "historical_line": 66,
+      "symbol": "Density",
+      "zip_line": 71
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "88b74909d7536c714ce5e72a1ef17a7bbbc2c5ba71ca36969caf8b24c21b129c",
+      "file": "rcpm/densities.py",
+      "historical_line": 115,
+      "symbol": "SphereUniform",
+      "zip_line": 120
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "a1809e1297d503e802db9985055f41c4bdb32b749a0667cf1c7276799c19fa6c",
+      "file": "rcpm/densities.py",
+      "historical_line": 137,
+      "symbol": "WrappedNormal",
+      "zip_line": 160
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "37dd12165b338f7d7335a91796e16ad0fe0fff35e7f203d1a9241447abc4b77b",
+      "file": "rcpm/densities.py",
+      "historical_line": 322,
+      "symbol": "ProductUniformComponents",
+      "zip_line": 345
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "f9c7835fe8148fb6c8e3d4e198bc714edbae03cae43cb191a14d005777f832a8",
+      "file": "rcpm/manifolds.py",
+      "historical_line": 23,
+      "symbol": "Manifold",
+      "zip_line": 23
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "f0ea2520ab88d5f37cdbbe25cb973832c6ed3cbdae2dc262a5a9c144c2ca1a89",
+      "file": "rcpm/manifolds.py",
+      "historical_line": 66,
+      "symbol": "Sphere",
+      "zip_line": 66
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "e19050cf9519112bf2e50276a127a38edd6e273b7ebe5b3c8709f46a36e0a28a",
+      "file": "rcpm/manifolds.py",
+      "historical_line": 251,
+      "symbol": "Product",
+      "zip_line": 468
+    },
+    {
+      "ast_identical": true,
+      "ast_sha256": "76dac9e42a90accf4ec6cdc7e4fed39e81320a70c8c74492fb85438582e25214",
+      "file": "src/metrics.py",
+      "historical_line": 20,
+      "symbol": "compute_ess",
+      "zip_line": 22
+    }
+  ],
+  "identical_table_constants": {
+    "historical": {
+      "BATCH_SIZE": {
+        "line": 59,
+        "value_ast": "Constant(value=256)"
+      },
+      "EVAL_SIZE": {
+        "line": 60,
+        "value_ast": "Constant(value=1024)"
+      },
+      "MANIFOLDS": {
+        "line": 71,
+        "value_ast": "Dict(keys=[Constant(value='S2'), Constant(value='T2')], values=[Dict(keys=[Constant(value='ours_manifold_name'), Constant(value='rcpm_manifold'), Constant(value='is_torus'), Constant(value='base_density'), Constant(value='target_density')], values=[Constant(value='S2'), Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Call(func=Attribute(value=Name(id='rcpm_manifolds', ctx=Load()), attr='Sphere', ctx=Load()), args=[], keywords=[keyword(arg='D', value=Constant(value=3)), keyword(arg='jitter', value=Constant(value=0.01))])), Constant(value=False), Constant(value='SphereUniform'), Constant(value='SphereWrappedNormal')]), Dict(keys=[Constant(value='ours_manifold_name'), Constant(value='rcpm_manifold'), Constant(value='is_torus'), Constant(value='base_density'), Constant(value='target_density')], values=[Constant(value='T2'), Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Call(func=Attribute(value=Name(id='rcpm_manifolds', ctx=Load()), attr='Product', ctx=Load()), args=[], keywords=[keyword(arg='D', value=Constant(value=4)), keyword(arg='manifolds_str', value=Constant(value='S1,S1'))])), Constant(value=True), Constant(value='TorusUniform'), Constant(value='TorusWrappedNormal')])])"
+      },
+      "N_EVAL_BATCHES": {
+        "line": 61,
+        "value_ast": "Constant(value=5)"
+      },
+      "N_ITERS": {
+        "line": 58,
+        "value_ast": "Constant(value=5000)"
+      },
+      "N_RUNS": {
+        "line": 55,
+        "value_ast": "Constant(value=5)"
+      },
+      "RCPM_GAMMA": {
+        "line": 56,
+        "value_ast": "Constant(value=1.0)"
+      },
+      "RUN_SEEDS": {
+        "line": 68,
+        "value_ast": "List(elts=[Constant(value=12345), Constant(value=23456), Constant(value=34567), Constant(value=45678), Constant(value=56789)], ctx=Load())"
+      }
+    },
+    "zip": {
+      "BATCH_SIZE": {
+        "line": 63,
+        "value_ast": "Constant(value=256)"
+      },
+      "EVAL_SIZE": {
+        "line": 64,
+        "value_ast": "Constant(value=1024)"
+      },
+      "MANIFOLDS": {
+        "line": 75,
+        "value_ast": "Dict(keys=[Constant(value='S2'), Constant(value='T2')], values=[Dict(keys=[Constant(value='ours_manifold_name'), Constant(value='rcpm_manifold'), Constant(value='is_torus'), Constant(value='base_density'), Constant(value='target_density')], values=[Constant(value='S2'), Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Call(func=Attribute(value=Name(id='rcpm_manifolds', ctx=Load()), attr='Sphere', ctx=Load()), args=[], keywords=[keyword(arg='D', value=Constant(value=3)), keyword(arg='jitter', value=Constant(value=0.01))])), Constant(value=False), Constant(value='SphereUniform'), Constant(value='SphereWrappedNormal')]), Dict(keys=[Constant(value='ours_manifold_name'), Constant(value='rcpm_manifold'), Constant(value='is_torus'), Constant(value='base_density'), Constant(value='target_density')], values=[Constant(value='T2'), Lambda(args=arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]), body=Call(func=Attribute(value=Name(id='rcpm_manifolds', ctx=Load()), attr='Product', ctx=Load()), args=[], keywords=[keyword(arg='D', value=Constant(value=4)), keyword(arg='manifolds_str', value=Constant(value='S1,S1'))])), Constant(value=True), Constant(value='TorusUniform'), Constant(value='TorusWrappedNormal')])])"
+      },
+      "N_EVAL_BATCHES": {
+        "line": 65,
+        "value_ast": "Constant(value=5)"
+      },
+      "N_ITERS": {
+        "line": 62,
+        "value_ast": "Constant(value=5000)"
+      },
+      "N_RUNS": {
+        "line": 59,
+        "value_ast": "Constant(value=5)"
+      },
+      "RCPM_GAMMA": {
+        "line": 60,
+        "value_ast": "Constant(value=1.0)"
+      },
+      "RUN_SEEDS": {
+        "line": 72,
+        "value_ast": "List(elts=[Constant(value=12345), Constant(value=23456), Constant(value=34567), Constant(value=45678), Constant(value=56789)], ctx=Load())"
+      }
+    }
+  },
+  "identical_whole_files": [
+    {
+      "bytes_identical": true,
+      "file": "rcpm/flows.py",
+      "sha256": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256"
+    },
+    {
+      "bytes_identical": true,
+      "file": "rcpm/utils.py",
+      "sha256": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491"
+    },
+    {
+      "bytes_identical": true,
+      "file": "src/utils.py",
+      "sha256": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    }
+  ],
+  "other_source_difference_scope": [
+    "src.densities adds SO/SE and other density dispatches and removes FlatTorus classes. Existing SphereUniform/WrappedNormal/ProductUniformComponents classes are AST-identical; table RCPM constructs these classes directly.",
+    "rcpm.densities adds SO3/SE3 dispatches and SO3Uniform. Existing Product/Sphere paths and classes used by flow initialization are unchanged.",
+    "rcpm.manifolds adds SOn and alters get() fallback/R handling. Its S1/S2 dispatch returns and Sphere/Product classes used by table RCPM are unchanged.",
+    "src.metrics adds entropic helpers and an import. Native RCPM calls the unchanged compute_ess function, not those new helpers."
+  ],
+  "representative_seed12345": {
+    "configuration": {
+      "base_density": "TorusUniform",
+      "cost_gamma": 1.0,
+      "init_alpha_linear_scale": 1.0,
+      "init_alpha_minval": 0.4,
+      "init_alpha_mode": "uniform",
+      "init_alpha_range": 0.01,
+      "manifold_name": "T2",
+      "min_zero_gamma": null,
+      "n_components": 68,
+      "n_transforms": 5,
+      "seed": 12345,
+      "target_density": "TorusWrappedNormal",
+      "target_scale": 0.3,
+      "training": {
+        "batch_size": 256,
+        "log_every": 5000,
+        "lr": 0.001,
+        "n_iters": 5000
+      }
+    },
+    "density_configuration": {
+      "base_class": "ProductUniformComponents",
+      "target_class": "WrappedNormal",
+      "target_loc": [
+        -1.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "target_scale": [
+        0.3,
+        0.3
+      ]
+    },
+    "evaluation_config": {
+      "batch_size": 1024,
+      "n_batches": 5,
+      "seed": 13345
+    },
+    "geometry_configuration": {
+      "ambient_dimension": 4,
+      "class": "Product",
+      "components": [
+        {
+          "ambient_dimension": 2,
+          "class": "Sphere",
+          "jitter": 0.01
+        },
+        {
+          "ambient_dimension": 2,
+          "class": "Sphere",
+          "jitter": 0.01
+        }
+      ],
+      "jitter": null
+    },
+    "parameter_count": 1700,
+    "parameter_dtypes": [
+      "float32",
+      "float64"
+    ]
+  },
+  "schema_version": 1,
+  "scope": "Read-only source/configuration provenance comparison for native RCPM table recipe; no execution or numerical correctness checks.",
+  "source_launch_differences": [
+    {
+      "difference": "Historical --gpu sets HIP_VISIBLE_DEVICES and CUDA_VISIBLE_DEVICES; ZIP sets CUDA_VISIBLE_DEVICES only.",
+      "file": "experiments/run_table.py",
+      "historical_line": 15,
+      "zip_line": 15
+    },
+    {
+      "difference": "Historical module enables jax_enable_x64=True in code; ZIP removes that update. Restored ZIP cohort supplies JAX_ENABLE_X64=True, and all paired records have effective x64=True.",
+      "file": "experiments/run_table.py",
+      "historical_line": 32,
+      "zip_line": 35
+    },
+    {
+      "difference": "ZIP appends --xla_gpu_enable_command_buffer= and --xla_gpu_graph_level=0, and disables preallocation. Modern historical-source records have XLA_FLAGS unset; both record preallocation false.",
+      "file": "experiments/run_table.py",
+      "zip_line": 20
+    },
+    {
+      "difference": "ZIP adds line-search arguments in the separate RNOT builder; native RCPM paths do not invoke that builder.",
+      "file": "experiments/run_table.py",
+      "zip_line": 214
+    }
+  ],
+  "sources": {
+    "historical_dbf533d": "../snapshots/dbf533d",
+    "zip": "../.."
+  },
+  "t2_five_seed_record_pairs": [
+    {
+      "both_x64_enabled": true,
+      "historical_evaluation_keys": [
+        [
+          4200704387,
+          68263054
+        ],
+        [
+          3719768423,
+          1495420425
+        ],
+        [
+          190553091,
+          3410819960
+        ],
+        [
+          2298436848,
+          1000359477
+        ],
+        [
+          647808571,
+          4066360559
+        ]
+      ],
+      "historical_result": "../artifacts/historical_source_jax062/results/historical_rcpm/table_rcpm_T2_seed12345_historical_source_dbf533d_04e2fac62813/result.json",
+      "historical_sha256": "0540bcacbe2a1490314d6d42bae1bec355610ebb545ea22f464b9de3ca9e43ef",
+      "identical_fields": {
+        "builder": true,
+        "configuration": true,
+        "density_configuration": true,
+        "evaluation_config": true,
+        "explicit_overrides": true,
+        "geometry_configuration": true,
+        "parameter_count": true,
+        "parameter_dtypes": true,
+        "runner_sha256": true,
+        "selection": true
+      },
+      "same_evaluation_key_count": 0,
+      "seed": 12345,
+      "zip_evaluation_keys": [
+        [
+          1955940769,
+          1593755662
+        ],
+        [
+          3178552735,
+          2499225520
+        ],
+        [
+          2961573914,
+          2208487432
+        ],
+        [
+          2120938243,
+          1378437637
+        ],
+        [
+          3806918248,
+          4233482412
+        ]
+      ],
+      "zip_result": "../artifacts/restored_zip_jax435/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+      "zip_sha256": "9bec0c8db2b3d526a1baaf00ba99ac1ba5e86ed2f50e109158a791a641ea687b"
+    },
+    {
+      "both_x64_enabled": true,
+      "historical_evaluation_keys": [
+        [
+          1981522356,
+          2283451842
+        ],
+        [
+          3254313085,
+          3085515470
+        ],
+        [
+          1992920496,
+          3509144998
+        ],
+        [
+          150323376,
+          1221321251
+        ],
+        [
+          1626742969,
+          4108548548
+        ]
+      ],
+      "historical_result": "../artifacts/historical_source_jax062/results/historical_rcpm/table_rcpm_T2_seed23456_historical_source_dbf533d_4511c83e15e2/result.json",
+      "historical_sha256": "bc102d2df6d8057bb2fc9624865fa7412fd674338a8580401597454c1ff471c4",
+      "identical_fields": {
+        "builder": true,
+        "configuration": true,
+        "density_configuration": true,
+        "evaluation_config": true,
+        "explicit_overrides": true,
+        "geometry_configuration": true,
+        "parameter_count": true,
+        "parameter_dtypes": true,
+        "runner_sha256": true,
+        "selection": true
+      },
+      "same_evaluation_key_count": 0,
+      "seed": 23456,
+      "zip_evaluation_keys": [
+        [
+          1174836703,
+          2194839716
+        ],
+        [
+          113300593,
+          309688178
+        ],
+        [
+          2655362039,
+          2275878118
+        ],
+        [
+          3388368820,
+          3662901077
+        ],
+        [
+          3468917522,
+          4244436253
+        ]
+      ],
+      "zip_result": "../artifacts/restored_zip_jax435/table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856/result.json",
+      "zip_sha256": "fc37aacec4156c42f14ab722e6750183ac6f4b3951fbc1c123d69a7a0c726941"
+    },
+    {
+      "both_x64_enabled": true,
+      "historical_evaluation_keys": [
+        [
+          1679836181,
+          340518296
+        ],
+        [
+          1476021123,
+          1825024440
+        ],
+        [
+          207898521,
+          860843016
+        ],
+        [
+          3216492890,
+          2207538639
+        ],
+        [
+          1230274826,
+          698696087
+        ]
+      ],
+      "historical_result": "../artifacts/historical_source_jax062/results/historical_rcpm/table_rcpm_T2_seed34567_historical_source_dbf533d_e379803e1ea3/result.json",
+      "historical_sha256": "07039e7240f468490a3841153f1891a26d380e30d7c117f2c6f93c6a936e8b8b",
+      "identical_fields": {
+        "builder": true,
+        "configuration": true,
+        "density_configuration": true,
+        "evaluation_config": true,
+        "explicit_overrides": true,
+        "geometry_configuration": true,
+        "parameter_count": true,
+        "parameter_dtypes": true,
+        "runner_sha256": true,
+        "selection": true
+      },
+      "same_evaluation_key_count": 0,
+      "seed": 34567,
+      "zip_evaluation_keys": [
+        [
+          367103561,
+          3380539795
+        ],
+        [
+          3672619931,
+          3242602984
+        ],
+        [
+          1407861853,
+          3520835356
+        ],
+        [
+          1061612570,
+          4272863561
+        ],
+        [
+          3835220564,
+          1742781552
+        ]
+      ],
+      "zip_result": "../artifacts/restored_zip_jax435/table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7/result.json",
+      "zip_sha256": "a444c72694a6b2b3e0304a36a169dfe16fe55f0aadbd8fe40157a14fa4d7c1f8"
+    },
+    {
+      "both_x64_enabled": true,
+      "historical_evaluation_keys": [
+        [
+          2727903614,
+          259698529
+        ],
+        [
+          258041893,
+          541312903
+        ],
+        [
+          362530004,
+          595842488
+        ],
+        [
+          101609908,
+          2962648764
+        ],
+        [
+          1784149153,
+          2007734105
+        ]
+      ],
+      "historical_result": "../artifacts/historical_source_jax062/results/historical_rcpm/table_rcpm_T2_seed45678_historical_source_dbf533d_83e5789c9d5c/result.json",
+      "historical_sha256": "764deef1039c8dc34c395de689cca2da0370c1d26b13c64c238f6f24933e7535",
+      "identical_fields": {
+        "builder": true,
+        "configuration": true,
+        "density_configuration": true,
+        "evaluation_config": true,
+        "explicit_overrides": true,
+        "geometry_configuration": true,
+        "parameter_count": true,
+        "parameter_dtypes": true,
+        "runner_sha256": true,
+        "selection": true
+      },
+      "same_evaluation_key_count": 0,
+      "seed": 45678,
+      "zip_evaluation_keys": [
+        [
+          2411784446,
+          916621192
+        ],
+        [
+          619226218,
+          4168617283
+        ],
+        [
+          1824278203,
+          4171258666
+        ],
+        [
+          2346383857,
+          2750473686
+        ],
+        [
+          3289742548,
+          1106098403
+        ]
+      ],
+      "zip_result": "../artifacts/restored_zip_jax435/table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f/result.json",
+      "zip_sha256": "23853a42128eade0957dc2856c9d17aa3fe16fe69a041fb8079cfc824bf1b1c1"
+    },
+    {
+      "both_x64_enabled": true,
+      "historical_evaluation_keys": [
+        [
+          1451222046,
+          4232529784
+        ],
+        [
+          2891589310,
+          2253831676
+        ],
+        [
+          1256048424,
+          1263777943
+        ],
+        [
+          697511894,
+          1754666383
+        ],
+        [
+          1854868954,
+          1858585218
+        ]
+      ],
+      "historical_result": "../artifacts/historical_source_jax062/results/historical_rcpm/table_rcpm_T2_seed56789_historical_source_dbf533d_fcef7c77e885/result.json",
+      "historical_sha256": "6658ed7de1aed2e2ba01adf42e558f6a7128c5792938534c55e1c593d306d931",
+      "identical_fields": {
+        "builder": true,
+        "configuration": true,
+        "density_configuration": true,
+        "evaluation_config": true,
+        "explicit_overrides": true,
+        "geometry_configuration": true,
+        "parameter_count": true,
+        "parameter_dtypes": true,
+        "runner_sha256": true,
+        "selection": true
+      },
+      "same_evaluation_key_count": 0,
+      "seed": 56789,
+      "zip_evaluation_keys": [
+        [
+          956059740,
+          2593707720
+        ],
+        [
+          2021094012,
+          110139880
+        ],
+        [
+          1775426537,
+          430539250
+        ],
+        [
+          2967507413,
+          3675674745
+        ],
+        [
+          2013281004,
+          4108389341
+        ]
+      ],
+      "zip_result": "../artifacts/restored_zip_jax435/table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97/result.json",
+      "zip_sha256": "d12e33e25fc34b1ec3a56d4435397b628e55119fce07f08711a96d8b87d31f8d"
+    }
+  ]
+}

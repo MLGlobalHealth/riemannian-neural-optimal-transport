@@ -1,0 +1,99 @@
+{
+  "updated_at": "2026-09-08T12:51:25.720940+00:00",
+  "status": "all_twelve_native_records_complete",
+  "completed_records": 12,
+  "expected_records": 12,
+  "all_native_json_checkpoint_log_hashes_verified_against_remote": true,
+  "twelve_check_archive_sha256": "041ec7aeff8c50c2d88b2c49caed3214edac643b68611b4934c9e8a9cff1df84",
+  "source22_unchanged": true,
+  "verified_inputs_unchanged": true,
+  "checks": [
+    {
+      "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+      "result_sha256": "de7f47267b8f4ecb988ee4edad06d506d0d52f6d8f85c6096c3da5b1312bf334",
+      "checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+      "training_log_sha256": "c93a0b7561854e402f34d21d4bafd36c517836bd683ab90a0a03dc61a17a8594"
+    },
+    {
+      "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b/result.json",
+      "result_sha256": "e1e21ddaa5173a337fe75dbfe494ec081028c94f1c89504e76095bde5740c179",
+      "checkpoint_sha256": "e403a40a58d4eaf0c67ce891e9baa9e10cbe67cd7af782cae19b1921d285d6dd",
+      "training_log_sha256": "cdb7c842fea6b5ddc63ecb501dafc3ee76ce3e3c740d17efb9499308d3b5c185"
+    },
+    {
+      "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d/result.json",
+      "result_sha256": "4812b91a6e0fa2efdba630fce652ee7137c21c95f1d4baa56c73e816147df30e",
+      "checkpoint_sha256": "b597e3aae0c8e057716860362b58f44f55d33b711d1eb972a3add7b1eb1ad807",
+      "training_log_sha256": "e379bbe30fb952907c963c30a43b6f141a3a928238b68a1cbc41b90f6349c266"
+    },
+    {
+      "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f/result.json",
+      "result_sha256": "595f82d6df1b4ca3d1ff9ed35a506f05b70bbd12c27d7c73a6ff91196809ee95",
+      "checkpoint_sha256": "ed5dc1ac5b69c6419284898d4b948647af0d09843bc5cd57d6ed49d8fca543a1",
+      "training_log_sha256": "fb44d8ba104e082f2aa51d6f0ad00bf73fe075fb90edf6cdef4625dba25169c3"
+    },
+    {
+      "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443/result.json",
+      "result_sha256": "8ccabdcbfae2ea9d8e2d320dcc1897db3072f95a13957618d970e8323239bad2",
+      "checkpoint_sha256": "5c435e0e6ce3fb1dfe8920b83934b282e099c41d40b2105a81e4227236168180",
+      "training_log_sha256": "a3b98ccd94b250ad73ae7f6e52633377148398533de11a44b14e56568d140225"
+    },
+    {
+      "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+      "result_sha256": "2333d117faa1161d5a50c416a01d47ad1961a2e5f9eb2fa431c7a6d06380b163",
+      "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+      "training_log_sha256": "578857f27f4ff646321c1f9d4bb488cd972838b632081e6b22b9f5c1309fb95d"
+    },
+    {
+      "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+      "result_sha256": "fbe0ffb7aa0370ac1af5c848856c533b642748600360204c8565ee09be8842df",
+      "checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709",
+      "training_log_sha256": "fa36dc092988d6af2aa385283dbda7694dd637adf610b5469716a1b945373ac1"
+    },
+    {
+      "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+      "result_sha256": "310c723d7036b67b34b54331b64d2bcb0e5a6529466a0497d483d40cf71b1e88",
+      "checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5",
+      "training_log_sha256": "3ce376b0142a1a7be282074f4204434f0954f907890d898ce956b3cf5cc3dc04"
+    },
+    {
+      "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+      "result_sha256": "7748e706538020291c38b852530391f221dabb2b7c612b0e8d4198e2b22d5530",
+      "checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5",
+      "training_log_sha256": "6ed45cd7a2d5b64549b270b41541dbfa6ff8ae6d808eac34e76acce387acc4f4"
+    },
+    {
+      "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+      "result_sha256": "1bab78ea70840c30212b742c50f2c881ab6f36b239f81c40a4af27074d84c339",
+      "checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e",
+      "training_log_sha256": "e08a12a67ba032e74728afa7c8bf61a45179e63b3105ece79d89af23b3d5f9d7"
+    },
+    {
+      "task_id": "table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+      "result_sha256": "15b490f3e27082191a3123cfd220bee632d9c511eba040d3c829a907542a405a",
+      "checkpoint_sha256": "91f4cfaf352ecf15581b4439c2f50d4a1d81016f77bb1edfa5acc1d4f55a3bad",
+      "training_log_sha256": "5cde95400ed6c5c29047d28f73602b1dc3267079fd48f417f378b91e6b7e77db"
+    },
+    {
+      "task_id": "table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810",
+      "committed_result": "../../results/nvidia6_portability_jax435/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+      "result_sha256": "4887d81529541f1c57862c70511911de02d5736bd7ec433ee7fe726b1a9233aa",
+      "checkpoint_sha256": "5d8488e817b767e4a42c39021afea4eb1a7fb3f816ca892e6ad35aeef6864654",
+      "training_log_sha256": "ef1b42eeb7c81d637c5aca6f7d6e495371d36d51e95a23434c9def52433ff4bb"
+    }
+  ],
+  "final_release_confirmation_sha256": "2d386b79d5a01f9f87fe0dc42bebdd010f561e19af5dcae35759d57573a5a0a7",
+  "all_80_package_pins_unchanged": true,
+  "all_workers_and_supervisors_exited": true
+}

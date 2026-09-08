@@ -1,0 +1,13 @@
+{
+  "all_historical_file_bytes_match_manifest_and_git": true,
+  "all_imported_file_bytes_match_zip_manifest": true,
+  "archive_file_count": 22,
+  "archive_zip_sha256": "8c859b4760e7121b96653110e6a385e4f9c6e706abfa9161f5b256903d680575",
+  "checked_date_utc": "2026-09-08",
+  "historical_file_count": 24,
+  "historical_source_revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+  "note": "Verification additions are separate from the original ZIP files and preserved historical source snapshot.",
+  "orphan_source_commit": "ca8eb58a7f20b7d0c22912892588335d48700ba4",
+  "root_commit_contains_exact_archive_file_set": true,
+  "unchanged_verifier_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+}

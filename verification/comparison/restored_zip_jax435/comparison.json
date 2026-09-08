@@ -1,0 +1,4500 @@
+{
+  "comparison_policy": {
+    "default_vs_override": "Explicit overrides are shown descriptively and cannot satisfy native-default table completeness. Complete configured groups count separately toward overall row coverage.",
+    "grouping": "Same suite, manifold/dimension, method/landmarks/gamma, label, source hash, runner hash, effective config, evaluation recipe, host and software/hardware environment. GPU index/UUID can differ only on the same host with matching model/driver/memory.",
+    "independence": "A seed contributes once; conflicting repeated seeds are excluded, never selected by performance. Identical copied JSON files are deduplicated.",
+    "publication_readiness": "No automatic publication approval; missing experiments, source-version gaps, solver reliability and timing differences remain explicit.",
+    "rounding": "Compare observed means to half-unit intervals at the printed precision. These checks do not establish statistical equivalence.",
+    "row_coverage": "Each covered row requires a complete five-seed group. Rows may use different hosts, labels, sources or environments, which remain explicit. Partial groups are never pooled. Coverage does not establish numerical agreement or full paper reproduction.",
+    "smoke": "All smoke runs excluded, even when the explicit label differs.",
+    "uncertainty": "Each run mean averages its recorded evaluation batches; ddof0 and ddof1 SE are computed over independent training seeds. Paper confidence level is not invented."
+  },
+  "duplicate_file_copies": [],
+  "environment_completeness": {
+    "425ed50554812ec5": {
+      "all_six_archive_table_rows_complete": false,
+      "all_six_table_rows_complete_in_this_environment": false,
+      "complete_configured_table_rows": [
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "complete_native_table_rows": [],
+      "complete_table_rows": [
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "environment": {
+        "environment": {
+          "JAX_ENABLE_X64": "True",
+          "JAX_PLATFORMS": "cuda",
+          "MPLBACKEND": "Agg",
+          "OMP_NUM_THREADS": "2",
+          "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+        "hostname": "nvidia7",
+        "jax_default_backend": "gpu",
+        "jax_enable_x64": true,
+        "packages": {
+          "cartopy": "0.25.0",
+          "flax": "0.8.4",
+          "jax": "0.4.35",
+          "jax-cuda12-pjrt": "0.4.35",
+          "jax-cuda12-plugin": "0.4.35",
+          "jax-cuda13-plugin": null,
+          "jaxlib": "0.4.34",
+          "matplotlib": "3.11.1",
+          "numpy": "2.4.6",
+          "optax": "0.2.3",
+          "pandas": null,
+          "scipy": "1.17.1",
+          "spherical-kde": "0.1.2"
+        },
+        "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+        "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+        "selected_accelerator_types": [
+          [
+            "NVIDIA RTX 6000 Ada Generation",
+            "570.195.03",
+            "49140 MiB"
+          ]
+        ]
+      },
+      "group_ids": [
+        "f93bd4238029889f",
+        "d2b0bd2d89b35fc4",
+        "a42e85edcd0849b4",
+        "9cc4e7180b4edd02"
+      ],
+      "label": "zip_historical_settings_cuda_jax435",
+      "missing_native_table_rows": [
+        "S2:RCPM_gamma1",
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RCPM_gamma1",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "missing_table_rows": [
+        "S2:RCPM_gamma1",
+        "T2:RCPM_gamma1"
+      ],
+      "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+      "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+    },
+    "bb0f06d960e2e744": {
+      "all_six_archive_table_rows_complete": false,
+      "all_six_table_rows_complete_in_this_environment": false,
+      "complete_configured_table_rows": [],
+      "complete_native_table_rows": [
+        "S2:RCPM_gamma1",
+        "T2:RCPM_gamma1"
+      ],
+      "complete_table_rows": [
+        "S2:RCPM_gamma1",
+        "T2:RCPM_gamma1"
+      ],
+      "environment": {
+        "environment": {
+          "JAX_ENABLE_X64": "True",
+          "JAX_PLATFORMS": "cuda",
+          "MPLBACKEND": "Agg",
+          "OMP_NUM_THREADS": "2",
+          "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+        "hostname": "nvidia7",
+        "jax_default_backend": "gpu",
+        "jax_enable_x64": true,
+        "packages": {
+          "cartopy": "0.25.0",
+          "flax": "0.8.4",
+          "jax": "0.4.35",
+          "jax-cuda12-pjrt": "0.4.35",
+          "jax-cuda12-plugin": "0.4.35",
+          "jax-cuda13-plugin": null,
+          "jaxlib": "0.4.34",
+          "matplotlib": "3.11.1",
+          "numpy": "2.4.6",
+          "optax": "0.2.3",
+          "pandas": null,
+          "scipy": "1.17.1",
+          "spherical-kde": "0.1.2"
+        },
+        "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+        "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+        "selected_accelerator_types": [
+          [
+            "NVIDIA RTX 6000 Ada Generation",
+            "570.195.03",
+            "49140 MiB"
+          ]
+        ]
+      },
+      "group_ids": [
+        "cdc40555dcd2babe",
+        "8f0eda66316ae598"
+      ],
+      "label": "zip_x64_cuda_jax435",
+      "missing_native_table_rows": [
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "missing_table_rows": [
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+      "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+    }
+  },
+  "evidence_path_base": "output_directory",
+  "excluded_runs": [],
+  "generated_at": "2026-09-08T12:59:05.707213+00:00",
+  "groups": [
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 988.2615781303641,
+          "n": 5,
+          "raw_values": [
+            1001.4726384741049,
+            987.4861026538135,
+            996.796115924639,
+            970.0720315149065,
+            985.4810020843568
+          ],
+          "se_ddof0": 4.843812639671911,
+          "se_ddof1": 5.415547166289544
+        },
+        "ess_ratio": {
+          "mean": 0.9650991973929337,
+          "n": 5,
+          "raw_values": [
+            0.978000623509868,
+            0.9643418971228648,
+            0.9734337069576553,
+            0.9473359682762759,
+            0.9623837910980046
+          ],
+          "se_ddof0": 0.0047302857809296,
+          "se_ddof1": 0.005288620279579633
+        },
+        "kl": {
+          "mean": 0.026959339692566402,
+          "n": 5,
+          "raw_values": [
+            0.02072790187323534,
+            0.030345056031174034,
+            0.025502257204180128,
+            0.028512596760487778,
+            0.02970888659375474
+          ],
+          "se_ddof0": 0.0015797417191496608,
+          "se_ddof1": 0.0017662049354555114
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "f93bd4238029889f",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "S2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "SphereWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 1e-08
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": 4096,
+          "method": "fps",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "fps",
+          "manifold": "sphere",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": true,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": true,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RNOT_FPS",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.004900802607066268,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.97,
+            "relative_difference_percent": -0.5052373821717803,
+            "rounding_interval": {
+              "lower_inclusive": "0.965",
+              "upper_exclusive": "0.975"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.0030406603074335965,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.03,
+            "relative_difference_percent": -10.135534358111988,
+            "rounding_interval": {
+              "lower_inclusive": "0.025",
+              "upper_exclusive": "0.035"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 986,
+          "reported_plus_minus": 2
+        },
+        "scope": "explicit_configuration_descriptive_comparison",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1001.4726384741049,
+            "ess_ratio": 0.978000623509868,
+            "kl": 0.02072790187323534
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_2411dbc94059/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.998046875,
+              "mean_finite": 6.246790613252682e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 8.816863106447687e-17,
+                "0.5": 1.1845063804508585e-15,
+                "0.9": 2.6981984939248353e-15,
+                "0.95": 3.219874627954742e-15,
+                "0.99": 4.274580380665633e-15,
+                "1": 0.06389187639720871
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.998046875,
+              "mean_finite": 4.29863747631449e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.180722483759776e-16,
+                "0.5": 1.1310590036770823e-15,
+                "0.9": 2.5122336342326556e-15,
+                "0.95": 3.2080355379411385e-15,
+                "0.99": 4.811127100031342e-15,
+                "1": 0.026412232975097618
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 0.0001662401041121242,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.2035759717909115e-17,
+                "0.5": 1.159752137418728e-15,
+                "0.9": 2.7806401849969997e-15,
+                "0.95": 3.585323033522277e-15,
+                "0.99": 5.5446346888812835e-15,
+                "1": 0.06257228663913146
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00012164864031787972,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 7.372256649264707e-17,
+                "0.5": 1.2535629379897119e-15,
+                "0.9": 2.907613603205589e-15,
+                "0.95": 3.7198590546088794e-15,
+                "0.99": 6.116884598386237e-15,
+                "1": 0.05253249627633779
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 5.6064360977787596e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.92036318505379e-17,
+                "0.5": 1.2510663494590153e-15,
+                "0.9": 2.854485478658296e-15,
+                "0.95": 3.4571338193063995e-15,
+                "0.99": 5.6430147435968895e-15,
+                "1": 0.03739737419077254
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_2411dbc94059",
+          "timings_seconds": {
+            "build": 8.644566463073716,
+            "training_native_return": 513.0249734148383,
+            "training_synchronized": 513.0252995409537
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 987.4861026538135,
+            "ess_ratio": 0.9643418971228648,
+            "kl": 0.030345056031174034
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_e3b69b1f0fd1/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.986328125,
+              "mean_finite": 0.00021187090555131117,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.152815092651949e-17,
+                "0.5": 1.2325725382054923e-15,
+                "0.9": 2.9760131998277765e-15,
+                "0.95": 3.745422995347162e-15,
+                "0.99": 0.003685174471205455,
+                "1": 0.04836690346478634
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9931640625,
+              "mean_finite": 0.00014146932244232932,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 5.229042299521092e-17,
+                "0.5": 1.1987734208468687e-15,
+                "0.9": 2.7530974288510132e-15,
+                "0.95": 3.539925978399383e-15,
+                "0.99": 7.376074521468304e-15,
+                "1": 0.051042602366356306
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9970703125,
+              "mean_finite": 9.076222907925437e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0607355800278998e-16,
+                "0.5": 1.0981080550900145e-15,
+                "0.9": 2.5494564988922386e-15,
+                "0.95": 3.2827154550506278e-15,
+                "0.99": 4.933790537531715e-15,
+                "1": 0.04811225359547896
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9921875,
+              "mean_finite": 0.0001655647048800358,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.4292017026523252e-16,
+                "0.5": 1.0796206673156044e-15,
+                "0.9": 2.4672387014581057e-15,
+                "0.95": 3.222564723535823e-15,
+                "0.99": 8.00744141471962e-14,
+                "1": 0.05563626503840756
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 8.582000331892578e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.3836980277381436e-16,
+                "0.5": 1.0832181164091732e-15,
+                "0.9": 2.4034566013594338e-15,
+                "0.95": 3.068416804809673e-15,
+                "0.99": 4.9610772203420645e-15,
+                "1": 0.025378123680100197
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_e3b69b1f0fd1",
+          "timings_seconds": {
+            "build": 5.41799882799387,
+            "training_native_return": 512.1701701090205,
+            "training_synchronized": 512.1704824990593
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 996.796115924639,
+            "ess_ratio": 0.9734337069576553,
+            "kl": 0.025502257204180128
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_441b57612e45/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00017307647807874045,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.525703289788113e-17,
+                "0.5": 1.1946021870390764e-15,
+                "0.9": 2.8690007565395573e-15,
+                "0.95": 3.461965531323376e-15,
+                "0.99": 6.985736786533448e-15,
+                "1": 0.07538268172969516
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 3.068377504192191e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 8.825104882502587e-17,
+                "0.5": 1.125937863914079e-15,
+                "0.9": 2.5102783414318908e-15,
+                "0.95": 3.0650154841819306e-15,
+                "0.99": 7.73874802355055e-15,
+                "1": 0.013497199872214016
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9912109375,
+              "mean_finite": 0.00013734557552708002,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0808165953071426e-16,
+                "0.5": 1.1107779924630013e-15,
+                "0.9": 2.45049192687387e-15,
+                "0.95": 3.072064847811136e-15,
+                "0.99": 2.8593704101477827e-14,
+                "1": 0.04984528217438842
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00018771127679997313,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.2781510639520015e-16,
+                "0.5": 1.0982185037573952e-15,
+                "0.9": 2.4572514073297847e-15,
+                "0.95": 3.1987967375963255e-15,
+                "0.99": 5.0479836781316245e-15,
+                "1": 0.04640437037719696
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9970703125,
+              "mean_finite": 5.223037281014919e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 5.598737759567951e-17,
+                "0.5": 1.0996686702489911e-15,
+                "0.9": 2.560467010399908e-15,
+                "0.95": 3.1631090727105316e-15,
+                "0.99": 4.932773264566503e-15,
+                "1": 0.043875525068293106
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_441b57612e45",
+          "timings_seconds": {
+            "build": 7.4463009079918265,
+            "training_native_return": 510.70586987398565,
+            "training_synchronized": 510.706166195916
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 970.0720315149065,
+            "ess_ratio": 0.9473359682762759,
+            "kl": 0.028512596760487778
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_061e8e18efc4/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.9931640625,
+              "mean_finite": 0.00017121064859366495,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 7.821313227254848e-17,
+                "0.5": 1.1119989268248153e-15,
+                "0.9": 2.506472534776409e-15,
+                "0.95": 3.185651301449093e-15,
+                "0.99": 4.630316001693602e-15,
+                "1": 0.05269950839534911
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.998046875,
+              "mean_finite": 4.9516971045683795e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0569933971687021e-16,
+                "0.5": 1.1005720330636836e-15,
+                "0.9": 2.3035744313607855e-15,
+                "0.95": 2.7961586469349885e-15,
+                "0.99": 4.400413523984781e-15,
+                "1": 0.02756747690410373
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9921875,
+              "mean_finite": 9.211711080660887e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.383873484925612e-16,
+                "0.5": 1.1329417080906493e-15,
+                "0.9": 2.6573361657257546e-15,
+                "0.95": 3.330795471352043e-15,
+                "0.99": 5.982860689127035e-15,
+                "1": 0.024810554255934123
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 6.215664789975333e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.3279576992586273e-16,
+                "0.5": 1.1568891590499783e-15,
+                "0.9": 2.4260424745485817e-15,
+                "0.95": 3.0653727314369763e-15,
+                "0.99": 5.273832595593049e-15,
+                "1": 0.02132019576808775
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9921875,
+              "mean_finite": 0.00019729623351956422,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 8.88880884630682e-17,
+                "0.5": 1.133952449488289e-15,
+                "0.9": 2.6076874068736595e-15,
+                "0.95": 3.430649185155476e-15,
+                "0.99": 8.335568794582686e-13,
+                "1": 0.06190231591820298
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_061e8e18efc4",
+          "timings_seconds": {
+            "build": 4.981323655927554,
+            "training_native_return": 511.18338221497834,
+            "training_synchronized": 511.1837645450141
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 985.4810020843568,
+            "ess_ratio": 0.9623837910980046,
+            "kl": 0.02970888659375474
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_6d7d390c678e/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.998046875,
+              "mean_finite": 1.4666789257387305e-08,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.301194641658594e-17,
+                "0.5": 1.1241793032192855e-15,
+                "0.9": 2.5712853092236907e-15,
+                "0.95": 3.1085928733893773e-15,
+                "0.99": 4.870297510580442e-15,
+                "1": 9.02365519167538e-06
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00011664776044380607,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 8.02161277333547e-17,
+                "0.5": 1.1269378692510568e-15,
+                "0.9": 2.800384246865393e-15,
+                "0.95": 3.6859871272012796e-15,
+                "0.99": 6.1189576537116805e-15,
+                "1": 0.05318563909412024
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9990234375,
+              "mean_finite": 1.5480519338793715e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.850533814905917e-17,
+                "0.5": 1.1746874070072892e-15,
+                "0.9": 2.4970704816772757e-15,
+                "0.95": 3.0732436334058493e-15,
+                "0.99": 4.071386871589627e-15,
+                "1": 0.015852051801532804
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00010155627610968011,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 8.183440902929322e-17,
+                "0.5": 1.119484457870117e-15,
+                "0.9": 2.4564390045080745e-15,
+                "0.95": 3.029344141416875e-15,
+                "0.99": 5.152844099419465e-15,
+                "1": 0.05958459223272901
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9931640625,
+              "mean_finite": 1.3541112383087651e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.3869132803014204e-16,
+                "0.5": 1.1129909185396203e-15,
+                "0.9": 2.5482642091273464e-15,
+                "0.95": 3.2202395951211968e-15,
+                "0.99": 8.115700132095278e-15,
+                "1": 0.013812866666347073
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_6d7d390c678e",
+          "timings_seconds": {
+            "build": 7.367679486982524,
+            "training_native_return": 512.8240171170328,
+            "training_synchronized": 512.824480481213
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 511.9816825459711,
+          "n": 5,
+          "raw_values": [
+            513.0249734148383,
+            512.1701701090205,
+            510.70586987398565,
+            511.18338221497834,
+            512.8240171170328
+          ],
+          "se_ddof0": 0.40489466879935593,
+          "se_ddof1": 0.45268600158131156
+        },
+        "training_synchronized": {
+          "mean": 511.98203865243124,
+          "n": 5,
+          "raw_values": [
+            513.0252995409537,
+            512.1704824990593,
+            510.706166195916,
+            511.1837645450141,
+            512.824480481213
+          ],
+          "se_ddof0": 0.40490515806052885,
+          "se_ddof1": 0.4526977289318197
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 970.8682438274042,
+          "n": 5,
+          "raw_values": [
+            974.2232069503268,
+            985.9489269028951,
+            966.1660546934434,
+            963.7206978742573,
+            964.2823327160979
+          ],
+          "se_ddof0": 3.769641895721562,
+          "se_ddof1": 4.214587764832293
+        },
+        "ess_ratio": {
+          "mean": 0.9481135193626994,
+          "n": 5,
+          "raw_values": [
+            0.9513898505374285,
+            0.9628407489286085,
+            0.9435215377865658,
+            0.9411334940178294,
+            0.9416819655430644
+          ],
+          "se_ddof0": 0.0036812909137905877,
+          "se_ddof1": 0.0041158083640940365
+        },
+        "kl": {
+          "mean": 0.0441432624700368,
+          "n": 5,
+          "raw_values": [
+            0.03931675014307971,
+            0.04385364818949553,
+            0.041628595784698554,
+            0.04217987061089966,
+            0.05373744762201053
+          ],
+          "se_ddof0": 0.0022414811400945697,
+          "se_ddof1": 0.002506052099767594
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "d2b0bd2d89b35fc4",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "S2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "SphereWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 1e-08
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "sphere",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": true,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": true,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RNOT_RND",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.0018864806373005694,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.95,
+            "relative_difference_percent": -0.19857690918953363,
+            "rounding_interval": {
+              "lower_inclusive": "0.945",
+              "upper_exclusive": "0.955"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.004143262470036796,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.04,
+            "relative_difference_percent": 10.35815617509199,
+            "rounding_interval": {
+              "lower_inclusive": "0.035",
+              "upper_exclusive": "0.045"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1100,
+          "reported_plus_minus": 1
+        },
+        "scope": "explicit_configuration_descriptive_comparison",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 974.2232069503268,
+            "ess_ratio": 0.9513898505374285,
+            "kl": 0.03931675014307971
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_ae44af77b0c9/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 8.347265665038503e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.792813562207657e-17,
+                "0.5": 1.0518598330722424e-15,
+                "0.9": 2.3775377695487317e-15,
+                "0.95": 3.085048444403785e-15,
+                "0.99": 2.3076346271939106e-14,
+                "1": 0.02291986503703428
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9814453125,
+              "mean_finite": 0.00040782755922232387,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0951783194796256e-16,
+                "0.5": 1.0312014545253264e-15,
+                "0.9": 2.330764134864619e-15,
+                "0.95": 3.120151589567479e-15,
+                "0.99": 0.0174262529723336,
+                "1": 0.06445743689879505
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9833984375,
+              "mean_finite": 0.0003770217451819022,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.200457605750058e-17,
+                "0.5": 1.0704600006323703e-15,
+                "0.9": 2.379386203321423e-15,
+                "0.95": 3.1518159166233436e-15,
+                "0.99": 0.01507335068817282,
+                "1": 0.05025147972424135
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 0.00011848890396035501,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.637750421894002e-17,
+                "0.5": 1.1116858811644603e-15,
+                "0.9": 2.344021670147576e-15,
+                "0.95": 2.928555801842133e-15,
+                "0.99": 1.639914001408763e-10,
+                "1": 0.07626280757537547
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.986328125,
+              "mean_finite": 0.0002905888454061933,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.203174435226797e-16,
+                "0.5": 1.0828152683963063e-15,
+                "0.9": 2.471292021912357e-15,
+                "0.95": 3.3611171789079796e-15,
+                "0.99": 0.014180176780202884,
+                "1": 0.045751812363568754
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_ae44af77b0c9",
+          "timings_seconds": {
+            "build": 6.788382283877581,
+            "training_native_return": 508.9188521169126,
+            "training_synchronized": 508.9191428509075
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 985.9489269028951,
+            "ess_ratio": 0.9628407489286085,
+            "kl": 0.04385364818949553
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_5615df2eb2e3/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.9892578125,
+              "mean_finite": 0.00023506642937382575,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.9779266964371464e-17,
+                "0.5": 1.1177821343858767e-15,
+                "0.9": 2.971047925256082e-15,
+                "0.95": 3.763402608198202e-15,
+                "0.99": 0.0037173648857487165,
+                "1": 0.0716145272731912
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9814453125,
+              "mean_finite": 0.00031038530341524604,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0500293230217561e-16,
+                "0.5": 1.189007250825008e-15,
+                "0.9": 3.1501997285857608e-15,
+                "0.95": 4.413536630939337e-15,
+                "0.99": 0.013748075711528956,
+                "1": 0.03868527804481876
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 0.00012912120514905183,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.793380615105908e-17,
+                "0.5": 1.1349043484403287e-15,
+                "0.9": 2.59212907339055e-15,
+                "0.95": 3.2044464613656157e-15,
+                "0.99": 7.06002477707404e-15,
+                "1": 0.061858717903655845
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9921875,
+              "mean_finite": 0.00013214670991700027,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.072473785127763e-16,
+                "0.5": 1.102542638006744e-15,
+                "0.9": 2.4000780565417207e-15,
+                "0.95": 3.109592471299053e-15,
+                "0.99": 7.183634763140363e-15,
+                "1": 0.04520565053679883
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9951171875,
+              "mean_finite": 0.00016920276179885173,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.289757650803225e-17,
+                "0.5": 1.0588647279516492e-15,
+                "0.9": 2.5423329122904327e-15,
+                "0.95": 3.240626952701796e-15,
+                "0.99": 5.085448798308967e-15,
+                "1": 0.050659905779459655
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_5615df2eb2e3",
+          "timings_seconds": {
+            "build": 4.720202425029129,
+            "training_native_return": 508.39137601898983,
+            "training_synchronized": 508.39167433511466
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 966.1660546934434,
+            "ess_ratio": 0.9435215377865658,
+            "kl": 0.041628595784698554
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_0b45516f8cfc/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.974609375,
+              "mean_finite": 0.00036449736802463386,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.0097336245596067e-17,
+                "0.5": 1.3077331455190936e-15,
+                "0.9": 3.5827677991285265e-15,
+                "0.95": 5.217900441588216e-15,
+                "0.99": 0.016201650440605935,
+                "1": 0.068817737560916
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9833984375,
+              "mean_finite": 0.0002472959384073116,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.1159763555866356e-16,
+                "0.5": 1.184199756234719e-15,
+                "0.9": 2.9331499489133894e-15,
+                "0.95": 4.446348012927849e-15,
+                "0.99": 9.620461819934643e-06,
+                "1": 0.05276370613124289
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9736328125,
+              "mean_finite": 0.00044932441177881295,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.08674214931851e-16,
+                "0.5": 1.2498665253786514e-15,
+                "0.9": 3.2388326530995143e-15,
+                "0.95": 5.384642595310221e-15,
+                "0.99": 0.017055507824171298,
+                "1": 0.05180529032529881
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.98828125,
+              "mean_finite": 0.00017534835605949005,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.6150856298772175e-17,
+                "0.5": 1.170815271621014e-15,
+                "0.9": 3.238085354435698e-15,
+                "0.95": 4.984445709616676e-15,
+                "0.99": 0.004395740370341906,
+                "1": 0.03172345209207168
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9794921875,
+              "mean_finite": 0.0005010797897151035,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.4337679939269818e-16,
+                "0.5": 1.230154551505253e-15,
+                "0.9": 3.585937922789134e-15,
+                "0.95": 5.6694678500340376e-15,
+                "0.99": 0.011623262645902549,
+                "1": 0.09575481780392901
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_0b45516f8cfc",
+          "timings_seconds": {
+            "build": 5.817332759033889,
+            "training_native_return": 508.1639603630174,
+            "training_synchronized": 508.16423839493655
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 963.7206978742573,
+            "ess_ratio": 0.9411334940178294,
+            "kl": 0.04217987061089966
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_e3da3b789275/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.994140625,
+              "mean_finite": 8.168148308448826e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.0956032548335315e-16,
+                "0.5": 1.2191600778054373e-15,
+                "0.9": 2.7935126493331173e-15,
+                "0.95": 3.979827671481743e-15,
+                "0.99": 2.1388850037166425e-11,
+                "1": 0.032211075982247706
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.986328125,
+              "mean_finite": 0.00016688055286124165,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.2409215001364504e-16,
+                "0.5": 1.1170420812444862e-15,
+                "0.9": 2.6781486000897536e-15,
+                "0.95": 3.659254416932755e-15,
+                "0.99": 2.8119198581942204e-06,
+                "1": 0.04508572618616604
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9912109375,
+              "mean_finite": 8.937549275739503e-05,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.60286591297898e-16,
+                "0.5": 1.2377395998615472e-15,
+                "0.9": 3.0090318746025695e-15,
+                "0.95": 3.622205703896891e-15,
+                "0.99": 1.511850784440246e-14,
+                "1": 0.039700469351032476
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9892578125,
+              "mean_finite": 0.00018242019799441105,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.120471182109263e-16,
+                "0.5": 1.095689587816102e-15,
+                "0.9": 2.499427838350516e-15,
+                "0.95": 3.214681582467917e-15,
+                "0.99": 3.8820498023726186e-06,
+                "1": 0.02735427382440811
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9912109375,
+              "mean_finite": 0.00010229084814396939,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.1508158546357973e-16,
+                "0.5": 1.2063853935509993e-15,
+                "0.9": 2.8909256881921586e-15,
+                "0.95": 3.653370801928846e-15,
+                "0.99": 9.867410013210226e-15,
+                "1": 0.03355848540993707
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_e3da3b789275",
+          "timings_seconds": {
+            "build": 6.7248662752099335,
+            "training_native_return": 509.33924806909636,
+            "training_synchronized": 509.3397129389923
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 964.2823327160979,
+            "ess_ratio": 0.9416819655430644,
+            "kl": 0.05373744762201053
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_8741bd6f228e/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.9873046875,
+              "mean_finite": 0.0003317844567971352,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.3496585480374211e-16,
+                "0.5": 1.1486205585121401e-15,
+                "0.9": 2.719582938555074e-15,
+                "0.95": 3.627669490358924e-15,
+                "0.99": 0.0141377015007864,
+                "1": 0.055117358726807605
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.990234375,
+              "mean_finite": 0.00016980206549380635,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.760817225731373e-17,
+                "0.5": 1.2254748940908846e-15,
+                "0.9": 3.360909739747491e-15,
+                "0.95": 4.3652523573921584e-15,
+                "0.99": 3.4068305688103806e-07,
+                "1": 0.0408318821323094
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.984375,
+              "mean_finite": 0.0002997224018268676,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.1906185245090765e-16,
+                "0.5": 1.226503346597561e-15,
+                "0.9": 2.989247454825799e-15,
+                "0.95": 3.973229855376331e-15,
+                "0.99": 0.013824653758776029,
+                "1": 0.037136169531697696
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9853515625,
+              "mean_finite": 0.00037717124546002946,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.131337278388224e-16,
+                "0.5": 1.10025144760862e-15,
+                "0.9": 2.858780355907581e-15,
+                "0.95": 3.81541744591581e-15,
+                "0.99": 0.010379269884113565,
+                "1": 0.07617250130259726
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9794921875,
+              "mean_finite": 0.0003181948526155569,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.0563013719230484e-17,
+                "0.5": 1.1155675182294602e-15,
+                "0.9": 2.9362170440823275e-15,
+                "0.95": 3.9817211826781395e-15,
+                "0.99": 0.014938293040692028,
+                "1": 0.05198476103290617
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_8741bd6f228e",
+          "timings_seconds": {
+            "build": 6.913420435972512,
+            "training_native_return": 508.9384361519478,
+            "training_synchronized": 508.9388521621004
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 508.7503745439928,
+          "n": 5,
+          "raw_values": [
+            508.9188521169126,
+            508.39137601898983,
+            508.1639603630174,
+            509.33924806909636,
+            508.9384361519478
+          ],
+          "se_ddof0": 0.1879665312905283,
+          "se_ddof1": 0.21015297073023126
+        },
+        "training_synchronized": {
+          "mean": 508.75072413641027,
+          "n": 5,
+          "raw_values": [
+            508.9191428509075,
+            508.39167433511466,
+            508.16423839493655,
+            509.3397129389923,
+            508.9388521621004
+          ],
+          "se_ddof0": 0.18799437350861176,
+          "se_ddof1": 0.21018409927637074
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 915.2152833360287,
+          "n": 5,
+          "raw_values": [
+            790.9252980695043,
+            955.8169944495846,
+            929.0817147125524,
+            926.3415622680246,
+            973.9108471804781
+          ],
+          "se_ddof0": 28.88441836001671,
+          "se_ddof1": 32.29376147177018
+        },
+        "ess_ratio": {
+          "mean": 0.8937649251328406,
+          "n": 5,
+          "raw_values": [
+            0.7723879863960003,
+            0.9334150336421725,
+            0.907306362023977,
+            0.9046304319023678,
+            0.9510848116996856
+          ],
+          "se_ddof0": 0.02820743980470382,
+          "se_ddof1": 0.03153687643727557
+        },
+        "kl": {
+          "mean": 0.1273751906643244,
+          "n": 5,
+          "raw_values": [
+            0.12069804356254883,
+            0.11743133411632918,
+            0.12949083772595119,
+            0.15706484293678102,
+            0.11219089498001174
+          ],
+          "se_ddof0": 0.007099236089730366,
+          "se_ddof1": 0.007937187242478447
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "a42e85edcd0849b4",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": 4096,
+          "method": "fps",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "fps",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": true,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RNOT_FPS",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.03623507486715949,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.93,
+            "relative_difference_percent": -3.896244609371988,
+            "rounding_interval": {
+              "lower_inclusive": "0.925",
+              "upper_exclusive": "0.935"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.002624809335675604,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.13,
+            "relative_difference_percent": -2.019084104365849,
+            "rounding_interval": {
+              "lower_inclusive": "0.125",
+              "upper_exclusive": "0.135"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1022,
+          "reported_plus_minus": 10
+        },
+        "scope": "explicit_configuration_descriptive_comparison",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 790.9252980695043,
+            "ess_ratio": 0.7723879863960003,
+            "kl": 0.12069804356254883
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.87890625,
+              "mean_finite": 0.006684325148305532,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.1067138836969437e-16,
+                "0.5": 2.7035533603812783e-15,
+                "0.9": 0.012666252786595446,
+                "0.95": 0.06350274145434884,
+                "0.99": 0.11773620970569125,
+                "1": 0.1411672637574063
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.884765625,
+              "mean_finite": 0.005730041790888595,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.9881865419272613e-16,
+                "0.5": 2.5124969368220386e-15,
+                "0.9": 0.0173789202968965,
+                "0.95": 0.05097057422876818,
+                "0.99": 0.0962072588617864,
+                "1": 0.1552930806193475
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.87890625,
+              "mean_finite": 0.006529507265962051,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.2521368304921876e-16,
+                "0.5": 2.6452626098678404e-15,
+                "0.9": 0.020507407960173564,
+                "0.95": 0.050253570687103705,
+                "0.99": 0.12279939236570706,
+                "1": 0.1703840539586599
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8837890625,
+              "mean_finite": 0.0060339017416363395,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.8321750762516077e-16,
+                "0.5": 2.4533052877024253e-15,
+                "0.9": 0.01567472443314542,
+                "0.95": 0.052922224795424085,
+                "0.99": 0.10599466528047813,
+                "1": 0.155915733576082
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.87109375,
+              "mean_finite": 0.006474669385124699,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.404225656034809e-16,
+                "0.5": 2.631749753209786e-15,
+                "0.9": 0.01794245489081167,
+                "0.95": 0.05095606343487321,
+                "0.99": 0.10843597298089933,
+                "1": 0.20658581954502384
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9",
+          "timings_seconds": {
+            "build": 8.083990450017154,
+            "training_native_return": 677.759501881199,
+            "training_synchronized": 677.7599137260113
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 955.8169944495846,
+            "ess_ratio": 0.9334150336421725,
+            "kl": 0.11743133411632918
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.884765625,
+              "mean_finite": 0.004868594953329161,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4683487774836355e-16,
+                "0.5": 2.84123526031489e-15,
+                "0.9": 1.302852379638883e-05,
+                "0.95": 0.04278910364253652,
+                "0.99": 0.095046755340258,
+                "1": 0.175412944645197
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.88671875,
+              "mean_finite": 0.005144049455780915,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.1818888770409222e-16,
+                "0.5": 2.7423340583009677e-15,
+                "0.9": 0.0015337275366079477,
+                "0.95": 0.04567957668860163,
+                "0.99": 0.09493657179568735,
+                "1": 0.14746783541693556
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.87109375,
+              "mean_finite": 0.005731632491906979,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.1065358151722424e-16,
+                "0.5": 2.796667923297028e-15,
+                "0.9": 0.01503001191574802,
+                "0.95": 0.047114096128561496,
+                "0.99": 0.10460235961687342,
+                "1": 0.1322172490228078
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8828125,
+              "mean_finite": 0.005595933247639037,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.0791149265843974e-16,
+                "0.5": 2.7433376211345277e-15,
+                "0.9": 0.003469261538979634,
+                "0.95": 0.041091816104738756,
+                "0.99": 0.11350396246874969,
+                "1": 0.17287017886223696
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8681640625,
+              "mean_finite": 0.0057848638008361816,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.1497499394815694e-16,
+                "0.5": 2.9202773119497943e-15,
+                "0.9": 0.016811045694648755,
+                "0.95": 0.048642418524249206,
+                "0.99": 0.10036137012525027,
+                "1": 0.1559628778807329
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b",
+          "timings_seconds": {
+            "build": 8.880641460884362,
+            "training_native_return": 673.9058380019851,
+            "training_synchronized": 673.9063220031094
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 929.0817147125524,
+            "ess_ratio": 0.907306362023977,
+            "kl": 0.12949083772595119
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.875,
+              "mean_finite": 0.004896527469857065,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.6450451880840158e-16,
+                "0.5": 2.861706254985248e-15,
+                "0.9": 0.015526068955329576,
+                "0.95": 0.03780676313461467,
+                "0.99": 0.0926875611087013,
+                "1": 0.13793937143394758
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8798828125,
+              "mean_finite": 0.00484962903988401,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.908066662718877e-16,
+                "0.5": 2.833258588793611e-15,
+                "0.9": 0.009827671139533154,
+                "0.95": 0.04132988506085351,
+                "0.99": 0.08247296977128864,
+                "1": 0.194297415650015
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.896484375,
+              "mean_finite": 0.0044509941733719,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.409418762378143e-16,
+                "0.5": 2.654913762042631e-15,
+                "0.9": 3.6626494587667198e-06,
+                "0.95": 0.03479186914319319,
+                "0.99": 0.0974242275108024,
+                "1": 0.13526844139636265
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.876953125,
+              "mean_finite": 0.005407158684486252,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.0550109191841963e-16,
+                "0.5": 3.1418273023520106e-15,
+                "0.9": 0.017675704678899073,
+                "0.95": 0.04439020158610856,
+                "0.99": 0.0978218930582589,
+                "1": 0.16142800147130823
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.884765625,
+              "mean_finite": 0.0050588010768106715,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.8413334673890175e-16,
+                "0.5": 2.6170137917234548e-15,
+                "0.9": 1.6380808487655922e-05,
+                "0.95": 0.03906116318510702,
+                "0.99": 0.10303253271230083,
+                "1": 0.14648036713089385
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d",
+          "timings_seconds": {
+            "build": 8.57545145903714,
+            "training_native_return": 672.3480238590855,
+            "training_synchronized": 672.3483571109828
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 926.3415622680246,
+            "ess_ratio": 0.9046304319023678,
+            "kl": 0.15706484293678102
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.892578125,
+              "mean_finite": 0.0050558155052875964,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.35107138647414e-16,
+                "0.5": 2.781610000920019e-15,
+                "0.9": 7.287625109861891e-06,
+                "0.95": 0.048766392046428485,
+                "0.99": 0.09302106794549539,
+                "1": 0.1542217008865813
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.90234375,
+              "mean_finite": 0.005464232261234105,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.321676414448018e-16,
+                "0.5": 2.6331870785993106e-15,
+                "0.9": 2.1619498788424493e-11,
+                "0.95": 0.03986386253984464,
+                "0.99": 0.1207530787683146,
+                "1": 0.19500044474784414
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8935546875,
+              "mean_finite": 0.005076591435544236,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.9712990846247147e-16,
+                "0.5": 3.024289115549423e-15,
+                "0.9": 3.425673750083854e-06,
+                "0.95": 0.04339283498411809,
+                "0.99": 0.1048208002393542,
+                "1": 0.258450215940118
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8955078125,
+              "mean_finite": 0.006123207429683836,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4655308933505235e-16,
+                "0.5": 2.6406153980296747e-15,
+                "0.9": 4.995522369112414e-06,
+                "0.95": 0.049117727363890466,
+                "0.99": 0.1165237481436418,
+                "1": 0.23035466172664368
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.90234375,
+              "mean_finite": 0.0041543028332147545,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.571977249593293e-16,
+                "0.5": 2.67711318161014e-15,
+                "0.9": 4.1010836911740093e-08,
+                "0.95": 0.033779277848225625,
+                "0.99": 0.09262798724890868,
+                "1": 0.20711219241664458
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f",
+          "timings_seconds": {
+            "build": 8.264523515943438,
+            "training_native_return": 678.1145550028887,
+            "training_synchronized": 678.1150867398828
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 973.9108471804781,
+            "ess_ratio": 0.9510848116996856,
+            "kl": 0.11219089498001174
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.88671875,
+              "mean_finite": 0.005640645837161634,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.2494011812348577e-16,
+                "0.5": 2.9033239357994136e-15,
+                "0.9": 4.86646220817807e-06,
+                "0.95": 0.0505050771744918,
+                "0.99": 0.11030435587173991,
+                "1": 0.17432086635264085
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.91015625,
+              "mean_finite": 0.004857485550309909,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.0655231293895534e-16,
+                "0.5": 2.5409741773457773e-15,
+                "0.9": 8.605575961114598e-14,
+                "0.95": 0.04343915843667858,
+                "0.99": 0.1044983003694095,
+                "1": 0.16348651464199757
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8818359375,
+              "mean_finite": 0.005819827883478609,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5027067901313426e-16,
+                "0.5": 3.131595095741746e-15,
+                "0.9": 1.6043410897254043e-05,
+                "0.95": 0.052914228349698174,
+                "0.99": 0.105468854746885,
+                "1": 0.168454539299645
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.900390625,
+              "mean_finite": 0.005616750171017945,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.0035913122515657e-16,
+                "0.5": 2.7863890334109613e-15,
+                "0.9": 4.387588031726003e-07,
+                "0.95": 0.04895705514555855,
+                "0.99": 0.10613941582480287,
+                "1": 0.1630148556449179
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8916015625,
+              "mean_finite": 0.005874051294443357,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.8843927091911505e-16,
+                "0.5": 2.615474931122051e-15,
+                "0.9": 9.337811416205996e-06,
+                "0.95": 0.053064514101477105,
+                "0.99": 0.11195340643858848,
+                "1": 0.1726299763388736
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443",
+          "timings_seconds": {
+            "build": 8.410078020067886,
+            "training_native_return": 659.4450512200128,
+            "training_synchronized": 659.4453684731852
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 672.3145939930342,
+          "n": 5,
+          "raw_values": [
+            677.759501881199,
+            673.9058380019851,
+            672.3480238590855,
+            678.1145550028887,
+            659.4450512200128
+          ],
+          "se_ddof0": 3.0426624910760234,
+          "se_ddof1": 3.4018000813174174
+        },
+        "training_synchronized": {
+          "mean": 672.3150096106343,
+          "n": 5,
+          "raw_values": [
+            677.7599137260113,
+            673.9063220031094,
+            672.3483571109828,
+            678.1150867398828,
+            659.4453684731852
+          ],
+          "se_ddof0": 3.0426891114527415,
+          "se_ddof1": 3.401829843803382
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 811.771768567866,
+          "n": 5,
+          "raw_values": [
+            720.7501609544736,
+            732.8707287287993,
+            880.319762644697,
+            810.1158813937111,
+            914.8023091176492
+          ],
+          "se_ddof0": 34.54108792755878,
+          "se_ddof1": 38.618110311409374
+        },
+        "ess_ratio": {
+          "mean": 0.7927458677420567,
+          "n": 5,
+          "raw_values": [
+            0.7038575790571031,
+            0.7156940710242181,
+            0.8596872682077119,
+            0.791128790423546,
+            0.8933616299977043
+          ],
+          "se_ddof0": 0.03373153117925662,
+          "se_ddof1": 0.03771299835098572
+        },
+        "kl": {
+          "mean": 0.222870520260049,
+          "n": 5,
+          "raw_values": [
+            0.12672628200580083,
+            0.15704639330917355,
+            0.23984221994584703,
+            0.3531487003752704,
+            0.2375890056641531
+          ],
+          "se_ddof0": 0.03524406722004963,
+          "se_ddof1": 0.03940406505380151
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "9cc4e7180b4edd02",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": true,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RNOT_RND",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.05725413225794329,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.02,
+            "printed_mean": 0.85,
+            "relative_difference_percent": -6.735780265640387,
+            "rounding_interval": {
+              "lower_inclusive": "0.845",
+              "upper_exclusive": "0.855"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.0028705202600489976,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.04,
+            "printed_mean": 0.22,
+            "relative_difference_percent": 1.3047819363859081,
+            "rounding_interval": {
+              "lower_inclusive": "0.215",
+              "upper_exclusive": "0.225"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1057,
+          "reported_plus_minus": 1
+        },
+        "scope": "explicit_configuration_descriptive_comparison",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 720.7501609544736,
+            "ess_ratio": 0.7038575790571031,
+            "kl": 0.12672628200580083
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.767578125,
+              "mean_finite": 0.017372832278594923,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.867899875000459e-16,
+                "0.5": 2.978247098733753e-15,
+                "0.9": 0.06911636496951802,
+                "0.95": 0.12568873063364372,
+                "0.99": 0.1947652328666668,
+                "1": 0.3464017250210745
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.763671875,
+              "mean_finite": 0.018353401634754206,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.907197063372261e-16,
+                "0.5": 2.847852193140459e-15,
+                "0.9": 0.06990439580234159,
+                "0.95": 0.12112051547838076,
+                "0.99": 0.2077103964989476,
+                "1": 0.27605724647910196
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7353515625,
+              "mean_finite": 0.021650887530111566,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.84317557187987e-16,
+                "0.5": 2.9592223050008863e-15,
+                "0.9": 0.08774799814182671,
+                "0.95": 0.1408963790740901,
+                "0.99": 0.24940670069544071,
+                "1": 0.30690880446293495
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.76171875,
+              "mean_finite": 0.01985155920682584,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.134662534789849e-16,
+                "0.5": 2.484262036847908e-15,
+                "0.9": 0.0827054307513162,
+                "0.95": 0.14306626430757494,
+                "0.99": 0.20815365527175722,
+                "1": 0.285766325783227
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7490234375,
+              "mean_finite": 0.020876853039067944,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.00982917047714e-16,
+                "0.5": 2.738723687510347e-15,
+                "0.9": 0.08054068432382455,
+                "0.95": 0.1398618696775808,
+                "0.99": 0.23812860765678198,
+                "1": 0.32934136818752313
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+          "timings_seconds": {
+            "build": 6.311059013009071,
+            "training_native_return": 677.7770920321345,
+            "training_synchronized": 677.7773836161941
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 732.8707287287993,
+            "ess_ratio": 0.7156940710242181,
+            "kl": 0.15704639330917355
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.8134765625,
+              "mean_finite": 0.008766182416588011,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.9234910287165157e-16,
+                "0.5": 3.296772960897324e-15,
+                "0.9": 0.03416488909242321,
+                "0.95": 0.07362757001739403,
+                "0.99": 0.13011522003423515,
+                "1": 0.16931297685128022
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.802734375,
+              "mean_finite": 0.008535437173215967,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5715532527198787e-16,
+                "0.5": 2.92152986403973e-15,
+                "0.9": 0.035065556876731546,
+                "0.95": 0.06961422589931757,
+                "0.99": 0.11149968456373587,
+                "1": 0.16661004225091788
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.82421875,
+              "mean_finite": 0.00862650120308654,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.052624869001479e-16,
+                "0.5": 2.9691216302730836e-15,
+                "0.9": 0.03442998619762764,
+                "0.95": 0.0722163427707304,
+                "0.99": 0.13152774525675376,
+                "1": 0.1725096352426466
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.845703125,
+              "mean_finite": 0.008850404451921933,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.085741636607672e-16,
+                "0.5": 2.804558165722387e-15,
+                "0.9": 0.03928648232494795,
+                "0.95": 0.07260874747457687,
+                "0.99": 0.11852352947571113,
+                "1": 0.1824350741599966
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.83203125,
+              "mean_finite": 0.009086921912918017,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.137655695620132e-16,
+                "0.5": 3.0640983213641477e-15,
+                "0.9": 0.037550192568449964,
+                "0.95": 0.07194984521134697,
+                "0.99": 0.1246183690132515,
+                "1": 0.17179162208820467
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+          "timings_seconds": {
+            "build": 6.761349147884175,
+            "training_native_return": 674.913328998955,
+            "training_synchronized": 674.9136403738521
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 880.319762644697,
+            "ess_ratio": 0.8596872682077119,
+            "kl": 0.23984221994584703
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.767578125,
+              "mean_finite": 0.014977149277858762,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.1034907340223403e-16,
+                "0.5": 2.8942659548930856e-15,
+                "0.9": 0.06542490655318911,
+                "0.95": 0.102503210464799,
+                "0.99": 0.16286040782507472,
+                "1": 0.25816489977082124
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7724609375,
+              "mean_finite": 0.012789714861705173,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.696361559771916e-16,
+                "0.5": 3.1554354459685633e-15,
+                "0.9": 0.05291602190817124,
+                "0.95": 0.09151100351001612,
+                "0.99": 0.15215784241983113,
+                "1": 0.21756291548399873
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7646484375,
+              "mean_finite": 0.01750512512163897,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.2576576364108364e-16,
+                "0.5": 2.8684097467872524e-15,
+                "0.9": 0.06907279577037533,
+                "0.95": 0.12034947988732438,
+                "0.99": 0.18825669100494852,
+                "1": 0.27783075507763255
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.787109375,
+              "mean_finite": 0.013169022643615174,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.187396152806005e-16,
+                "0.5": 2.9246840881710837e-15,
+                "0.9": 0.056830193375963706,
+                "0.95": 0.1019049312488602,
+                "0.99": 0.15050158048375215,
+                "1": 0.2674027967582008
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7822265625,
+              "mean_finite": 0.012739930008344807,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.8735531059381505e-16,
+                "0.5": 2.7359932559486667e-15,
+                "0.9": 0.05715835280806285,
+                "0.95": 0.09296576650021018,
+                "0.99": 0.1399892649149403,
+                "1": 0.3337585065807659
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+          "timings_seconds": {
+            "build": 3.668414151063189,
+            "training_native_return": 675.2960410779342,
+            "training_synchronized": 675.2964493150357
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 810.1158813937111,
+            "ess_ratio": 0.791128790423546,
+            "kl": 0.3531487003752704
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.7412109375,
+              "mean_finite": 0.016054644851073913,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.268710859942019e-16,
+                "0.5": 4.283310314170268e-15,
+                "0.9": 0.07731258807067797,
+                "0.95": 0.1104211226415954,
+                "0.99": 0.18295673987760724,
+                "1": 0.30092880980357545
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7744140625,
+              "mean_finite": 0.015990617784361453,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5688920299234704e-16,
+                "0.5": 3.699208888992331e-15,
+                "0.9": 0.0682976928508912,
+                "0.95": 0.11610374913213475,
+                "0.99": 0.19730198953896136,
+                "1": 0.2589283667230605
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7451171875,
+              "mean_finite": 0.01619151834672437,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.817137458001968e-16,
+                "0.5": 4.330295952117509e-15,
+                "0.9": 0.06442731631653047,
+                "0.95": 0.11456372512390764,
+                "0.99": 0.1997696656712066,
+                "1": 0.31675056059805223
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7783203125,
+              "mean_finite": 0.014606695925155575,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.919963421553347e-16,
+                "0.5": 3.833034664193674e-15,
+                "0.9": 0.05917214429081655,
+                "0.95": 0.11365607399301937,
+                "0.99": 0.19803522724123832,
+                "1": 0.24963984200487266
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.7802734375,
+              "mean_finite": 0.012849690103822857,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.6715164620829703e-16,
+                "0.5": 3.691928839767525e-15,
+                "0.9": 0.0583871187335742,
+                "0.95": 0.10245543578424521,
+                "0.99": 0.1658019079383881,
+                "1": 0.27844939740263674
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+          "timings_seconds": {
+            "build": 6.79630754282698,
+            "training_native_return": 680.0668434998952,
+            "training_synchronized": 680.06715918798
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 914.8023091176492,
+            "ess_ratio": 0.8933616299977043,
+            "kl": 0.2375890056641531
+          },
+          "path": "../../results/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.85546875,
+              "mean_finite": 0.010614649301298854,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4418684634830573e-16,
+                "0.5": 2.7733552517735035e-15,
+                "0.9": 0.037486733064515755,
+                "0.95": 0.09131199849789158,
+                "0.99": 0.15826165188670535,
+                "1": 0.21796320794587434
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.83984375,
+              "mean_finite": 0.010523919304502834,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.9939179056080712e-16,
+                "0.5": 2.6695150277201393e-15,
+                "0.9": 0.04237775823486451,
+                "0.95": 0.08190022936034329,
+                "0.99": 0.13937072117602498,
+                "1": 0.2676184729543881
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8427734375,
+              "mean_finite": 0.010078634596490797,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.307971854100467e-16,
+                "0.5": 3.2391679251923406e-15,
+                "0.9": 0.04165336181404833,
+                "0.95": 0.08308954631837599,
+                "0.99": 0.1479841421358583,
+                "1": 0.2355878107880285
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8427734375,
+              "mean_finite": 0.010659530371109456,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.528766905511888e-16,
+                "0.5": 2.7284874107819997e-15,
+                "0.9": 0.04346406916476461,
+                "0.95": 0.08001198700824934,
+                "0.99": 0.15315968606759137,
+                "1": 0.19908833414396399
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8623046875,
+              "mean_finite": 0.009361410429347808,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4238295055050246e-16,
+                "0.5": 2.8189047473014516e-15,
+                "0.9": 0.037601605483074264,
+                "0.95": 0.07314855910103286,
+                "0.99": 0.1522724593504537,
+                "1": 0.20072453967871612
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+          "timings_seconds": {
+            "build": 5.735212940024212,
+            "training_native_return": 669.3324345890433,
+            "training_synchronized": 669.3327760938555
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 675.4771480395924,
+          "n": 5,
+          "raw_values": [
+            677.7770920321345,
+            674.913328998955,
+            675.2960410779342,
+            680.0668434998952,
+            669.3324345890433
+          ],
+          "se_ddof0": 1.6057800823109065,
+          "se_ddof1": 1.7953167104811973
+        },
+        "training_synchronized": {
+          "mean": 675.4774817173835,
+          "n": 5,
+          "raw_values": [
+            677.7773836161941,
+            674.9136403738521,
+            675.2964493150357,
+            680.06715918798,
+            669.3327760938555
+          ],
+          "se_ddof0": 1.6057743928640227,
+          "se_ddof1": 1.7953103494862037
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 1020.3317980829117,
+          "n": 5,
+          "raw_values": [
+            1020.4299350208214,
+            1019.9996595467594,
+            1022.0341611427696,
+            1020.12836645529,
+            1019.0668682489182
+          ],
+          "se_ddof0": 0.43171373688553577,
+          "se_ddof1": 0.4826706312482582
+        },
+        "ess_ratio": {
+          "mean": 0.9964177715653435,
+          "n": 5,
+          "raw_values": [
+            0.9965136084187709,
+            0.9960934175261322,
+            0.9980802354909859,
+            0.9962191078664941,
+            0.9951824885243342
+          ],
+          "se_ddof0": 0.000421595446177281,
+          "se_ddof1": 0.00047135803832837716
+        },
+        "kl": {
+          "mean": 0.0038152133270270756,
+          "n": 5,
+          "raw_values": [
+            0.006768577020761767,
+            0.0025545824345464796,
+            0.00215126763703543,
+            0.00247208299369579,
+            0.005129556549095912
+          ],
+          "se_ddof0": 0.0008151505336194369,
+          "se_ddof1": 0.0009113660025341443
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "cdc40555dcd2babe",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "S2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "SphereWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 0.01
+        },
+        "label": "zip_x64_cuda_jax435",
+        "landmark_configuration": null,
+        "parameter_dtypes": [
+          "float32",
+          "float64"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": 1.0,
+          "landmark_method": null,
+          "manifold": "sphere",
+          "method": "rcpm",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RCPM_gamma1",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 3,
+            "difference_from_printed_mean": 0.00041777156534350546,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.996,
+            "relative_difference_percent": 0.04194493627946842,
+            "rounding_interval": {
+              "lower_inclusive": "0.9955",
+              "upper_exclusive": "0.9965"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 4,
+            "difference_from_printed_mean": 0.00011521332702707542,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0008,
+            "printed_mean": 0.0037,
+            "relative_difference_percent": 3.1138737034344706,
+            "rounding_interval": {
+              "lower_inclusive": "0.00365",
+              "upper_exclusive": "0.00375"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 37.3,
+          "reported_plus_minus": 0.6
+        },
+        "scope": "archive_defaults",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1020.4299350208214,
+            "ess_ratio": 0.9965136084187709,
+            "kl": 0.006768577020761767
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+          "residual_diagnostics": [],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1",
+          "timings_seconds": {
+            "build": 7.025035911006853,
+            "training_native_return": 27.04993545403704,
+            "training_synchronized": 27.05089093511924
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1019.9996595467594,
+            "ess_ratio": 0.9960934175261322,
+            "kl": 0.0025545824345464796
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5/result.json",
+          "residual_diagnostics": [],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5",
+          "timings_seconds": {
+            "build": 9.081026495900005,
+            "training_native_return": 27.1021922940854,
+            "training_synchronized": 27.103391183074564
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1022.0341611427696,
+            "ess_ratio": 0.9980802354909859,
+            "kl": 0.00215126763703543
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f/result.json",
+          "residual_diagnostics": [],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f",
+          "timings_seconds": {
+            "build": 8.272734083002433,
+            "training_native_return": 27.139460301026702,
+            "training_synchronized": 27.140437118010595
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1020.12836645529,
+            "ess_ratio": 0.9962191078664941,
+            "kl": 0.00247208299369579
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864/result.json",
+          "residual_diagnostics": [],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864",
+          "timings_seconds": {
+            "build": 6.936192072927952,
+            "training_native_return": 26.570844165980816,
+            "training_synchronized": 26.571865645004436
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1019.0668682489182,
+            "ess_ratio": 0.9951824885243342,
+            "kl": 0.005129556549095912
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83/result.json",
+          "residual_diagnostics": [],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83",
+          "timings_seconds": {
+            "build": 6.841787665849552,
+            "training_native_return": 25.598184895934537,
+            "training_synchronized": 25.599456764990464
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 26.692123422212898,
+          "n": 5,
+          "raw_values": [
+            27.04993545403704,
+            27.1021922940854,
+            27.139460301026702,
+            26.570844165980816,
+            25.598184895934537
+          ],
+          "se_ddof0": 0.26135847950369323,
+          "se_ddof1": 0.2922076633331218
+        },
+        "training_synchronized": {
+          "mean": 26.69320832923986,
+          "n": 5,
+          "raw_values": [
+            27.05089093511924,
+            27.103391183074564,
+            27.140437118010595,
+            26.571865645004436,
+            25.599456764990464
+          ],
+          "se_ddof0": 0.2613210241024969,
+          "se_ddof1": 0.29216578692152206
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 632.316183296993,
+          "n": 5,
+          "raw_values": [
+            609.4205711643996,
+            612.3439386903626,
+            685.9803785530112,
+            586.4980177880725,
+            667.3380102891191
+          ],
+          "se_ddof0": 16.886418351442703,
+          "se_ddof1": 18.87958966516291
+        },
+        "ess_ratio": {
+          "mean": 0.6174962727509697,
+          "n": 5,
+          "raw_values": [
+            0.595137276527734,
+            0.5979921276273072,
+            0.669902713430675,
+            0.5727519704961646,
+            0.6516972756729679
+          ],
+          "se_ddof0": 0.016490642921330765,
+          "se_ddof1": 0.018437099282385655
+        },
+        "kl": {
+          "mean": 0.8799006051174869,
+          "n": 5,
+          "raw_values": [
+            0.90038261216891,
+            0.9323565837185551,
+            0.8504139578269708,
+            0.9461599663113092,
+            0.7701899055616892
+          ],
+          "se_ddof0": 0.02861282594580373,
+          "se_ddof1": 0.03199011192159343
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "8f0eda66316ae598",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "T2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "TorusWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 0.01
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 0.01
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_x64_cuda_jax435",
+        "landmark_configuration": null,
+        "parameter_dtypes": [
+          "float32",
+          "float64"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": 1.0,
+          "landmark_method": null,
+          "manifold": "torus",
+          "method": "rcpm",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RCPM_gamma1",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.0674962727509697,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.03,
+            "printed_mean": 0.55,
+            "relative_difference_percent": 12.272049591085398,
+            "rounding_interval": {
+              "lower_inclusive": "0.545",
+              "upper_exclusive": "0.555"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.05009939488251314,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.02,
+            "printed_mean": 0.93,
+            "relative_difference_percent": -5.387031707797112,
+            "rounding_interval": {
+              "lower_inclusive": "0.925",
+              "upper_exclusive": "0.935"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 62.3,
+          "reported_plus_minus": 0.5
+        },
+        "scope": "archive_defaults",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 609.4205711643996,
+            "ess_ratio": 0.595137276527734,
+            "kl": 0.90038261216891
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+          "residual_diagnostics": [],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810",
+          "timings_seconds": {
+            "build": 6.732456352794543,
+            "training_native_return": 43.179450216004625,
+            "training_synchronized": 43.18067405279726
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 612.3439386903626,
+            "ess_ratio": 0.5979921276273072,
+            "kl": 0.9323565837185551
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856/result.json",
+          "residual_diagnostics": [],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856",
+          "timings_seconds": {
+            "build": 9.681553267175332,
+            "training_native_return": 48.837037552148104,
+            "training_synchronized": 48.83820505300537
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 685.9803785530112,
+            "ess_ratio": 0.669902713430675,
+            "kl": 0.8504139578269708
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7/result.json",
+          "residual_diagnostics": [],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7",
+          "timings_seconds": {
+            "build": 10.31503347796388,
+            "training_native_return": 43.77458133595064,
+            "training_synchronized": 43.775700052967295
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 586.4980177880725,
+            "ess_ratio": 0.5727519704961646,
+            "kl": 0.9461599663113092
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f/result.json",
+          "residual_diagnostics": [],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f",
+          "timings_seconds": {
+            "build": 7.146532356040552,
+            "training_native_return": 42.357966898940504,
+            "training_synchronized": 42.35914781689644
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 667.3380102891191,
+            "ess_ratio": 0.6516972756729679,
+            "kl": 0.7701899055616892
+          },
+          "path": "../../results/restored_zip_jax435/table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97/result.json",
+          "residual_diagnostics": [],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97",
+          "timings_seconds": {
+            "build": 10.229555198922753,
+            "training_native_return": 42.69403442600742,
+            "training_synchronized": 42.695211436832324
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 44.16861408581026,
+          "n": 5,
+          "raw_values": [
+            43.179450216004625,
+            48.837037552148104,
+            43.77458133595064,
+            42.357966898940504,
+            42.69403442600742
+          ],
+          "se_ddof0": 1.065471032713105,
+          "se_ddof1": 1.1912328286017022
+        },
+        "training_synchronized": {
+          "mean": 44.16978768249974,
+          "n": 5,
+          "raw_values": [
+            43.18067405279726,
+            48.83820505300537,
+            43.775700052967295,
+            42.35914781689644,
+            42.695211436832324
+          ],
+          "se_ddof0": 1.0654682239213134,
+          "se_ddof1": 1.1912296882770121
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    }
+  ],
+  "input_result_files": 30,
+  "input_roots": [
+    "../../results/restored_zip_jax435"
+  ],
+  "missing_implementations_and_coverage": {
+    "continental_drift": "runner and original point clouds absent",
+    "figures_3_5": "dimension sweep runners available; defaults conflict; raw figure values absent",
+    "table_1_2_RCNF_Moser": "code absent",
+    "table_1_2_RNOT_RCPM": "runners available; defaults conflict with paper",
+    "table_3": "absent from ZIP; historical driver recovered in verification/snapshots/dbf533d; no fresh ablation rerun",
+    "table_4": "semi-dual RCPM experiment runner absent",
+    "table_5": "SO3/SE3 geometry components present but experiment runners absent"
+  },
+  "paper_title": "Riemannian Neural Optimal Transport",
+  "primary_host": null,
+  "read_errors": [],
+  "schema_version": 1,
+  "table_row_coverage": {
+    "all_six_rows_have_complete_five_seed_group": true,
+    "complete_configured_table_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND"
+    ],
+    "complete_native_table_rows": [
+      "S2:RCPM_gamma1",
+      "T2:RCPM_gamma1"
+    ],
+    "complete_table_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "expected_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "missing_table_rows": [],
+    "rows": {
+      "S2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "cdc40555dcd2babe"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "bb0f06d960e2e744",
+            "group_id": "cdc40555dcd2babe",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_x64_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "S2:RNOT_FPS": {
+        "complete_configured_group_ids": [
+          "f93bd4238029889f"
+        ],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "425ed50554812ec5",
+            "group_id": "f93bd4238029889f",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_historical_settings_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "explicit_configuration_descriptive_comparison",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "S2:RNOT_RND": {
+        "complete_configured_group_ids": [
+          "d2b0bd2d89b35fc4"
+        ],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "425ed50554812ec5",
+            "group_id": "d2b0bd2d89b35fc4",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_historical_settings_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "explicit_configuration_descriptive_comparison",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "8f0eda66316ae598"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "bb0f06d960e2e744",
+            "group_id": "8f0eda66316ae598",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_x64_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RNOT_FPS": {
+        "complete_configured_group_ids": [
+          "a42e85edcd0849b4"
+        ],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "425ed50554812ec5",
+            "group_id": "a42e85edcd0849b4",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_historical_settings_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "explicit_configuration_descriptive_comparison",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RNOT_RND": {
+        "complete_configured_group_ids": [
+          "9cc4e7180b4edd02"
+        ],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": "True",
+                "JAX_PLATFORMS": "cuda",
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.8.4",
+                "jax": "0.4.35",
+                "jax-cuda12-pjrt": "0.4.35",
+                "jax-cuda12-plugin": "0.4.35",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.34",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.3",
+                "pandas": null,
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "425ed50554812ec5",
+            "group_id": "9cc4e7180b4edd02",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_historical_settings_cuda_jax435",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "explicit_configuration_descriptive_comparison",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      }
+    },
+    "scope": "Six main-table rows implemented by the archive; row coverage may span environments without pooling seeds."
+  },
+  "version_assessment": {
+    "blocker": "OpenReview web challenge and public API1/API2 HTTP 403",
+    "camera_ready_has_additional_tables_4_5": true,
+    "current_live_openreview_equals_local_camera_ready": "not established",
+    "historical_requested_url_copy_verified_by_download_metadata": true,
+    "live_openreview_pdf_retrieved": false,
+    "tables_1_2_3_same_in_all_three_sources": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "status": "verified",
+  "python": "3.11.15",
+  "normalized_package_versions_equal": true,
+  "candidate_package_count": 80,
+  "freeze_text_difference": "spherical_kde distribution spelling normalized to spherical-kde by pip",
+  "pip_check": "No broken requirements found.",
+  "probe_jax_config": {
+    "jax_enable_x64": true,
+    "jax_threefry_partitionable": false,
+    "jax_default_prng_impl": "threefry2x32",
+    "jax_default_matmul_precision": null
+  },
+  "checked_at": "2026-09-08T11:21:43.164558+00:00"
+}

@@ -1,0 +1,313 @@
+{
+  "builder": "native_archive_builder",
+  "checkpoint": {
+    "bytes": 12664,
+    "file": "checkpoint.msgpack",
+    "note": "Archive RCPM training does not return optimizer state.",
+    "sha256": "bfc83c0f3e1c13fca070205a562093f92cbc33d71a20a100ae310e738d375e19"
+  },
+  "command": [
+    "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/tooling/verify_run.py",
+    "--source-root",
+    "/data/am1118/mlgh-finalMLGH-ca8eb58-20260908/archive",
+    "--output-dir",
+    "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/results",
+    "--suite",
+    "table",
+    "--manifold",
+    "torus",
+    "--dimension",
+    "2",
+    "--method",
+    "rcpm",
+    "--seed",
+    "56789",
+    "--gpu",
+    "2",
+    "--label",
+    "zip_x64_cuda_jax435"
+  ],
+  "configuration": {
+    "base_density": "TorusUniform",
+    "cost_gamma": 1.0,
+    "init_alpha_linear_scale": 1.0,
+    "init_alpha_minval": 0.4,
+    "init_alpha_mode": "uniform",
+    "init_alpha_range": 0.01,
+    "manifold_name": "T2",
+    "min_zero_gamma": null,
+    "n_components": 68,
+    "n_transforms": 5,
+    "seed": 56789,
+    "target_density": "TorusWrappedNormal",
+    "target_scale": 0.3,
+    "training": {
+      "batch_size": 256,
+      "log_every": 5000,
+      "lr": 0.001,
+      "n_iters": 5000
+    }
+  },
+  "density_configuration": {
+    "base_class": "ProductUniformComponents",
+    "target_class": "WrappedNormal",
+    "target_loc": [
+      -1.0,
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "target_scale": [
+      0.3,
+      0.3
+    ]
+  },
+  "environment": {
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "2",
+      "JAX_ENABLE_X64": "True",
+      "JAX_PLATFORMS": "cuda",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+    "hostname": "nvidia7",
+    "jax_default_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_enable_x64": true,
+    "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.34",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "pandas": null,
+      "scipy": "1.17.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+    "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+  },
+  "evaluation_batches": [
+    {
+      "evaluation_seconds": 7.607744537992403,
+      "index": 0,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 671.064413636825,
+        "ess_ratio": 0.6553363414422119,
+        "kl": 0.8333097621022396
+      },
+      "prng_key": [
+        956059740,
+        2593707720
+      ]
+    },
+    {
+      "evaluation_seconds": 0.5883782939054072,
+      "index": 1,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 646.6810383661945,
+        "ess_ratio": 0.6315244515294868,
+        "kl": 0.8222227824517141
+      },
+      "prng_key": [
+        2021094012,
+        110139880
+      ]
+    },
+    {
+      "evaluation_seconds": 0.5990240811370313,
+      "index": 2,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 679.6617400920549,
+        "ess_ratio": 0.6637321680586473,
+        "kl": 0.8022417809144885
+      },
+      "prng_key": [
+        1775426537,
+        430539250
+      ]
+    },
+    {
+      "evaluation_seconds": 0.5987860888708383,
+      "index": 3,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 648.0201980823277,
+        "ess_ratio": 0.6328322246897732,
+        "kl": 0.7954088451364734
+      },
+      "prng_key": [
+        2967507413,
+        3675674745
+      ]
+    },
+    {
+      "evaluation_seconds": 0.5958655760623515,
+      "index": 4,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 691.2626612681937,
+        "ess_ratio": 0.6750611926447204,
+        "kl": 0.5977663572035308
+      },
+      "prng_key": [
+        2013281004,
+        4108389341
+      ]
+    }
+  ],
+  "evaluation_config": {
+    "batch_size": 1024,
+    "n_batches": 5,
+    "seed": 57789
+  },
+  "explicit_overrides": {},
+  "finished_at": "2026-09-08T11:28:56.772091+00:00",
+  "geometry_configuration": {
+    "ambient_dimension": 4,
+    "class": "Product",
+    "components": [
+      {
+        "ambient_dimension": 2,
+        "class": "Sphere",
+        "jitter": 0.01
+      },
+      {
+        "ambient_dimension": 2,
+        "class": "Sphere",
+        "jitter": 0.01
+      }
+    ],
+    "jitter": null
+  },
+  "label": "zip_x64_cuda_jax435",
+  "paper_reproduction": false,
+  "paper_reproduction_note": "Numerical comparison with paper is a separate verification step; smoke runs are ineligible.",
+  "parameter_count": 1700,
+  "parameter_dtypes": [
+    "float32",
+    "float64"
+  ],
+  "parameter_nonfinite_count": 0,
+  "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "schema_version": 1,
+  "selection": {
+    "dimension": 2,
+    "gamma": 1.0,
+    "landmark_method": null,
+    "manifold": "torus",
+    "method": "rcpm",
+    "seed": 56789,
+    "suite": "table"
+  },
+  "smoke": false,
+  "source": {
+    "files": {
+      "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "rcpm/requirements.txt": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+  },
+  "source_root": "/data/am1118/mlgh-finalMLGH-ca8eb58-20260908/archive",
+  "started_at": "2026-09-08T11:27:53.739489+00:00",
+  "status": "complete",
+  "summary": {
+    "ess": {
+      "mean": 667.3380102891191,
+      "raw_batches": [
+        671.064413636825,
+        646.6810383661945,
+        679.6617400920549,
+        648.0201980823277,
+        691.2626612681937
+      ],
+      "se_ddof0": 7.843564700102755,
+      "se_ddof1": 8.769371927673756
+    },
+    "ess_ratio": {
+      "mean": 0.6516972756729679,
+      "raw_batches": [
+        0.6553363414422119,
+        0.6315244515294868,
+        0.6637321680586473,
+        0.6328322246897732,
+        0.6750611926447204
+      ],
+      "se_ddof0": 0.007659731152444097,
+      "se_ddof1": 0.008563839773118902
+    },
+    "kl": {
+      "mean": 0.7701899055616892,
+      "raw_batches": [
+        0.8333097621022396,
+        0.8222227824517141,
+        0.8022417809144885,
+        0.7954088451364734,
+        0.5977663572035308
+      ],
+      "se_ddof0": 0.03903062091357418,
+      "se_ddof1": 0.0436375607833884
+    }
+  },
+  "summary_note": "Batch errors are evaluation Monte Carlo uncertainty. Table comparison requires aggregating independent training seeds.",
+  "task_id": "table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97",
+  "timings_seconds": {
+    "build": 10.229555198922753,
+    "training_native_return": 42.69403442600742,
+    "training_synchronized": 42.695211436832324
+  }
+}

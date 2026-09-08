@@ -1,0 +1,222 @@
+{
+  "a_checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+  "a_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/checkpoint.msgpack",
+  "affinity": [
+    28,
+    29
+  ],
+  "arrays": {
+    "landmarks": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "6520da1e595dc13adda98f55e49d7e6ba26155c953f4c5640de5f2a966c37bb5",
+      "b_nonfinite_count": 0,
+      "b_sha256": "6520da1e595dc13adda98f55e49d7e6ba26155c953f4c5640de5f2a966c37bb5",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float64",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128,
+        4
+      ],
+      "size": 512
+    },
+    "params/Dense_0/bias": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "c38cd4eafd91cf877d97f157cbc7131b0c73bd8cc466a88390a6d848171f0ee1",
+      "b_nonfinite_count": 0,
+      "b_sha256": "c38cd4eafd91cf877d97f157cbc7131b0c73bd8cc466a88390a6d848171f0ee1",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128
+      ],
+      "size": 128
+    },
+    "params/Dense_0/kernel": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "78442a5d060895a54191e12f66752e929f2a6752691fcdca749c46b9620c6002",
+      "b_nonfinite_count": 0,
+      "b_sha256": "78442a5d060895a54191e12f66752e929f2a6752691fcdca749c46b9620c6002",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128,
+        128
+      ],
+      "size": 16384
+    },
+    "params/Dense_1/bias": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "cdb1d577690201541666f5fa414fcc3396da89da2931b72a603628642e7a8792",
+      "b_nonfinite_count": 0,
+      "b_sha256": "cdb1d577690201541666f5fa414fcc3396da89da2931b72a603628642e7a8792",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128
+      ],
+      "size": 128
+    },
+    "params/Dense_1/kernel": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "227f21cd92f20716300ec8e1bebcd90bba837a0c573e35a538d4a631cefdd0fe",
+      "b_nonfinite_count": 0,
+      "b_sha256": "227f21cd92f20716300ec8e1bebcd90bba837a0c573e35a538d4a631cefdd0fe",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128,
+        128
+      ],
+      "size": 16384
+    },
+    "params/Dense_2/bias": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "b_nonfinite_count": 0,
+      "b_sha256": "df3f619804a92fdb4057192dc43dd748ea778adc52bc498ce80524c014b81119",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        1
+      ],
+      "size": 1
+    },
+    "params/Dense_2/kernel": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "f2e2c1bb8fa7a97249127d2be5f66f56bcdecdc51595bead32b07205606f2eae",
+      "b_nonfinite_count": 0,
+      "b_sha256": "f2e2c1bb8fa7a97249127d2be5f66f56bcdecdc51595bead32b07205606f2eae",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128,
+        1
+      ],
+      "size": 128
+    },
+    "params/LayerNorm_0/bias": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "fee9c5770061e52226de9b2458c3b70a4c817cc0d34b73d27c347bb6ed1a6c9d",
+      "b_nonfinite_count": 0,
+      "b_sha256": "fee9c5770061e52226de9b2458c3b70a4c817cc0d34b73d27c347bb6ed1a6c9d",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128
+      ],
+      "size": 128
+    },
+    "params/LayerNorm_0/scale": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "9592ce3beb0d6e9855cd132632325e959a20c0e52083d98dd570c5ffed42aa32",
+      "b_nonfinite_count": 0,
+      "b_sha256": "9592ce3beb0d6e9855cd132632325e959a20c0e52083d98dd570c5ffed42aa32",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "float32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        128
+      ],
+      "size": 128
+    },
+    "retained_pretraining_key": {
+      "a_nonfinite_count": 0,
+      "a_sha256": "d6fea511f5ecd9bd7391b2a9fb050e09e64e8752db7ab1812a004149e22b1822",
+      "b_nonfinite_count": 0,
+      "b_sha256": "d6fea511f5ecd9bd7391b2a9fb050e09e64e8752db7ab1812a004149e22b1822",
+      "bitwise_equal": true,
+      "different_element_count": 0,
+      "dtype": "uint32",
+      "max_absolute_difference": 0.0,
+      "shape": [
+        2
+      ],
+      "size": 2
+    }
+  },
+  "b_checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+  "b_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/checkpoint.msgpack",
+  "checkpoint_files_byte_identical": true,
+  "different_parameter_value_count": 0,
+  "evidence_path_base": "report_directory",
+  "exact_parameter_array_count": 8,
+  "hostname": "nvidia7",
+  "input_record_checkpoint_hashes_match_probe": [
+    true,
+    true
+  ],
+  "input_result_paths": [
+    "../results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+    "../results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json"
+  ],
+  "packages": {
+    "flax": "0.8.4",
+    "jax": "0.4.35",
+    "jaxlib": "0.4.34",
+    "numpy": "2.4.6"
+  },
+  "parameter_array_count": 8,
+  "parameter_max_absolute_difference": 0.0,
+  "parameter_value_count": 33409,
+  "payload_keys": [
+    [
+      "key",
+      "landmarks",
+      "params",
+      "state"
+    ],
+    [
+      "key",
+      "landmarks",
+      "params",
+      "state"
+    ]
+  ],
+  "probe_input_paths": {
+    "a": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/results/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/checkpoint.msgpack",
+    "b": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/checkpoint_comparison_inputs/nvidia6_fps.msgpack"
+  },
+  "recorded_evaluation_keys": [
+    [
+      1955940769,
+      1593755662
+    ],
+    [
+      3178552735,
+      2499225520
+    ],
+    [
+      2961573914,
+      2208487432
+    ],
+    [
+      2120938243,
+      1378437637
+    ],
+    [
+      3806918248,
+      4233482412
+    ]
+  ],
+  "same_effective_configuration": true,
+  "same_recorded_evaluation_keys": true,
+  "scope": "Saved T2 FPS seed12345 arrays; CPU only, no evaluation or training.",
+  "state_params_match_top_level_params": true
+}

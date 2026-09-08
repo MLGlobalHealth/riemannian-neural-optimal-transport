@@ -1,0 +1,1402 @@
+{
+  "all_five_checkpoints_byte_identical": true,
+  "all_five_evaluation_key_schedules_identical": true,
+  "evidence_path_base": "report_directory",
+  "hosts": {
+    "nvidia6": {
+      "aggregates": {
+        "ess": {
+          "mean": 815.8008064775629,
+          "raw_seed_values": [
+            697.8351163738373,
+            909.9178656754705,
+            881.3265765660342,
+            806.0414730395937,
+            783.8830007328786
+          ],
+          "se_ddof0": 33.57471806708537,
+          "se_ddof1": 37.537675961696614
+        },
+        "ess_ratio": {
+          "mean": 0.796680475075745,
+          "raw_seed_values": [
+            0.6814796058338255,
+            0.8885916656987016,
+            0.8606704849277678,
+            0.7871498760152282,
+            0.7655107429032018
+          ],
+          "se_ddof0": 0.03278781061238806,
+          "se_ddof1": 0.03665788668134435
+        },
+        "kl": {
+          "mean": 0.2229976296027818,
+          "raw_seed_values": [
+            0.1273211332307107,
+            0.1580961569707102,
+            0.2401193412198462,
+            0.35195945194000683,
+            0.23749206465263512
+          ],
+          "se_ddof0": 0.034928834154318286,
+          "se_ddof1": 0.039051623771936037
+        },
+        "training_seconds": {
+          "mean": 1324.562136461027,
+          "raw_seed_values": [
+            1594.8692884012125,
+            1253.8925726576708,
+            1258.4682977870107,
+            1253.390792446211,
+            1262.1897310130298
+          ],
+          "se_ddof0": 60.45964482829276,
+          "se_ddof1": 67.59593786577811
+        }
+      },
+      "group_id": "67456ac801272931",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA GeForce RTX 3090",
+              "550.90.07",
+              "24576 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "paper_comparison": {
+        "ess_ratio": {
+          "fresh_printed_mean": "0.80",
+          "mean_difference_from_paper": -0.05331952492425496,
+          "mean_in_paper_rounding_interval": false,
+          "paper_mean": 0.85,
+          "paper_reported_plus_minus": 0.02,
+          "paper_rounding_interval": [
+            0.845,
+            0.855
+          ],
+          "printed_decimal_places": 2
+        },
+        "kl": {
+          "fresh_printed_mean": "0.22",
+          "mean_difference_from_paper": 0.0029976296027817984,
+          "mean_in_paper_rounding_interval": true,
+          "paper_mean": 0.22,
+          "paper_reported_plus_minus": 0.04,
+          "paper_rounding_interval": [
+            0.215,
+            0.225
+          ],
+          "printed_decimal_places": 2
+        }
+      },
+      "seed_records": [
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/checkpoint.msgpack",
+          "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+          "native_seed_means": {
+            "ess": 697.8351163738373,
+            "ess_ratio": 0.6814796058338255,
+            "kl": 0.1273211332307107
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 922.0890027053579,
+                "ess_ratio": 0.900477541704451,
+                "kl": 0.13810377992871575
+              },
+              "prng_key": [
+                1955940769,
+                1593755662
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 900.3714977226678,
+                "ess_ratio": 0.8792690407447927,
+                "kl": 0.14232922560108785
+              },
+              "prng_key": [
+                3178552735,
+                2499225520
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 1.1553712266761322,
+                "ess_ratio": 0.0011282922135509104,
+                "kl": 0.11972818728370044
+              },
+              "prng_key": [
+                2961573914,
+                2208487432
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 773.286201679808,
+                "ess_ratio": 0.7551623063279375,
+                "kl": 0.11179015514872824
+              },
+              "prng_key": [
+                2120938243,
+                1378437637
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 892.273508534677,
+                "ess_ratio": 0.8713608481783955,
+                "kl": 0.12465431819132121
+              },
+              "prng_key": [
+                3806918248,
+                4233482412
+              ]
+            }
+          ],
+          "result_path": "../results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+          "result_sha256": "2333d117faa1161d5a50c416a01d47ad1961a2e5f9eb2fa431c7a6d06380b163",
+          "seed": 12345,
+          "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+          "training_native_seconds": 1594.8692884012125
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/checkpoint.msgpack",
+          "checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709",
+          "native_seed_means": {
+            "ess": 909.9178656754705,
+            "ess_ratio": 0.8885916656987016,
+            "kl": 0.1580961569707102
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 928.1014230513264,
+                "ess_ratio": 0.9063490459485609,
+                "kl": 0.17904070941893013
+              },
+              "prng_key": [
+                1174836703,
+                2194839716
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 935.9242687905106,
+                "ess_ratio": 0.913988543740733,
+                "kl": 0.1466080779780623
+              },
+              "prng_key": [
+                113300593,
+                309688178
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 876.9067101090628,
+                "ess_ratio": 0.8563542090908817,
+                "kl": 0.16440708655298802
+              },
+              "prng_key": [
+                2655362039,
+                2275878118
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 927.2827267507553,
+                "ess_ratio": 0.9055495378425344,
+                "kl": 0.14825438321118722
+              },
+              "prng_key": [
+                3388368820,
+                3662901077
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 881.3741996756972,
+                "ess_ratio": 0.8607169918707981,
+                "kl": 0.15217052769238337
+              },
+              "prng_key": [
+                3468917522,
+                4244436253
+              ]
+            }
+          ],
+          "result_path": "../results/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+          "result_sha256": "fbe0ffb7aa0370ac1af5c848856c533b642748600360204c8565ee09be8842df",
+          "seed": 23456,
+          "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+          "training_native_seconds": 1253.8925726576708
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/checkpoint.msgpack",
+          "checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5",
+          "native_seed_means": {
+            "ess": 881.3265765660342,
+            "ess_ratio": 0.8606704849277678,
+            "kl": 0.2401193412198462
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 887.973793887722,
+                "ess_ratio": 0.8671619080934785,
+                "kl": 0.24038648516174008
+              },
+              "prng_key": [
+                367103561,
+                3380539795
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 881.5214289690555,
+                "ess_ratio": 0.8608607704775932,
+                "kl": 0.265024356270488
+              },
+              "prng_key": [
+                3672619931,
+                3242602984
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 900.1765167792868,
+                "ess_ratio": 0.8790786296672722,
+                "kl": 0.20643705583980926
+              },
+              "prng_key": [
+                1407861853,
+                3520835356
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 870.3975996630338,
+                "ess_ratio": 0.8499976559209315,
+                "kl": 0.24180244249682947
+              },
+              "prng_key": [
+                1061612570,
+                4272863561
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 866.5635435310736,
+                "ess_ratio": 0.8462534604795641,
+                "kl": 0.2469463663303645
+              },
+              "prng_key": [
+                3835220564,
+                1742781552
+              ]
+            }
+          ],
+          "result_path": "../results/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+          "result_sha256": "310c723d7036b67b34b54331b64d2bcb0e5a6529466a0497d483d40cf71b1e88",
+          "seed": 34567,
+          "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+          "training_native_seconds": 1258.4682977870107
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/checkpoint.msgpack",
+          "checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5",
+          "native_seed_means": {
+            "ess": 806.0414730395937,
+            "ess_ratio": 0.7871498760152282,
+            "kl": 0.35195945194000683
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 839.1352716898203,
+                "ess_ratio": 0.8194680387595902,
+                "kl": 0.346184031641456
+              },
+              "prng_key": [
+                2411784446,
+                916621192
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 753.6931943573093,
+                "ess_ratio": 0.7360285101145598,
+                "kl": 0.28966630172990004
+              },
+              "prng_key": [
+                619226218,
+                4168617283
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 776.6406655546376,
+                "ess_ratio": 0.7584381499557008,
+                "kl": 0.41139397498210833
+              },
+              "prng_key": [
+                1824278203,
+                4171258666
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 823.7843294034592,
+                "ess_ratio": 0.8044768841830656,
+                "kl": 0.38802975101097464
+              },
+              "prng_key": [
+                2346383857,
+                2750473686
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 836.9539041927422,
+                "ess_ratio": 0.8173377970632248,
+                "kl": 0.3245232003355951
+              },
+              "prng_key": [
+                3289742548,
+                1106098403
+              ]
+            }
+          ],
+          "result_path": "../results/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+          "result_sha256": "7748e706538020291c38b852530391f221dabb2b7c612b0e8d4198e2b22d5530",
+          "seed": 45678,
+          "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+          "training_native_seconds": 1253.390792446211
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/checkpoint.msgpack",
+          "checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e",
+          "native_seed_means": {
+            "ess": 783.8830007328786,
+            "ess_ratio": 0.7655107429032018,
+            "kl": 0.23749206465263512
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 267.3807395053174,
+                "ess_ratio": 0.26111400342316154,
+                "kl": 0.19896681735636704
+              },
+              "prng_key": [
+                956059740,
+                2593707720
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 911.7804633698671,
+                "ess_ratio": 0.8904106087596358,
+                "kl": 0.2421197722349291
+              },
+              "prng_key": [
+                2021094012,
+                110139880
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 916.7328101771593,
+                "ess_ratio": 0.8952468849386321,
+                "kl": 0.23931663681052107
+              },
+              "prng_key": [
+                1775426537,
+                430539250
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 914.2363728066073,
+                "ess_ratio": 0.8928089578189524,
+                "kl": 0.22913041383243088
+              },
+              "prng_key": [
+                2967507413,
+                3675674745
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 909.2846178054418,
+                "ess_ratio": 0.8879732595756268,
+                "kl": 0.27792668302892765
+              },
+              "prng_key": [
+                2013281004,
+                4108389341
+              ]
+            }
+          ],
+          "result_path": "../results/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+          "result_sha256": "1bab78ea70840c30212b742c50f2c881ab6f36b239f81c40a4af27074d84c339",
+          "seed": 56789,
+          "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+          "training_native_seconds": 1262.1897310130298
+        }
+      ],
+      "seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ],
+      "status": "complete_five_independent_seeds"
+    },
+    "nvidia7": {
+      "aggregates": {
+        "ess": {
+          "mean": 811.771768567866,
+          "raw_seed_values": [
+            720.7501609544736,
+            732.8707287287992,
+            880.319762644697,
+            810.1158813937111,
+            914.8023091176492
+          ],
+          "se_ddof0": 34.541087927558785,
+          "se_ddof1": 38.61811031140939
+        },
+        "ess_ratio": {
+          "mean": 0.7927458677420567,
+          "raw_seed_values": [
+            0.7038575790571031,
+            0.715694071024218,
+            0.8596872682077119,
+            0.791128790423546,
+            0.8933616299977043
+          ],
+          "se_ddof0": 0.033731531179256626,
+          "se_ddof1": 0.03771299835098573
+        },
+        "kl": {
+          "mean": 0.222870520260049,
+          "raw_seed_values": [
+            0.12672628200580083,
+            0.15704639330917355,
+            0.23984221994584703,
+            0.3531487003752704,
+            0.2375890056641531
+          ],
+          "se_ddof0": 0.03524406722004963,
+          "se_ddof1": 0.03940406505380151
+        },
+        "training_seconds": {
+          "mean": 675.4771480395924,
+          "raw_seed_values": [
+            677.7770920321345,
+            674.913328998955,
+            675.2960410779342,
+            680.0668434998952,
+            669.3324345890433
+          ],
+          "se_ddof0": 1.6057800823109065,
+          "se_ddof1": 1.7953167104811973
+        }
+      },
+      "group_id": "9cc4e7180b4edd02",
+      "identity": {
+        "builder": "explicit_configuration_builder_using_archive_classes",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "solver": {
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "min_steps": 1000,
+            "use_adam": true,
+            "use_line_search": false
+          },
+          "training": {
+            "n_steps": 1000
+          }
+        },
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_historical_settings_cuda_jax435",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "paper_comparison": {
+        "ess_ratio": {
+          "fresh_printed_mean": "0.79",
+          "mean_difference_from_paper": -0.05725413225794329,
+          "mean_in_paper_rounding_interval": false,
+          "paper_mean": 0.85,
+          "paper_reported_plus_minus": 0.02,
+          "paper_rounding_interval": [
+            0.845,
+            0.855
+          ],
+          "printed_decimal_places": 2
+        },
+        "kl": {
+          "fresh_printed_mean": "0.22",
+          "mean_difference_from_paper": 0.0028705202600489976,
+          "mean_in_paper_rounding_interval": true,
+          "paper_mean": 0.22,
+          "paper_reported_plus_minus": 0.04,
+          "paper_rounding_interval": [
+            0.215,
+            0.225
+          ],
+          "printed_decimal_places": 2
+        }
+      },
+      "seed_records": [
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/checkpoint.msgpack",
+          "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+          "native_seed_means": {
+            "ess": 720.7501609544736,
+            "ess_ratio": 0.7038575790571031,
+            "kl": 0.12672628200580083
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 921.4237651050373,
+                "ess_ratio": 0.899827895610388,
+                "kl": 0.13970292692757336
+              },
+              "prng_key": [
+                1955940769,
+                1593755662
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 900.6832903506861,
+                "ess_ratio": 0.8795735257330919,
+                "kl": 0.1408632918239233
+              },
+              "prng_key": [
+                3178552735,
+                2499225520
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 1.1552762459566344,
+                "ess_ratio": 0.0011281994589420257,
+                "kl": 0.12017293535650689
+              },
+              "prng_key": [
+                2961573914,
+                2208487432
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 886.312929919345,
+                "ess_ratio": 0.8655399706243604,
+                "kl": 0.11233889662317198
+              },
+              "prng_key": [
+                2120938243,
+                1378437637
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 894.1755431513426,
+                "ess_ratio": 0.873218303858733,
+                "kl": 0.12055335929782868
+              },
+              "prng_key": [
+                3806918248,
+                4233482412
+              ]
+            }
+          ],
+          "result_path": "../results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+          "result_sha256": "75cf13e917e0ccd3259f09ef50548c51d2a32a9b78c1d809dc2814600748380a",
+          "seed": 12345,
+          "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+          "training_native_seconds": 677.7770920321345
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/checkpoint.msgpack",
+          "checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709",
+          "native_seed_means": {
+            "ess": 732.8707287287992,
+            "ess_ratio": 0.715694071024218,
+            "kl": 0.15704639330917355
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 928.7274359920889,
+                "ess_ratio": 0.9069603867110243,
+                "kl": 0.1777028970591464
+              },
+              "prng_key": [
+                1174836703,
+                2194839716
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 935.1416674830554,
+                "ess_ratio": 0.9132242846514212,
+                "kl": 0.14771039589736928
+              },
+              "prng_key": [
+                113300593,
+                309688178
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 876.78552755355,
+                "ess_ratio": 0.8562358667515136,
+                "kl": 0.16469494297282603
+              },
+              "prng_key": [
+                2655362039,
+                2275878118
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 41.89929121999669,
+                "ess_ratio": 0.04091727658202802,
+                "kl": 0.1433558185018426
+              },
+              "prng_key": [
+                3388368820,
+                3662901077
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 881.7997213953059,
+                "ess_ratio": 0.8611325404251035,
+                "kl": 0.1517679121146835
+              },
+              "prng_key": [
+                3468917522,
+                4244436253
+              ]
+            }
+          ],
+          "result_path": "../results/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+          "result_sha256": "5b43596e27b0246c5a92d578e8cb476a9b0eb3ead0369a73975a4a3602f090be",
+          "seed": 23456,
+          "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+          "training_native_seconds": 674.913328998955
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/checkpoint.msgpack",
+          "checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5",
+          "native_seed_means": {
+            "ess": 880.319762644697,
+            "ess_ratio": 0.8596872682077119,
+            "kl": 0.23984221994584703
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 887.9253148281806,
+                "ess_ratio": 0.8671145652618951,
+                "kl": 0.24049655556673957
+              },
+              "prng_key": [
+                367103561,
+                3380539795
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 881.6571129187747,
+                "ess_ratio": 0.8609932743347409,
+                "kl": 0.26460440448793315
+              },
+              "prng_key": [
+                3672619931,
+                3242602984
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 899.7949491693554,
+                "ess_ratio": 0.8787060050481986,
+                "kl": 0.20685715920441458
+              },
+              "prng_key": [
+                1407861853,
+                3520835356
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 870.1837090295494,
+                "ess_ratio": 0.8497887783491693,
+                "kl": 0.24223147845289827
+              },
+              "prng_key": [
+                1061612570,
+                4272863561
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 862.0377272776249,
+                "ess_ratio": 0.8418337180445555,
+                "kl": 0.24502150201724943
+              },
+              "prng_key": [
+                3835220564,
+                1742781552
+              ]
+            }
+          ],
+          "result_path": "../results/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+          "result_sha256": "45c71698e1abfd9b7e62cccbeab12b2e4da8863ff267aefc16ad16f282e693f3",
+          "seed": 34567,
+          "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+          "training_native_seconds": 675.2960410779342
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/checkpoint.msgpack",
+          "checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5",
+          "native_seed_means": {
+            "ess": 810.1158813937111,
+            "ess_ratio": 0.791128790423546,
+            "kl": 0.3531487003752704
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 836.8950825437905,
+                "ess_ratio": 0.8172803540466704,
+                "kl": 0.3483913006852137
+              },
+              "prng_key": [
+                2411784446,
+                916621192
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 753.9289668634309,
+                "ess_ratio": 0.7362587567025692,
+                "kl": 0.2892042180873279
+              },
+              "prng_key": [
+                619226218,
+                4168617283
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 800.4483489592442,
+                "ess_ratio": 0.7816878407805119,
+                "kl": 0.4123729030925647
+              },
+              "prng_key": [
+                1824278203,
+                4171258666
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 822.7416760392456,
+                "ess_ratio": 0.8034586680070758,
+                "kl": 0.3903957396037636
+              },
+              "prng_key": [
+                2346383857,
+                2750473686
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 836.565332562844,
+                "ess_ratio": 0.8169583325809023,
+                "kl": 0.3253793404074822
+              },
+              "prng_key": [
+                3289742548,
+                1106098403
+              ]
+            }
+          ],
+          "result_path": "../results/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+          "result_sha256": "8d2bc2d2526685c4982bf54b7f180bdd54ae12e321b8a3cd21b34a46ac4e358a",
+          "seed": 45678,
+          "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+          "training_native_seconds": 680.0668434998952
+        },
+        {
+          "checkpoint_bytes": 539794,
+          "checkpoint_path": "../artifacts/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/checkpoint.msgpack",
+          "checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e",
+          "native_seed_means": {
+            "ess": 914.8023091176492,
+            "ess_ratio": 0.8933616299977043,
+            "kl": 0.2375890056641531
+          },
+          "raw_native_batches": [
+            {
+              "index": 0,
+              "metrics": {
+                "ess": 923.5130706555292,
+                "ess_ratio": 0.9018682330620402,
+                "kl": 0.2014904358008079
+              },
+              "prng_key": [
+                956059740,
+                2593707720
+              ]
+            },
+            {
+              "index": 1,
+              "metrics": {
+                "ess": 911.2480125878717,
+                "ess_ratio": 0.8898906372928435,
+                "kl": 0.241584762598827
+              },
+              "prng_key": [
+                2021094012,
+                110139880
+              ]
+            },
+            {
+              "index": 2,
+              "metrics": {
+                "ess": 915.4648341328174,
+                "ess_ratio": 0.8940086270828295,
+                "kl": 0.2387086478364153
+              },
+              "prng_key": [
+                1775426537,
+                430539250
+              ]
+            },
+            {
+              "index": 3,
+              "metrics": {
+                "ess": 914.1896028870386,
+                "ess_ratio": 0.8927632840693737,
+                "kl": 0.22890145473595885
+              },
+              "prng_key": [
+                2967507413,
+                3675674745
+              ]
+            },
+            {
+              "index": 4,
+              "metrics": {
+                "ess": 909.5960253249892,
+                "ess_ratio": 0.8882773684814348,
+                "kl": 0.2772597273487565
+              },
+              "prng_key": [
+                2013281004,
+                4108389341
+              ]
+            }
+          ],
+          "result_path": "../results/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+          "result_sha256": "8f6c05c7d5f66934eece1bdca8f66d55ecaf0fbe23c462b14c4b9da72f77edef",
+          "seed": 56789,
+          "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+          "training_native_seconds": 669.3324345890433
+        }
+      ],
+      "seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ],
+      "status": "complete_five_independent_seeds"
+    }
+  },
+  "limits": "Printed rounding checks are descriptive, not statistical equivalence. GPU timings are reported separately and are not an AMD timing match. Host environments differ in GPU architecture, driver, OS and Python build; individual causes are not isolated.",
+  "mean_difference_nvidia6_minus_nvidia7": {
+    "ess": 4.029037909696854,
+    "ess_ratio": 0.003934607333688334,
+    "kl": 0.00012710934273280072
+  },
+  "paired_checkpoints": [
+    {
+      "checkpoint_files_byte_identical": true,
+      "native_mean_difference_nvidia6_minus_nvidia7": {
+        "ess": -22.915044580636277,
+        "ess_ratio": -0.022377973223277614,
+        "kl": 0.0005948512249098759
+      },
+      "nvidia6_checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+      "nvidia7_checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+      "same_checkpoint_sha256": true,
+      "same_configuration": true,
+      "same_evaluation_keys": true,
+      "seed": 12345
+    },
+    {
+      "checkpoint_files_byte_identical": true,
+      "native_mean_difference_nvidia6_minus_nvidia7": {
+        "ess": 177.04713694667123,
+        "ess_ratio": 0.17289759467448362,
+        "kl": 0.0010497636615366401
+      },
+      "nvidia6_checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709",
+      "nvidia7_checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709",
+      "same_checkpoint_sha256": true,
+      "same_configuration": true,
+      "same_evaluation_keys": true,
+      "seed": 23456
+    },
+    {
+      "checkpoint_files_byte_identical": true,
+      "native_mean_difference_nvidia6_minus_nvidia7": {
+        "ess": 1.0068139213371978,
+        "ess_ratio": 0.0009832167200558573,
+        "kl": 0.00027712127399917574
+      },
+      "nvidia6_checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5",
+      "nvidia7_checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5",
+      "same_checkpoint_sha256": true,
+      "same_configuration": true,
+      "same_evaluation_keys": true,
+      "seed": 34567
+    },
+    {
+      "checkpoint_files_byte_identical": true,
+      "native_mean_difference_nvidia6_minus_nvidia7": {
+        "ess": -4.074408354117395,
+        "ess_ratio": -0.0039789144083177685,
+        "kl": -0.001189248435263579
+      },
+      "nvidia6_checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5",
+      "nvidia7_checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5",
+      "same_checkpoint_sha256": true,
+      "same_configuration": true,
+      "same_evaluation_keys": true,
+      "seed": 45678
+    },
+    {
+      "checkpoint_files_byte_identical": true,
+      "native_mean_difference_nvidia6_minus_nvidia7": {
+        "ess": -130.9193083847706,
+        "ess_ratio": -0.12785088709450254,
+        "kl": -9.694101151799805e-05
+      },
+      "nvidia6_checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e",
+      "nvidia7_checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e",
+      "same_checkpoint_sha256": true,
+      "same_configuration": true,
+      "same_evaluation_keys": true,
+      "seed": 56789
+    }
+  ],
+  "paper_row": {
+    "ess_ratio": {
+      "mean": 0.85,
+      "reported_plus_minus": 0.02
+    },
+    "kl": {
+      "mean": 0.22,
+      "reported_plus_minus": 0.04
+    },
+    "method": "RNOT_RND",
+    "training_seconds": {
+      "mean": 1057,
+      "reported_plus_minus": 1
+    }
+  },
+  "paper_table": 2,
+  "paper_targets_path": "../paper_targets.json",
+  "paper_targets_sha256": "47518544284797c88115f025c624a330b133336edc5f4a24ac5bd2cd63d93495",
+  "schema_version": 1,
+  "scope": "Two complete T2 RNOT random five-seed rows, separately grouped by recorded NVIDIA host environment; existing runs only.",
+  "uncertainty": "SE ddof0 reproduces shipped across-seed convention; ddof1 is sample SE. Neither is labeled as the unspecified paper confidence interval. Held-out batches are not independent training runs."
+}

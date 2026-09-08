@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+runs/
+verification/artifacts/
+.DS_Store

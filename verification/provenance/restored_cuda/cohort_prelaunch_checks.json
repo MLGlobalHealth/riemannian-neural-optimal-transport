@@ -1,0 +1,906 @@
+{
+  "purpose": "Compact extracted prelaunch evidence for29 new fixed-cohort jobs; the retained original pilot has separate zip_gpu_check_1/2.json evidence.",
+  "new_job_count": 29,
+  "records": [
+    {
+      "task_id": "table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:19:21.402309+00:00",
+      "pid": 4100543,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:18:51.132072+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:19:21.400692+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.26862
+    },
+    {
+      "task_id": "table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:21:26.069009+00:00",
+      "pid": 4107184,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:20:55.827566+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:21:26.067654+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.240088
+    },
+    {
+      "task_id": "table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:23:39.803679+00:00",
+      "pid": 4119645,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:23:09.565743+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:23:39.802236+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.236493
+    },
+    {
+      "task_id": "table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:25:48.147576+00:00",
+      "pid": 4126674,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:25:17.904981+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:25:48.146712+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.241731
+    },
+    {
+      "task_id": "table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:27:51.172671+00:00",
+      "pid": 4131149,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:27:20.953569+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:27:51.171429+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.21786
+    },
+    {
+      "task_id": "table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_5615df2eb2e3",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:29:58.278396+00:00",
+      "pid": 4143693,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:29:28.051421+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:29:58.277130+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.225709
+    },
+    {
+      "task_id": "table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_0b45516f8cfc",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:40:01.833411+00:00",
+      "pid": 4178993,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:39:31.604006+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:40:01.831917+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.227911
+    },
+    {
+      "task_id": "table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_e3da3b789275",
+      "gpu": 2,
+      "started_at": "2026-09-08T11:50:09.406793+00:00",
+      "pid": 15070,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:49:39.173762+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:50:09.404940+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.231178
+    },
+    {
+      "task_id": "table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_8741bd6f228e",
+      "gpu": 2,
+      "started_at": "2026-09-08T12:00:20.624071+00:00",
+      "pid": 42723,
+      "queue_snapshot": "cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "fdc41b05f4db3ec36ec704a627776c95092bc2ea8018c3741fe380b2001fca02",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:59:50.386631+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:00:20.622792+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.236161
+    },
+    {
+      "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9",
+      "gpu": 3,
+      "started_at": "2026-09-08T11:30:21.552663+00:00",
+      "pid": 4146857,
+      "queue_snapshot": "cohort_queue_gpu3.json",
+      "queue_snapshot_sha256": "689df723e0fc8fcc714c2622b581498ba890a62b03295bb658c2b08f118a72c3",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:29:51.301055+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:30:21.550873+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.249818
+    },
+    {
+      "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b",
+      "gpu": 3,
+      "started_at": "2026-09-08T11:43:25.260582+00:00",
+      "pid": 4194201,
+      "queue_snapshot": "cohort_queue_gpu3.json",
+      "queue_snapshot_sha256": "689df723e0fc8fcc714c2622b581498ba890a62b03295bb658c2b08f118a72c3",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:42:55.027435+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:43:25.259184+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.231749
+    },
+    {
+      "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d",
+      "gpu": 3,
+      "started_at": "2026-09-08T11:55:54.509887+00:00",
+      "pid": 31382,
+      "queue_snapshot": "cohort_queue_gpu3.json",
+      "queue_snapshot_sha256": "689df723e0fc8fcc714c2622b581498ba890a62b03295bb658c2b08f118a72c3",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:55:24.274456+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:55:54.508296+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.23384
+    },
+    {
+      "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f",
+      "gpu": 3,
+      "started_at": "2026-09-08T12:08:25.561696+00:00",
+      "pid": 60585,
+      "queue_snapshot": "cohort_queue_gpu3.json",
+      "queue_snapshot_sha256": "689df723e0fc8fcc714c2622b581498ba890a62b03295bb658c2b08f118a72c3",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T12:07:55.322942+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:08:25.560502+00:00",
+          "gpu": 3,
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.23756
+    },
+    {
+      "task_id": "table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:19:21.424991+00:00",
+      "pid": 4100544,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:18:51.151938+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:19:21.423570+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.271632
+    },
+    {
+      "task_id": "table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:21:07.261164+00:00",
+      "pid": 4105890,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:20:37.017904+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:21:07.259601+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.241697
+    },
+    {
+      "task_id": "table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:22:57.170877+00:00",
+      "pid": 4116065,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:22:26.918789+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:22:57.169363+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.250574
+    },
+    {
+      "task_id": "table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:24:15.736575+00:00",
+      "pid": 4121211,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:23:45.503022+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:24:15.735139+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.232117
+    },
+    {
+      "task_id": "table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:25:32.989355+00:00",
+      "pid": 4125379,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:25:02.755384+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:25:32.988631+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.233247
+    },
+    {
+      "task_id": "table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_2411dbc94059",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:27:16.169103+00:00",
+      "pid": 4130429,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:26:45.932915+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:27:16.167761+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.234846
+    },
+    {
+      "task_id": "table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_e3b69b1f0fd1",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:37:34.410596+00:00",
+      "pid": 4173235,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:37:04.171485+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:37:34.409017+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.237532
+    },
+    {
+      "task_id": "table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_441b57612e45",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:47:43.907550+00:00",
+      "pid": 11278,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:47:13.679092+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:47:43.906179+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.227087
+    },
+    {
+      "task_id": "table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_061e8e18efc4",
+      "gpu": 4,
+      "started_at": "2026-09-08T11:57:58.466842+00:00",
+      "pid": 37491,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:57:28.238281+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:57:58.465427+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.227146
+    },
+    {
+      "task_id": "table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_6d7d390c678e",
+      "gpu": 4,
+      "started_at": "2026-09-08T12:10:48.964412+00:00",
+      "pid": 83359,
+      "queue_snapshot": "cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "a8d0e203a69fcb76d8040c98601a13b4caa3cffcda218d009d0d1ea2ac78ad07",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T12:10:18.727364+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:10:48.963105+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.235741
+    },
+    {
+      "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+      "gpu": 5,
+      "started_at": "2026-09-08T11:30:21.574345+00:00",
+      "pid": 4146860,
+      "queue_snapshot": "cohort_queue_gpu5.json",
+      "queue_snapshot_sha256": "b18506e07a6ab7cb2c8ae612d40c5379bd8537260543777776eeda160b9b3458",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:29:51.316514+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:30:21.573347+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.256833
+    },
+    {
+      "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+      "gpu": 5,
+      "started_at": "2026-09-08T11:42:58.257267+00:00",
+      "pid": 4193294,
+      "queue_snapshot": "cohort_queue_gpu5.json",
+      "queue_snapshot_sha256": "b18506e07a6ab7cb2c8ae612d40c5379bd8537260543777776eeda160b9b3458",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:42:28.021348+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:42:58.255863+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.234515
+    },
+    {
+      "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+      "gpu": 5,
+      "started_at": "2026-09-08T11:56:02.398229+00:00",
+      "pid": 31569,
+      "queue_snapshot": "cohort_queue_gpu5.json",
+      "queue_snapshot_sha256": "b18506e07a6ab7cb2c8ae612d40c5379bd8537260543777776eeda160b9b3458",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T11:55:32.182573+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T11:56:02.396724+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.214151
+    },
+    {
+      "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+      "gpu": 5,
+      "started_at": "2026-09-08T12:09:00.870511+00:00",
+      "pid": 67998,
+      "queue_snapshot": "cohort_queue_gpu5.json",
+      "queue_snapshot_sha256": "b18506e07a6ab7cb2c8ae612d40c5379bd8537260543777776eeda160b9b3458",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T12:08:30.557936+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:09:00.869504+00:00",
+          "gpu": 5,
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.311568
+    },
+    {
+      "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443",
+      "gpu": 2,
+      "started_at": "2026-09-08T12:15:13.975449+00:00",
+      "pid": 102838,
+      "queue_snapshot": "handoffs/t2_fps_56789_gpu2/cohort_queue_gpu2.json",
+      "queue_snapshot_sha256": "7087600861f9902c42c93c58514f567308d61bf5c41fd10a1743e13fb10341cc",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T12:14:43.723279+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:15:13.973996+00:00",
+          "gpu": 2,
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.250717
+    },
+    {
+      "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+      "gpu": 4,
+      "started_at": "2026-09-08T12:20:43.814909+00:00",
+      "pid": 126523,
+      "queue_snapshot": "handoffs/t2_random_56789_gpu4/cohort_queue_gpu4.json",
+      "queue_snapshot_sha256": "8b1a3577740f8b5459ebabdf8b9b95b5175fae872eca97278c0bb705e66540bc",
+      "last_two_prelaunch_idle_checks": [
+        {
+          "utc": "2026-09-08T12:20:13.552224+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        },
+        {
+          "utc": "2026-09-08T12:20:43.813896+00:00",
+          "gpu": 4,
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "memory_mib": 437,
+          "utilization_percent": 0,
+          "compute_pids": [
+            3675773
+          ]
+        }
+      ],
+      "check_gap_seconds": 30.261672
+    }
+  ],
+  "interpretation": "Full queue snapshots and logs remain ignored artifacts. Original GPU3/GPU5 snapshots are historical states at supervisor retirement; their active workers completed normally as the handoff sidecars record."
+}

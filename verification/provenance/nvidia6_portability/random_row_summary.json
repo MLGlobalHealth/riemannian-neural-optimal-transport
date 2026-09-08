@@ -1,0 +1,282 @@
+{
+  "status": "complete",
+  "host": "nvidia6",
+  "gpu_model": "NVIDIA GeForce RTX 3090",
+  "driver": "550.90.07",
+  "independent_seeds": [
+    12345,
+    23456,
+    34567,
+    45678,
+    56789
+  ],
+  "group_identity": {
+    "selection": {
+      "dimension": 2,
+      "gamma": null,
+      "landmark_method": "random",
+      "manifold": "torus",
+      "method": "ours",
+      "suite": "table"
+    },
+    "label": "zip_historical_settings_cuda_jax435",
+    "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+    "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+    "builder": "explicit_configuration_builder_using_archive_classes",
+    "configuration_without_seed": {
+      "base_density": "TorusUniform",
+      "jax_platform": "gpu",
+      "manifold_name": "T2",
+      "model": {
+        "activation": "silu",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "last_scale": 0.01,
+        "leaky_slope": 0.01,
+        "max_dist": 3.14159,
+        "n_landmarks": 128,
+        "network_type": "mlp",
+        "softplus_beta": 1,
+        "use_layernorm": true
+      },
+      "solver": {
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "grad_clip": null,
+        "inner_lr": 0.05,
+        "inner_steps": 2500,
+        "line_search_steps": [
+          0.5,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001,
+          0.0005,
+          0.0001,
+          5e-05,
+          1e-05
+        ],
+        "logsumexp_gamma": 0.1,
+        "logsumexp_init": true,
+        "lr_decay": false,
+        "min_steps": 1000,
+        "momentum": 0.0,
+        "tolerance": 1e-06,
+        "use_adam": true,
+        "use_line_search": false
+      },
+      "target_density": "TorusWrappedNormal",
+      "training": {
+        "batch_size": 256,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "learning_rate": 0.001,
+        "log_every": 1,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "n_steps": 1000
+      }
+    },
+    "explicit_overrides": {
+      "model": {
+        "n_landmarks": 128
+      },
+      "solver": {
+        "inner_lr": 0.05,
+        "inner_steps": 2500,
+        "logsumexp_gamma": 0.1,
+        "logsumexp_init": true,
+        "min_steps": 1000,
+        "use_adam": true,
+        "use_line_search": false
+      },
+      "training": {
+        "n_steps": 1000
+      }
+    },
+    "evaluation_recipe": {
+      "batch_size": 1024,
+      "n_batches": 5,
+      "seed_rule": {
+        "training_seed_offset": 1000.0
+      }
+    },
+    "environment": {
+      "environment": {
+        "JAX_ENABLE_X64": "True",
+        "JAX_PLATFORMS": "cuda",
+        "MPLBACKEND": "Agg",
+        "OMP_NUM_THREADS": "2",
+        "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+      },
+      "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "hostname": "nvidia6",
+      "jax_default_backend": "gpu",
+      "jax_enable_x64": true,
+      "packages": {
+        "cartopy": "0.25.0",
+        "flax": "0.8.4",
+        "jax": "0.4.35",
+        "jax-cuda12-pjrt": "0.4.35",
+        "jax-cuda12-plugin": "0.4.35",
+        "jax-cuda13-plugin": null,
+        "jaxlib": "0.4.34",
+        "matplotlib": "3.11.1",
+        "numpy": "2.4.6",
+        "optax": "0.2.3",
+        "pandas": null,
+        "scipy": "1.17.1",
+        "spherical-kde": "0.1.2"
+      },
+      "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+      "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+      "selected_accelerator_types": [
+        [
+          "NVIDIA GeForce RTX 3090",
+          "550.90.07",
+          "24576 MiB"
+        ]
+      ]
+    },
+    "density_configuration": {
+      "base_class": "ProductUniformComponents",
+      "target_class": "WrappedNormal",
+      "target_loc": [
+        -1.0,
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "target_scale": [
+        0.3,
+        0.3
+      ]
+    },
+    "geometry_configuration": {
+      "ambient_dimension": 4,
+      "class": "Product",
+      "components": [
+        {
+          "ambient_dimension": 2,
+          "class": "Sphere",
+          "jitter": 1e-08
+        },
+        {
+          "ambient_dimension": 2,
+          "class": "Sphere",
+          "jitter": 1e-08
+        }
+      ],
+      "jitter": null
+    },
+    "landmark_configuration": {
+      "base_count": 64,
+      "fps_candidates_per_density": null,
+      "method": "random",
+      "target_count": 64
+    },
+    "parameter_dtypes": [
+      "float32"
+    ]
+  },
+  "metrics": {
+    "kl": {
+      "n": 5,
+      "mean": 0.2229976296027818,
+      "se_ddof0": 0.034928834154318286,
+      "se_ddof1": 0.03905162377193604,
+      "raw_values": [
+        0.1273211332307107,
+        0.1580961569707102,
+        0.2401193412198462,
+        0.35195945194000683,
+        0.23749206465263512
+      ]
+    },
+    "ess_ratio": {
+      "n": 5,
+      "mean": 0.796680475075745,
+      "se_ddof0": 0.03278781061238806,
+      "se_ddof1": 0.03665788668134435,
+      "raw_values": [
+        0.6814796058338255,
+        0.8885916656987016,
+        0.8606704849277678,
+        0.7871498760152282,
+        0.7655107429032018
+      ]
+    }
+  },
+  "native_training_seconds": {
+    "n": 5,
+    "mean": 1324.562136461027,
+    "se_ddof0": 60.45964482829276,
+    "se_ddof1": 67.59593786577811,
+    "raw_values": [
+      1594.8692884012125,
+      1253.8925726576708,
+      1258.4682977870107,
+      1253.390792446211,
+      1262.1897310130298
+    ]
+  },
+  "raw_records": [
+    {
+      "task_id": "table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f",
+      "seed": 12345,
+      "kl": 0.1273211332307107,
+      "ess_ratio": 0.6814796058338255,
+      "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543"
+    },
+    {
+      "task_id": "table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe",
+      "seed": 23456,
+      "kl": 0.1580961569707102,
+      "ess_ratio": 0.8885916656987016,
+      "checkpoint_sha256": "6e6c180f300c895d8728485501c7384e6101e3478da0f741869e98f0c3fd4709"
+    },
+    {
+      "task_id": "table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d",
+      "seed": 34567,
+      "kl": 0.2401193412198462,
+      "ess_ratio": 0.8606704849277678,
+      "checkpoint_sha256": "32e47b47afbc06b76d79929f99a35d27158f1de79541b604077f71bba32834a5"
+    },
+    {
+      "task_id": "table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab",
+      "seed": 45678,
+      "kl": 0.35195945194000683,
+      "ess_ratio": 0.7871498760152282,
+      "checkpoint_sha256": "fd119f1792e18789d68c11efc7a98af710cb90ef382e20601bbf6de863ad38a5"
+    },
+    {
+      "task_id": "table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502",
+      "seed": 56789,
+      "kl": 0.23749206465263512,
+      "ess_ratio": 0.7655107429032018,
+      "checkpoint_sha256": "8dbbf298dbebf7d455e3c9a1686e3cb8438e31315cdeb8df4b986b09e8d2676e"
+    }
+  ],
+  "paper_displayed_mean_targets": {
+    "kl": "0.22",
+    "ess_ratio": "0.85"
+  },
+  "paper_displayed_mean_rounding": {
+    "kl": {
+      "observed": "0.22",
+      "target": "0.22",
+      "match": true
+    },
+    "ess_ratio": {
+      "observed": "0.80",
+      "target": "0.85",
+      "match": false
+    }
+  },
+  "interpretation": "Complete five-seed nvidia6 random host row. No pooling with nvidia7 or other rows; SEddof0 is across independent training seeds, separate from within-run batch errors."
+}

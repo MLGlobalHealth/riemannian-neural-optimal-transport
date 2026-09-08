@@ -1,0 +1,770 @@
+{
+  "purpose": "Four fixed-seed portability checks, excluded from the five-seed main table",
+  "interpretation": "Same package versions, source and settings on nvidia6 RTX 3090 with driver 550.90.07 versus nvidia7 RTX 6000 Ada with driver 570.195.03. Host and driver differ; this is not an isolated GPU-architecture, GPU-vendor or AMD experiment.",
+  "pairs": {
+    "T2_RNOT_FPS": {
+      "nvidia6": {
+        "result_path": "/private/tmp/mlgh-verification/nvidia6_portability_jax435/results/fps/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+        "result_sha256": "de7f47267b8f4ecb988ee4edad06d506d0d52f6d8f85c6096c3da5b1312bf334",
+        "checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+        "summary": {
+          "ess": {
+            "mean": 967.5605412808609,
+            "raw_batches": [
+              973.3764126559846,
+              937.4862003049856,
+              974.7898067180244,
+              977.2246429941736,
+              974.9256437311358
+            ],
+            "se_ddof0": 6.7474208992012965,
+            "se_ddof1": 7.543845901708427
+          },
+          "ess_ratio": {
+            "mean": 0.9448833410945907,
+            "raw_batches": [
+              0.95056290298436,
+              0.9155138674853375,
+              0.9519431706230707,
+              0.9543209404239976,
+              0.9520758239561873
+            ],
+            "se_ddof0": 0.006589278221876266,
+            "se_ddof1": 0.007367037013387136
+          },
+          "kl": {
+            "mean": 0.12129077546086484,
+            "raw_batches": [
+              0.12991245906619586,
+              0.11856346294366088,
+              0.12091203243777512,
+              0.10587917810213779,
+              0.13118674475455466
+            ],
+            "se_ddof0": 0.004085891087357296,
+            "se_ddof1": 0.0045681651099957225
+          }
+        },
+        "training_seconds": 1498.6171830492094,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "4",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "nvidia7": {
+        "result_path": "/private/tmp/mlgh-verification/jax0435_candidate/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+        "result_sha256": "6ebc6767e2b654eb503335f1812a3b988a15222551ae802f41176b30dff2b340",
+        "checkpoint_sha256": "358939c83c3cf560dcb1ac4cc096d15b61a8e8413586f8cb4bcfebe6894e8c8f",
+        "summary": {
+          "ess": {
+            "mean": 790.9252980695043,
+            "raw_batches": [
+              973.3542027105677,
+              933.6433502265937,
+              974.6292978974551,
+              99.11144964439158,
+              973.888189868513
+            ],
+            "se_ddof0": 154.85189412610492,
+            "se_ddof1": 173.1296808552855
+          },
+          "ess_ratio": {
+            "mean": 0.7723879863960003,
+            "raw_batches": [
+              0.9505412135845388,
+              0.9117610842056579,
+              0.9517864237279835,
+              0.09678852504335116,
+              0.9510626854184697
+            ],
+            "se_ddof0": 0.15122255285752434,
+            "se_ddof1": 0.16907195396023975
+          },
+          "kl": {
+            "mean": 0.12069804356254883,
+            "raw_batches": [
+              0.13067577956388748,
+              0.11765735786295888,
+              0.12107314058516137,
+              0.09969815678786756,
+              0.13438578301286883
+            ],
+            "se_ddof0": 0.005430621101943139,
+            "se_ddof1": 0.006071618971994837
+          }
+        },
+        "training_seconds": 677.759501881199,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "3",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "matching_declared_inputs": {
+        "selection": true,
+        "label": true,
+        "explicit_overrides": true,
+        "configuration": true,
+        "evaluation_config": true,
+        "source": true,
+        "runner_sha256": true,
+        "density_configuration": true,
+        "geometry_configuration": true,
+        "landmark_configuration": true,
+        "parameter_dtypes": true
+      },
+      "mean_differences_nvidia6_minus_nvidia7": {
+        "kl": 0.000592731898316004,
+        "ess": 176.63524321135662,
+        "ess_ratio": 0.17249535469859045
+      },
+      "evaluation_key_sequence_identical": true,
+      "printed_loss_comparison": {
+        "nvidia6_steps": 1000,
+        "nvidia7_steps": 1000,
+        "common_steps": 1000,
+        "different_at_printed_precision_count": 0,
+        "first_different_step": null
+      },
+      "checkpoint_sha256_identical": true
+    },
+    "T2_RNOT_random": {
+      "nvidia6": {
+        "result_path": "/private/tmp/mlgh-verification/nvidia6_portability_jax435/results/random/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+        "result_sha256": "2333d117faa1161d5a50c416a01d47ad1961a2e5f9eb2fa431c7a6d06380b163",
+        "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+        "summary": {
+          "ess": {
+            "mean": 697.8351163738373,
+            "raw_batches": [
+              922.0890027053579,
+              900.3714977226678,
+              1.1553712266761322,
+              773.286201679808,
+              892.273508534677
+            ],
+            "se_ddof0": 157.50207785587133,
+            "se_ddof1": 176.09267634159633
+          },
+          "ess_ratio": {
+            "mean": 0.6814796058338255,
+            "raw_batches": [
+              0.900477541704451,
+              0.8792690407447927,
+              0.0011282922135509104,
+              0.7551623063279375,
+              0.8713608481783955
+            ],
+            "se_ddof0": 0.15381062290612435,
+            "se_ddof1": 0.17196550423984017
+          },
+          "kl": {
+            "mean": 0.1273211332307107,
+            "raw_batches": [
+              0.13810377992871575,
+              0.14232922560108785,
+              0.11972818728370044,
+              0.11179015514872824,
+              0.12465431819132121
+            ],
+            "se_ddof0": 0.0050891426280006155,
+            "se_ddof1": 0.0056898344317006504
+          }
+        },
+        "training_seconds": 1594.8692884012125,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "5",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "nvidia7": {
+        "result_path": "/private/tmp/mlgh-verification/jax0435_candidate/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+        "result_sha256": "75cf13e917e0ccd3259f09ef50548c51d2a32a9b78c1d809dc2814600748380a",
+        "checkpoint_sha256": "4e7a6f657bd2ca9076f83a218b54a73e0c408d50c1b2e3a96a0607e0fbcc8543",
+        "summary": {
+          "ess": {
+            "mean": 720.7501609544736,
+            "raw_batches": [
+              921.4237651050373,
+              900.6832903506861,
+              1.1552762459566344,
+              886.312929919345,
+              894.1755431513426
+            ],
+            "se_ddof0": 160.9906852228663,
+            "se_ddof1": 179.9930579513
+          },
+          "ess_ratio": {
+            "mean": 0.7038575790571031,
+            "raw_batches": [
+              0.899827895610388,
+              0.8795735257330919,
+              0.0011281994589420257,
+              0.8655399706243604,
+              0.873218303858733
+            ],
+            "se_ddof0": 0.15721746603795536,
+            "se_ddof1": 0.1757744706555664
+          },
+          "kl": {
+            "mean": 0.12672628200580083,
+            "raw_batches": [
+              0.13970292692757336,
+              0.1408632918239233,
+              0.12017293535650689,
+              0.11233889662317198,
+              0.12055335929782868
+            ],
+            "se_ddof0": 0.005123657073755613,
+            "se_ddof1": 0.005728422755157602
+          }
+        },
+        "training_seconds": 677.7770920321345,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "5",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "matching_declared_inputs": {
+        "selection": true,
+        "label": true,
+        "explicit_overrides": true,
+        "configuration": true,
+        "evaluation_config": true,
+        "source": true,
+        "runner_sha256": true,
+        "density_configuration": true,
+        "geometry_configuration": true,
+        "landmark_configuration": true,
+        "parameter_dtypes": true
+      },
+      "mean_differences_nvidia6_minus_nvidia7": {
+        "kl": 0.0005948512249098759,
+        "ess": -22.915044580636277,
+        "ess_ratio": -0.022377973223277614
+      },
+      "evaluation_key_sequence_identical": true,
+      "printed_loss_comparison": {
+        "nvidia6_steps": 1000,
+        "nvidia7_steps": 1000,
+        "common_steps": 1000,
+        "different_at_printed_precision_count": 0,
+        "first_different_step": null
+      },
+      "checkpoint_sha256_identical": true
+    },
+    "S2_RCPM": {
+      "nvidia6": {
+        "result_path": "/private/tmp/mlgh-verification/nvidia6_portability_jax435/results/rcpm_sphere/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+        "result_sha256": "15b490f3e27082191a3123cfd220bee632d9c511eba040d3c829a907542a405a",
+        "checkpoint_sha256": "91f4cfaf352ecf15581b4439c2f50d4a1d81016f77bb1edfa5acc1d4f55a3bad",
+        "summary": {
+          "ess": {
+            "mean": 1020.4299350208214,
+            "raw_batches": [
+              1021.3834344248651,
+              1019.4689267758403,
+              1021.6983920425677,
+              1019.8082288370331,
+              1019.7906930238008
+            ],
+            "se_ddof0": 0.41167123223107277,
+            "se_ddof1": 0.4602624298248906
+          },
+          "ess_ratio": {
+            "mean": 0.9965136084187709,
+            "raw_batches": [
+              0.9974447601805323,
+              0.9955751238045315,
+              0.99775233597907,
+              0.9959064734736651,
+              0.9958893486560555
+            ],
+            "se_ddof0": 0.000402022687725657,
+            "se_ddof1": 0.0004494750291258697
+          },
+          "kl": {
+            "mean": 0.006768577020761767,
+            "raw_batches": [
+              0.006428905690993217,
+              0.007904307437277575,
+              -7.260026395811104e-05,
+              0.014268158531474007,
+              0.005314113708022147
+            ],
+            "se_ddof0": 0.002064617671106741,
+            "se_ddof1": 0.002308312730070988
+          }
+        },
+        "training_seconds": 37.82498039631173,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "4",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "nvidia7": {
+        "result_path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+        "result_sha256": "faabdfd661295b45bf875f2f8fb75241138b4871b2b1b08d606675aa9ec33293",
+        "checkpoint_sha256": "91f4cfaf352ecf15581b4439c2f50d4a1d81016f77bb1edfa5acc1d4f55a3bad",
+        "summary": {
+          "ess": {
+            "mean": 1020.4299350208214,
+            "raw_batches": [
+              1021.3834344248651,
+              1019.4689267758403,
+              1021.6983920425677,
+              1019.8082288370331,
+              1019.7906930238008
+            ],
+            "se_ddof0": 0.41167123223107277,
+            "se_ddof1": 0.4602624298248906
+          },
+          "ess_ratio": {
+            "mean": 0.9965136084187709,
+            "raw_batches": [
+              0.9974447601805323,
+              0.9955751238045315,
+              0.99775233597907,
+              0.9959064734736651,
+              0.9958893486560555
+            ],
+            "se_ddof0": 0.000402022687725657,
+            "se_ddof1": 0.0004494750291258697
+          },
+          "kl": {
+            "mean": 0.006768577020761767,
+            "raw_batches": [
+              0.006428905690993217,
+              0.007904307437277575,
+              -7.260026395811104e-05,
+              0.014268158531474007,
+              0.005314113708022147
+            ],
+            "se_ddof0": 0.002064617671106741,
+            "se_ddof1": 0.002308312730070988
+          }
+        },
+        "training_seconds": 27.04993545403704,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "4",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "matching_declared_inputs": {
+        "selection": true,
+        "label": true,
+        "explicit_overrides": true,
+        "configuration": true,
+        "evaluation_config": true,
+        "source": true,
+        "runner_sha256": true,
+        "density_configuration": true,
+        "geometry_configuration": true,
+        "landmark_configuration": true,
+        "parameter_dtypes": true
+      },
+      "mean_differences_nvidia6_minus_nvidia7": {
+        "kl": 0.0,
+        "ess": 0.0,
+        "ess_ratio": 0.0
+      },
+      "evaluation_key_sequence_identical": true,
+      "printed_loss_comparison": {
+        "nvidia6_steps": 0,
+        "nvidia7_steps": 0,
+        "common_steps": 0,
+        "different_at_printed_precision_count": 0,
+        "first_different_step": null
+      },
+      "checkpoint_sha256_identical": true
+    },
+    "T2_RCPM": {
+      "nvidia6": {
+        "result_path": "/private/tmp/mlgh-verification/nvidia6_portability_jax435/results/rcpm_torus/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+        "result_sha256": "4887d81529541f1c57862c70511911de02d5736bd7ec433ee7fe726b1a9233aa",
+        "checkpoint_sha256": "5d8488e817b767e4a42c39021afea4eb1a7fb3f816ca892e6ad35aeef6864654",
+        "summary": {
+          "ess": {
+            "mean": 609.4205711643995,
+            "raw_batches": [
+              622.2942340080065,
+              606.1969051171093,
+              600.7196555116958,
+              595.8934673118677,
+              621.9985938733186
+            ],
+            "se_ddof0": 4.870393597622466,
+            "se_ddof1": 5.445265580731797
+          },
+          "ess_ratio": {
+            "mean": 0.5951372765277338,
+            "raw_batches": [
+              0.6077092128984438,
+              0.591989165153427,
+              0.5866402885856404,
+              0.5819272141717458,
+              0.6074205018294127
+            ],
+            "se_ddof0": 0.00475624374767819,
+            "se_ddof1": 0.005317642168683395
+          },
+          "kl": {
+            "mean": 0.90038261216891,
+            "raw_batches": [
+              0.8845959215395696,
+              0.9201858711565082,
+              1.0250475309533211,
+              0.6568098886037292,
+              1.015273848591422
+            ],
+            "se_ddof0": 0.059568581824560395,
+            "se_ddof1": 0.06659969914148776
+          }
+        },
+        "training_seconds": 74.88495260477066,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "5",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "nvidia7": {
+        "result_path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+        "result_sha256": "9bec0c8db2b3d526a1baaf00ba99ac1ba5e86ed2f50e109158a791a641ea687b",
+        "checkpoint_sha256": "5d8488e817b767e4a42c39021afea4eb1a7fb3f816ca892e6ad35aeef6864654",
+        "summary": {
+          "ess": {
+            "mean": 609.4205711643995,
+            "raw_batches": [
+              622.2942340080065,
+              606.1969051171093,
+              600.7196555116958,
+              595.8934673118677,
+              621.9985938733186
+            ],
+            "se_ddof0": 4.870393597622466,
+            "se_ddof1": 5.445265580731797
+          },
+          "ess_ratio": {
+            "mean": 0.5951372765277338,
+            "raw_batches": [
+              0.6077092128984438,
+              0.591989165153427,
+              0.5866402885856404,
+              0.5819272141717458,
+              0.6074205018294127
+            ],
+            "se_ddof0": 0.00475624374767819,
+            "se_ddof1": 0.005317642168683395
+          },
+          "kl": {
+            "mean": 0.90038261216891,
+            "raw_batches": [
+              0.8845959215395696,
+              0.9201858711565082,
+              1.0250475309533211,
+              0.6568098886037292,
+              1.015273848591422
+            ],
+            "se_ddof0": 0.059568581824560395,
+            "se_ddof1": 0.06659969914148776
+          }
+        },
+        "training_seconds": 43.179450216004625,
+        "environment": {
+          "environment": {
+            "CUDA_VISIBLE_DEVICES": "2",
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "validation_errors": []
+      },
+      "matching_declared_inputs": {
+        "selection": true,
+        "label": true,
+        "explicit_overrides": true,
+        "configuration": true,
+        "evaluation_config": true,
+        "source": true,
+        "runner_sha256": true,
+        "density_configuration": true,
+        "geometry_configuration": true,
+        "landmark_configuration": true,
+        "parameter_dtypes": true
+      },
+      "mean_differences_nvidia6_minus_nvidia7": {
+        "kl": 0.0,
+        "ess": 0.0,
+        "ess_ratio": 0.0
+      },
+      "evaluation_key_sequence_identical": true,
+      "printed_loss_comparison": {
+        "nvidia6_steps": 0,
+        "nvidia7_steps": 0,
+        "common_steps": 0,
+        "different_at_printed_precision_count": 0,
+        "first_different_step": null
+      },
+      "checkpoint_sha256_identical": true
+    }
+  }
+}
