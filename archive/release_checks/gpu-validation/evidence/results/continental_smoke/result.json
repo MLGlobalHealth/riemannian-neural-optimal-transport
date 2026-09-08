@@ -1,0 +1,418 @@
+{
+  "build_seconds": 10.686249936930835,
+  "checkpoint": {
+    "bytes": 10707,
+    "file": "checkpoint.msgpack",
+    "note": "Regular and EMA parameters retained. Transport uses regular state.params. Stored key is the native retained pre-training key; this is not an exact training-resume checkpoint.",
+    "sha256": "be28dad99c3b82d2d9fe26928911c80b2fdfb5af20e50fe16bdcf2ecce2628ea"
+  },
+  "config_sha256": "85b18e60a5f461784a173e81e724a9c40978ddca8098556e22e571be8024be67",
+  "configuration": {
+    "base_density": "SphereUniform",
+    "jax_platform": "gpu",
+    "manifold_name": "S2",
+    "model": {
+      "activation": "silu",
+      "hidden_dims": [
+        16,
+        16
+      ],
+      "last_scale": 0.01,
+      "leaky_slope": 0.01,
+      "max_dist": 3.14159,
+      "n_landmarks": 8,
+      "network_type": "mlp",
+      "softplus_beta": 1.0,
+      "use_layernorm": true
+    },
+    "solver": {
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "grad_clip": null,
+      "inner_lr": 0.05,
+      "inner_steps": 2,
+      "line_search_steps": [
+        0.1,
+        0.05,
+        0.01,
+        0.005,
+        0.001
+      ],
+      "logsumexp_gamma": 0.01,
+      "logsumexp_init": false,
+      "lr_decay": false,
+      "min_steps": 2,
+      "momentum": 0.0,
+      "tolerance": 1e-06,
+      "use_adam": false,
+      "use_line_search": false
+    },
+    "target_density": "SphereWrappedNormal",
+    "training": {
+      "batch_size": 8,
+      "eval_every": null,
+      "eval_size": 1024,
+      "grad_accum_steps": 0,
+      "learning_rate": 0.001,
+      "log_every": 1,
+      "lr_decay": false,
+      "lr_decay_alpha": 0.05,
+      "n_steps": 2,
+      "seed": 12345
+    }
+  },
+  "data": {
+    "past": {
+      "bytes": 2080416,
+      "path": "/data/am1118/mlgh-paper-release-check-20260908/source/data/continental/land_points_past.csv",
+      "rows": 50000,
+      "sha256": "1afe72623f68d42ded0c1c90de223fb050f4298ff272ca6401d32cb40e1d2fee"
+    },
+    "present": {
+      "bytes": 2067166,
+      "path": "/data/am1118/mlgh-paper-release-check-20260908/source/data/continental/land_points_present.csv",
+      "rows": 50000,
+      "sha256": "17ff2ebfa9fa7acb367b9e21adb994e1a501777e97143decc8f437a5fa33357f"
+    }
+  },
+  "effective_solver": {
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.999,
+    "eps": 1e-12,
+    "grad_clip": null,
+    "inner_lr": 0.05,
+    "inner_steps": 2,
+    "line_search_steps": [
+      0.1,
+      0.05,
+      0.01,
+      0.005,
+      0.001
+    ],
+    "logsumexp_gamma": 0.01,
+    "logsumexp_init": false,
+    "lr_decay": false,
+    "min_steps": 2,
+    "momentum": 0.0,
+    "tolerance": 1e-06,
+    "use_adam": false,
+    "use_line_search": false
+  },
+  "empirical_densities": {
+    "past": {
+      "class": "EmpiricalSphereDensity",
+      "kde_bandwidth": 0.1,
+      "log_Z": 2.0237537407876047,
+      "n_mc_samples": 10000,
+      "points": 256,
+      "use_kde": true
+    },
+    "present": {
+      "class": "EmpiricalSphereDensity",
+      "kde_bandwidth": 0.1,
+      "log_Z": 1.9666556414322152,
+      "n_mc_samples": 10000,
+      "points": 256,
+      "use_kde": true
+    }
+  },
+  "environment": {
+    "environment": {
+      "CUDA_ROOT": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+      "CUDA_VISIBLE_DEVICES": "5",
+      "HIP_VISIBLE_DEVICES": null,
+      "JAX_DEFAULT_MATMUL_PRECISION": null,
+      "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+      "JAX_ENABLE_X64": "True",
+      "JAX_PLATFORMS": "cuda",
+      "JAX_RANDOM_SEED_OFFSET": "0",
+      "JAX_THREEFRY_PARTITIONABLE": "False",
+      "MKL_NUM_THREADS": "2",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2",
+      "XLA_FLAGS": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+    "hostname": "nvidia6",
+    "jax_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_enable_x64": true,
+    "jax_threefry_partitionable": false,
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.34",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "pandas": "3.0.2",
+      "scipy": "1.17.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+  },
+  "finished_at": "2026-09-08T15:29:36.946099+00:00",
+  "fresh_experiment": true,
+  "history": {
+    "eval_loss": [],
+    "eval_loss_ema": [],
+    "eval_solver_residual": [],
+    "eval_transport_cost": [],
+    "eval_transport_cost_ema": [],
+    "grad_norm": [
+      0.7444221377372742,
+      2.7878713607788086
+    ],
+    "iterations": [
+      1,
+      2
+    ],
+    "train_loss": [
+      -0.005515560905672847,
+      -0.0031536500797684167
+    ],
+    "train_residual": [
+      0.013836443840571934,
+      0.019019867648293262
+    ],
+    "train_transport_cost": [
+      1.3586269559407585e-06,
+      2.586698170978409e-06
+    ]
+  },
+  "label": "Continental smoke execution check",
+  "landmarks": {
+    "fps_candidates": 64,
+    "method": "fps"
+  },
+  "manifold": "S2",
+  "provenance": {
+    "checkpoint_reference": "saved_runs/continental_drift_20260121_211950.pkl",
+    "configuration_note": "Printed notebook settings are explicit. Unprinted fields use packaged ZIP defaults; original notebook companion defaults are not confirmed. In particular, logsumexp_init=False and logsumexp_gamma=0.01 follow the packaged ZIP, while the current original-worktree defaults differ. The native builder omits Adam and line-search options, so both are effectively false. The historical checkpoint and original kernel environment were not recovered.",
+    "ema": {
+      "decay": 0.99,
+      "eval_with_ema": false
+    },
+    "native_cells": [
+      0,
+      1,
+      6
+    ],
+    "notebook": "archive/original/continental_drift.ipynb",
+    "notebook_sha256": "e73b9ecf125a3808a35a67dda860c55b8889ff8dd1cb1809eba08c7508a19975",
+    "printed_settings": [
+      "model.network_type",
+      "model.hidden_dims",
+      "model.n_landmarks",
+      "model.activation",
+      "solver.inner_steps",
+      "solver.inner_lr",
+      "solver.tolerance",
+      "solver.min_steps",
+      "training.n_steps",
+      "training.batch_size",
+      "training.learning_rate"
+    ],
+    "smoke_changes": "First 256 CSV rows, 8 landmarks, 64 FPS candidates, hidden dimensions [16,16], 2 outer/inner/min steps, batch 8, 16 transport samples.",
+    "solver_note": "Native builder omits Adam and line-search options; actual constructor defaults are recorded.",
+    "status": "Recovered fresh recipe; historical checkpoint unavailable and full training not verified."
+  },
+  "record_type": "paper_continental_run",
+  "requested_recipe": {
+    "configuration": {
+      "base_density": "SphereUniform",
+      "jax_platform": "gpu",
+      "manifold_name": "S2",
+      "model": {
+        "activation": "silu",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "last_scale": 0.01,
+        "leaky_slope": 0.01,
+        "max_dist": 3.14159,
+        "n_landmarks": 128,
+        "network_type": "mlp",
+        "softplus_beta": 1.0,
+        "use_layernorm": true
+      },
+      "solver": {
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "grad_clip": null,
+        "inner_lr": 0.05,
+        "inner_steps": 2500,
+        "line_search_steps": [
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001
+        ],
+        "logsumexp_gamma": 0.01,
+        "logsumexp_init": false,
+        "lr_decay": false,
+        "min_steps": 1000,
+        "momentum": 0.0,
+        "tolerance": 1e-06,
+        "use_adam": false,
+        "use_line_search": false
+      },
+      "target_density": "SphereWrappedNormal",
+      "training": {
+        "batch_size": 256,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "learning_rate": 0.001,
+        "log_every": 1,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "n_steps": 1000,
+        "seed": 12345
+      }
+    },
+    "data": {
+      "past": {
+        "path": "data/continental/land_points_past.csv",
+        "sha256": "1afe72623f68d42ded0c1c90de223fb050f4298ff272ca6401d32cb40e1d2fee"
+      },
+      "present": {
+        "path": "data/continental/land_points_present.csv",
+        "sha256": "17ff2ebfa9fa7acb367b9e21adb994e1a501777e97143decc8f437a5fa33357f"
+      }
+    },
+    "fps_candidates": 50000,
+    "label": "Fresh recovered continental recipe (historical checkpoint unavailable)",
+    "landmark_method": "fps",
+    "provenance": {
+      "checkpoint_reference": "saved_runs/continental_drift_20260121_211950.pkl",
+      "configuration_note": "Printed notebook settings are explicit. Unprinted fields use packaged ZIP defaults; original notebook companion defaults are not confirmed. In particular, logsumexp_init=False and logsumexp_gamma=0.01 follow the packaged ZIP, while the current original-worktree defaults differ. The native builder omits Adam and line-search options, so both are effectively false. The historical checkpoint and original kernel environment were not recovered.",
+      "notebook": "archive/original/continental_drift.ipynb",
+      "printed_settings": [
+        "model.network_type",
+        "model.hidden_dims",
+        "model.n_landmarks",
+        "model.activation",
+        "solver.inner_steps",
+        "solver.inner_lr",
+        "solver.tolerance",
+        "solver.min_steps",
+        "training.n_steps",
+        "training.batch_size",
+        "training.learning_rate"
+      ],
+      "status": "Recovered fresh recipe; historical checkpoint unavailable and full training not verified."
+    },
+    "schema_version": 1,
+    "transport": {
+      "parameters": "state.params",
+      "size": 1024,
+      "source_selection": "first_csv_rows",
+      "target_seed": 42
+    }
+  },
+  "samples": {
+    "arrays": {
+      "source_samples": {
+        "dtype": "float64",
+        "sha256": "d30aa94dae6e7d212669b5bb2b74535c84467615c4f4f7c5a13ae8fd52643e15",
+        "shape": [
+          16,
+          3
+        ]
+      },
+      "target_samples": {
+        "dtype": "float64",
+        "sha256": "841338287a01b9ad355ca5dd46db863ea3bb9009a85d612765ce32ee952bb755",
+        "shape": [
+          16,
+          3
+        ]
+      },
+      "transported_samples": {
+        "dtype": "float64",
+        "sha256": "775faa2356896011ae4a668df9deaa76b845a2d9723b8e8a7af23666828c0fc1",
+        "shape": [
+          16,
+          3
+        ]
+      }
+    },
+    "bytes": 1869,
+    "file": "samples.npz",
+    "parameters": "state.params",
+    "sha256": "34c30b175e60909ef24d2d3faa1f55296900511bb6c43945f7627824e0c18de7",
+    "size": 16,
+    "source_selection": "first_csv_rows",
+    "target_hint": "The native solver receives target_samples row-for-row.",
+    "target_key": [
+      0,
+      42
+    ]
+  },
+  "schema_version": 1,
+  "smoke": true,
+  "source": {
+    "files": {
+      "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "experiments/run_se3_experiment.py": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+      "experiments/run_so3_experiment.py": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+      "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "d5725ffd79d5a33cbf098007aa375dbb30dc3c54b5259c9e98181f2bc4ecfd88"
+  },
+  "started_at": "2026-09-08T15:29:20.094196+00:00",
+  "status": "complete",
+  "training_key": [
+    2597319189,
+    717887741
+  ],
+  "training_seconds": 3.2761024460196495,
+  "transport_seconds": 0.998995334841311,
+  "used_data": {
+    "past": {
+      "bytes": 10927,
+      "path": "/data/am1118/mlgh-paper-release-check-20260908/results/continental_smoke/smoke_past.csv",
+      "rows": 256,
+      "sha256": "e581b820977e099b1f651e0d647979f8bd4e15a22b613775863abcf259b2164e"
+    },
+    "present": {
+      "bytes": 10864,
+      "path": "/data/am1118/mlgh-paper-release-check-20260908/results/continental_smoke/smoke_present.csv",
+      "rows": 256,
+      "sha256": "9e0275cee0a1a46e3110ac41a38294857c7f27afb4f41cfe8a7083151d28748d"
+    }
+  },
+  "wrapper_sha256": "35fd60634f3dc7d45985156ebbf0b1957043f547962adc95388161cba9726fff"
+}

@@ -1,0 +1,27 @@
+{
+  "tables": {
+    "jobs": 30,
+    "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+    "all_commands_resolve_export": true
+  },
+  "liegroups": {
+    "jobs": 14,
+    "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+    "all_commands_resolve_export": true
+  },
+  "sweep": {
+    "jobs": 126,
+    "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+    "all_commands_resolve_export": true
+  },
+  "highd": {
+    "jobs": 12,
+    "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+    "all_commands_resolve_export": true
+  },
+  "ablations": {
+    "jobs": 84,
+    "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+    "all_commands_resolve_export": true
+  }
+}

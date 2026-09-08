@@ -1,0 +1,13 @@
+{
+  "paper/__init__.py": "540ca415403b0209125b83533e4d78281f03feab02703ca43061f1e5c75184aa",
+  "paper/run.py": "3f2ed0fbbb618113f7489c6455b51a5b109520b2f76d719ea2f22a0452e8f029",
+  "paper/worker.py": "aabe074f25a57ac88de40466027a33a999330d762e0e65b9ac2ea92111fbfbed",
+  "paper/_runtime.py": "3689f40fb338f2e8ecbc30d96647a5454ffd1b0230465c941f7e290727f244cb",
+  "paper/_ablation_native.py": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+  "tests/test_paper_run.py": "5aa6a4028e0588091cc7a95581cafb489610a3b2baf14c608119c47fc6e532b3",
+  "paper/configs/tables.json": "cdc09e784bb230e6105c17a5c235f1feaf6c5b70eb459c624e64ec35ecdc4dba",
+  "paper/configs/liegroups.json": "7f59f273abe8a761cea3d87b40eb8709ab399631b6baca23597733cf4437a56d",
+  "paper/configs/sweep.json": "ae055f26e79bf3d941d1b7b46572ac3fab8465e384435cd58cd205e0be57328e",
+  "paper/configs/highd.json": "b5655f5410ba18d391c977495e3560dfb1ac982d65369179e05b981c6c0ed070",
+  "paper/configs/ablations.json": "c6dd1336e5cb96d822186bf7ecddb5cd21310c20aaf94508e14199e45f733f54"
+}

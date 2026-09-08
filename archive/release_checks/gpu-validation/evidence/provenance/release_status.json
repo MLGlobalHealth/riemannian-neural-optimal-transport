@@ -1,0 +1,98 @@
+{
+  "supervisor_pid": 2480247,
+  "status": "complete",
+  "finished_at": "2026-09-08T15:30:36.139603+00:00",
+  "jobs": {
+    "se3_native": {
+      "status": "complete",
+      "pid": 2480249,
+      "gpu": 0,
+      "started_at": "2026-09-08T15:29:19.617179+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.615809+00:00",
+        "raw": "0, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:30:36.138764+00:00"
+    },
+    "s2_ours_smoke": {
+      "status": "complete",
+      "pid": 2480251,
+      "gpu": 1,
+      "started_at": "2026-09-08T15:29:19.669800+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.668559+00:00",
+        "raw": "1, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:48.980310+00:00"
+    },
+    "s2_rcpm_smoke": {
+      "status": "complete",
+      "pid": 2480254,
+      "gpu": 3,
+      "started_at": "2026-09-08T15:29:19.739710+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.738538+00:00",
+        "raw": "3, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:53.057680+00:00"
+    },
+    "ablation_smoke": {
+      "status": "complete",
+      "pid": 2480258,
+      "gpu": 4,
+      "started_at": "2026-09-08T15:29:19.806557+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.805414+00:00",
+        "raw": "4, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:47.978262+00:00"
+    },
+    "continental_smoke": {
+      "status": "complete",
+      "pid": 2480263,
+      "gpu": 5,
+      "started_at": "2026-09-08T15:29:19.873971+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.872657+00:00",
+        "raw": "5, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:37.958475+00:00"
+    },
+    "embeddings_full": {
+      "status": "complete",
+      "pid": 2480267,
+      "gpu": 6,
+      "started_at": "2026-09-08T15:29:19.923520+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:19.922268+00:00",
+        "raw": "6, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:31.946401+00:00"
+    },
+    "s2_checkpoint_transport": {
+      "status": "complete",
+      "pid": 2482243,
+      "gpu": 1,
+      "started_at": "2026-09-08T15:29:49.050483+00:00",
+      "capacity": {
+        "at": "2026-09-08T15:29:49.049411+00:00",
+        "raw": "1, NVIDIA GeForce RTX 3090, 2, 24252, 0",
+        "idle": true
+      },
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:30:04.077593+00:00"
+    }
+  }
+}

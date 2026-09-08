@@ -1,0 +1,158 @@
+{
+  "configuration": {
+    "base_density": "SphereUniform",
+    "jax_platform": "gpu",
+    "manifold_name": "S2",
+    "model": {
+      "activation": "silu",
+      "hidden_dims": [
+        16,
+        16
+      ],
+      "last_scale": 0.01,
+      "leaky_slope": 0.01,
+      "max_dist": 3.14159,
+      "n_landmarks": 8,
+      "network_type": "mlp",
+      "softplus_beta": 1.0,
+      "use_layernorm": true
+    },
+    "solver": {
+      "adam_beta1": 0.9,
+      "adam_beta2": 0.999,
+      "grad_clip": null,
+      "inner_lr": 0.05,
+      "inner_steps": 2,
+      "line_search_steps": [
+        0.1,
+        0.05,
+        0.01,
+        0.005,
+        0.001
+      ],
+      "logsumexp_gamma": 0.01,
+      "logsumexp_init": false,
+      "lr_decay": false,
+      "min_steps": 2,
+      "momentum": 0.0,
+      "tolerance": 1e-06,
+      "use_adam": false,
+      "use_line_search": false
+    },
+    "target_density": "SphereWrappedNormal",
+    "training": {
+      "batch_size": 8,
+      "eval_every": null,
+      "eval_size": 1024,
+      "grad_accum_steps": 0,
+      "learning_rate": 0.001,
+      "log_every": 1,
+      "lr_decay": false,
+      "lr_decay_alpha": 0.05,
+      "n_steps": 2,
+      "seed": 12345
+    }
+  },
+  "label": "Continental smoke execution check",
+  "manifold": "S2",
+  "provenance": {
+    "checkpoint_reference": "saved_runs/continental_drift_20260121_211950.pkl",
+    "configuration_note": "Printed notebook settings are explicit. Unprinted fields use packaged ZIP defaults; original notebook companion defaults are not confirmed. In particular, logsumexp_init=False and logsumexp_gamma=0.01 follow the packaged ZIP, while the current original-worktree defaults differ. The native builder omits Adam and line-search options, so both are effectively false. The historical checkpoint and original kernel environment were not recovered.",
+    "ema": {
+      "decay": 0.99,
+      "eval_with_ema": false
+    },
+    "native_cells": [
+      0,
+      1,
+      6
+    ],
+    "notebook": "archive/original/continental_drift.ipynb",
+    "notebook_sha256": "e73b9ecf125a3808a35a67dda860c55b8889ff8dd1cb1809eba08c7508a19975",
+    "printed_settings": [
+      "model.network_type",
+      "model.hidden_dims",
+      "model.n_landmarks",
+      "model.activation",
+      "solver.inner_steps",
+      "solver.inner_lr",
+      "solver.tolerance",
+      "solver.min_steps",
+      "training.n_steps",
+      "training.batch_size",
+      "training.learning_rate"
+    ],
+    "smoke_changes": "First 256 CSV rows, 8 landmarks, 64 FPS candidates, hidden dimensions [16,16], 2 outer/inner/min steps, batch 8, 16 transport samples.",
+    "solver_note": "Native builder omits Adam and line-search options; actual constructor defaults are recorded.",
+    "status": "Recovered fresh recipe; historical checkpoint unavailable and full training not verified."
+  },
+  "result_file": "result.json",
+  "samples": {
+    "arrays": {
+      "source_samples": {
+        "dtype": "float64",
+        "sha256": "d30aa94dae6e7d212669b5bb2b74535c84467615c4f4f7c5a13ae8fd52643e15",
+        "shape": [
+          16,
+          3
+        ]
+      },
+      "target_samples": {
+        "dtype": "float64",
+        "sha256": "841338287a01b9ad355ca5dd46db863ea3bb9009a85d612765ce32ee952bb755",
+        "shape": [
+          16,
+          3
+        ]
+      },
+      "transported_samples": {
+        "dtype": "float64",
+        "sha256": "775faa2356896011ae4a668df9deaa76b845a2d9723b8e8a7af23666828c0fc1",
+        "shape": [
+          16,
+          3
+        ]
+      }
+    },
+    "bytes": 1869,
+    "file": "samples.npz",
+    "parameters": "state.params",
+    "sha256": "34c30b175e60909ef24d2d3faa1f55296900511bb6c43945f7627824e0c18de7",
+    "size": 16,
+    "source_selection": "first_csv_rows",
+    "target_hint": "The native solver receives target_samples row-for-row.",
+    "target_key": [
+      0,
+      42
+    ]
+  },
+  "smoke": true,
+  "source": {
+    "files": {
+      "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "experiments/run_se3_experiment.py": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+      "experiments/run_so3_experiment.py": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+      "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "d5725ffd79d5a33cbf098007aa375dbb30dc3c54b5259c9e98181f2bc4ecfd88"
+  }
+}

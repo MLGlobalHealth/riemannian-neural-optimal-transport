@@ -1,0 +1,247 @@
+{
+  "native_files_unchanged": 23,
+  "moved_files_unchanged": 873,
+  "numerical_wrappers_match_gpu_export": true,
+  "public_zip_files_match_worktree": true,
+  "original_main_head": "811406518ad3787b378eefd3fe2c1fa39aa135c3",
+  "release_zip_sha256": "2665f27bed3a0879d8e36bcb0ac78b2d2421607640e5e28a3f09f9600e1b5502",
+  "plots": [
+    "continental-smoke",
+    "embeddings-fresh",
+    "reference-ablations",
+    "reference-embeddings",
+    "reference-highd",
+    "reference-liegroups",
+    "reference-sweep",
+    "reference-tables",
+    "s2_checkpoint-smoke"
+  ],
+  "standalone_checks": {
+    "zip": "/private/tmp/mlgh-paper-release-20260908/riemannian-neural-optimal-transport-paper.zip",
+    "zip_sha256": "2665f27bed3a0879d8e36bcb0ac78b2d2421607640e5e28a3f09f9600e1b5502",
+    "files": 59,
+    "native_python_files": 22,
+    "parsed_python_modules": 33,
+    "resolved_relative_markdown_links": 14,
+    "checks": [
+      {
+        "name": "help-run",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "help-plot",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.plot",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "help-transport",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.transport",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "help-embeddings",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.embeddings",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "help-continental",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.continental",
+          "--help"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-tables",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "tables",
+          "--gpus",
+          "0",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-tables",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-liegroups",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "liegroups",
+          "--gpus",
+          "0",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-sweep",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "sweep",
+          "--gpus",
+          "0",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-highd",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "highd",
+          "--gpus",
+          "0",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-ablations",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.run",
+          "ablations",
+          "--gpus",
+          "0",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "dry-continental",
+        "command": [
+          "/Library/Developer/CommandLineTools/usr/bin/python3",
+          "-m",
+          "paper.continental",
+          "--config",
+          "paper/configs/continental.json",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-continental",
+          "--dry-run"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-tables",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "tables",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-tables"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-liegroups",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "liegroups",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-liegroups"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-sweep",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "sweep",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-sweep"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-highd",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "highd",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-highd"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-ablations",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "ablations",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-ablations"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "plot-embeddings",
+        "command": [
+          "/Users/alessandromicheli/miniforge3/envs/entropic-rnot/bin/python",
+          "-m",
+          "paper.plot",
+          "embeddings",
+          "--reference",
+          "--output",
+          "/private/tmp/mlgh-paper-release-20260908/export-qa/figures/reference-embeddings"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "scope": "Standalone export checksum/AST/CLI/plan/offline plotting checks. No model training in the local plotting environment."
+  }
+}

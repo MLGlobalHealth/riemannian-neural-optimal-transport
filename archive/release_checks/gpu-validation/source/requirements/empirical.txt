@@ -1,0 +1,3 @@
+# Adds the CSV dependency used by the continental-drift runner.
+-r cuda.txt
+pandas==3.0.2

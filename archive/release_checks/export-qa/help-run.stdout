@@ -1,0 +1,31 @@
+usage: run.py [-h] --gpus GPUS [GPUS ...] --output OUTPUT
+              [--source-root SOURCE_ROOT] [--config CONFIG] [--python PYTHON]
+              [--dry-run] [--smoke] [--platform {cuda,cpu}] [--job JOB]
+              [--manifolds MANIFOLDS [MANIFOLDS ...]]
+              [--methods {ours,rcpm} [{ours,rcpm} ...]]
+              [--landmarks {fps,random} [{fps,random} ...]]
+              [--seeds SEEDS [SEEDS ...]]
+              {tables,liegroups,sweep,highd,ablations}
+
+Declare and run paper experiments: python -m paper.run SUITE --gpus 0 --output
+runs/NAME.
+
+positional arguments:
+  {tables,liegroups,sweep,highd,ablations}
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --gpus GPUS [GPUS ...]
+  --output OUTPUT       A fresh run directory
+  --source-root SOURCE_ROOT
+  --config CONFIG
+  --python PYTHON
+  --dry-run
+  --smoke               Two training updates and one 8-point evaluation; not
+                        paper reproduction
+  --platform {cuda,cpu}
+  --job JOB             Select one exact declared job ID
+  --manifolds MANIFOLDS [MANIFOLDS ...]
+  --methods {ours,rcpm} [{ours,rcpm} ...]
+  --landmarks {fps,random} [{fps,random} ...]
+  --seeds SEEDS [SEEDS ...]

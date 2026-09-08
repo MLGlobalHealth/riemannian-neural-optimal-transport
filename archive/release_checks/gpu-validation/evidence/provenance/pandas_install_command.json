@@ -1,0 +1,13 @@
+[
+  "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+  "-m",
+  "pip",
+  "install",
+  "--no-deps",
+  "--only-binary=:all:",
+  "--target",
+  "/data/am1118/mlgh-paper-release-check-20260908/pandas-overlay",
+  "--report",
+  "/data/am1118/mlgh-paper-release-check-20260908/provenance/pandas_install_report.json",
+  "pandas==3.0.2"
+]

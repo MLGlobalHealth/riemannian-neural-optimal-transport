@@ -1,0 +1,12 @@
+{
+  "paper/plot.py": "6874ec2fd76aed0ebd0510be6e2c2fab94f3ac129da4c70baa59694513d0af8b",
+  "paper/_plot_data.py": "fbab4e96eb4e998c3b4413fd68e3a809f0f2e29d2102fb81784d166935c5c17a",
+  "paper/transport.py": "3058c02bbf4a0e610e5d6697edc2db51b2b0f67afce731e54e7dd83c2c188aae",
+  "tests/test_plot_data.py": "67478105842aa2c0da949d295654104c2df3da7221d8917bcf136bcacb8a92fe",
+  "tests/test_transport.py": "55e14aaae2127a525219b81567edcc45f4b9fed6ad800abe381221a344d81f26",
+  "reference/paper_targets.json": "20bf844aa22c4543995fdfe8c32bfd0f682b0f588adb881a00b89858e28fba1b",
+  "reference/dimension_logs.json": "a683bfb85ea72e76994b2de44b020a32e1f2d0fd3968d0118da6fd965bb37195",
+  "reference/ablation_results.json": "a1ebdbbb27b998df7724fc08d35ace08291fe24aa5c638d29435a1556d19f378",
+  "reference/embedding_results.json": "4773b5d6b5fe0e66c78e9b108dbee06bb338fae5e6daedaa55406a94806204f7",
+  "reference/README.md": "503c3fb9ee8dd74f73f1730ef68f7dc7b8d3a4394c360470f516b8014c777bf2"
+}

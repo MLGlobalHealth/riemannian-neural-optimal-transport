@@ -1,0 +1,241 @@
+{
+  "record_type": "sample_render",
+  "evaluation_only": true,
+  "fresh_training": false,
+  "input_metadata": {
+    "record_type": "paper_transport_samples",
+    "evaluation_only": true,
+    "independent_training_run": false,
+    "status": "complete",
+    "started_at": "2026-09-08T15:29:49.141902+00:00",
+    "input_result_sha256": "faff549fbdbb0d5c048f5461e8498802b4f2835e3efe9405e266f002ba79247a",
+    "checkpoint_sha256": "97a2f00e76087f74d382a688b971b284fe67b1638861fa83bbc8207c8cf2ec77",
+    "source": {
+      "files": {
+        "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+        "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+        "experiments/run_se3_experiment.py": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+        "experiments/run_so3_experiment.py": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+        "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+        "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+        "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+        "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+        "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+        "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+        "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+        "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+        "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+        "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+        "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+        "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+        "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+        "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+        "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+        "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+        "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+        "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+        "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+      },
+      "sha256": "d5725ffd79d5a33cbf098007aa375dbb30dc3c54b5259c9e98181f2bc4ecfd88"
+    },
+    "configuration": {
+      "base_density": "SphereUniform",
+      "jax_platform": "gpu",
+      "manifold_name": "S2",
+      "model": {
+        "activation": "silu",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "last_scale": 0.01,
+        "leaky_slope": 0.01,
+        "max_dist": 3.14159,
+        "n_landmarks": 128,
+        "network_type": "mlp",
+        "softplus_beta": 1,
+        "use_layernorm": true
+      },
+      "solver": {
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "grad_clip": null,
+        "inner_lr": 0.05,
+        "inner_steps": 2,
+        "line_search_steps": [
+          0.5,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001,
+          0.0005,
+          0.0001,
+          5e-05,
+          1e-05
+        ],
+        "logsumexp_gamma": 0.1,
+        "logsumexp_init": true,
+        "lr_decay": false,
+        "min_steps": 2,
+        "momentum": 0.0,
+        "tolerance": 1e-06,
+        "use_adam": true,
+        "use_line_search": false
+      },
+      "target_density": "SphereWrappedNormal",
+      "training": {
+        "batch_size": 8,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "learning_rate": 0.001,
+        "log_every": 1,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "n_steps": 2,
+        "seed": 12345
+      }
+    },
+    "selection": {
+      "ablation": null,
+      "dimension": 2,
+      "gamma": null,
+      "landmark_method": "random",
+      "manifold": "S2",
+      "method": "ours",
+      "seed": 12345,
+      "suite": "tables"
+    },
+    "manifold": "S2",
+    "label": "smoke_not_paper_reproduction \u00b7 saved-model visualization",
+    "smoke": true,
+    "sampling": {
+      "seed": 123,
+      "n_samples": 16,
+      "recipe": "split2 source/target, unchanged native solver.batch_solve with full target hint batch",
+      "source_key": [
+        1896456402,
+        17229315
+      ],
+      "target_key": [
+        4081828428,
+        1707601653
+      ]
+    },
+    "provenance": {
+      "input_result": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke/results/tables_S2_ours_random_seed12345/result.json",
+      "checkpoint": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke/results/tables_S2_ours_random_seed12345/checkpoint.msgpack",
+      "renderer_sha256": "3058c02bbf4a0e610e5d6697edc2db51b2b0f67afce731e54e7dd83c2c188aae"
+    },
+    "environment": {
+      "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+      "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+      "hostname": "nvidia6",
+      "packages": {
+        "jax": "0.4.35",
+        "jaxlib": "0.4.34",
+        "jax-cuda12-plugin": "0.4.35",
+        "jax-cuda12-pjrt": "0.4.35",
+        "jax-cuda13-plugin": null,
+        "flax": "0.8.4",
+        "optax": "0.2.3",
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "matplotlib": "3.11.1",
+        "cartopy": "0.25.0",
+        "spherical-kde": "0.1.2",
+        "pandas": null
+      },
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "1",
+        "HIP_VISIBLE_DEVICES": "1",
+        "CUDA_ROOT": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+        "JAX_THREEFRY_PARTITIONABLE": "False",
+        "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+        "JAX_RANDOM_SEED_OFFSET": "0",
+        "JAX_DEFAULT_MATMUL_PRECISION": null,
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "MPLBACKEND": "Agg"
+      },
+      "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB"
+    },
+    "arrays": {
+      "source_samples": {
+        "shape": [
+          16,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "7a518786191f7f4e5024bf936defc83b1a292af4f2c8d22af491ff5cdf914507"
+      },
+      "target_samples": {
+        "shape": [
+          16,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "661eaa55d1c1399efe8bb6b868314b7dd47bdcd4e6f9d7431277013bcaf36dbe"
+      },
+      "transported_samples": {
+        "shape": [
+          16,
+          3
+        ],
+        "dtype": "float64",
+        "sha256": "e0b213ae7a9314092dfa21c415328bf631c61a820c015f842ec683fb0a67ff22"
+      }
+    },
+    "samples": {
+      "file": "samples.npz",
+      "sha256": "bfe7b9d367169248f8d82de04c21bf37ae45366d2f7c3e7b75c2e1251bbc2a6e"
+    },
+    "finished_at": "2026-09-08T15:30:01.565514+00:00"
+  },
+  "rendering": {
+    "kind": "sample scatter; no density estimate",
+    "maximum_points_displayed": 2500,
+    "trajectory_note": "Geodesic display between recorded source/transport endpoints; not an optimizer trajectory.",
+    "sphere_view": {
+      "elevation": 22,
+      "azimuth": 35
+    },
+    "torus_radii": [
+      2,
+      0.65
+    ]
+  },
+  "arrays": {
+    "source_samples": {
+      "shape": [
+        16,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "7a518786191f7f4e5024bf936defc83b1a292af4f2c8d22af491ff5cdf914507"
+    },
+    "target_samples": {
+      "shape": [
+        16,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "661eaa55d1c1399efe8bb6b868314b7dd47bdcd4e6f9d7431277013bcaf36dbe"
+    },
+    "transported_samples": {
+      "shape": [
+        16,
+        3
+      ],
+      "dtype": "float64",
+      "sha256": "e0b213ae7a9314092dfa21c415328bf631c61a820c015f842ec683fb0a67ff22"
+    }
+  }
+}

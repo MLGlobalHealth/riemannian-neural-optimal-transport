@@ -1,0 +1,434 @@
+{
+  "se3_native": {
+    "job_id": "liegroups_SE3_ours_fps_seed12345",
+    "plan": {
+      "schema_version": 1,
+      "suite": "liegroups",
+      "source_root": "/data/am1118/mlgh-paper-release-check-20260908/source",
+      "output_dir": "/data/am1118/mlgh-paper-release-check-20260908/results/se3_native",
+      "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "gpus": [
+        "0"
+      ],
+      "recipe": {
+        "suite": "liegroups",
+        "label": "recovered_liegroup_native",
+        "x64": true,
+        "manifolds": [
+          "SO3",
+          "SE3"
+        ],
+        "landmark_methods": [
+          "fps"
+        ],
+        "seeds": [
+          12345
+        ],
+        "gammas": [
+          1.0,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001
+        ],
+        "rnot_overrides": {},
+        "evaluation": {
+          "n_batches": 5,
+          "batch_size": 1024,
+          "seed_offset": null,
+          "seed": 12345
+        }
+      },
+      "recipe_file": "/data/am1118/mlgh-paper-release-check-20260908/source/paper/configs/liegroups.json",
+      "recipe_sha256": "7f59f273abe8a761cea3d87b40eb8709ab399631b6baca23597733cf4437a56d",
+      "smoke": false,
+      "platform": "cuda",
+      "environment_overrides": {
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "JAX_THREEFRY_PARTITIONABLE": "False",
+        "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+        "JAX_RANDOM_SEED_OFFSET": "0",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "unfiltered_job_count": 14,
+      "jobs": [
+        {
+          "job_id": "liegroups_SE3_ours_fps_seed12345",
+          "selection": {
+            "suite": "liegroups",
+            "manifold": "SE3",
+            "dimension": 6,
+            "method": "ours",
+            "seed": 12345,
+            "gamma": null,
+            "landmark_method": "fps",
+            "ablation": null
+          },
+          "result": "/data/am1118/mlgh-paper-release-check-20260908/results/se3_native/results/liegroups_SE3_ours_fps_seed12345/result.json",
+          "log": "/data/am1118/mlgh-paper-release-check-20260908/results/se3_native/logs/liegroups_SE3_ours_fps_seed12345.log",
+          "command_without_gpu": [
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "-m",
+            "paper.worker",
+            "--manifest",
+            "/data/am1118/mlgh-paper-release-check-20260908/results/se3_native/manifest.json",
+            "--job-id",
+            "liegroups_SE3_ours_fps_seed12345"
+          ]
+        }
+      ],
+      "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+      "interpretation": "recovered_liegroup_native"
+    }
+  },
+  "s2_ours_smoke": {
+    "job_id": "tables_S2_ours_random_seed12345",
+    "plan": {
+      "schema_version": 1,
+      "suite": "tables",
+      "source_root": "/data/am1118/mlgh-paper-release-check-20260908/source",
+      "output_dir": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke",
+      "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "gpus": [
+        "0"
+      ],
+      "recipe": {
+        "suite": "tables",
+        "label": "restored_main_tables",
+        "x64": true,
+        "manifolds": [
+          "S2",
+          "T2"
+        ],
+        "landmark_methods": [
+          "fps",
+          "random"
+        ],
+        "seeds": [
+          12345,
+          23456,
+          34567,
+          45678,
+          56789
+        ],
+        "gammas": [
+          1.0
+        ],
+        "rnot_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "training": {
+            "n_steps": 1000
+          },
+          "solver": {
+            "inner_steps": 2500,
+            "inner_lr": 0.05,
+            "min_steps": 1000,
+            "logsumexp_init": true,
+            "logsumexp_gamma": 0.1,
+            "use_adam": true,
+            "use_line_search": false
+          }
+        },
+        "evaluation": {
+          "n_batches": 5,
+          "batch_size": 1024,
+          "seed_offset": 1000,
+          "seed": null
+        }
+      },
+      "recipe_file": "/data/am1118/mlgh-paper-release-check-20260908/source/paper/configs/tables.json",
+      "recipe_sha256": "cdc09e784bb230e6105c17a5c235f1feaf6c5b70eb459c624e64ec35ecdc4dba",
+      "smoke": true,
+      "platform": "cuda",
+      "environment_overrides": {
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "JAX_THREEFRY_PARTITIONABLE": "False",
+        "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+        "JAX_RANDOM_SEED_OFFSET": "0",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "unfiltered_job_count": 30,
+      "jobs": [
+        {
+          "job_id": "tables_S2_ours_random_seed12345",
+          "selection": {
+            "suite": "tables",
+            "manifold": "S2",
+            "dimension": 2,
+            "method": "ours",
+            "seed": 12345,
+            "gamma": null,
+            "landmark_method": "random",
+            "ablation": null
+          },
+          "result": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke/results/tables_S2_ours_random_seed12345/result.json",
+          "log": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke/logs/tables_S2_ours_random_seed12345.log",
+          "command_without_gpu": [
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "-m",
+            "paper.worker",
+            "--manifest",
+            "/data/am1118/mlgh-paper-release-check-20260908/results/s2_ours_smoke/manifest.json",
+            "--job-id",
+            "tables_S2_ours_random_seed12345"
+          ]
+        }
+      ],
+      "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+      "interpretation": "Tiny validation only; not paper reproduction"
+    }
+  },
+  "s2_rcpm_smoke": {
+    "job_id": "tables_S2_rcpm_gamma1_seed12345",
+    "plan": {
+      "schema_version": 1,
+      "suite": "tables",
+      "source_root": "/data/am1118/mlgh-paper-release-check-20260908/source",
+      "output_dir": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke",
+      "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "gpus": [
+        "0"
+      ],
+      "recipe": {
+        "suite": "tables",
+        "label": "restored_main_tables",
+        "x64": true,
+        "manifolds": [
+          "S2",
+          "T2"
+        ],
+        "landmark_methods": [
+          "fps",
+          "random"
+        ],
+        "seeds": [
+          12345,
+          23456,
+          34567,
+          45678,
+          56789
+        ],
+        "gammas": [
+          1.0
+        ],
+        "rnot_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "training": {
+            "n_steps": 1000
+          },
+          "solver": {
+            "inner_steps": 2500,
+            "inner_lr": 0.05,
+            "min_steps": 1000,
+            "logsumexp_init": true,
+            "logsumexp_gamma": 0.1,
+            "use_adam": true,
+            "use_line_search": false
+          }
+        },
+        "evaluation": {
+          "n_batches": 5,
+          "batch_size": 1024,
+          "seed_offset": 1000,
+          "seed": null
+        }
+      },
+      "recipe_file": "/data/am1118/mlgh-paper-release-check-20260908/source/paper/configs/tables.json",
+      "recipe_sha256": "cdc09e784bb230e6105c17a5c235f1feaf6c5b70eb459c624e64ec35ecdc4dba",
+      "smoke": true,
+      "platform": "cuda",
+      "environment_overrides": {
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "JAX_THREEFRY_PARTITIONABLE": "False",
+        "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+        "JAX_RANDOM_SEED_OFFSET": "0",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "unfiltered_job_count": 30,
+      "jobs": [
+        {
+          "job_id": "tables_S2_rcpm_gamma1_seed12345",
+          "selection": {
+            "suite": "tables",
+            "manifold": "S2",
+            "dimension": 2,
+            "method": "rcpm",
+            "seed": 12345,
+            "gamma": 1.0,
+            "landmark_method": null,
+            "ablation": null
+          },
+          "result": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/results/tables_S2_rcpm_gamma1_seed12345/result.json",
+          "log": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/logs/tables_S2_rcpm_gamma1_seed12345.log",
+          "command_without_gpu": [
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "-m",
+            "paper.worker",
+            "--manifest",
+            "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/manifest.json",
+            "--job-id",
+            "tables_S2_rcpm_gamma1_seed12345"
+          ]
+        }
+      ],
+      "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+      "interpretation": "Tiny validation only; not paper reproduction"
+    }
+  },
+  "ablation_smoke": {
+    "job_id": "ablations_S2_ours_random_seed12345_baseline",
+    "plan": {
+      "schema_version": 1,
+      "suite": "ablations",
+      "source_root": "/data/am1118/mlgh-paper-release-check-20260908/source",
+      "output_dir": "/data/am1118/mlgh-paper-release-check-20260908/results/ablation_smoke",
+      "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "gpus": [
+        "0"
+      ],
+      "recipe": {
+        "suite": "ablations",
+        "label": "historical_ablation_recipe_current_library_unverified",
+        "x64": true,
+        "manifolds": [
+          "S2",
+          "T2",
+          "S10",
+          "T10"
+        ],
+        "landmark_methods": [
+          "random"
+        ],
+        "seeds": [
+          12345
+        ],
+        "gammas": [],
+        "rnot_overrides": {
+          "model": {
+            "n_landmarks": 128
+          },
+          "training": {
+            "n_steps": 1000,
+            "grad_accum_steps": 0
+          },
+          "solver": {
+            "inner_steps": 2500,
+            "inner_lr": 0.05,
+            "min_steps": 1000,
+            "logsumexp_init": true,
+            "logsumexp_gamma": 0.1,
+            "use_adam": true,
+            "use_line_search": false
+          }
+        },
+        "historical_driver_revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+        "ablations": [
+          "baseline",
+          "no_logsumexp_init",
+          "fewer_inner_steps_500",
+          "more_inner_steps_4000",
+          "inner_lr_5e-2",
+          "inner_lr_1e-3",
+          "logsumexp_gamma_1",
+          "logsumexp_gamma_0.01",
+          "logsumexp_gamma_0.001",
+          "no_adam",
+          "landmarks_fps",
+          "landmarks_32",
+          "landmarks_64",
+          "landmarks_256",
+          "hidden_32_32",
+          "hidden_64_64",
+          "hidden_256_256",
+          "hidden_128_128_128",
+          "lr_1e-4",
+          "batch_512",
+          "batch_128"
+        ],
+        "evaluation": {
+          "n_batches": 5,
+          "batch_size": 1024,
+          "seed_offset": null,
+          "seed": 12345
+        }
+      },
+      "recipe_file": "/data/am1118/mlgh-paper-release-check-20260908/source/paper/configs/ablations.json",
+      "recipe_sha256": "c6dd1336e5cb96d822186bf7ecddb5cd21310c20aaf94508e14199e45f733f54",
+      "smoke": true,
+      "platform": "cuda",
+      "environment_overrides": {
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "JAX_THREEFRY_PARTITIONABLE": "False",
+        "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+        "JAX_RANDOM_SEED_OFFSET": "0",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "MPLBACKEND": "Agg",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "unfiltered_job_count": 84,
+      "jobs": [
+        {
+          "job_id": "ablations_S2_ours_random_seed12345_baseline",
+          "selection": {
+            "suite": "ablations",
+            "manifold": "S2",
+            "dimension": 2,
+            "method": "ours",
+            "seed": 12345,
+            "gamma": null,
+            "landmark_method": "random",
+            "ablation": "baseline"
+          },
+          "result": "/data/am1118/mlgh-paper-release-check-20260908/results/ablation_smoke/results/ablations_S2_ours_random_seed12345_baseline/result.json",
+          "log": "/data/am1118/mlgh-paper-release-check-20260908/results/ablation_smoke/logs/ablations_S2_ours_random_seed12345_baseline.log",
+          "command_without_gpu": [
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "-m",
+            "paper.worker",
+            "--manifest",
+            "/data/am1118/mlgh-paper-release-check-20260908/results/ablation_smoke/manifest.json",
+            "--job-id",
+            "ablations_S2_ours_random_seed12345_baseline"
+          ]
+        }
+      ],
+      "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+      "interpretation": "Tiny validation only; not paper reproduction"
+    }
+  }
+}

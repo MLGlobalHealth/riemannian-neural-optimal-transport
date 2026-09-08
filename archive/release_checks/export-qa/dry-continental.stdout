@@ -1,0 +1,113 @@
+{
+  "recipe": {
+    "schema_version": 1,
+    "label": "Fresh recovered continental recipe (historical checkpoint unavailable)",
+    "configuration": {
+      "manifold_name": "S2",
+      "base_density": "SphereUniform",
+      "target_density": "SphereWrappedNormal",
+      "jax_platform": "gpu",
+      "model": {
+        "network_type": "mlp",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "n_landmarks": 128,
+        "use_layernorm": true,
+        "last_scale": 0.01,
+        "activation": "silu",
+        "leaky_slope": 0.01,
+        "softplus_beta": 1.0,
+        "max_dist": 3.14159
+      },
+      "solver": {
+        "inner_steps": 2500,
+        "inner_lr": 0.05,
+        "grad_clip": null,
+        "lr_decay": false,
+        "tolerance": 1e-06,
+        "min_steps": 1000,
+        "momentum": 0.0,
+        "logsumexp_init": false,
+        "logsumexp_gamma": 0.01,
+        "use_adam": false,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "use_line_search": false,
+        "line_search_steps": [
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001
+        ]
+      },
+      "training": {
+        "n_steps": 1000,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "log_every": 1,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "seed": 12345
+      }
+    },
+    "landmark_method": "fps",
+    "fps_candidates": 50000,
+    "data": {
+      "past": {
+        "path": "data/continental/land_points_past.csv",
+        "sha256": "1afe72623f68d42ded0c1c90de223fb050f4298ff272ca6401d32cb40e1d2fee"
+      },
+      "present": {
+        "path": "data/continental/land_points_present.csv",
+        "sha256": "17ff2ebfa9fa7acb367b9e21adb994e1a501777e97143decc8f437a5fa33357f"
+      }
+    },
+    "transport": {
+      "source_selection": "first_csv_rows",
+      "size": 1024,
+      "target_seed": 42,
+      "parameters": "state.params"
+    },
+    "provenance": {
+      "notebook": "archive/original/continental_drift.ipynb",
+      "status": "Recovered fresh recipe; historical checkpoint unavailable and full training not verified.",
+      "checkpoint_reference": "saved_runs/continental_drift_20260121_211950.pkl",
+      "printed_settings": [
+        "model.network_type",
+        "model.hidden_dims",
+        "model.n_landmarks",
+        "model.activation",
+        "solver.inner_steps",
+        "solver.inner_lr",
+        "solver.tolerance",
+        "solver.min_steps",
+        "training.n_steps",
+        "training.batch_size",
+        "training.learning_rate"
+      ],
+      "configuration_note": "Printed notebook settings are explicit. Unprinted fields use packaged ZIP defaults; original notebook companion defaults are not confirmed. In particular, logsumexp_init=False and logsumexp_gamma=0.01 follow the packaged ZIP, while the current original-worktree defaults differ. The native builder omits Adam and line-search options, so both are effectively false. The historical checkpoint and original kernel environment were not recovered."
+    }
+  },
+  "data": {
+    "past": {
+      "path": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/data/continental/land_points_past.csv",
+      "sha256": "1afe72623f68d42ded0c1c90de223fb050f4298ff272ca6401d32cb40e1d2fee",
+      "rows": 50000,
+      "bytes": 2080416
+    },
+    "present": {
+      "path": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/data/continental/land_points_present.csv",
+      "sha256": "17ff2ebfa9fa7acb367b9e21adb994e1a501777e97143decc8f437a5fa33357f",
+      "rows": 50000,
+      "bytes": 2067166
+    }
+  },
+  "smoke": false,
+  "will_train": false
+}

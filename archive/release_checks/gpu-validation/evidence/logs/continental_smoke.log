@@ -1,0 +1,15 @@
+Loaded 256 points from /data/am1118/mlgh-paper-release-check-20260908/results/continental_smoke/smoke_past.csv
+  Manifold: S^2 (D=3)
+  Estimated log(Z) = 2.0238 (normalization constant)
+Loaded 256 points from /data/am1118/mlgh-paper-release-check-20260908/results/continental_smoke/smoke_present.csv
+  Manifold: S^2 (D=3)
+  Estimated log(Z) = 1.9667 (normalization constant)
+Using FPS landmarks: 4 from base, 4 from target (candidates=64)
+/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:92: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int64 to dtype=int32 with jax_numpy_dtype_promotion='standard'. In future JAX releases this will result in an error.
+  warnings.warn(
+/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/jax/_src/ops/scatter.py:92: FutureWarning: scatter inputs have incompatible types: cannot safely cast value from dtype=int64 to dtype=int32 with jax_numpy_dtype_promotion='standard'. In future JAX releases this will result in an error.
+  warnings.warn(
+✓ Generated 8 total landmarks
+[     1] loss=-0.0055 | res=1.38e-02 | grad=7.44e-01 | 3.2s
+[     2] loss=-0.0032 | res=1.90e-02 | grad=2.79e+00 | 0.0s
+/data/am1118/mlgh-paper-release-check-20260908/results/continental_smoke/result.json

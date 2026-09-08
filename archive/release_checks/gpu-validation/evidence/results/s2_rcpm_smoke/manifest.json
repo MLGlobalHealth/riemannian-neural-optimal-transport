@@ -1,0 +1,164 @@
+{
+  "created_at": "2026-09-08T15:29:19.886165+00:00",
+  "environment_overrides": {
+    "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+    "JAX_ENABLE_X64": "True",
+    "JAX_PLATFORMS": "cuda",
+    "JAX_RANDOM_SEED_OFFSET": "0",
+    "JAX_THREEFRY_PARTITIONABLE": "False",
+    "MKL_NUM_THREADS": "2",
+    "MPLBACKEND": "Agg",
+    "NUMEXPR_NUM_THREADS": "2",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+  },
+  "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+  "gpus": [
+    "3"
+  ],
+  "interpretation": "Tiny validation only; not paper reproduction",
+  "interpreter": {
+    "packages": {
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jaxlib": "0.4.34",
+      "optax": "0.2.3"
+    },
+    "python": [
+      3,
+      11,
+      15
+    ]
+  },
+  "jobs": [
+    {
+      "command_without_gpu": [
+        "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/manifest.json",
+        "--job-id",
+        "tables_S2_rcpm_gamma1_seed12345"
+      ],
+      "job_id": "tables_S2_rcpm_gamma1_seed12345",
+      "log": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/logs/tables_S2_rcpm_gamma1_seed12345.log",
+      "result": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/results/tables_S2_rcpm_gamma1_seed12345/result.json",
+      "selection": {
+        "ablation": null,
+        "dimension": 2,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "S2",
+        "method": "rcpm",
+        "seed": 12345,
+        "suite": "tables"
+      }
+    }
+  ],
+  "output_dir": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke",
+  "paper_source": {
+    "paper/__init__.py": "540ca415403b0209125b83533e4d78281f03feab02703ca43061f1e5c75184aa",
+    "paper/_ablation_native.py": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+    "paper/_plot_data.py": "fbab4e96eb4e998c3b4413fd68e3a809f0f2e29d2102fb81784d166935c5c17a",
+    "paper/_runtime.py": "3689f40fb338f2e8ecbc30d96647a5454ffd1b0230465c941f7e290727f244cb",
+    "paper/configs/ablations.json": "c6dd1336e5cb96d822186bf7ecddb5cd21310c20aaf94508e14199e45f733f54",
+    "paper/configs/continental.json": "85b18e60a5f461784a173e81e724a9c40978ddca8098556e22e571be8024be67",
+    "paper/configs/highd.json": "b5655f5410ba18d391c977495e3560dfb1ac982d65369179e05b981c6c0ed070",
+    "paper/configs/liegroups.json": "7f59f273abe8a761cea3d87b40eb8709ab399631b6baca23597733cf4437a56d",
+    "paper/configs/sweep.json": "ae055f26e79bf3d941d1b7b46572ac3fab8465e384435cd58cd205e0be57328e",
+    "paper/configs/tables.json": "cdc09e784bb230e6105c17a5c235f1feaf6c5b70eb459c624e64ec35ecdc4dba",
+    "paper/continental.py": "35fd60634f3dc7d45985156ebbf0b1957043f547962adc95388161cba9726fff",
+    "paper/embeddings.py": "10928a30918619d89892935433c02d2fe74991bb9743e7632ec3984d0480793f",
+    "paper/plot.py": "725794a7d5e6e8c8ade491c8bfa515cf32d75170334010d183c74b552814ad32",
+    "paper/run.py": "3f2ed0fbbb618113f7489c6455b51a5b109520b2f76d719ea2f22a0452e8f029",
+    "paper/transport.py": "3058c02bbf4a0e610e5d6697edc2db51b2b0f67afce731e54e7dd83c2c188aae",
+    "paper/worker.py": "aabe074f25a57ac88de40466027a33a999330d762e0e65b9ac2ea92111fbfbed"
+  },
+  "platform": "cuda",
+  "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+  "recipe": {
+    "evaluation": {
+      "batch_size": 1024,
+      "n_batches": 5,
+      "seed": null,
+      "seed_offset": 1000
+    },
+    "gammas": [
+      1.0
+    ],
+    "label": "restored_main_tables",
+    "landmark_methods": [
+      "fps",
+      "random"
+    ],
+    "manifolds": [
+      "S2",
+      "T2"
+    ],
+    "rnot_overrides": {
+      "model": {
+        "n_landmarks": 128
+      },
+      "solver": {
+        "inner_lr": 0.05,
+        "inner_steps": 2500,
+        "logsumexp_gamma": 0.1,
+        "logsumexp_init": true,
+        "min_steps": 1000,
+        "use_adam": true,
+        "use_line_search": false
+      },
+      "training": {
+        "n_steps": 1000
+      }
+    },
+    "seeds": [
+      12345,
+      23456,
+      34567,
+      45678,
+      56789
+    ],
+    "suite": "tables",
+    "x64": true
+  },
+  "recipe_file": "/data/am1118/mlgh-paper-release-check-20260908/source/paper/configs/tables.json",
+  "recipe_sha256": "cdc09e784bb230e6105c17a5c235f1feaf6c5b70eb459c624e64ec35ecdc4dba",
+  "schema_version": 1,
+  "smoke": true,
+  "source": {
+    "files": {
+      "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "experiments/run_se3_experiment.py": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+      "experiments/run_so3_experiment.py": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+      "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "d5725ffd79d5a33cbf098007aa375dbb30dc3c54b5259c9e98181f2bc4ecfd88"
+  },
+  "source_root": "/data/am1118/mlgh-paper-release-check-20260908/source",
+  "suite": "tables",
+  "unfiltered_job_count": 30
+}

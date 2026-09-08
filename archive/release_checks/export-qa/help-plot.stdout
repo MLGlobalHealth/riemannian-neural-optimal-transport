@@ -1,0 +1,22 @@
+usage: plot.py [-h] [--input INPUT] --output OUTPUT [--reference]
+               [--reference-dir REFERENCE_DIR] [--group GROUP]
+               {tables,liegroups,sweep,highd,ablations,embeddings}
+
+Render actual experiment outputs or explicitly labeled historical references.
+Examples: python -m paper.plot tables --input runs/results --output
+figures/tables python -m paper.plot sweep --reference --output figures/sweep
+
+positional arguments:
+  {tables,liegroups,sweep,highd,ablations,embeddings}
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Results directory, comparison JSON, or explicit plot-
+                        data JSON.
+  --output OUTPUT       Output directory for PNG, PDF, CSV and provenance
+                        JSON.
+  --reference           Use labeled archived/paper-reported reference data; no
+                        model execution.
+  --reference-dir REFERENCE_DIR
+  --group GROUP         Optional group/cohort ID selector; repeat for several
+                        explicit groups.

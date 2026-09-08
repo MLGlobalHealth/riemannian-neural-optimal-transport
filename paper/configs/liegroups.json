@@ -1,0 +1,30 @@
+{
+  "suite": "liegroups",
+  "label": "recovered_liegroup_native",
+  "x64": true,
+  "manifolds": [
+    "SO3",
+    "SE3"
+  ],
+  "landmark_methods": [
+    "fps"
+  ],
+  "seeds": [
+    12345
+  ],
+  "gammas": [
+    1.0,
+    0.1,
+    0.05,
+    0.01,
+    0.005,
+    0.001
+  ],
+  "rnot_overrides": {},
+  "evaluation": {
+    "n_batches": 5,
+    "batch_size": 1024,
+    "seed_offset": null,
+    "seed": 12345
+  }
+}
