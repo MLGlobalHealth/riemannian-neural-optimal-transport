@@ -1,0 +1,81 @@
+{
+  "title": "Riemannian Neural Optimal Transport",
+  "short_name": "RNOT",
+  "authors": [
+    {
+      "name": "Alessandro Micheli",
+      "affiliations": [
+        1
+      ]
+    },
+    {
+      "name": "Yueqi Cao",
+      "affiliations": [
+        2
+      ]
+    },
+    {
+      "name": "Anthea Monod",
+      "affiliations": [
+        1
+      ]
+    },
+    {
+      "name": "Samir Bhatt",
+      "affiliations": [
+        1,
+        3
+      ]
+    }
+  ],
+  "affiliations": {
+    "1": "Imperial College London, London, UK",
+    "2": "KTH Royal Institute of Technology, Stockholm, Sweden",
+    "3": "University Of Copenhagen, Copenhagen, Denmark"
+  },
+  "corresponding_author": {
+    "name": "Alessandro Micheli",
+    "email": "a.micheli19@imperial.ac.uk"
+  },
+  "abstract": "Computational optimal transport (OT) offers a principled framework for generative modeling. Neural OT methods, which use neural networks to learn an OT map (or potential) from data in an amortized way, can be evaluated out of sample after training, but existing approaches are tailored to Euclidean geometry. Extending neural OT to high-dimensional Riemannian manifolds remains an open challenge. In this paper, we prove that any method for OT on manifolds that produces discrete approximations of transport maps necessarily suffers from the curse of dimensionality: achieving a fixed accuracy requires a number of parameters that grows exponentially with the manifold dimension. Motivated by this limitation, we introduce Riemannian Neural OT (RNOT) maps, which are continuous neural-network parameterizations of OT maps on manifolds that avoid discretization and incorporate geometric structure by construction. Under mild regularity assumptions, we prove that RNOT maps approximate Riemannian OT maps with sub-exponential complexity in the dimension. Experiments on synthetic and real datasets demonstrate improved scalability and competitive performance relative to discretization-based baselines.",
+  "abstract_source": "Existing LaTeX sections/abstract.tex; verified against camera-ready first page.",
+  "abstract_source_sha256": "750fff34dcab4750ee2cbd7aeb207c0c6507db5f532b1da49d01a8b852f416ef",
+  "method_summary": "RNOT learns a continuous transport potential directly on a Riemannian manifold. Geodesic distance-to-landmark features encode the geometry, the c-transform enforces the optimal-transport structure, and a sample-based Kantorovich semi-dual objective trains the model end to end.",
+  "method_steps": [
+    {
+      "title": "Encode intrinsic geometry",
+      "description": "Represent a point by its geodesic distances to a set of landmarks."
+    },
+    {
+      "title": "Learn a continuous potential",
+      "description": "A neural network parameterizes a continuous potential, with c-concavity enforced through the c-transform."
+    },
+    {
+      "title": "Transport along the manifold",
+      "description": "An intrinsic minimization defines the transport map, moving source samples toward the target distribution."
+    }
+  ],
+  "theory_statement": "Under the paper’s smoothness and regularity assumptions on compact Riemannian manifolds, RNOT admits approximation guarantees with sub-exponential complexity in dimension.",
+  "canonical_identifiers": {
+    "arxiv": "2602.03566",
+    "arxiv_version_verified": "v1",
+    "arxiv_date_verified": "2026-02-03",
+    "openreview": "ez4oLq7PR3"
+  },
+  "links": {
+    "paper": "https://openreview.net/pdf?id=ez4oLq7PR3",
+    "openreview": "https://openreview.net/forum?id=ez4oLq7PR3",
+    "arxiv": "https://arxiv.org/abs/2602.03566",
+    "code_as_printed_in_camera_ready": "https://github.com/MLGlobalHealth/riemannian-neural-optimal-transport"
+  },
+  "venue_as_printed_in_camera_ready": {
+    "conference": "Proceedings of the 43rd International Conference on Machine Learning",
+    "location": "Seoul, South Korea",
+    "series": "PMLR",
+    "volume": "306",
+    "year": 2026
+  },
+  "citation_bibtex": "@misc{micheli2026riemannianneuraloptimaltransport,\n  title = {Riemannian Neural Optimal Transport},\n  author = {Alessandro Micheli and Yueqi Cao and Anthea Monod and Samir Bhatt},\n  year = {2026},\n  eprint = {2602.03566},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.LG},\n  url = {https://arxiv.org/abs/2602.03566}\n}\n",
+  "citation_note": "Stable arXiv citation verified from the local arXiv PDF. No proceedings page range or DOI has been invented; live publisher metadata was not fetched for this extraction task.",
+  "figure_use_note": "All visual assets are original paper artwork or existing author LaTeX figure files. They depict the paper’s reported results, not newly produced website experiments."
+}

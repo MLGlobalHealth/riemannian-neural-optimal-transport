@@ -73,3 +73,13 @@ The verification tooling can be checked without running experiments:
 ```sh
 python -m unittest discover -s verification -p 'test_*.py'
 ```
+
+## Local project page
+
+A visual research page is available under [website/](website/README.md), with interactive manifold illustrations, original paper figures, and local paper/code downloads. Start it from the repository root:
+
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1 --directory website
+```
+
+Open [http://127.0.0.1:4173](http://127.0.0.1:4173). The website is self-contained and has no build step or deployment configuration.
