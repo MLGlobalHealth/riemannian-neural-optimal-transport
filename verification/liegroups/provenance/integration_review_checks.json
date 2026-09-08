@@ -1,0 +1,800 @@
+{
+  "status": "pass",
+  "failures": [],
+  "source_file_count": 24,
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "native_result_count": 14,
+  "artifact_count": 28,
+  "all_artifacts_ignored": true,
+  "old_raw_evidence_count": 94,
+  "old_status_counts": {
+    "evaluation_only_complete": 2,
+    "complete": 90,
+    "failed": 2
+  },
+  "old_raw_diff": [],
+  "markdown_files_checked": 8,
+  "local_markdown_links_checked": 47,
+  "results": [
+    {
+      "job_id": "SE3_ours_nativeJAX435",
+      "raw_result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.001_nativeJAX435",
+      "raw_result_sha256": "23f0a454edfcc4f62ea3a598f27dd84a8110a958f4d1b11ada78450fe654bb59",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.005_nativeJAX435",
+      "raw_result_sha256": "0ef728fc7dd4787c63ed29f9daa9c659f9ef361bbc9c19ebe7913925958df574",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.01_nativeJAX435",
+      "raw_result_sha256": "d7ebb8759ba79c078e56048fa941fefd83e1f0011fbadbbc444e3fbdd298eb0d",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.05_nativeJAX435",
+      "raw_result_sha256": "f915ee2e6c00b8c9662442c33d0186da6c2a393366f7013b962f3f4655f32757",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.1_nativeJAX435",
+      "raw_result_sha256": "75ebee3589eacc2337cf038626d6087d68445271f16f3f3d68505f4ef686c46d",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SE3_rcpm_gamma1_nativeJAX435",
+      "raw_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_ours_nativeJAX435",
+      "raw_result_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.001_nativeJAX435",
+      "raw_result_sha256": "6807bbe31cf87857be06c0bf1359af36ca46c65d424022115284fdd1e08c894f",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.005_nativeJAX435",
+      "raw_result_sha256": "457dd462f8bb0a7f41caa9aa3fb90f6ba3626373c949298d439e384fbef37d08",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.01_nativeJAX435",
+      "raw_result_sha256": "1cc6da08ef469e976a08930e93f339b314e82bc5fd30b03b71c858328e0eeb8e",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.05_nativeJAX435",
+      "raw_result_sha256": "917e19e296d97801ecaee9bef42c5b654bb4feab0ee091e7da99b687c71e5864",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.1_nativeJAX435",
+      "raw_result_sha256": "353a39ee1503f7e959c212664dd418cadd8ceb30b2669aa94f88eb4ef4af3584",
+      "matches_fetched": true
+    },
+    {
+      "job_id": "SO3_rcpm_gamma1_nativeJAX435",
+      "raw_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "matches_fetched": true
+    }
+  ],
+  "old_records": [
+    {
+      "path": "verification/results/checkpoint_replay/nvidia6/evaluation.json",
+      "git_blob_sha1": "24fdb8a09449cdb54b5e48073f41238bd7791816",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/checkpoint_replay/nvidia7/evaluation.json",
+      "git_blob_sha1": "a51e77b2f7808c9cfd1fd97ebb142696c00af975",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/closest_official_cuda_jax435/table_ours_S2_seed12345_closest_official_cuda_jax435_d4432e52de6c/result.json",
+      "git_blob_sha1": "7ebf9e182056c83352e2cdddda6976538778b676",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/closest_official_cuda_jax435/table_rcpm_S2_seed12345_closest_official_cuda_jax435_f23e2ce5aabd/result.json",
+      "git_blob_sha1": "8b48cf4e6f156cc4a1f40b45088a6bd4800105c0",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_rcpm_jax438_failure/table_rcpm_S2_seed12345_historical_source_dbf533d_eeb9297b6b3c/result.json",
+      "git_blob_sha1": "f5309b201e0abc0918e1a4259b11fb6bec14a73d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_rcpm_jax438_failure/table_rcpm_T2_seed12345_historical_source_dbf533d_04e2fac62813/result.json",
+      "git_blob_sha1": "c4892354764e99acbbd521de8552b251eb6fec38",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_settings/table_ours_S2_seed12345_historical_settings_x64_0a43fdb0aa48/result.json",
+      "git_blob_sha1": "d932bc41304862d049bde13c8f457820cd8bae12",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_settings/table_ours_S2_seed12345_historical_settings_x64_b0891303e33c/result.json",
+      "git_blob_sha1": "774b2a636c0c80ed959ab2df35827517379cf829",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_settings/table_ours_T2_seed12345_historical_settings_x64_0d0f4fd4aa16/result.json",
+      "git_blob_sha1": "4bcd3dba0c946d605c25bce11975b2611642da93",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_settings/table_ours_T2_seed12345_historical_settings_x64_11df8b4cd73b/result.json",
+      "git_blob_sha1": "796eecab0c1cfa525643c656d97e19994cd43d25",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_S2_seed12345_historical_source_dbf533d_eeb9297b6b3c/result.json",
+      "git_blob_sha1": "438ee92829a603c86fd9214d55c96bb340c5d98b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_S2_seed23456_historical_source_dbf533d_d3198fc4be02/result.json",
+      "git_blob_sha1": "506b17a7fa27d6e2fa569704d7176556549c52a4",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_S2_seed34567_historical_source_dbf533d_7de191ed86fb/result.json",
+      "git_blob_sha1": "dccb92a9f42893990dd2be911d5a6ff6d8b0f499",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_S2_seed45678_historical_source_dbf533d_29f813049204/result.json",
+      "git_blob_sha1": "ff40411491ad6266ceb029008d266d7181f674cf",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_S2_seed56789_historical_source_dbf533d_895ebf574be9/result.json",
+      "git_blob_sha1": "17ed57368e6ed089dc923edc588726d76ac5e759",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_T2_seed12345_historical_source_dbf533d_04e2fac62813/result.json",
+      "git_blob_sha1": "461d9dc61f7030de0ff641c3ef3889333e907f9b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_T2_seed23456_historical_source_dbf533d_4511c83e15e2/result.json",
+      "git_blob_sha1": "b6806990a728e292d8373905ee4373bc0df0a571",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_T2_seed34567_historical_source_dbf533d_e379803e1ea3/result.json",
+      "git_blob_sha1": "c40c7145d4b7cd56d6d75efea5aa10b5a85c74fe",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_T2_seed45678_historical_source_dbf533d_83e5789c9d5c/result.json",
+      "git_blob_sha1": "0b2fad9a616274cd0e82b874b70cb25eab6727d3",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax062/table_rcpm_T2_seed56789_historical_source_dbf533d_fcef7c77e885/result.json",
+      "git_blob_sha1": "bd8952ae37c0d8e10093a13c0fb93e71016a7f7a",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax438/table_ours_S2_seed12345_historical_source_dbf533d_da8c697005eb/result.json",
+      "git_blob_sha1": "726c81dff5f5ac5260122240fe910fcc843171e9",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/historical_source_jax438/table_ours_T2_seed12345_historical_source_dbf533d_39d585aca286/result.json",
+      "git_blob_sha1": "620c594ae7e361255ca3fb5d8c2ae460a6f86cf2",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+      "git_blob_sha1": "ef88ec7bc5677edc37e844f59f4e4dc2a9d78e7f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+      "git_blob_sha1": "bf24752fd05e09823311460b2cfbd546d73237cb",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+      "git_blob_sha1": "aab44680d8d4cd7e2b5d919469fd6de025de491b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b/result.json",
+      "git_blob_sha1": "6c581057fe68c0295e67bcf2dd1698663586b7a7",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d/result.json",
+      "git_blob_sha1": "0c4f0b121a585bdf629bbe01de7094c3bbe4cee6",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+      "git_blob_sha1": "b937455817d6af756fa5660eac004fb0dfdc7a9a",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f/result.json",
+      "git_blob_sha1": "629eb345a9b91415daf9767ae94df0749ece108b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+      "git_blob_sha1": "36f093470bc055e232001775010df621f579845b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443/result.json",
+      "git_blob_sha1": "58debc7de5930d5d930174390b21f3528cce465c",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+      "git_blob_sha1": "7f3cf75769384e6a86099ee3a9244f5905b7e048",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+      "git_blob_sha1": "63e1b5a272d17842b7f40b3cda887d45b22073c8",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/nvidia6_portability_jax435/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+      "git_blob_sha1": "23fe36808c4f6bf60357fd1c23b46e055693189c",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_2411dbc94059/result.json",
+      "git_blob_sha1": "e9c2b05ab77e585c2078a980857dee4ed8101d17",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed12345_zip_historical_settings_cuda_jax435_ae44af77b0c9/result.json",
+      "git_blob_sha1": "3ff1bae657eaf3f2d65b77a45ff287d40b12e577",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_5615df2eb2e3/result.json",
+      "git_blob_sha1": "984316c9b94e8805b173701b06c355904deb5275",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed23456_zip_historical_settings_cuda_jax435_e3b69b1f0fd1/result.json",
+      "git_blob_sha1": "c57aa6d31ba8ec58973cb29023fc4666fa859ffa",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_0b45516f8cfc/result.json",
+      "git_blob_sha1": "d767f3cbdcb7513c91fb81fd36916a6d53d2dd80",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed34567_zip_historical_settings_cuda_jax435_441b57612e45/result.json",
+      "git_blob_sha1": "0a7d8ab65c3817b410fdf9aeb31bd98596aa2786",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_061e8e18efc4/result.json",
+      "git_blob_sha1": "82155fa190fda5ac465b6b916446a47d148ebe6b",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed45678_zip_historical_settings_cuda_jax435_e3da3b789275/result.json",
+      "git_blob_sha1": "3f30d9d7b23af2e3ad6112ee4814223ae1c5b553",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_6d7d390c678e/result.json",
+      "git_blob_sha1": "0edf4799ea96a459395fb3601a2f515806572d95",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_S2_seed56789_zip_historical_settings_cuda_jax435_8741bd6f228e/result.json",
+      "git_blob_sha1": "4800691344801a5ea7e822f9f9cc1a2df988d1f0",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+      "git_blob_sha1": "1c5876ab8a9b2f32ae17c7ee2c3c656885d4692e",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+      "git_blob_sha1": "b81df2dd54d36c0ba877482d5d066c3d61f02b8f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fa120bdddebe/result.json",
+      "git_blob_sha1": "4ea58af852fbe1ad9c132ac0c2a72aa4e1e10b35",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed23456_zip_historical_settings_cuda_jax435_fc4a448fa84b/result.json",
+      "git_blob_sha1": "42dfb00105d6969476ee19b1a8bbf4ef3f421f39",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_035145fdc01d/result.json",
+      "git_blob_sha1": "a5b3f8995dd27d40afabddfc2508228e2fcbea88",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed34567_zip_historical_settings_cuda_jax435_7d0f21afb99d/result.json",
+      "git_blob_sha1": "918102c8020bf1d878aa6922d7dfa70cf7df502c",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_847d5106879f/result.json",
+      "git_blob_sha1": "07364994c3ce55f3293a8bf96cb84ca6745108bd",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed45678_zip_historical_settings_cuda_jax435_ddbac3d03fab/result.json",
+      "git_blob_sha1": "f5572082db560c2edfd6b5baad35c6c5a581e495",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_45c22dbf9443/result.json",
+      "git_blob_sha1": "e46302c97ca8b9a107fdb199f5ec5f2b31fcd2b7",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_ours_T2_seed56789_zip_historical_settings_cuda_jax435_4a181a372502/result.json",
+      "git_blob_sha1": "602012d946b05163ad080e601d2d3956ce2db91d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+      "git_blob_sha1": "28af7bd3068e03a278f287aa40248304899c6ea7",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5/result.json",
+      "git_blob_sha1": "9c4b924f574cddae06b2c13e703698faa5e69e31",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f/result.json",
+      "git_blob_sha1": "340ebced0dae46b503740df9ea38c9093673309f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864/result.json",
+      "git_blob_sha1": "02d5f58ae32778016faba393c8e887c47f932388",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83/result.json",
+      "git_blob_sha1": "f87340baf7807905fca826628ed6035c48ea96ab",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+      "git_blob_sha1": "a9415e922c35e8027395f80a7877067a1f2346dd",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856/result.json",
+      "git_blob_sha1": "7da42a5cdafa39c4989e784e97ba4c0f15efd09d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7/result.json",
+      "git_blob_sha1": "67d190fc13d0ec312aa985fa672426f931514c05",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f/result.json",
+      "git_blob_sha1": "284633c79a89d89606344a8fd9e2d1951e758a98",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/restored_zip_jax435/table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97/result.json",
+      "git_blob_sha1": "2bc5954568eeabd01cea8115ceb0e2971c1ee18f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed12345_zip_defaults_7417ab3c8c6d/result.json",
+      "git_blob_sha1": "991866154a31f31d9309e6d694b1694de579126a",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed12345_zip_defaults_769765e2d52f/result.json",
+      "git_blob_sha1": "f220cfb0a61952e7483800bb8f97a99f5c527652",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed23456_zip_defaults_1b0b06fa631d/result.json",
+      "git_blob_sha1": "8c85ab866bbd0db2787fb9e962acd6c0f2227bbc",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed23456_zip_defaults_e4684d6e775e/result.json",
+      "git_blob_sha1": "7e5a8ba2f9435a2ac17099d51dfb5e1ad6150ac8",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed34567_zip_defaults_2a38f312eac5/result.json",
+      "git_blob_sha1": "74bed681fc3783dd0ecc8b4810b63d3ccde5e571",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed34567_zip_defaults_90ad28ff6a57/result.json",
+      "git_blob_sha1": "1c6d2c62fa1765f5b781b19cc5e7866aec466297",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed45678_zip_defaults_8c6b393f4297/result.json",
+      "git_blob_sha1": "3861e1f739a0704832a0537ee116a8d428ec7a91",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed45678_zip_defaults_94dbb7102a5d/result.json",
+      "git_blob_sha1": "bb5a6c683d5327f03b80ee61a1d3ee2d5365cb1e",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed56789_zip_defaults_835103629fb0/result.json",
+      "git_blob_sha1": "a366b29a21bc03136784245f43b7aeece36cedba",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_S2_seed56789_zip_defaults_ccb538400cea/result.json",
+      "git_blob_sha1": "23efded17c9d20b3f5dba7bf0774569d870df8ad",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed12345_zip_defaults_37c3ecb52ad2/result.json",
+      "git_blob_sha1": "7ded9b6d6816fc5e502876ec67b8f2f9f75dce43",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed12345_zip_defaults_f2f9a924eaf9/result.json",
+      "git_blob_sha1": "58e6fd8bf369131bf42b52ffc6c8de19a69f6858",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed23456_zip_defaults_043f35be1d9b/result.json",
+      "git_blob_sha1": "462037c4449c80e7cca8a88695dee202475c6e9e",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed23456_zip_defaults_8f24e5513209/result.json",
+      "git_blob_sha1": "36fa95f7798b6c0c0cf702848ee850f2c593c96e",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed34567_zip_defaults_6b38c5f27d6a/result.json",
+      "git_blob_sha1": "a20e75d9434d6588036cc25c46e8bdd297de21ee",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed34567_zip_defaults_aff3fb3af70f/result.json",
+      "git_blob_sha1": "b83d914ce8f3aff6418aa2b8bbe52bea8c66fa21",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed45678_zip_defaults_3b69daa7bc32/result.json",
+      "git_blob_sha1": "2712e5b90defd1517a1f9da331b451455c4a990d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed45678_zip_defaults_b1eb64252e9a/result.json",
+      "git_blob_sha1": "c1e5c30c0770a23d130b167c45e85f0f2dfcac2d",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed56789_zip_defaults_1984dd02271e/result.json",
+      "git_blob_sha1": "490f638a24a2cdeddbfab04da9c9bd93ac238d41",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_ours_T2_seed56789_zip_defaults_52314f1198b4/result.json",
+      "git_blob_sha1": "0e40fffb82d957ec57e4a0b39475396b239e973f",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_S2_seed12345_zip_defaults_0d945495fc09/result.json",
+      "git_blob_sha1": "fe8adf390602ecef4d0dd740cf997b00a2d8aead",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_S2_seed23456_zip_defaults_0a5584d68448/result.json",
+      "git_blob_sha1": "654c429b15ec7fc93f77caf22823e5423d9521ed",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_S2_seed34567_zip_defaults_bf35bb541692/result.json",
+      "git_blob_sha1": "f738cfb1bf58463e38a64a2d8d10569b5504a477",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_S2_seed45678_zip_defaults_29ad38d15ee6/result.json",
+      "git_blob_sha1": "af02cd2660a46eaf2a1d6bb8336d21ee6bea87b9",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_S2_seed56789_zip_defaults_715416696674/result.json",
+      "git_blob_sha1": "26d5f35edd0ea08099529bbea79792adfe899bd3",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_T2_seed12345_zip_defaults_95923f3cebeb/result.json",
+      "git_blob_sha1": "50828a4ae94d60f0502d455014c43d42625f4116",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_T2_seed23456_zip_defaults_3426d08ce645/result.json",
+      "git_blob_sha1": "418c7006cc0a1b9957d7b1510dd0af7623674736",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_T2_seed34567_zip_defaults_8f9d82f2563c/result.json",
+      "git_blob_sha1": "1ce39207fabb80662bcf881e9c11ebfb551d58cc",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_T2_seed45678_zip_defaults_8c04b6f4d9b3/result.json",
+      "git_blob_sha1": "2fc813a9d82092cf14f5a01c9137eb3c9405a165",
+      "unchanged": true
+    },
+    {
+      "path": "verification/results/zip_defaults/table_rcpm_T2_seed56789_zip_defaults_97ba2753c811/result.json",
+      "git_blob_sha1": "f7e3210842a2c2c98e8a326a5e43d94839d0b17b",
+      "unchanged": true
+    }
+  ],
+  "links": [
+    {
+      "from": "README.md",
+      "target": "verification/provenance/archive_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/environments/reproduction-cuda.txt",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/provenance/amd_environment.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/historical_settings.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/snapshots/dbf533d/",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/liegroups/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "rcpm/LICENSE",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "website/README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../provenance/recovered_liegroup_source_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "comparison/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../../README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../environments/reproduction-cuda.txt",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "provenance/run_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "comparison.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_ours_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_ours_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_ours_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_ours_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/comparison/comparison.md",
+      "target": "../results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paper_protocol.md",
+      "target": "paper_protocol.png",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paper_protocol.md",
+      "target": "paper_protocol.json",
+      "exists": true
+    }
+  ],
+  "scope_note": "Read-only point-in-time review; parent is editing final report and adding separate eight replay records. That report and new replays are outside this check."
+}

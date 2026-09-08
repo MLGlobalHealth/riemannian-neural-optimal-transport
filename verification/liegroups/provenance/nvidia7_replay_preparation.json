@@ -1,0 +1,35 @@
+{
+  "prepared_at": "2026-09-08T14:14:28.663836+00:00",
+  "root": "/data/am1118/mlgh-liegroups-replay-20260908",
+  "source_root": "/data/am1118/mlgh-liegroups-replay-20260908/source",
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "source_count": 24,
+  "python": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+  "cuda_root": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+  "freeze_sha256": "f7b7335f0a864a57487be28384442d962d2519edd54a4c4a21e6382528779171",
+  "exact80freeze_unchanged": true,
+  "freeze_count": 80,
+  "pip_check": "No broken requirements found.",
+  "tool_hashes": {
+    "verify_run.py": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+    "verify_liegroup_run.py": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33"
+  },
+  "input_pairs": {
+    "SE3_ours_nativeJAX435": {
+      "result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+    },
+    "SE3_rcpm_gamma1_nativeJAX435": {
+      "result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431"
+    },
+    "SO3_rcpm_gamma1_nativeJAX435": {
+      "result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505"
+    }
+  },
+  "remaining_input": "SO3_ours_nativeJAX435 stilltraining on nvidia6",
+  "evaluations_launched": false,
+  "training_launched": false,
+  "gpu_snapshot": "0, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, NVIDIA RTX 6000 Ada Generation, 570.195.03, 47886, 634, 0\n1, GPU-1240d33d-4047-20ab-2f09-32bb90161931, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3642, 44878, 90\n2, GPU-ff515502-97e7-8e97-be25-82e619cfb969, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n3, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n4, GPU-ddda76a0-9305-3456-0656-f5035285db1c, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n5, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n6, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3634, 44886, 100\n7, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3640, 44880, 100"
+}

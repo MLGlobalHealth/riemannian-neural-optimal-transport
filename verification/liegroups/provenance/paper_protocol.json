@@ -1,0 +1,797 @@
+{
+  "schema_version": 1,
+  "scope": "Table5 output reproduction protocol, static comparison of user-supplied runners and exact camera-ready paper. No code edits, training, or mathematical-correctness audit.",
+  "sources": {
+    "camera_ready_pdf": {
+      "path": "/Users/alessandromicheli/Downloads/Riemannian_Neural_Optimal_Transport___ICML_2026___Camera_Ready.pdf",
+      "sha256": "318386d9f934d70a7758df4f931058b68b5182b4bd60e9996b3c524b569f3e89",
+      "bytes": 3234211
+    },
+    "so3_runner": {
+      "path": "/Users/alessandromicheli/Downloads/run_so3_experiment.py",
+      "sha256": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+      "bytes": 18728
+    },
+    "se3_runner": {
+      "path": "/Users/alessandromicheli/Downloads/run_se3_experiment.py",
+      "sha256": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+      "bytes": 17918
+    },
+    "zip_base_py": {
+      "path": "/private/tmp/mlgh-verification/archive/src/base.py",
+      "sha256": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "bytes": 2748
+    },
+    "zip_densities_py": {
+      "path": "/private/tmp/mlgh-verification/archive/src/densities.py",
+      "sha256": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "bytes": 16611
+    }
+  },
+  "paper": {
+    "table_number": 5,
+    "table_pdf_page": 32,
+    "liegroup_description_section": "G.2",
+    "liegroup_description_pdf_page": 31,
+    "generic_synthetic_protocol_section": "F.2",
+    "generic_synthetic_protocol_pdf_page": 26,
+    "metrics_section": "F.3",
+    "metrics_pdf_pages": [
+      27,
+      28
+    ],
+    "source_description": {
+      "SO3": "Uniform source on SO(3), wrapped-normal target; described as analogous to the sphere/torus experiment.",
+      "SE3": "Compactly supported source: uniform rotation times a uniform distribution on a compact subset of R3. Target: wrapped normal on SO(3) times truncated normal in translation."
+    },
+    "not_specified_for_table5": [
+      "Exact RNOT landmark method/count",
+      "Exact RNOT outer or inner steps",
+      "Training seed values or independent-training-run count",
+      "SO3 target location/scale stated numerically",
+      "SE3 translation box bounds, target location or scale stated numerically",
+      "Which src/base.py revision supplied defaults",
+      "Source commit/environment snapshot executing Table5",
+      "Exact construction/confidence level of Table5 plus-minus quantities",
+      "Quantitative threshold or exact failure type for the Numerically unstable row"
+    ],
+    "generic_F2_reference": {
+      "scope": "Explicitly describes spheres and tori, n=2..10; not an independently specified Lie-group recipe.",
+      "rnot": {
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "n_landmarks": 128,
+        "batch_size": 256,
+        "training_steps": 1000,
+        "maximum_inner_steps": 2500
+      },
+      "rcpm": {
+        "n_components": 68,
+        "batch_size": 256,
+        "training_steps": 5000,
+        "gammas": [
+          1,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001
+        ]
+      },
+      "metrics": {
+        "evaluation_batches": 5,
+        "batch_size": 1024
+      },
+      "hardware_as_printed": "AMD MI300X GPUs with192GB memory"
+    },
+    "expected_numeric_rows": [
+      {
+        "manifold": "SO3",
+        "method": "ours",
+        "gamma": null,
+        "paper_method_label": "Ours (RNOT)",
+        "kl": {
+          "printed": "2.96",
+          "value": 2.96,
+          "decimal_places": 2,
+          "rounding_interval_lower": "2.955",
+          "rounding_interval_upper": "2.965",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.01",
+          "value": 0.01,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.005",
+          "rounding_interval_upper": "0.015",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.225",
+          "value": 0.225,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.2245",
+          "rounding_interval_upper": "0.2255",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 1.0,
+        "paper_method_label": "RCPM (gamma=1.0)",
+        "kl": {
+          "printed": "2.86",
+          "value": 2.86,
+          "decimal_places": 2,
+          "rounding_interval_lower": "2.855",
+          "rounding_interval_upper": "2.865",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.03",
+          "value": 0.03,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.025",
+          "rounding_interval_upper": "0.035",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.391",
+          "value": 0.391,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.3905",
+          "rounding_interval_upper": "0.3915",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 0.1,
+        "paper_method_label": "RCPM (gamma=0.1)",
+        "kl": {
+          "printed": "3.29",
+          "value": 3.29,
+          "decimal_places": 2,
+          "rounding_interval_lower": "3.285",
+          "rounding_interval_upper": "3.295",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.10",
+          "value": 0.1,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.095",
+          "rounding_interval_upper": "0.105",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.002",
+          "value": 0.002,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0015",
+          "rounding_interval_upper": "0.0025",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 0.05,
+        "paper_method_label": "RCPM (gamma=0.05)",
+        "kl": {
+          "printed": "3.54",
+          "value": 3.54,
+          "decimal_places": 2,
+          "rounding_interval_lower": "3.535",
+          "rounding_interval_upper": "3.545",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.06",
+          "value": 0.06,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.055",
+          "rounding_interval_upper": "0.065",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.006",
+          "value": 0.006,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0055",
+          "rounding_interval_upper": "0.0065",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 0.01,
+        "paper_method_label": "RCPM (gamma=0.01)",
+        "kl": {
+          "printed": "2.83",
+          "value": 2.83,
+          "decimal_places": 2,
+          "rounding_interval_lower": "2.825",
+          "rounding_interval_upper": "2.835",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.10",
+          "value": 0.1,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.095",
+          "rounding_interval_upper": "0.105",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.003",
+          "value": 0.003,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0025",
+          "rounding_interval_upper": "0.0035",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 0.005,
+        "paper_method_label": "RCPM (gamma=0.005)",
+        "kl": {
+          "printed": "3.72",
+          "value": 3.72,
+          "decimal_places": 2,
+          "rounding_interval_lower": "3.715",
+          "rounding_interval_upper": "3.725",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.10",
+          "value": 0.1,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.095",
+          "rounding_interval_upper": "0.105",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.004",
+          "value": 0.004,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0035",
+          "rounding_interval_upper": "0.0045",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SO3",
+        "method": "rcpm",
+        "gamma": 0.001,
+        "paper_method_label": "RCPM (gamma=0.001)",
+        "kl": {
+          "printed": "5.90",
+          "value": 5.9,
+          "decimal_places": 2,
+          "rounding_interval_lower": "5.895",
+          "rounding_interval_upper": "5.905",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.06",
+          "value": 0.06,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.055",
+          "rounding_interval_upper": "0.065",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.004",
+          "value": 0.004,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0035",
+          "rounding_interval_upper": "0.0045",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SE3",
+        "method": "ours",
+        "gamma": null,
+        "paper_method_label": "Ours (RNOT)",
+        "kl": {
+          "printed": "2.50",
+          "value": 2.5,
+          "decimal_places": 2,
+          "rounding_interval_lower": "2.495",
+          "rounding_interval_upper": "2.505",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.01",
+          "value": 0.01,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.005",
+          "rounding_interval_upper": "0.015",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.683",
+          "value": 0.683,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.6825",
+          "rounding_interval_upper": "0.6835",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      },
+      {
+        "manifold": "SE3",
+        "method": "rcpm",
+        "gamma": 1.0,
+        "paper_method_label": "RCPM (gamma=1.0)",
+        "kl": {
+          "printed": "14.38",
+          "value": 14.38,
+          "decimal_places": 2,
+          "rounding_interval_lower": "14.375",
+          "rounding_interval_upper": "14.385",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "kl_reported_plus_minus": {
+          "printed": "0.09",
+          "value": 0.09,
+          "decimal_places": 2,
+          "rounding_interval_lower": "0.085",
+          "rounding_interval_upper": "0.095",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "ess_ratio": {
+          "printed": "0.007",
+          "value": 0.007,
+          "decimal_places": 3,
+          "rounding_interval_lower": "0.0065",
+          "rounding_interval_upper": "0.0075",
+          "interval_use": "Descriptive half-open rounding interval; not a confidence or equivalence interval."
+        },
+        "paper_training_seed_count": null,
+        "paper_landmark_method": null
+      }
+    ],
+    "expected_qualitative_rows": [
+      {
+        "manifold": "SE3",
+        "method": "rcpm",
+        "gamma_condition": "gamma < 1",
+        "supplied_runner_gammas": [
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001
+        ],
+        "kl_printed": "Numerically unstable",
+        "ess_ratio_printed": "–",
+        "numeric_target": null,
+        "criterion": "Paper provides no numerical threshold or exact instability type; preserve each gamma result/failure separately."
+      }
+    ]
+  },
+  "shared_native_runner_protocol": {
+    "default_landmark_method": "fps",
+    "fps_candidate_pool_per_distribution": 4096,
+    "landmark_split": "Half base + half target; independent FPS selection and concatenation.",
+    "training_models_per_manifold_default": 7,
+    "training_models_both_manifolds_default": 14,
+    "training_repetitions_per_method_gamma": 1,
+    "training_seed": 12345,
+    "evaluation_seed": 12345,
+    "evaluation_batches": 5,
+    "evaluation_batch_size": 1024,
+    "evaluation_key_schedule": "Reset PRNGKey(EVAL_SEED) separately for each method/gamma, then repeat key,subkey=jax.random.split(key); evaluate with subkey. No +1000 offset.",
+    "rnot_evaluation_key_use": "Native evaluator splits each supplied subkey into base and target draws; passes target draw as solver initialization hint.",
+    "rcpm_evaluation_key_use": "Samples base directly using supplied subkey; evaluates native flow/logdet and target log density.",
+    "reported_kl_mean": "np.mean(five batch KL values)",
+    "reported_kl_se": "np.std(five batch KL values, ddof=0) / sqrt(5)",
+    "reported_ess_ratio": "np.mean(five batch ESS/N values)",
+    "independent_seed_interpretation": "Five evaluation batches from one trained model are not five independent training seeds.",
+    "x64": true,
+    "gpu_environment": "HIP_VISIBLE_DEVICES and CUDA_VISIBLE_DEVICES selected before imports; XLA command buffer/graph flags disabled; preallocation false.",
+    "cli_options": [
+      "--gpu",
+      "--output-dir",
+      "--ours-only",
+      "--rcpm-only",
+      "--landmark-method"
+    ],
+    "cli_missing": [
+      "--seed",
+      "--gamma"
+    ],
+    "rcpm": {
+      "gammas": [
+        1,
+        0.1,
+        0.05,
+        0.01,
+        0.005,
+        0.001
+      ],
+      "n_components_per_transform": 68,
+      "n_transforms": 5,
+      "native_main_training_iterations": 5000,
+      "native_main_batch_size": 256,
+      "optimizer": "optax.adam",
+      "learning_rate": 0.001,
+      "training_objective": "Native forward KL loss, mean(base_log_prob - flow_logdet - target_log_prob).",
+      "training_helper_defaults_not_main_recipe": {
+        "n_iters": 500,
+        "batch_size": 128
+      },
+      "initialization_batch_size": 16,
+      "potential": {
+        "class": "flows.InfAffine",
+        "init_alpha_mode": "uniform",
+        "init_alpha_linear_scale": 1.0,
+        "init_alpha_minval": 0.4,
+        "init_alpha_range": 0.01,
+        "min_zero_gamma": null
+      }
+    }
+  },
+  "so3_native_rnot": {
+    "builder_lines": [
+      125,
+      205
+    ],
+    "config_source": "ExperimentConfig() imports full defaults from companion src/base.py. Values below are conditional on unchanged ZIP base.py hash above.",
+    "effective_configs": {
+      "ModelConfig": {
+        "network_type": "mlp",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "n_landmarks": 256,
+        "use_layernorm": true,
+        "last_scale": 0.01,
+        "activation": "silu",
+        "leaky_slope": 0.01,
+        "softplus_beta": 1,
+        "max_dist": 3.14159
+      },
+      "SolverConfig": {
+        "inner_steps": 500,
+        "inner_lr": 0.005,
+        "grad_clip": null,
+        "lr_decay": false,
+        "tolerance": 1e-06,
+        "min_steps": 50,
+        "momentum": 0.0,
+        "logsumexp_init": false,
+        "logsumexp_gamma": 0.01,
+        "use_adam": false,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "use_line_search": true,
+        "line_search_steps": [
+          0.5,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001,
+          0.0005,
+          0.0001,
+          5e-05,
+          1e-05
+        ]
+      },
+      "TrainingConfig": {
+        "n_steps": 500,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "log_every": 1,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "seed": 12345
+      }
+    },
+    "training_seed_source": "exp_cfg.training.seed at runner line137; changing only module TRAINING_SEED does not change the RNOT seed.",
+    "base": "SO3Uniform via densities.get(SOUniform)",
+    "target": {
+      "class": "WrappedNormal via densities.get(SOWrappedNormal)",
+      "location": "manifold.zero(), identity quaternion",
+      "tangent_scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "evaluation_lines": [
+      393,
+      409
+    ]
+  },
+  "se3_native_rnot": {
+    "builder_lines": [
+      80,
+      204
+    ],
+    "effective_configs": {
+      "ModelConfig": {
+        "network_type": "mlp",
+        "hidden_dims": [
+          128,
+          128
+        ],
+        "n_landmarks": 128,
+        "use_layernorm": true,
+        "last_scale": 0.01,
+        "activation": "silu",
+        "leaky_slope": 0.01,
+        "softplus_beta": 1,
+        "max_dist": 14.208082361849165
+      },
+      "SolverConfig": {
+        "inner_steps": 100,
+        "inner_lr": 0.005,
+        "grad_clip": null,
+        "lr_decay": false,
+        "tolerance": 1e-06,
+        "min_steps": 500,
+        "momentum": 0.0,
+        "logsumexp_init": true,
+        "logsumexp_gamma": 0.01,
+        "use_adam": false,
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "use_line_search": true,
+        "line_search_steps": [
+          0.5,
+          0.1,
+          0.05,
+          0.01,
+          0.005,
+          0.001,
+          0.0005,
+          0.0001,
+          5e-05,
+          1e-05
+        ]
+      },
+      "TrainingConfig": {
+        "n_steps": 200,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "lr_decay": true,
+        "lr_decay_alpha": 0.05,
+        "log_every": 1,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "seed": 12345
+      }
+    },
+    "base": {
+      "class": "SE3Uniform",
+      "translation_half_width": 4.0,
+      "translation_box": [
+        [
+          -4.0,
+          -4.0,
+          -4.0
+        ],
+        [
+          4.0,
+          4.0,
+          4.0
+        ]
+      ]
+    },
+    "target": {
+      "class": "SE3FactorizedCompact",
+      "location_quaternion": [
+        0.8660254037844386,
+        0.0,
+        0.0,
+        0.5
+      ],
+      "location_translation": [
+        1.0,
+        0.5,
+        -0.5
+      ],
+      "rotation_scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "translation_scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "translation_box": [
+        [
+          -4.0,
+          -4.0,
+          -4.0
+        ],
+        [
+          4.0,
+          4.0,
+          4.0
+        ]
+      ]
+    },
+    "rcpm_uses_same_base_and_target": true,
+    "evaluation_lines": [
+      395,
+      410
+    ]
+  },
+  "concrete_protocol_findings": [
+    {
+      "id": "single_training_run",
+      "status": "preserve",
+      "finding": "The native Table5-shaped protocol is one trained model per method/gamma and five held-out batches, unlike the prior main-table five-seed suite."
+    },
+    {
+      "id": "so3_default_dependency",
+      "status": "record_difference",
+      "finding": "With unchanged ZIP base.py, SO3 RNOT uses256 landmarks/500 outer/500 inner versus generic paper F.2 sphere/torus128/1000/2500. Table5 does not specify Lie-group values, so this is not proof that the supplied runner is wrong."
+    },
+    {
+      "id": "se3_explicit_settings",
+      "status": "preserve",
+      "finding": "SE3 explicitly uses128 landmarks/200 outer/100 inner/min_steps500; these differ from generic F.2 and must be retained as supplied pending original-run evidence. No silent increase of steps or tuning."
+    },
+    {
+      "id": "stale_se3_console",
+      "status": "metadata_only",
+      "finding": "SE3 main lines376–377 print Uniform[-2,2]^3 and SE3WrappedNormal; actual builders use Uniform[-4,4]^3 and SE3FactorizedCompact with the same[-4,4] box."
+    },
+    {
+      "id": "no_fps_random_paper_split",
+      "status": "scope",
+      "finding": "Table5 labels Ours(RNOT) only, with no FPS/random rows. Native FPS is the supplied default; an additional random RNOT trial is not required by the table."
+    },
+    {
+      "id": "qualitative_instability",
+      "status": "record_all",
+      "finding": "SE3 gamma<1 is a qualitative paper row. Do not convert it to invented zero/NaN targets or discard any finite run result."
+    }
+  ],
+  "native_outputs": {
+    "SO3": [
+      "ours_so3.npz",
+      "rcpm_so3.npz"
+    ],
+    "SE3": [
+      "ours_se3.npz",
+      "rcpm_se3.npz"
+    ],
+    "limitation": "Native files save summary metrics, not per-batch values, training checkpoints or exact config/source hashes; a wrapper can separately retain those without changing native computations."
+  },
+  "bounded_latex_source_search": [
+    {
+      "kind": "unpacked_latex",
+      "root": "/Users/alessandromicheli/Downloads/Riemannian_Neural_Optimal_Transport___ICML_2026 (1)",
+      "files_checked": [
+        "main.tex",
+        "sections/ablations.tex",
+        "sections/abstract.tex",
+        "sections/background.tex",
+        "sections/conclusions.tex",
+        "sections/epsilon_net_scaling.tex",
+        "sections/experiment-setup.tex",
+        "sections/experiments.tex",
+        "sections/further-results.tex",
+        "sections/implementation-details.tex",
+        "sections/introduction.tex",
+        "sections/problem.tex",
+        "sections/related_work.tex",
+        "sections/review-OT-geometry.tex",
+        "sections/review-functional-analysis.tex",
+        "sections/review-riemannian-geometry.tex",
+        "sections/solution.tex"
+      ],
+      "matches": []
+    },
+    {
+      "kind": "latex_zip",
+      "path": "/Users/alessandromicheli/Downloads/Riemannian_Neural_Optimal_Transport___ICML_2026.zip",
+      "sha256": "c596afeafa3b0513ff8da49554cc8ce9f9a9dd8c65afc5c5f26060f497662a46",
+      "bytes": 3648302,
+      "files_checked": [
+        "old_main.tex",
+        "main.tex",
+        "sections/background.tex",
+        "sections/conclusions.tex",
+        "sections/abstract.tex",
+        "sections/experiments.tex",
+        "sections/implementation-details.tex",
+        "sections/implementing-neural-rcpms.tex",
+        "sections/introduction.tex",
+        "sections/problem.tex",
+        "sections/solution.tex",
+        "sections/related_work.tex",
+        "sections/review-n-sphere.tex",
+        "sections/review-OT-geometry.tex",
+        "sections/review-riemannian-geometry.tex",
+        "sections/scaling_neural.tex",
+        "sections/scaling.tex",
+        "sections/convergence_gradients.tex",
+        "sections/distribution-manifolds.tex",
+        "sections/epsilon_net_scaling.tex",
+        "sections/epsilon-net-proof-rcpms-curse.tex",
+        "sections/experiment-setup.tex",
+        "sections/further-results.tex",
+        "sections/review-functional-analysis.tex",
+        "sections/manifold_descriptions.tex",
+        "sections/ablations.tex"
+      ],
+      "matches": []
+    },
+    {
+      "kind": "latex_zip",
+      "path": "/Users/alessandromicheli/Downloads/Riemannian_Neural_Optimal_Transport___ICML_2026 (1).zip",
+      "sha256": "2da881b32112d8db38b1337ef8c0559bca84dbd6488da9f9dc2bcda74ac8e212",
+      "bytes": 3351903,
+      "files_checked": [
+        "main.tex",
+        "sections/background.tex",
+        "sections/conclusions.tex",
+        "sections/abstract.tex",
+        "sections/experiments.tex",
+        "sections/implementation-details.tex",
+        "sections/introduction.tex",
+        "sections/problem.tex",
+        "sections/solution.tex",
+        "sections/related_work.tex",
+        "sections/review-OT-geometry.tex",
+        "sections/review-riemannian-geometry.tex",
+        "sections/epsilon_net_scaling.tex",
+        "sections/experiment-setup.tex",
+        "sections/further-results.tex",
+        "sections/review-functional-analysis.tex",
+        "sections/ablations.tex"
+      ],
+      "matches": []
+    }
+  ],
+  "latex_search_conclusion": "The checked existing main/section TeX files contain no SO3/SE3 Table5 text, numeric targets or output references; they do not recover the camera-ready Lie-group recipe.",
+  "table_screenshot": {
+    "file": "paper_protocol.png",
+    "source_pdf_page": 32,
+    "crop_points": [
+      50,
+      259,
+      546,
+      460
+    ],
+    "sha256": "8a97506ac5c2934265bbbffbe0b85c31515fb8b250487821d00ae08d6991c2c7"
+  }
+}

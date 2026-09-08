@@ -1,0 +1,811 @@
+{
+  "all_five_batches_exactly_match_original": true,
+  "checkpoint": "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+  "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+  "command": [
+    "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+    "--source-root",
+    "/data/am1118/mlgh-liegroups-20260908/source",
+    "--input-result",
+    "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+    "--checkpoint",
+    "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+    "--expected-checkpoint-sha256",
+    "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+    "--helper",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+    "--wrapper",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+    "--requirements",
+    "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+    "--gpu",
+    "3",
+    "--output",
+    "/data/am1118/mlgh-liegroups-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json"
+  ],
+  "configuration": {
+    "builder": {
+      "gamma": 1.0,
+      "n_components": 68,
+      "n_transforms": 5,
+      "seed": 12345
+    },
+    "flow": {
+      "n_transforms": 5,
+      "single_transform_cfg": {
+        "_target_": "flows.ExpMapFlow",
+        "potential_cfg": {
+          "_target_": "flows.InfAffine",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "min_zero_gamma": null,
+          "n_components": 68
+        }
+      }
+    },
+    "training": {
+      "batch_size": 256,
+      "log_every": 500,
+      "lr": 0.001,
+      "n_iters": 5000
+    }
+  },
+  "density_configuration": {
+    "base": {
+      "class": "SE3Uniform",
+      "t_range": 4.0
+    },
+    "target": {
+      "class": "SE3FactorizedCompact",
+      "include_alpha_volume_correction": false,
+      "loc": [
+        0.8660253951241847,
+        0.0,
+        0.0,
+        0.4999999950000001,
+        1.0,
+        0.5,
+        -0.5
+      ],
+      "rot_scale": [
+        0.3,
+        0.3,
+        0.3
+      ],
+      "trans_high": [
+        4.0,
+        4.0,
+        4.0
+      ],
+      "trans_low": [
+        -4.0,
+        -4.0,
+        -4.0
+      ],
+      "trans_scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "environment": {
+    "all_package_versions": {
+      "Cartopy": "0.25.0",
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Sphinx": "9.0.4",
+      "absl-py": "2.5.0",
+      "alabaster": "1.0.0",
+      "babel": "2.18.0",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "chex": "0.1.90",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "docutils": "0.22.4",
+      "etils": "1.14.0",
+      "flax": "0.8.4",
+      "fonttools": "4.64.0",
+      "fsspec": "2026.7.0",
+      "humanize": "4.16.0",
+      "idna": "3.19",
+      "imagesize": "2.0.1",
+      "iniconfig": "2.3.0",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jaxlib": "0.4.34",
+      "kiwisolver": "1.5.1",
+      "markdown-it-py": "4.2.0",
+      "matplotlib": "3.11.1",
+      "mdurl": "0.1.2",
+      "ml_dtypes": "0.6.0",
+      "msgpack": "1.2.2",
+      "nest-asyncio": "1.6.0",
+      "numpy": "2.4.6",
+      "numpydoc": "1.10.0",
+      "nvidia-cublas-cu12": "12.9.2.10",
+      "nvidia-cuda-cupti-cu12": "12.9.79",
+      "nvidia-cuda-nvcc-cu12": "12.9.86",
+      "nvidia-cuda-nvrtc-cu12": "12.9.86",
+      "nvidia-cuda-runtime-cu12": "12.9.79",
+      "nvidia-cudnn-cu12": "9.25.1.1",
+      "nvidia-cufft-cu12": "11.4.1.4",
+      "nvidia-cusolver-cu12": "11.7.5.82",
+      "nvidia-cusparse-cu12": "12.5.10.65",
+      "nvidia-nccl-cu12": "2.31.2",
+      "nvidia-nvjitlink-cu12": "12.9.86",
+      "opt_einsum": "3.4.0",
+      "optax": "0.2.3",
+      "orbax-checkpoint": "0.11.5",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "24.0",
+      "pluggy": "1.6.0",
+      "protobuf": "7.36.1",
+      "pypandoc": "1.17",
+      "pyparsing": "3.3.2",
+      "pyproj": "3.7.2",
+      "pyshp": "3.1.6",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "roman-numerals": "4.1.0",
+      "scipy": "1.17.1",
+      "setuptools": "79.0.1",
+      "shapely": "2.1.2",
+      "simplejson": "4.1.2",
+      "six": "1.17.0",
+      "snowballstemmer": "3.1.1",
+      "spherical-kde": "0.1.2",
+      "sphinxcontrib-applehelp": "2.0.0",
+      "sphinxcontrib-devhelp": "2.0.0",
+      "sphinxcontrib-htmlhelp": "2.1.0",
+      "sphinxcontrib-jsmath": "1.0.1",
+      "sphinxcontrib-qthelp": "2.0.0",
+      "sphinxcontrib-serializinghtml": "2.0.0",
+      "tensorstore": "0.1.85",
+      "toolz": "1.1.0",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "zipp": "4.1.0"
+    },
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "3",
+      "JAX_ENABLE_X64": "True",
+      "JAX_PLATFORMS": "cuda",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+    "hostname": "nvidia6",
+    "jax_config": {
+      "jax_default_matmul_precision": null,
+      "jax_default_prng_impl": "threefry2x32",
+      "jax_enable_x64": true,
+      "jax_random_seed_offset": 0,
+      "jax_threefry_partitionable": false
+    },
+    "jax_default_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.34",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "pandas": null,
+      "scipy": "1.17.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+  },
+  "evaluation_batches": [
+    {
+      "comparison_to_original": {
+        "ess": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "ess_ratio": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "kl": {
+          "difference": 0.0,
+          "exact_equal": true
+        }
+      },
+      "evaluation_seconds": 14.55338880699128,
+      "index": 0,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 7.821371349842709,
+        "ess_ratio": 0.00763805795883077,
+        "kl": 13.172709046378376
+      },
+      "original_metrics": {
+        "ess": 7.821371349842709,
+        "ess_ratio": 0.00763805795883077,
+        "kl": 13.172709046378376
+      },
+      "prng_key": [
+        2300365598,
+        2950565312
+      ]
+    },
+    {
+      "comparison_to_original": {
+        "ess": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "ess_ratio": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "kl": {
+          "difference": 0.0,
+          "exact_equal": true
+        }
+      },
+      "evaluation_seconds": 1.208055891096592,
+      "index": 1,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 6.617200503098158,
+        "ess_ratio": 0.006462109866306795,
+        "kl": 13.136370973893246
+      },
+      "original_metrics": {
+        "ess": 6.617200503098158,
+        "ess_ratio": 0.006462109866306795,
+        "kl": 13.136370973893246
+      },
+      "prng_key": [
+        949301550,
+        3196768145
+      ]
+    },
+    {
+      "comparison_to_original": {
+        "ess": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "ess_ratio": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "kl": {
+          "difference": 0.0,
+          "exact_equal": true
+        }
+      },
+      "evaluation_seconds": 1.2472989968955517,
+      "index": 2,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 8.10378356605686,
+        "ess_ratio": 0.007913851138727402,
+        "kl": 13.238039928793235
+      },
+      "original_metrics": {
+        "ess": 8.10378356605686,
+        "ess_ratio": 0.007913851138727402,
+        "kl": 13.238039928793235
+      },
+      "prng_key": [
+        3188581498,
+        1498900698
+      ]
+    },
+    {
+      "comparison_to_original": {
+        "ess": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "ess_ratio": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "kl": {
+          "difference": 0.0,
+          "exact_equal": true
+        }
+      },
+      "evaluation_seconds": 1.2402496640570462,
+      "index": 3,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 7.180708402567452,
+        "ess_ratio": 0.007012410549382278,
+        "kl": 13.170691514384682
+      },
+      "original_metrics": {
+        "ess": 7.180708402567452,
+        "ess_ratio": 0.007012410549382278,
+        "kl": 13.170691514384682
+      },
+      "prng_key": [
+        2696973199,
+        2132697368
+      ]
+    },
+    {
+      "comparison_to_original": {
+        "ess": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "ess_ratio": {
+          "difference": 0.0,
+          "exact_equal": true
+        },
+        "kl": {
+          "difference": 0.0,
+          "exact_equal": true
+        }
+      },
+      "evaluation_seconds": 1.2339730048552155,
+      "index": 4,
+      "metric_nonfinite": {
+        "ess": false,
+        "ess_ratio": false,
+        "kl": false
+      },
+      "metrics": {
+        "ess": 7.48883180260967,
+        "ess_ratio": 0.0073133123072360055,
+        "kl": 13.413910571167056
+      },
+      "original_metrics": {
+        "ess": 7.48883180260967,
+        "ess_ratio": 0.0073133123072360055,
+        "kl": 13.413910571167056
+      },
+      "prng_key": [
+        539786244,
+        3564729885
+      ]
+    }
+  ],
+  "evaluation_config": {
+    "batch_size": 1024,
+    "n_batches": 5,
+    "seed": 12345,
+    "seed_offset": null
+  },
+  "evaluation_only": true,
+  "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+  "finished_at": "2026-09-08T14:25:56.250850+00:00",
+  "geometry_configuration": {
+    "D": 7,
+    "alpha": 1.0,
+    "class": "SE3"
+  },
+  "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "independent_training_run": false,
+  "input_result": "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+  "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+  "interpretation": "Fixed saved model and the exact five recorded evaluation keys. Identical sampled arrays across hosts are not assumed. No training is performed.",
+  "label": "recovered_liegroup_fixed_checkpoint_cuda_jax435",
+  "original_environment": {
+    "all_package_versions": {
+      "Cartopy": "0.25.0",
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.3",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "Sphinx": "9.0.4",
+      "absl-py": "2.5.0",
+      "alabaster": "1.0.0",
+      "babel": "2.18.0",
+      "certifi": "2026.7.22",
+      "charset-normalizer": "3.5.1",
+      "chex": "0.1.90",
+      "contourpy": "1.3.3",
+      "cycler": "0.12.1",
+      "docutils": "0.22.4",
+      "etils": "1.14.0",
+      "flax": "0.8.4",
+      "fonttools": "4.64.0",
+      "fsspec": "2026.7.0",
+      "humanize": "4.16.0",
+      "idna": "3.19",
+      "imagesize": "2.0.1",
+      "iniconfig": "2.3.0",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jaxlib": "0.4.34",
+      "kiwisolver": "1.5.1",
+      "markdown-it-py": "4.2.0",
+      "matplotlib": "3.11.1",
+      "mdurl": "0.1.2",
+      "ml_dtypes": "0.6.0",
+      "msgpack": "1.2.2",
+      "nest-asyncio": "1.6.0",
+      "numpy": "2.4.6",
+      "numpydoc": "1.10.0",
+      "nvidia-cublas-cu12": "12.9.2.10",
+      "nvidia-cuda-cupti-cu12": "12.9.79",
+      "nvidia-cuda-nvcc-cu12": "12.9.86",
+      "nvidia-cuda-nvrtc-cu12": "12.9.86",
+      "nvidia-cuda-runtime-cu12": "12.9.79",
+      "nvidia-cudnn-cu12": "9.25.1.1",
+      "nvidia-cufft-cu12": "11.4.1.4",
+      "nvidia-cusolver-cu12": "11.7.5.82",
+      "nvidia-cusparse-cu12": "12.5.10.65",
+      "nvidia-nccl-cu12": "2.31.2",
+      "nvidia-nvjitlink-cu12": "12.9.86",
+      "opt_einsum": "3.4.0",
+      "optax": "0.2.3",
+      "orbax-checkpoint": "0.11.5",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "24.0",
+      "pluggy": "1.6.0",
+      "protobuf": "7.36.1",
+      "pypandoc": "1.17",
+      "pyparsing": "3.3.2",
+      "pyproj": "3.7.2",
+      "pyshp": "3.1.6",
+      "pytest": "9.1.1",
+      "python-dateutil": "2.9.0.post0",
+      "requests": "2.34.2",
+      "rich": "15.0.0",
+      "roman-numerals": "4.1.0",
+      "scipy": "1.17.1",
+      "setuptools": "79.0.1",
+      "shapely": "2.1.2",
+      "simplejson": "4.1.2",
+      "six": "1.17.0",
+      "snowballstemmer": "3.1.1",
+      "spherical-kde": "0.1.2",
+      "sphinxcontrib-applehelp": "2.0.0",
+      "sphinxcontrib-devhelp": "2.0.0",
+      "sphinxcontrib-htmlhelp": "2.1.0",
+      "sphinxcontrib-jsmath": "1.0.1",
+      "sphinxcontrib-qthelp": "2.0.0",
+      "sphinxcontrib-serializinghtml": "2.0.0",
+      "tensorstore": "0.1.85",
+      "toolz": "1.1.0",
+      "typing_extensions": "4.16.0",
+      "urllib3": "2.7.0",
+      "zipp": "4.1.0"
+    },
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "3",
+      "JAX_ENABLE_X64": "True",
+      "JAX_PLATFORMS": "cuda",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+    "hostname": "nvidia6",
+    "jax_default_backend": "gpu",
+    "jax_default_prng_impl": "threefry2x32",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_enable_x64": true,
+    "jax_threefry_partitionable": false,
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.34",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "pandas": null,
+      "scipy": "1.17.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+    "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]"
+  },
+  "original_host_replay": true,
+  "record_type": "liegroup_checkpoint_evaluation",
+  "requirements_sha256": "59bf165a84bbf82fa6ddeafc4e0472fa25c74a501c4526084c6e8000cb37f559",
+  "restored_arrays": {
+    "parameters": {
+      "params/params/transform00/potential_mod/alphas": {
+        "dtype": "float32",
+        "nonfinite_count": 0,
+        "sha256": "f15772813be952ea5910411dc75429930f07318d95fd5fcde6bb47dd297d6d5b",
+        "shape": [
+          68
+        ],
+        "size": 68
+      },
+      "params/params/transform00/potential_mod/mus": {
+        "dtype": "float64",
+        "nonfinite_count": 0,
+        "sha256": "10294c36d5e80c33035bfc19df8a76d7d08c4e83177c30379078337aa2054d5b",
+        "shape": [
+          7,
+          68
+        ],
+        "size": 476
+      },
+      "params/params/transform01/potential_mod/alphas": {
+        "dtype": "float32",
+        "nonfinite_count": 0,
+        "sha256": "23d2901543cf107debfc3c895d705758bfe2f1c552cb656f0fb993a61b9ac61a",
+        "shape": [
+          68
+        ],
+        "size": 68
+      },
+      "params/params/transform01/potential_mod/mus": {
+        "dtype": "float64",
+        "nonfinite_count": 0,
+        "sha256": "987e34c8f04cca946e84b26549cd432aac93833363cb7aeab2dcc9491342a011",
+        "shape": [
+          7,
+          68
+        ],
+        "size": 476
+      },
+      "params/params/transform02/potential_mod/alphas": {
+        "dtype": "float32",
+        "nonfinite_count": 0,
+        "sha256": "c8f9652b9dd48fc394f3b429115fe3f44474908ff771ffb7d0935e08f6180a7d",
+        "shape": [
+          68
+        ],
+        "size": 68
+      },
+      "params/params/transform02/potential_mod/mus": {
+        "dtype": "float64",
+        "nonfinite_count": 0,
+        "sha256": "01c1d78ff540529d75c8e438bd09c739ef8a3906dee7199be39dc0d8e55a32d7",
+        "shape": [
+          7,
+          68
+        ],
+        "size": 476
+      },
+      "params/params/transform03/potential_mod/alphas": {
+        "dtype": "float32",
+        "nonfinite_count": 0,
+        "sha256": "33122a6647f3a60af31df1f5328d1afa6b8748721cad4a52f1c9fec1485822b1",
+        "shape": [
+          68
+        ],
+        "size": 68
+      },
+      "params/params/transform03/potential_mod/mus": {
+        "dtype": "float64",
+        "nonfinite_count": 0,
+        "sha256": "7d43222f41c92770afa717e67e270e6ac46e69441b0634d086a6bb9774322f52",
+        "shape": [
+          7,
+          68
+        ],
+        "size": 476
+      },
+      "params/params/transform04/potential_mod/alphas": {
+        "dtype": "float32",
+        "nonfinite_count": 0,
+        "sha256": "59d7986c744f81dc28a3da91dcfc9f00d3aac3b7bff6b1dc5c87f874500495c3",
+        "shape": [
+          68
+        ],
+        "size": 68
+      },
+      "params/params/transform04/potential_mod/mus": {
+        "dtype": "float64",
+        "nonfinite_count": 0,
+        "sha256": "ba0255a4a10b3f401eb34bf7eeb68360c39d5e6038745b535c63de4569c7c9e1",
+        "shape": [
+          7,
+          68
+        ],
+        "size": 476
+      }
+    }
+  },
+  "runner_sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+  "schema_version": 1,
+  "selection": {
+    "gamma": 1.0,
+    "landmark_method": null,
+    "manifold": "SE3",
+    "method": "rcpm",
+    "seed": 12345
+  },
+  "source": {
+    "files": {
+      "experiments/run_experiments.py": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "experiments/run_experiments_highD.py": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "experiments/run_se3_experiment.py": "c0c7f6609d359ec1636f42dd035c54f3d2dede2eb905240de922eb211b2f108e",
+      "experiments/run_so3_experiment.py": "3b5ffa41ee137c99ef05dc3e93369e86d85ee8c6fdbf695b69b26ebff4c6d7d8",
+      "experiments/run_table.py": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "rcpm/requirements.txt": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/barycenter.py": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "src/base.py": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "src/densities.py": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "src/embeddings.py": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "src/manifolds.py": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "src/metrics.py": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "src/networks.py": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "src/solvers.py": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "src/trainers.py": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85"
+  },
+  "source_and_checkpoint_unchanged_after_replay": true,
+  "source_root": "/data/am1118/mlgh-liegroups-20260908/source",
+  "started_at": "2026-09-08T14:25:17.421789+00:00",
+  "status": "evaluation_only_complete",
+  "summary": {
+    "ess": {
+      "mean": 7.44237912483497,
+      "raw_batches": [
+        7.821371349842709,
+        6.617200503098158,
+        8.10378356605686,
+        7.180708402567452,
+        7.48883180260967
+      ],
+      "se_ddof0": 0.23088006561158678
+    },
+    "ess_ratio": {
+      "mean": 0.00726794836409665,
+      "raw_batches": [
+        0.00763805795883077,
+        0.006462109866306795,
+        0.007913851138727402,
+        0.007012410549382278,
+        0.0073133123072360055
+      ],
+      "se_ddof0": 0.0002254688140738152
+    },
+    "kl": {
+      "mean": 13.226344406923317,
+      "raw_batches": [
+        13.172709046378376,
+        13.136370973893246,
+        13.238039928793235,
+        13.170691514384682,
+        13.413910571167056
+      ],
+      "se_ddof0": 0.04444640196949057
+    }
+  },
+  "validated_runtime_pins": {
+    "absl-py": "2.5.0",
+    "alabaster": "1.0.0",
+    "babel": "2.18.0",
+    "cartopy": "0.25.0",
+    "certifi": "2026.7.22",
+    "charset-normalizer": "3.5.1",
+    "chex": "0.1.90",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "docutils": "0.22.4",
+    "etils": "1.14.0",
+    "flax": "0.8.4",
+    "fonttools": "4.64.0",
+    "fsspec": "2026.7.0",
+    "humanize": "4.16.0",
+    "idna": "3.19",
+    "imagesize": "2.0.1",
+    "iniconfig": "2.3.0",
+    "jax": "0.4.35",
+    "jax-cuda12-pjrt": "0.4.35",
+    "jax-cuda12-plugin": "0.4.35",
+    "jaxlib": "0.4.34",
+    "jinja2": "3.1.6",
+    "kiwisolver": "1.5.1",
+    "markdown-it-py": "4.2.0",
+    "markupsafe": "3.0.3",
+    "matplotlib": "3.11.1",
+    "mdurl": "0.1.2",
+    "ml-dtypes": "0.6.0",
+    "msgpack": "1.2.2",
+    "nest-asyncio": "1.6.0",
+    "numpy": "2.4.6",
+    "numpydoc": "1.10.0",
+    "nvidia-cublas-cu12": "12.9.2.10",
+    "nvidia-cuda-cupti-cu12": "12.9.79",
+    "nvidia-cuda-nvcc-cu12": "12.9.86",
+    "nvidia-cuda-nvrtc-cu12": "12.9.86",
+    "nvidia-cuda-runtime-cu12": "12.9.79",
+    "nvidia-cudnn-cu12": "9.25.1.1",
+    "nvidia-cufft-cu12": "11.4.1.4",
+    "nvidia-cusolver-cu12": "11.7.5.82",
+    "nvidia-cusparse-cu12": "12.5.10.65",
+    "nvidia-nccl-cu12": "2.31.2",
+    "nvidia-nvjitlink-cu12": "12.9.86",
+    "opt-einsum": "3.4.0",
+    "optax": "0.2.3",
+    "orbax-checkpoint": "0.11.5",
+    "packaging": "26.3",
+    "pillow": "12.3.0",
+    "pluggy": "1.6.0",
+    "protobuf": "7.36.1",
+    "pygments": "2.21.0",
+    "pypandoc": "1.17",
+    "pyparsing": "3.3.2",
+    "pyproj": "3.7.2",
+    "pyshp": "3.1.6",
+    "pytest": "9.1.1",
+    "python-dateutil": "2.9.0.post0",
+    "pyyaml": "6.0.3",
+    "requests": "2.34.2",
+    "rich": "15.0.0",
+    "roman-numerals": "4.1.0",
+    "scipy": "1.17.1",
+    "shapely": "2.1.2",
+    "simplejson": "4.1.2",
+    "six": "1.17.0",
+    "snowballstemmer": "3.1.1",
+    "spherical-kde": "0.1.2",
+    "sphinx": "9.0.4",
+    "sphinxcontrib-applehelp": "2.0.0",
+    "sphinxcontrib-devhelp": "2.0.0",
+    "sphinxcontrib-htmlhelp": "2.1.0",
+    "sphinxcontrib-jsmath": "1.0.1",
+    "sphinxcontrib-qthelp": "2.0.0",
+    "sphinxcontrib-serializinghtml": "2.0.0",
+    "tensorstore": "0.1.85",
+    "toolz": "1.1.0",
+    "typing-extensions": "4.16.0",
+    "urllib3": "2.7.0",
+    "zipp": "4.1.0"
+  }
+}

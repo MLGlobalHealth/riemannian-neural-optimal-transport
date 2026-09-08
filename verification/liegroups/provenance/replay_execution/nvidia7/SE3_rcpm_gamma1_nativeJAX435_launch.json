@@ -1,0 +1,554 @@
+{
+  "predeclared_at": "2026-09-08T14:25:18.718159+00:00",
+  "command": [
+    "taskset",
+    "-c",
+    "20,21,22,23",
+    "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+    "-u",
+    "/data/am1118/mlgh-liegroups-replay-20260908/tooling/evaluate_liegroup_checkpoint.py",
+    "--source-root",
+    "/data/am1118/mlgh-liegroups-replay-20260908/source",
+    "--input-result",
+    "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/result.json",
+    "--checkpoint",
+    "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+    "--expected-checkpoint-sha256",
+    "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+    "--helper",
+    "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_run.py",
+    "--wrapper",
+    "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_liegroup_run.py",
+    "--requirements",
+    "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+    "--gpu",
+    "5",
+    "--output",
+    "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json"
+  ],
+  "environment": {
+    "CUDA_ROOT": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "True",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "MPLBACKEND": "Agg",
+    "CUDA_VISIBLE_DEVICES": "5",
+    "HIP_VISIBLE_DEVICES": "5"
+  },
+  "gpu": 5,
+  "cpu_affinity": [
+    20,
+    21,
+    22,
+    23
+  ],
+  "capacity_window": [
+    {
+      "at": "2026-09-08T14:24:47.931130+00:00",
+      "monotonic": 1145410.104851415,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 99
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:24:53.063758+00:00",
+      "monotonic": 1145415.237487913,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 100
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:24:58.188366+00:00",
+      "monotonic": 1145420.362073753,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 100
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:03.319662+00:00",
+      "monotonic": 1145425.493382055,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 99
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:08.429813+00:00",
+      "monotonic": 1145430.603523593,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 99
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:13.555270+00:00",
+      "monotonic": 1145435.72898397,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 96
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 100
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:18.671541+00:00",
+      "monotonic": 1145440.845246902,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 47886,
+          "free_mib": 634,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3642,
+          "free_mib": 44878,
+          "utilization": 100
+        },
+        "2": {
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 437,
+          "free_mib": 48083,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3636,
+          "free_mib": 44884,
+          "utilization": 99
+        },
+        "7": {
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "used_mib": 3640,
+          "free_mib": 44880,
+          "utilization": 97
+        }
+      }
+    }
+  ],
+  "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+  "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "tool_hashes": {
+    "verify_run.py": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+    "verify_liegroup_run.py": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+    "evaluate_liegroup_checkpoint.py": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+    "supervise_replays.py": "2d17ce995e16d19bc1d49d1f001793184342aa599e7fe7e628034faa0af7dc41"
+  },
+  "manifest_sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c",
+  "worker_pid": 510219,
+  "started_at": "2026-09-08T14:25:18.720179+00:00"
+}

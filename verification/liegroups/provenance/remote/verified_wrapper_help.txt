@@ -1,0 +1,22 @@
+usage: verify_liegroup_run.py [-h] [--source-root SOURCE_ROOT]
+                              [--source-manifest SOURCE_MANIFEST] --output-dir
+                              OUTPUT_DIR --manifold {SO3,SE3} --method
+                              {ours,rcpm} [--gamma GAMMA] --gpu GPU
+
+Record one native SO(3)/SE(3) experiment from the recovered paper runners.
+Calls the unchanged builders, trainers and evaluators. One training seed and
+five evaluation batches constitute a native row; these are not five training
+replicates. RCPM gamma is selected only to distribute the original sweep
+across fresh processes. No configuration, optimizer, loss or metric is
+replaced.
+
+options:
+  -h, --help            show this help message and exit
+  --source-root SOURCE_ROOT
+  --source-manifest SOURCE_MANIFEST
+  --output-dir OUTPUT_DIR
+                        Fresh directory for this one row.
+  --manifold {SO3,SE3}
+  --method {ours,rcpm}
+  --gamma GAMMA         Required for RCPM; one of the recovered sweep values.
+  --gpu GPU             One physical NVIDIA GPU index.

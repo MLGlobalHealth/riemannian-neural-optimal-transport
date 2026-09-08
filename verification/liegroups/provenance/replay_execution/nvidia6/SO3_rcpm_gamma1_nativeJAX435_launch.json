@@ -1,0 +1,554 @@
+{
+  "predeclared_at": "2026-09-08T14:25:17.277214+00:00",
+  "command": [
+    "taskset",
+    "-c",
+    "8,9,10,11",
+    "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+    "-u",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+    "--source-root",
+    "/data/am1118/mlgh-liegroups-20260908/source",
+    "--input-result",
+    "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+    "--checkpoint",
+    "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+    "--expected-checkpoint-sha256",
+    "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+    "--helper",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+    "--wrapper",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+    "--requirements",
+    "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+    "--gpu",
+    "2",
+    "--output",
+    "/data/am1118/mlgh-liegroups-20260908/replay/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json"
+  ],
+  "environment": {
+    "CUDA_ROOT": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "True",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "MPLBACKEND": "Agg",
+    "CUDA_VISIBLE_DEVICES": "2",
+    "HIP_VISIBLE_DEVICES": "2"
+  },
+  "gpu": 2,
+  "cpu_affinity": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "capacity_window": [
+    {
+      "at": "2026-09-08T14:24:46.604488+00:00",
+      "monotonic": 2512803.114452958,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:24:51.709119+00:00",
+      "monotonic": 2512808.219083167,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:24:56.812878+00:00",
+      "monotonic": 2512813.322843077,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:01.919082+00:00",
+      "monotonic": 2512818.429050565,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:07.031283+00:00",
+      "monotonic": 2512823.541248177,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:12.136378+00:00",
+      "monotonic": 2512828.646344403,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    },
+    {
+      "at": "2026-09-08T14:25:17.239295+00:00",
+      "monotonic": 2512833.749257714,
+      "gpus": {
+        "0": {
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "1": {
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "2": {
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "3": {
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "4": {
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "5": {
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "6": {
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        },
+        "7": {
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "used_mib": 2,
+          "free_mib": 24252,
+          "utilization": 0
+        }
+      }
+    }
+  ],
+  "input_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+  "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "tool_hashes": {
+    "verify_run.py": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+    "verify_liegroup_run.py": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+    "evaluate_liegroup_checkpoint.py": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+    "supervise_replays.py": "2d17ce995e16d19bc1d49d1f001793184342aa599e7fe7e628034faa0af7dc41"
+  },
+  "manifest_sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c",
+  "worker_pid": 2411378,
+  "started_at": "2026-09-08T14:25:17.278635+00:00"
+}

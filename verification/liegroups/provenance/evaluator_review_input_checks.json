@@ -1,0 +1,72 @@
+{
+  "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+  "checks": [
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_ours_nativeJAX435/result.json",
+      "record_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "input_guards_pass": true,
+      "original_environment_matches_80_pins": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "record_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "input_guards_pass": true,
+      "original_environment_matches_80_pins": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_ours_nativeJAX435/result.json",
+      "record_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "input_guards_pass": true,
+      "original_environment_matches_80_pins": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "record_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "input_guards_pass": true,
+      "original_environment_matches_80_pins": true
+    }
+  ],
+  "outside_four_model_scope": [
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma0.001_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma0.005_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma0.01_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma0.05_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    },
+    {
+      "record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma0.1_nativeJAX435/result.json",
+      "unsupported_gamma_rejected": true
+    }
+  ],
+  "jax_or_native_execution": false
+}

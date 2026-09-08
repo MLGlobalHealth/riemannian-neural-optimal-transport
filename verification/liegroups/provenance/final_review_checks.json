@@ -1,0 +1,516 @@
+{
+  "status": "pass",
+  "failures": [],
+  "raw_evaluation_count": 8,
+  "pair_count": 4,
+  "exact_original_host_scalar_metrics": 65,
+  "cross_host_max_absolute_differences": {
+    "ess": 6.821210263296962e-13,
+    "ess_ratio": 6.661338147750939e-16,
+    "kl": 4.440892098500626e-16,
+    "mean_residual": 1.1102230246251565e-16
+  },
+  "local_markdown_links_checked": 61,
+  "raw_checks": [
+    {
+      "host": "nvidia6",
+      "job": "SE3_ours_nativeJAX435",
+      "sha256": "03f65f0daba24317f03d2cf26ecafef86d5f56409892f8517f8bf6afad6fe639",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia6",
+      "job": "SE3_rcpm_gamma1_nativeJAX435",
+      "sha256": "c6408a9edd9146153832351843e7b0b483328d791b3e4beeae26916fdcc6c981",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia6",
+      "job": "SO3_ours_nativeJAX435",
+      "sha256": "826f7bfe6f4ec89fd05aecb1e6204a5768034f41f61c28eb8dfc1a13df1a9f2d",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia6",
+      "job": "SO3_rcpm_gamma1_nativeJAX435",
+      "sha256": "5e2823be880ff34bcb02f1d31375ef5c61f1fea665e81ea28413aa5c61dde947",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia7",
+      "job": "SE3_ours_nativeJAX435",
+      "sha256": "74237dfec1d66091d9bada742bdfa79ff7c726881d740d2c097a93acfa46bb46",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia7",
+      "job": "SE3_rcpm_gamma1_nativeJAX435",
+      "sha256": "3f60fd602a802184f7abb798398e8e62ff67e3809109b287d32fc5f9a80d0054",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia7",
+      "job": "SO3_ours_nativeJAX435",
+      "sha256": "7d144031c7955ff78f3c059f42d610a3d7c36ab8c395564a0cd6ce50c77a37b7",
+      "matches_fetched": true
+    },
+    {
+      "host": "nvidia7",
+      "job": "SO3_rcpm_gamma1_nativeJAX435",
+      "sha256": "21c46d5c606a002a19f6dd4ae5f69b70b798de10907454a7d4e3614d958e5103",
+      "matches_fetched": true
+    }
+  ],
+  "paired_checks": [
+    {
+      "row": "SO3/RNOT",
+      "common_checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+      "restored_arrays_and_keys_identical": true
+    },
+    {
+      "row": "SO3/RCPM/1",
+      "common_checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+      "restored_arrays_and_keys_identical": true
+    },
+    {
+      "row": "SE3/RNOT",
+      "common_checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+      "restored_arrays_and_keys_identical": true
+    },
+    {
+      "row": "SE3/RCPM/1",
+      "common_checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+      "restored_arrays_and_keys_identical": true
+    }
+  ],
+  "links": [
+    {
+      "from": "README.md",
+      "target": "verification/provenance/archive_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/environments/reproduction-cuda.txt",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/provenance/amd_environment.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/historical_settings.json",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/snapshots/dbf533d/",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "verification/liegroups/README.md",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "rcpm/LICENSE",
+      "exists": true
+    },
+    {
+      "from": "README.md",
+      "target": "website/README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "liegroups/comparison/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "liegroups/provenance/run_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "liegroups/README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "liegroups/provenance/paired_replay_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/restored_zip_jax435/comparison.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/restored_zip_jax435/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/checkpoint_replay_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/paired_checkpoint_hash_manifest.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/t2_seed12345_trajectory_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/t2_five_seed_host_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/nvidia6_portability_jax435/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/archive_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "historical_settings.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "snapshots/dbf533d/",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/historical_source.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/historical_snapshot_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/restored_cuda/README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/rcpm_recipe_provenance.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "environments/reproduction-cuda.txt",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/amd_environment.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/rng_environment_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/initialization_environment_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "../README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/zip_defaults/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/historical_settings/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/historical_source_jax438/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/historical_source_jax062/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "comparison/historical_rcpm_jax438_failure/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/stored_ablation_results/README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/rebuttal_search.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/rebuttal_archive_search.md",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "paper_targets.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/run_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/REPORT.md",
+      "target": "provenance/evaluation_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../provenance/recovered_liegroup_source_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "comparison/comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../REPORT.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../../README.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "../environments/reproduction-cuda.txt",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "provenance/run_manifest.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/README.md",
+      "target": "provenance/paired_replay_comparison.md",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia6/SO3_ours_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia7/SO3_ours_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia6/SO3_rcpm_gamma1_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia7/SO3_rcpm_gamma1_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia6/SE3_ours_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia7/SE3_ours_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia6/SE3_rcpm_gamma1_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "../evaluations/nvidia7/SE3_rcpm_gamma1_nativeJAX435.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "paired_replay_comparison.json",
+      "exists": true
+    },
+    {
+      "from": "verification/liegroups/provenance/paired_replay_comparison.md",
+      "target": "evaluation_manifest.json",
+      "exists": true
+    }
+  ],
+  "reviewed_document_hashes": {
+    "README.md": "fd70e3bfb0b4222fbba101eca52e3fe97163a47f3c26607f4c7ca8b0abf07070",
+    "verification/REPORT.md": "f91075568fb67b416cb28798e5658a131c296521faee1bedcda4ffaff0b3dd17",
+    "verification/liegroups/README.md": "d1b7b25ac49456cf87a9f3153abbaf189d4e28304a0b32ad58767d31ded71f1c",
+    "verification/liegroups/provenance/paired_replay_comparison.md": "6a512d7904eec517c45c6152fe98ad5bda78bd35cf25b519002264c1b85d5a35"
+  },
+  "no_tests_or_numerical_runs_executed": true,
+  "mean_checks": [
+    {
+      "row": "SO3/RNOT",
+      "host": "nvidia6",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RNOT",
+      "host": "nvidia6",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 1.0
+    },
+    {
+      "row": "SO3/RNOT",
+      "host": "nvidia7",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RNOT",
+      "host": "nvidia7",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RCPM/1",
+      "host": "nvidia6",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RCPM/1",
+      "host": "nvidia6",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RCPM/1",
+      "host": "nvidia7",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SO3/RCPM/1",
+      "host": "nvidia7",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RNOT",
+      "host": "nvidia6",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RNOT",
+      "host": "nvidia6",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RNOT",
+      "host": "nvidia7",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RNOT",
+      "host": "nvidia7",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RCPM/1",
+      "host": "nvidia6",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 2.0
+    },
+    {
+      "row": "SE3/RCPM/1",
+      "host": "nvidia6",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    },
+    {
+      "row": "SE3/RCPM/1",
+      "host": "nvidia7",
+      "metric": "kl",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 2.0
+    },
+    {
+      "row": "SE3/RCPM/1",
+      "host": "nvidia7",
+      "metric": "ess_ratio",
+      "derived_equals_saved_native_mean": true,
+      "independent_reduction_difference_ulps": 0.0
+    }
+  ],
+  "mean_reduction_note": "Every derived mean equals the saved native NumPy mean exactly. Independent math.fsum/5 calculations agree within two floating-point ULPs; no published or recorded value was changed.",
+  "scope_wording_corrected": true
+}

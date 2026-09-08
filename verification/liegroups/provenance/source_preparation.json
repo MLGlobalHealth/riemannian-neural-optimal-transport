@@ -1,0 +1,13 @@
+{
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "source_count": 24,
+  "manifest_file_sha256": "8ae363e44174657405556714e5b6552d50b8ae1c1c7f9b8bff97d2243af26ff1",
+  "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "bundle_sha256": "c32c0b7d92b3e2a60954e1d24162ee13bfdf42e99eca93cf33e50963db4bd483",
+  "bundle_bytes": 85632,
+  "local_source_root": "/Users/alessandromicheli/Documents/dev/ml/projects/riemannian-neural-ot-finalMLGH",
+  "remote_target": "/data/am1118/mlgh-liegroups-20260908",
+  "reuse_venv": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv",
+  "new_wrapper_status": "awaiting_root_freeze",
+  "jobs_launched": false
+}

@@ -66,7 +66,7 @@ python experiments/run_experiments_highD.py torus --gpu 0 --output-dir runs/high
 
 `verification/verify_run.py --help` exposes individual runs and short smoke checks. Smoke checks are excluded from paper comparisons. `verification/evaluate_checkpoint.py --help` describes replaying a saved model from its result JSON and checkpoint on another compatible host; it retains the original evaluation function and recorded keys, and labels outputs as evaluation-only. The separate [historical source candidate](verification/snapshots/dbf533d/) includes the recovered ablation driver and is preserved for provenance; it does not replace the ZIP library.
 
-RCNF/Moser and the camera-ready SO(3)/SE(3) runners were not recovered in the inspected branches or server locations. Their published rows are not covered by the 30-run command. The original RCPM license is included at [rcpm/LICENSE](rcpm/LICENSE).
+The author supplied the SO(3)/SE(3) runners separately; both are now included unchanged. Their native Table 5 protocol uses one training seed per configuration and has separate [run instructions and evidence](verification/liegroups/README.md). These 14 configurations are outside the 30-run main-table command above. RCNF/Moser runners remain unrecovered. The original RCPM license is included at [rcpm/LICENSE](rcpm/LICENSE).
 
 The verification tooling can be checked without running experiments:
 

@@ -4,6 +4,32 @@
 
 The verification concerns reproduction of the published outputs. The ZIP's experiment algorithms and metric implementations remain unchanged. Source, configuration, software, and GPU environment are recorded for each trial.
 
+## Recovered SO(3)/SE(3) Table 5 experiments
+
+The author supplied `run_so3_experiment.py` and `run_se3_experiment.py` from Downloads. Both are included unchanged under `experiments/`, together with the original ZIP library. All 14 native configurations completed on `nvidia6` RTX 3090: one RNOT model and six RCPM gamma values for each manifold. Nine configurations returned finite outputs; the five SE(3) RCPM configurations below gamma 1 returned nonfinite outputs. No configuration was adjusted in response to the results.
+
+| Experiment | Paper KL | Fresh KL ± native batch SE | Paper ESS ratio | Fresh ESS ratio |
+|---|---:|---:|---:|---:|
+| SO(3) RNOT | 2.96 ± 0.01 | 3.801323 ± 0.012528 | 0.225 | 0.780429 |
+| SO(3) RCPM γ=1 | 2.86 ± 0.03 | 2.820084 ± 0.030677 | 0.391 | 0.775483 |
+| SO(3) RCPM γ=0.1 | 3.29 ± 0.10 | 4.181860 ± 0.084795 | 0.002 | 0.009389 |
+| SO(3) RCPM γ=0.05 | 3.54 ± 0.06 | 4.212878 ± 0.066277 | 0.006 | 0.007258 |
+| SO(3) RCPM γ=0.01 | 2.83 ± 0.10 | 3.833475 ± 0.069337 | 0.003 | 0.004164 |
+| SO(3) RCPM γ=0.005 | 3.72 ± 0.10 | 5.344554 ± 0.244777 | 0.004 | 0.002466 |
+| SO(3) RCPM γ=0.001 | 5.90 ± 0.06 | 7.524689 ± 0.075338 | 0.004 | 0.006566 |
+| SE(3) RNOT | 2.50 ± 0.01 | 2.405148 ± 0.009306 | 0.683 | 0.670147 |
+| SE(3) RCPM γ=1 | 14.38 ± 0.09 | 13.226344 ± 0.044446 | 0.007 | 0.007268 |
+
+None of the nine KL means matches at the paper's printed precision; only SE(3) RCPM gamma 1 matches its printed ESS mean. All five SE(3) RCPM gamma values below 1 produce observed nonfinite outputs, consistent with the paper's qualitative instability description. The [complete comparison](liegroups/comparison/comparison.md) retains every result and its raw five evaluation batches; the [manifest](liegroups/provenance/run_manifest.json) records checkpoint and log hashes.
+
+Each row is one trained model with seed 12345, evaluated on five batches of 1024 using evaluation seed 12345 with no offset. Its ± quantity is the population standard deviation of the five batch estimates divided by √5. This differs from the earlier main-table protocol, which trains five independent seeds per row; the records are kept separate. Table 5 does not specify the exact settings or interval construction needed to resolve the remaining numerical differences independently of the supplied code.
+
+SO(3) RNOT inherits the ZIP defaults (256 landmarks, 500 outer updates, 500 inner steps). SE(3) RNOT explicitly sets 128 landmarks, 200 outer updates and 100 inner steps, including the supplied minimum-steps value of 500. Both use the recovered FPS default. The actual SE(3) translation box is `[-4,4]^3` and its target is `SE3FactorizedCompact`; the original console banner contains older names and bounds. The [native protocol and run instructions](liegroups/README.md) record these details. The earlier S²/T² historical-settings overrides were not applied.
+
+A separate [paired checkpoint comparison](liegroups/provenance/paired_replay_comparison.md) replayed four fixed models—both RNOT models and both RCPM gamma 1 models—on RTX 3090 and RTX 6000 Ada. All four original-host replays reproduce every recorded batch exactly. Both RCPM replays also match exactly on the second host; the RNOT KL/ESS-ratio batch differences are at most 6.66e-16. Restored parameter/landmark fingerprints and all evaluation keys match. The eight replays perform no training and add no independent training repetitions.
+
+Thus, evaluation differences between these two NVIDIA environments do not explain the Table 5 gaps for these four fixed models. This check does not test training on the second host, reproduce AMD/ROCm execution, or establish which source/settings/runtime produced the paper's numbers. The SO(3) runner's original companion `src/base.py` configuration remains unconfirmed. The original AMD environment has not been rerun.
+
 ## Restored main-table configuration
 
 All 30 prescribed experiments completed on `nvidia7` RTX 6000 Ada GPUs: S²/T² RNOT with FPS/random landmarks and S²/T² RCPM with γ=1, each using seeds `12345`, `23456`, `34567`, `45678`, and `56789`. The supported older CUDA environment and recovered settings are described below.
@@ -106,12 +132,12 @@ The initial 30-run ZIP-default suite used JAX 0.6.2 / Flax 0.10.6 with float32 d
 | Tables 1–2, RCNF and Moser | Original runners/configurations not found in the ZIP, reachable Git history, or inspected server locations. |
 | Table 3 ablations | Historical driver recovered. All 79 numeric cells match the included [four stored historical JSONs](provenance/stored_ablation_results/README.md) at displayed precision. This is stored provenance, not a fresh ablation rerun. |
 | Table 4, semi-dual RCPM | Original runner/configuration not recovered. |
-| Table 5, SO(3)/SE(3) | Geometry components exist; original KL/ESS experiment runners not recovered. |
+| Table 5, SO(3)/SE(3) | Two author-supplied runners recovered unchanged; all 14 native configurations executed. Numerical differences and observed SE(3) RCPM instability are reported above. |
 | Dimension-sweep figures | ZIP drivers exist; full sweeps have not been rerun after the main-table default mismatch was established. |
 | Continental drift | Original point-cloud data and runner not recovered. |
 
-Searches covered fetched branches, reachable history, bounded source/output searches, and relevant archive names on `nvidia6`, `nvidia7`, and the configured `dide` host. Related entropic SO(3)/SE(3) W1/W2 experiments belong to a different experiment and do not supply the paper's KL/ESS rows. [Branch/source search details](provenance/rebuttal_search.md) and [archive search details](provenance/rebuttal_archive_search.md) retain the scope.
+The initial searches covered fetched branches, reachable history, bounded source/output searches, and relevant archive names on `nvidia6`, `nvidia7`, and the configured `dide` host. The two subsequently supplied Lie-group runners supersede the initial missing-runner finding for Table 5; the original search records remain historical evidence. Related entropic SO(3)/SE(3) W1/W2 experiments belong to a different experiment and do not supply the paper's KL/ESS rows. [Branch/source search details](provenance/rebuttal_search.md) and [archive search details](provenance/rebuttal_archive_search.md) retain the scope.
 
 Targets come from the historical download of the [requested OpenReview PDF](https://openreview.net/pdf?id=ez4oLq7PR3), whose download metadata confirms that URL, and the local camera-ready PDF. Their main Tables 1–3 agree with the [arXiv version](https://arxiv.org/pdf/2602.03566v1). The live OpenReview endpoint returned HTTP 403, so its currently served revision was not retrieved. PDF hashes and extracted targets are in [paper_targets.json](paper_targets.json).
 
-The [training-run manifest](provenance/run_manifest.json) records **90 completed experiments and two initialization failures**, with all completed cohorts and prescribed seeds retained. The separate [evaluation manifest](provenance/evaluation_manifest.json) records **two successful checkpoint replays**. All owned experiment workers, supervisors, and collectors have exited; no jobs remain scheduled. The tooling suite passed 22 tests covering aggregation, source/configuration/environment separation, missing/duplicate/failed runs, portable links, complete job declaration, failure preservation, and checkpoint-evaluation guards. The 22 ZIP files and 24 historical snapshot files were verified against their source manifests; the historical snapshot was also checked against Git. Raw per-run JSONs remain unchanged. Checkpoints and full logs are retained locally in ignored `verification/artifacts/` and isolated server run directories, with hashes in the committed evidence. Checkpoint replays are evaluation-only records and do not add independent training seeds.
+The earlier S²/T² [training-run manifest](provenance/run_manifest.json) records **90 completed experiments and two initialization failures**, with all completed cohorts and prescribed seeds retained. Its separate [evaluation manifest](provenance/evaluation_manifest.json) records **two successful checkpoint replays**. The new Table 5 training and replay records have their own manifests under `liegroups/` and do not alter those earlier counts. All owned experiment workers, supervisors, and collectors have exited; no jobs remain scheduled. The full verification tooling suite now passes 34 tests, including 12 new Table 5 comparison and checkpoint-restoration tests. The original 22 tests cover aggregation, source/configuration/environment separation, missing/duplicate/failed runs, portable links, complete job declaration, failure preservation, and checkpoint-evaluation guards. The 22 ZIP files, both newly recovered runners, and 24 historical snapshot files were verified against their source manifests; the historical snapshot was also checked against Git. Raw per-run JSONs remain unchanged. Checkpoints and full logs are retained locally in ignored `verification/artifacts/` and isolated server run directories, with hashes in the committed evidence. Checkpoint replays are evaluation-only records and do not add independent training seeds.

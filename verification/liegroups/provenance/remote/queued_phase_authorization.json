@@ -1,0 +1,18 @@
+{
+  "authorized_at": "2026-09-08T14:09:36.303561+00:00",
+  "reason": "Parent confirmed first4 native initialization/training memory fits; all10 previously declared configurations released without modifications.",
+  "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+  "queued_supervisor_sha256": "7ba91d9b6729f8f6af76d2b0cfa760b707cb6842f714f650d48ce7cd5b5623b4",
+  "original_supervisor_unchanged": true,
+  "maximum_concurrent_workers": 6,
+  "allowed_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "foreign_processes_untouched": true,
+  "initial_phase_failure_pauses_queued_jobs": true
+}

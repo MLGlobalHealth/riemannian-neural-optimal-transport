@@ -1,0 +1,367 @@
+{
+  "checked_at": "2026-09-08T14:18:08.541275+00:00",
+  "all14_complete_and_owned_processes_exited": true,
+  "native_records": [
+    {
+      "job_id": "SO3_ours_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_ours_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma1_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma1_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.1_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.1_nativeJAX435",
+      "status": "complete",
+      "outcome": "nonfinite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.05_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.05_nativeJAX435",
+      "status": "complete",
+      "outcome": "nonfinite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.01_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.01_nativeJAX435",
+      "status": "complete",
+      "outcome": "nonfinite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.005_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.005_nativeJAX435",
+      "status": "complete",
+      "outcome": "nonfinite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.001_nativeJAX435",
+      "status": "complete",
+      "outcome": "finite_output",
+      "batches": 5
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.001_nativeJAX435",
+      "status": "complete",
+      "outcome": "nonfinite_output",
+      "batches": 5
+    }
+  ],
+  "supervisor_states": {
+    "initial": {
+      "started_at": "2026-09-08T14:05:22.215525+00:00",
+      "pid": 2399354,
+      "phase": "initial",
+      "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+      "status": "complete",
+      "workers": {
+        "SO3_ours_nativeJAX435": {
+          "pid": 2399388,
+          "gpu": 0,
+          "cpu_affinity": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "started_at": "2026-09-08T14:05:53.963656+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:16:12.693261+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_ours_nativeJAX435": {
+          "pid": 2399389,
+          "gpu": 1,
+          "cpu_affinity": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "started_at": "2026-09-08T14:05:53.974035+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:07:10.769519+00:00",
+          "outcome": "finite_output"
+        },
+        "SO3_rcpm_gamma1_nativeJAX435": {
+          "pid": 2399390,
+          "gpu": 2,
+          "cpu_affinity": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "started_at": "2026-09-08T14:05:53.980201+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:08:07.039159+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma1_nativeJAX435": {
+          "pid": 2399391,
+          "gpu": 3,
+          "cpu_affinity": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "started_at": "2026-09-08T14:05:53.985909+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:08:22.371578+00:00",
+          "outcome": "finite_output"
+        }
+      },
+      "pending": [],
+      "events": [],
+      "updated_at": "2026-09-08T14:16:12.693295+00:00",
+      "finished_at": "2026-09-08T14:16:12.693898+00:00"
+    },
+    "queued": {
+      "started_at": "2026-09-08T14:10:28.941787+00:00",
+      "pid": 2403693,
+      "phase": "queued",
+      "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+      "status": "complete",
+      "workers": {
+        "SO3_rcpm_gamma0.1_nativeJAX435": {
+          "pid": 2403717,
+          "gpu": 4,
+          "cpu_affinity": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "started_at": "2026-09-08T14:11:00.661524+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:13:18.898280+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma0.1_nativeJAX435": {
+          "pid": 2403718,
+          "gpu": 5,
+          "cpu_affinity": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "started_at": "2026-09-08T14:11:00.670621+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:13:39.341269+00:00",
+          "outcome": "nonfinite_output"
+        },
+        "SO3_rcpm_gamma0.05_nativeJAX435": {
+          "pid": 2403719,
+          "gpu": 1,
+          "cpu_affinity": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "started_at": "2026-09-08T14:11:00.677585+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:13:18.899174+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma0.05_nativeJAX435": {
+          "pid": 2403720,
+          "gpu": 2,
+          "cpu_affinity": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "started_at": "2026-09-08T14:11:00.682951+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:13:44.447940+00:00",
+          "outcome": "nonfinite_output"
+        },
+        "SO3_rcpm_gamma0.01_nativeJAX435": {
+          "pid": 2403721,
+          "gpu": 3,
+          "cpu_affinity": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "started_at": "2026-09-08T14:11:00.687614+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:13:18.900015+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma0.01_nativeJAX435": {
+          "pid": 2406701,
+          "gpu": 4,
+          "cpu_affinity": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "started_at": "2026-09-08T14:13:59.757678+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:16:43.586530+00:00",
+          "outcome": "nonfinite_output"
+        },
+        "SO3_rcpm_gamma0.005_nativeJAX435": {
+          "pid": 2406702,
+          "gpu": 1,
+          "cpu_affinity": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "started_at": "2026-09-08T14:13:59.767382+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:16:23.124525+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma0.005_nativeJAX435": {
+          "pid": 2406703,
+          "gpu": 3,
+          "cpu_affinity": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "started_at": "2026-09-08T14:13:59.774360+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:16:43.587083+00:00",
+          "outcome": "nonfinite_output"
+        },
+        "SO3_rcpm_gamma0.001_nativeJAX435": {
+          "pid": 2407743,
+          "gpu": 5,
+          "cpu_affinity": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "started_at": "2026-09-08T14:14:20.262097+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:16:38.481040+00:00",
+          "outcome": "finite_output"
+        },
+        "SE3_rcpm_gamma0.001_nativeJAX435": {
+          "pid": 2407832,
+          "gpu": 2,
+          "cpu_affinity": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "started_at": "2026-09-08T14:14:25.397452+00:00",
+          "exit_code": 0,
+          "native_status": "complete",
+          "evaluation_batch_count": 5,
+          "finished_at": "2026-09-08T14:17:09.152491+00:00",
+          "outcome": "nonfinite_output"
+        }
+      },
+      "pending": [],
+      "events": [],
+      "updated_at": "2026-09-08T14:17:09.152708+00:00",
+      "finished_at": "2026-09-08T14:17:09.153556+00:00"
+    }
+  },
+  "owned_process_ids": [
+    2399354,
+    2399388,
+    2399389,
+    2399390,
+    2399391,
+    2403693,
+    2403717,
+    2403718,
+    2403719,
+    2403720,
+    2403721,
+    2406701,
+    2406702,
+    2406703,
+    2407743,
+    2407832
+  ],
+  "owned_processes_remaining": "",
+  "source24_unchanged": true,
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "freeze80_unchanged": true,
+  "freeze_sha256": "59bf165a84bbf82fa6ddeafc4e0472fa25c74a501c4526084c6e8000cb37f559",
+  "gpu_snapshot": "0, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n1, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n2, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n3, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n4, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n5, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n6, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n7, NVIDIA GeForce RTX 3090, 550.90.07, 2, 24252, 0\n",
+  "no_additional_training_scheduled": true
+}

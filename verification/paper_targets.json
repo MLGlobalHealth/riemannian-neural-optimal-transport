@@ -865,7 +865,7 @@
     "table_1_2_RCNF_Moser": "code absent",
     "table_3": "absent from ZIP; historical driver recovered in verification/snapshots/dbf533d; no fresh ablation rerun",
     "table_4": "semi-dual RCPM experiment runner absent",
-    "table_5": "SO3/SE3 geometry components present but experiment runners absent",
+    "table_5": "Absent from original ZIP; two author-supplied runners recovered unchanged on 2026-09-08. Separate native 14-configuration reproduction evidence in verification/liegroups/.",
     "continental_drift": "runner and original point clouds absent",
     "figures_3_5": "dimension sweep runners available; defaults conflict; raw figure values absent"
   },
