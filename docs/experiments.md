@@ -2,7 +2,7 @@
 
 Run these commands from the repository root after the installation in [README](../README.md). Choose GPU IDs available for your use and a **new output directory for each training invocation**. Plotting an existing result or reference file requires only the [plotting dependencies](../requirements/plots.txt).
 
-The public commands call the supplied training and metric implementations. Their recipes, execution metadata and saved outputs make a run inspectable; they do not imply that every published number has been reproduced. See [reproduction status](reproducibility.md) for measured agreement and remaining gaps.
+The public commands call the supplied training and metric implementations. Their recipes, execution metadata and saved outputs make a run inspectable; they do not imply that every published number has been reproduced.
 
 ## Map from the paper to commands
 

@@ -2,7 +2,7 @@
 
 Code accompanying **Riemannian Neural Optimal Transport**, ICML 2026, by Alessandro Micheli, Yueqi Cao, Anthea Monod and Samir Bhatt.
 
-[Paper](https://openreview.net/pdf?id=ez 4 oLq 7 PR3) · [Experiment and figure guide](docs/experiments.md) · [Coverage and reproduction status](docs/reproducibility.md)
+[Paper](https://openreview.net/pdf?id=ez 4 oLq 7 PR3) · [Experiment and figure guide](docs/experiments.md)
 
 RNOT learns continuous transport maps on Riemannian manifolds using distance-to-landmark features and a neural transport potential. This repository contains the experiment library, RCPM baseline, explicit experiment recipes, plotting commands, and available paper reference data.
 
@@ -68,7 +68,7 @@ Plot commands export **PDF, PNG and the plotted numerical data**. They do not ne
 | `requirements/`, `docs/` | Pinned installations and experiment instructions |
 | `archive/` | Preserved research history, verification evidence and website; omitted from release ZIPs |
 
-The available runners cover RNOT and RCPM. RCNF/Moser and semi-dual RCPM runners remain unrecovered, and some numerical reproduction differences remain. See [the coverage notes](docs/reproducibility.md) before interpreting a run as an exact reproduction of the published tables.
+The available runners cover RNOT and RCPM. RCNF/Moser and semi-dual RCPM runners remain unrecovered, and some numerical reproduction differences remain.
 
 ## Build the distributable code archive
 
