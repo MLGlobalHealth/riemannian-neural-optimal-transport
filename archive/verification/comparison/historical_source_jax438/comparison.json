@@ -1,0 +1,986 @@
+{
+  "comparison_policy": {
+    "default_vs_override": "Explicit overrides are shown descriptively and cannot satisfy native-default table completeness. Complete configured groups count separately toward overall row coverage.",
+    "grouping": "Same suite, manifold/dimension, method/landmarks/gamma, label, source hash, runner hash, effective config, evaluation recipe, host and software/hardware environment. GPU index/UUID can differ only on the same host with matching model/driver/memory.",
+    "independence": "A seed contributes once; conflicting repeated seeds are excluded, never selected by performance. Identical copied JSON files are deduplicated.",
+    "publication_readiness": "No automatic publication approval; missing experiments, source-version gaps, solver reliability and timing differences remain explicit.",
+    "rounding": "Compare observed means to half-unit intervals at the printed precision. These checks do not establish statistical equivalence.",
+    "row_coverage": "Each covered row requires a complete five-seed group. Rows may use different hosts, labels, sources or environments, which remain explicit. Partial groups are never pooled. Coverage does not establish numerical agreement or full paper reproduction.",
+    "smoke": "All smoke runs excluded, even when the explicit label differs.",
+    "uncertainty": "Each run mean averages its recorded evaluation batches; ddof0 and ddof1 SE are computed over independent training seeds. Paper confidence level is not invented."
+  },
+  "duplicate_file_copies": [],
+  "environment_completeness": {
+    "40214715a3bb05a7": {
+      "all_six_archive_table_rows_complete": false,
+      "all_six_table_rows_complete_in_this_environment": false,
+      "complete_configured_table_rows": [],
+      "complete_native_table_rows": [],
+      "complete_table_rows": [],
+      "environment": {
+        "environment": {
+          "JAX_ENABLE_X64": null,
+          "JAX_PLATFORMS": null,
+          "MPLBACKEND": "Agg",
+          "OMP_NUM_THREADS": "2",
+          "XLA_FLAGS": null,
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+        "hostname": "nvidia6",
+        "jax_default_backend": "gpu",
+        "jax_enable_x64": true,
+        "packages": {
+          "cartopy": "0.25.0",
+          "flax": "0.10.0",
+          "jax": "0.4.38",
+          "jax-cuda12-pjrt": "0.4.38",
+          "jax-cuda12-plugin": "0.4.38",
+          "jax-cuda13-plugin": null,
+          "jaxlib": "0.4.38",
+          "matplotlib": "3.8.3",
+          "numpy": "1.24.4",
+          "optax": "0.2.3",
+          "pandas": "2.2.1",
+          "scipy": "1.14.1",
+          "spherical-kde": "0.1.2"
+        },
+        "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+        "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+        "selected_accelerator_types": [
+          [
+            "NVIDIA GeForce RTX 3090",
+            "550.90.07",
+            "24576 MiB"
+          ]
+        ]
+      },
+      "group_ids": [
+        "0d722cf6df6d60ad",
+        "77b12e4d4dba4339"
+      ],
+      "label": "historical_source_dbf533d",
+      "missing_native_table_rows": [
+        "S2:RCPM_gamma1",
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RCPM_gamma1",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "missing_table_rows": [
+        "S2:RCPM_gamma1",
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RCPM_gamma1",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+      "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b"
+    }
+  },
+  "evidence_path_base": "output_directory",
+  "excluded_runs": [],
+  "generated_at": "2026-09-08T12:59:05.572768+00:00",
+  "groups": [
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 533.2830286233076,
+          "n": 1,
+          "raw_values": [
+            533.2830286233076
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "ess_ratio": {
+          "mean": 0.5207842076399488,
+          "n": 1,
+          "raw_values": [
+            0.5207842076399488
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "kl": {
+          "mean": 1.3214831343238518,
+          "n": 1,
+          "raw_values": [
+            1.3214831343238518
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": false,
+      "group_id": "0d722cf6df6d60ad",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "S2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true
+          },
+          "target_density": "SphereWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": null,
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.0",
+            "jax": "0.4.38",
+            "jax-cuda12-pjrt": "0.4.38",
+            "jax-cuda12-plugin": "0.4.38",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.38",
+            "matplotlib": "3.8.3",
+            "numpy": "1.24.4",
+            "optax": "0.2.3",
+            "pandas": "2.2.1",
+            "scipy": "1.14.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA GeForce RTX 3090",
+              "550.90.07",
+              "24576 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 1e-08
+        },
+        "label": "historical_source_dbf533d",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "sphere",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b"
+      },
+      "independent_valid_seed_count": 1,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [
+        23456,
+        34567,
+        45678,
+        56789
+      ],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": false,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RNOT_RND",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.42921579236005114,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.95,
+            "relative_difference_percent": -45.18060972211065,
+            "rounding_interval": {
+              "lower_inclusive": "0.945",
+              "upper_exclusive": "0.955"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 1.2814831343238517,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.04,
+            "relative_difference_percent": 3203.7078358096296,
+            "rounding_interval": {
+              "lower_inclusive": "0.035",
+              "upper_exclusive": "0.045"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1100,
+          "reported_plus_minus": 1
+        },
+        "scope": "archive_defaults",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 533.2830286233076,
+            "ess_ratio": 0.5207842076399488,
+            "kl": 1.3214831343238518
+          },
+          "path": "../../results/historical_source_jax438/table_ours_S2_seed12345_historical_source_dbf533d_da8c697005eb/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.9306640625,
+              "mean_finite": 0.005749012891223667,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.3037585482470196e-16,
+                "0.5": 4.614233387302082e-15,
+                "0.9": 7.549448368497688e-07,
+                "0.95": 0.03716754173459451,
+                "0.99": 0.12977656357625023,
+                "1": 0.31061152748339016
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9130859375,
+              "mean_finite": 0.006513274468062033,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 5.902410651985967e-17,
+                "0.5": 4.8605597034451365e-15,
+                "0.9": 8.860116537192281e-07,
+                "0.95": 0.05285233433964281,
+                "0.99": 0.14926986245834664,
+                "1": 0.3279059208039263
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9052734375,
+              "mean_finite": 0.007967418889859645,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.5519848927891178e-16,
+                "0.5": 5.153483017018891e-15,
+                "0.9": 9.700924950179465e-07,
+                "0.95": 0.06617610910765985,
+                "0.99": 0.18038009744656697,
+                "1": 0.31410122572768134
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9267578125,
+              "mean_finite": 0.0056885792518043595,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.5583264708869988e-16,
+                "0.5": 4.704110504073078e-15,
+                "0.9": 7.58241150707368e-07,
+                "0.95": 0.03546397867416806,
+                "0.99": 0.15169861775858895,
+                "1": 0.243402150116447
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.9267578125,
+              "mean_finite": 0.006659508949655318,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.4095907628731174e-16,
+                "0.5": 5.479013038683448e-15,
+                "0.9": 7.17667033725143e-07,
+                "0.95": 0.03965504843851135,
+                "0.99": 0.17458873708606354,
+                "1": 0.2735451698288921
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed12345_historical_source_dbf533d_da8c697005eb",
+          "timings_seconds": {
+            "build": 6.381533137056977,
+            "training_native_return": 1319.6240447857417,
+            "training_synchronized": 1319.6245089229196
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "partial_fewer_than_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 1319.6240447857417,
+          "n": 1,
+          "raw_values": [
+            1319.6240447857417
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "training_synchronized": {
+          "mean": 1319.6245089229196,
+          "n": 1,
+          "raw_values": [
+            1319.6245089229196
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        }
+      },
+      "valid_seeds": [
+        12345
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 860.6456067106619,
+          "n": 1,
+          "raw_values": [
+            860.6456067106619
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "ess_ratio": {
+          "mean": 0.8404742253033808,
+          "n": 1,
+          "raw_values": [
+            0.8404742253033808
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "kl": {
+          "mean": 0.11920590637269664,
+          "n": 1,
+          "raw_values": [
+            0.11920590637269664
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": false,
+      "group_id": "77b12e4d4dba4339",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 128,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.05,
+            "inner_steps": 2500,
+            "logsumexp_gamma": 0.1,
+            "logsumexp_init": true,
+            "lr_decay": false,
+            "min_steps": 1000,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": true
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 1000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.3,
+            0.3
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": null,
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+          "hostname": "nvidia6",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": true,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.0",
+            "jax": "0.4.38",
+            "jax-cuda12-pjrt": "0.4.38",
+            "jax-cuda12-plugin": "0.4.38",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.38",
+            "matplotlib": "3.8.3",
+            "numpy": "1.24.4",
+            "optax": "0.2.3",
+            "pandas": "2.2.1",
+            "scipy": "1.14.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+          "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA GeForce RTX 3090",
+              "550.90.07",
+              "24576 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "historical_source_dbf533d",
+        "landmark_configuration": {
+          "base_count": 64,
+          "fps_candidates_per_density": 4096,
+          "method": "fps",
+          "target_count": 64
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "fps",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b"
+      },
+      "independent_valid_seed_count": 1,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [
+        23456,
+        34567,
+        45678,
+        56789
+      ],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": false,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RNOT_FPS",
+        "native_default_five_seed_comparison": false,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.08952577469661926,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.93,
+            "relative_difference_percent": -9.626427386733255,
+            "rounding_interval": {
+              "lower_inclusive": "0.925",
+              "upper_exclusive": "0.935"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.010794093627303367,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.13,
+            "relative_difference_percent": -8.303148944079513,
+            "rounding_interval": {
+              "lower_inclusive": "0.125",
+              "upper_exclusive": "0.135"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1022,
+          "reported_plus_minus": 10
+        },
+        "scope": "archive_defaults",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 860.6456067106619,
+            "ess_ratio": 0.8404742253033808,
+            "kl": 0.11920590637269664
+          },
+          "path": "../../results/historical_source_jax438/table_ours_T2_seed12345_historical_source_dbf533d_39d585aca286/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.89453125,
+              "mean_finite": 0.006237828187540317,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.9379748936550835e-16,
+                "0.5": 2.7239124255689632e-15,
+                "0.9": 0.012019521927116186,
+                "0.95": 0.054891012623350874,
+                "0.99": 0.11252700200534686,
+                "1": 0.1866435107661307
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.892578125,
+              "mean_finite": 0.006237756166452178,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.6283892013537176e-16,
+                "0.5": 2.5022908908285182e-15,
+                "0.9": 0.0157285459589711,
+                "0.95": 0.05248076906069002,
+                "0.99": 0.11037915195724433,
+                "1": 0.1709384614890605
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8818359375,
+              "mean_finite": 0.006179588442581292,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.7679667163556443e-16,
+                "0.5": 2.506305247868667e-15,
+                "0.9": 0.021251813694127538,
+                "0.95": 0.04952162461660226,
+                "0.99": 0.09645340710804914,
+                "1": 0.15689929792499666
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.8916015625,
+              "mean_finite": 0.006417764273262067,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.7091101496570354e-16,
+                "0.5": 2.5604553971910823e-15,
+                "0.9": 0.017558139800793546,
+                "0.95": 0.05455209828597743,
+                "0.99": 0.11628601903047141,
+                "1": 0.14496491240498516
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.884765625,
+              "mean_finite": 0.006358037018752205,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.9695515608478554e-16,
+                "0.5": 2.6181921516399003e-15,
+                "0.9": 0.020751247343117587,
+                "0.95": 0.05141941922061248,
+                "0.99": 0.10522010359304279,
+                "1": 0.1491658580167456
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed12345_historical_source_dbf533d_39d585aca286",
+          "timings_seconds": {
+            "build": 9.359825380146503,
+            "training_native_return": 1196.3212768989615,
+            "training_synchronized": 1196.3220373378135
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "partial_fewer_than_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 1196.3212768989615,
+          "n": 1,
+          "raw_values": [
+            1196.3212768989615
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        },
+        "training_synchronized": {
+          "mean": 1196.3220373378135,
+          "n": 1,
+          "raw_values": [
+            1196.3220373378135
+          ],
+          "se_ddof0": 0.0,
+          "se_ddof1": null
+        }
+      },
+      "valid_seeds": [
+        12345
+      ]
+    }
+  ],
+  "input_result_files": 2,
+  "input_roots": [
+    "../../results/historical_source_jax438"
+  ],
+  "missing_implementations_and_coverage": {
+    "continental_drift": "runner and original point clouds absent",
+    "figures_3_5": "dimension sweep runners available; defaults conflict; raw figure values absent",
+    "table_1_2_RCNF_Moser": "code absent",
+    "table_1_2_RNOT_RCPM": "runners available; defaults conflict with paper",
+    "table_3": "absent from ZIP; historical driver recovered in verification/snapshots/dbf533d; no fresh ablation rerun",
+    "table_4": "semi-dual RCPM experiment runner absent",
+    "table_5": "SO3/SE3 geometry components present but experiment runners absent"
+  },
+  "paper_title": "Riemannian Neural Optimal Transport",
+  "primary_host": null,
+  "read_errors": [],
+  "schema_version": 1,
+  "table_row_coverage": {
+    "all_six_rows_have_complete_five_seed_group": false,
+    "complete_configured_table_rows": [],
+    "complete_native_table_rows": [],
+    "complete_table_rows": [],
+    "expected_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "missing_table_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "rows": {
+      "S2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": []
+      },
+      "S2:RNOT_FPS": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": []
+      },
+      "S2:RNOT_RND": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": [
+          {
+            "complete_five_seed_comparison": false,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+              "hostname": "nvidia6",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.0",
+                "jax": "0.4.38",
+                "jax-cuda12-pjrt": "0.4.38",
+                "jax-cuda12-plugin": "0.4.38",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.38",
+                "matplotlib": "3.8.3",
+                "numpy": "1.24.4",
+                "optax": "0.2.3",
+                "pandas": "2.2.1",
+                "scipy": "1.14.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+              "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA GeForce RTX 3090",
+                  "550.90.07",
+                  "24576 MiB"
+                ]
+              ]
+            },
+            "environment_id": "40214715a3bb05a7",
+            "group_id": "0d722cf6df6d60ad",
+            "hostname": "nvidia6",
+            "independent_valid_seed_count": 1,
+            "label": "historical_source_dbf533d",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b",
+            "status": "partial_fewer_than_five_seeds",
+            "valid_seeds": [
+              12345
+            ]
+          }
+        ]
+      },
+      "T2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": []
+      },
+      "T2:RNOT_FPS": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": [
+          {
+            "complete_five_seed_comparison": false,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": null,
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-verification-20260908/venv/bin/python",
+              "hostname": "nvidia6",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": true,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.0",
+                "jax": "0.4.38",
+                "jax-cuda12-pjrt": "0.4.38",
+                "jax-cuda12-plugin": "0.4.38",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.4.38",
+                "matplotlib": "3.8.3",
+                "numpy": "1.24.4",
+                "optax": "0.2.3",
+                "pandas": "2.2.1",
+                "scipy": "1.14.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+              "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA GeForce RTX 3090",
+                  "550.90.07",
+                  "24576 MiB"
+                ]
+              ]
+            },
+            "environment_id": "40214715a3bb05a7",
+            "group_id": "77b12e4d4dba4339",
+            "hostname": "nvidia6",
+            "independent_valid_seed_count": 1,
+            "label": "historical_source_dbf533d",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b",
+            "status": "partial_fewer_than_five_seeds",
+            "valid_seeds": [
+              12345
+            ]
+          }
+        ]
+      },
+      "T2:RNOT_RND": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [],
+        "covered_by_complete_five_seed_group": false,
+        "groups": []
+      }
+    },
+    "scope": "Six main-table rows implemented by the archive; row coverage may span environments without pooling seeds."
+  },
+  "version_assessment": {
+    "blocker": "OpenReview web challenge and public API1/API2 HTTP 403",
+    "camera_ready_has_additional_tables_4_5": true,
+    "current_live_openreview_equals_local_camera_ready": "not established",
+    "historical_requested_url_copy_verified_by_download_metadata": true,
+    "live_openreview_pdf_retrieved": false,
+    "tables_1_2_3_same_in_all_three_sources": true
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "count": 8,
+  "independent_training_runs": 0,
+  "record_type": "evaluation_only_manifest",
+  "records": [
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 27089,
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia6",
+      "input_result_path": "../results/SE3_ours_nativeJAX435/result.json",
+      "input_result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "result_path": "../evaluations/nvidia6/SE3_ours_nativeJAX435.json",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SE3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "sha256": "03f65f0daba24317f03d2cf26ecafef86d5f56409892f8517f8bf6afad6fe639",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 25853,
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia6",
+      "input_result_path": "../results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "result_path": "../evaluations/nvidia6/SE3_rcpm_gamma1_nativeJAX435.json",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SE3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "sha256": "c6408a9edd9146153832351843e7b0b483328d791b3e4beeae26916fdcc6c981",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 25452,
+      "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia6",
+      "input_result_path": "../results/SO3_ours_nativeJAX435/result.json",
+      "input_result_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "result_path": "../evaluations/nvidia6/SO3_ours_nativeJAX435.json",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SO3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "sha256": "826f7bfe6f4ec89fd05aecb1e6204a5768034f41f61c28eb8dfc1a13df1a9f2d",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 25435,
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia6",
+      "input_result_path": "../results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "input_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "result_path": "../evaluations/nvidia6/SO3_rcpm_gamma1_nativeJAX435.json",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SO3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "sha256": "5e2823be880ff34bcb02f1d31375ef5c61f1fea665e81ea28413aa5c61dde947",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": false,
+      "bytes": 27339,
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia7",
+      "input_result_path": "../results/SE3_ours_nativeJAX435/result.json",
+      "input_result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "result_path": "../evaluations/nvidia7/SE3_ours_nativeJAX435.json",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SE3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "sha256": "74237dfec1d66091d9bada742bdfa79ff7c726881d740d2c097a93acfa46bb46",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 26001,
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia7",
+      "input_result_path": "../results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "result_path": "../evaluations/nvidia7/SE3_rcpm_gamma1_nativeJAX435.json",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SE3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "sha256": "3f60fd602a802184f7abb798398e8e62ff67e3809109b287d32fc5f9a80d0054",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": false,
+      "bytes": 25790,
+      "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia7",
+      "input_result_path": "../results/SO3_ours_nativeJAX435/result.json",
+      "input_result_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "result_path": "../evaluations/nvidia7/SO3_ours_nativeJAX435.json",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SO3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "sha256": "7d144031c7955ff78f3c059f42d610a3d7c36ab8c395564a0cd6ce50c77a37b7",
+      "status": "evaluation_only_complete"
+    },
+    {
+      "all_five_batches_exactly_match_original": true,
+      "bytes": 25582,
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+      "evaluator_sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+      "host": "nvidia7",
+      "input_result_path": "../results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "input_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "result_path": "../evaluations/nvidia7/SO3_rcpm_gamma1_nativeJAX435.json",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SO3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "sha256": "21c46d5c606a002a19f6dd4ae5f69b70b798de10907454a7d4e3614d958e5103",
+      "status": "evaluation_only_complete"
+    }
+  ],
+  "schema_version": 1
+}

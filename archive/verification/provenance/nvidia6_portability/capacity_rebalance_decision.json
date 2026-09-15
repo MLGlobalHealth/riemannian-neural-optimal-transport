@@ -1,0 +1,73 @@
+{
+  "decided_at": "2026-09-08T11:29:18.930120+00:00",
+  "reason": "Parent directed capacity rebalance before any T2 final metrics: all five seeds of each full row move to nvidia7; both existing nvidia6 first-seed workers continue as independent portability checks.",
+  "original_manifest_sha256": "c5ec704bd2dcb0c5eaed7f931de62087180b42fce1865358b3c8bdf4097dcbb2",
+  "active_workers": [
+    {
+      "method": "fps",
+      "seed": 12345,
+      "gpu": 4,
+      "supervisor_pid": 2165427,
+      "supervisor_action": "SIGSTOP_only_supervisor_while_current_worker_finishes",
+      "worker_pid": 2167756,
+      "worker_status_at_decision": "training",
+      "worker_result_path": "/data/am1118/mlgh-zip-jax0435-restored-20260908/results/fps/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_201d894144e9/result.json",
+      "worker_command_unchanged": true
+    },
+    {
+      "method": "random",
+      "seed": 12345,
+      "gpu": 5,
+      "supervisor_pid": 2165428,
+      "supervisor_action": "SIGSTOP_only_supervisor_while_current_worker_finishes",
+      "worker_pid": 2170334,
+      "worker_status_at_decision": "training",
+      "worker_result_path": "/data/am1118/mlgh-zip-jax0435-restored-20260908/results/random/table_ours_T2_seed12345_zip_historical_settings_cuda_jax435_a3b0d254ed4f/result.json",
+      "worker_command_unchanged": true
+    }
+  ],
+  "unstarted_jobs": [
+    {
+      "method": "fps",
+      "seed": 23456,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "fps",
+      "seed": 34567,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "fps",
+      "seed": 45678,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "fps",
+      "seed": 56789,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "random",
+      "seed": 23456,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "random",
+      "seed": 34567,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "random",
+      "seed": 45678,
+      "status": "notrun_due_capacity_rebalance"
+    },
+    {
+      "method": "random",
+      "seed": 56789,
+      "status": "notrun_due_capacity_rebalance"
+    }
+  ],
+  "source_config_environment_changes": false,
+  "additional_gpu_jobs_authorized": false
+}

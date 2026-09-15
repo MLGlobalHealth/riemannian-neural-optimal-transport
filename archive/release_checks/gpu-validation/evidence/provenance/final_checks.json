@@ -1,0 +1,46 @@
+{
+  "checked_at": "2026-09-08T15:31:34.294997+00:00",
+  "status": "all_complete",
+  "owned_pids": [
+    2480247,
+    2480249,
+    2480251,
+    2480254,
+    2480258,
+    2480263,
+    2480267,
+    2482243,
+    2480257,
+    2480261,
+    2480266,
+    2480269
+  ],
+  "owned_process_ps": "    PID    PPID STAT COMMAND\n",
+  "all_owned_exited_or_zombie": true,
+  "source_57_files_unchanged": true,
+  "base80_freeze_unchanged": true,
+  "checkpoint_checks": [
+    {
+      "result": "results/se3_native/results/liegroups_SE3_ours_fps_seed12345/result.json",
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+    },
+    {
+      "result": "results/s2_ours_smoke/results/tables_S2_ours_random_seed12345/result.json",
+      "checkpoint_sha256": "97a2f00e76087f74d382a688b971b284fe67b1638861fa83bbc8207c8cf2ec77"
+    },
+    {
+      "result": "results/s2_rcpm_smoke/results/tables_S2_rcpm_gamma1_seed12345/result.json",
+      "checkpoint_sha256": "f14b5cdbdce241a0eb0e220f594b9a28048bcf7f3c163bd39a43c62cd3194752"
+    },
+    {
+      "result": "results/ablation_smoke/results/ablations_S2_ours_random_seed12345_baseline/result.json",
+      "checkpoint_sha256": "97a2f00e76087f74d382a688b971b284fe67b1638861fa83bbc8207c8cf2ec77"
+    },
+    {
+      "result": "results/continental_smoke/result.json",
+      "checkpoint_sha256": "be28dad99c3b82d2d9fe26928911c80b2fdfb5af20e50fe16bdcf2ecce2628ea"
+    }
+  ],
+  "gpus": "0, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n2, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n3, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n4, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n5, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n6, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n7, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n",
+  "gpu_processes": ""
+}

@@ -1,0 +1,349 @@
+{
+  "created_at": "2026-09-08T13:52:28.946322+00:00",
+  "no_gpu_jobs_launched": true,
+  "gpu_libraries_not_imported": true,
+  "capacity_measurement": "Two read-only snapshots more than 30 seconds apart; utilization between snapshots is unobserved. Recheck before launch.",
+  "hosts": {
+    "nvidia6": {
+      "hostname": "nvidia6",
+      "initial_at": "2026-09-08T13:50:49.413209+00:00",
+      "followup_at": "2026-09-08T13:52:02.075233+00:00",
+      "snapshot_interval_seconds": 72.662024,
+      "gpus": {
+        "0": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-1e3c7ca5-134e-9d2b-2eab-539278545347",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "1": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "2": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-09a54998-1924-8565-19fb-d8d2fed32ba8",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "3": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "4": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-c46c3062-0628-69bf-00e8-76ded5dece35",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "5": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "6": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "7": {
+          "model": "NVIDIA GeForce RTX 3090",
+          "driver": "550.90.07",
+          "uuid": "GPU-a782c603-cada-c82b-f23b-e0aec25f51e0",
+          "used_mib_samples": [
+            2,
+            2
+          ],
+          "free_mib_min": 24252,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        }
+      },
+      "venv": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv",
+      "python": "3.11.15 | packaged by conda-forge | (main, Jun 11 2026, 03:34:02) [GCC 14.3.0]",
+      "exact_80_package_pins": true,
+      "matching_package_pins": 80,
+      "pip_check": "No broken requirements found.",
+      "cuda_root": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+      "cuda_root_exists": true,
+      "own_reproduction_processes": [],
+      "process_owners_followup": ""
+    },
+    "nvidia7": {
+      "hostname": "nvidia7",
+      "initial_at": "2026-09-08T13:50:49.344485+00:00",
+      "followup_at": "2026-09-08T13:52:00.982042+00:00",
+      "snapshot_interval_seconds": 71.637557,
+      "gpus": {
+        "0": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4",
+          "used_mib_samples": [
+            47886,
+            47886
+          ],
+          "free_mib_min": 634,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": false
+        },
+        "1": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-1240d33d-4047-20ab-2f09-32bb90161931",
+          "used_mib_samples": [
+            3638,
+            3638
+          ],
+          "free_mib_min": 44882,
+          "utilization_samples": [
+            100,
+            100
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": false
+        },
+        "2": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-ff515502-97e7-8e97-be25-82e619cfb969",
+          "used_mib_samples": [
+            437,
+            437
+          ],
+          "free_mib_min": 48083,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "3": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-3c96510d-4276-2ce2-9d63-084f205e2a00",
+          "used_mib_samples": [
+            437,
+            437
+          ],
+          "free_mib_min": 48083,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "4": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-ddda76a0-9305-3456-0656-f5035285db1c",
+          "used_mib_samples": [
+            437,
+            437
+          ],
+          "free_mib_min": 48083,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "5": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06",
+          "used_mib_samples": [
+            437,
+            437
+          ],
+          "free_mib_min": 48083,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "6": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f",
+          "used_mib_samples": [
+            3632,
+            3632
+          ],
+          "free_mib_min": 44888,
+          "utilization_samples": [
+            100,
+            100
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": false
+        },
+        "7": {
+          "model": "NVIDIA RTX 6000 Ada Generation",
+          "driver": "570.195.03",
+          "uuid": "GPU-cff4935c-4806-7bea-670a-e3f396b43fa4",
+          "used_mib_samples": [
+            3636,
+            3636
+          ],
+          "free_mib_min": 44884,
+          "utilization_samples": [
+            100,
+            100
+          ],
+          "empty_in_both_snapshots": false,
+          "spare_capacity_in_both_snapshots": false
+        }
+      },
+      "venv": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "exact_80_package_pins": true,
+      "matching_package_pins": 80,
+      "pip_check": "No broken requirements found.",
+      "cuda_root": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+      "cuda_root_exists": true,
+      "own_reproduction_processes": [],
+      "process_owners_followup": "3482579 3482578 fjl1218  python\n3482623 3482622 fjl1218  python\n3482629 3482628 fjl1218  python\n3663024 3661664 afs23    python\n3675773 3661664 afs23    python"
+    },
+    "dide": {
+      "hostname": "didelx01",
+      "initial_at": "2026-09-08T13:50:51.749071+00:00",
+      "followup_at": "2026-09-08T13:52:01.555237+00:00",
+      "snapshot_interval_seconds": 69.806166,
+      "gpus": {
+        "0": {
+          "model": "NVIDIA RTX A6000",
+          "driver": "570.211.01",
+          "uuid": "GPU-02930813-4fed-7776-b5bf-dce03d3f8f5f",
+          "used_mib_samples": [
+            1,
+            1
+          ],
+          "free_mib_min": 48549,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        },
+        "1": {
+          "model": "NVIDIA RTX A6000",
+          "driver": "570.211.01",
+          "uuid": "GPU-d7c51629-4e58-8fc7-e025-47206512152e",
+          "used_mib_samples": [
+            1,
+            1
+          ],
+          "free_mib_min": 48549,
+          "utilization_samples": [
+            0,
+            0
+          ],
+          "empty_in_both_snapshots": true,
+          "spare_capacity_in_both_snapshots": true
+        }
+      },
+      "venv": "/home/am1118/venvs/ernot-pinned",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "exact_80_package_pins": false,
+      "matching_package_pins": 31,
+      "pip_check": "No broken requirements found.",
+      "cuda_root": "/home/am1118/venvs/ernot-pinned/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+      "cuda_root_exists": true,
+      "own_reproduction_processes": [],
+      "process_owners_followup": ""
+    }
+  },
+  "recommended_existing_environment_host": "nvidia6",
+  "rationale": "All eight RTX3090 devices empty in both snapshots, all80 restored pins verified, no leftover reproduction jobs; adequate memory can only be confirmed for the new runners after their fixed pilot plan. nvidia7 has larger-memory spare devices but persistent foreign contexts; dide would need a separate restored environment."
+}

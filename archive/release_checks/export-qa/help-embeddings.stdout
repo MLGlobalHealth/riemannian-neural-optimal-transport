@@ -1,0 +1,24 @@
+usage: embeddings.py [-h] --output OUTPUT [--platform {cuda,cpu}] [--gpu GPU]
+                     [--landmarks LANDMARKS [LANDMARKS ...]]
+                     [--validation-size VALIDATION_SIZE]
+                     [--candidates CANDIDATES] [--subset-size SUBSET_SIZE]
+                     [--repeats REPEATS] [--epsilon EPSILON] [--seed SEED]
+                     [--x64] [--smoke]
+
+Regenerate the landmark embedding experiment underlying Figure 4.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --output OUTPUT       New JSON output file.
+  --platform {cuda,cpu}
+  --gpu GPU             Physical GPU index, required for CUDA.
+  --landmarks LANDMARKS [LANDMARKS ...]
+  --validation-size VALIDATION_SIZE
+  --candidates CANDIDATES
+  --subset-size SUBSET_SIZE
+  --repeats REPEATS
+  --epsilon EPSILON
+  --seed SEED
+  --x64                 Explicit precision variant; the notebook does not
+                        enable x64.
+  --smoke               Small execution check; not the full paper experiment.

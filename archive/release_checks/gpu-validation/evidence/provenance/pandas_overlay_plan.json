@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-09-08T15:17:01.213224+00:00",
+  "overlay": "/data/am1118/mlgh-paper-release-check-20260908/pandas-overlay",
+  "distribution": "pandas==3.0.2",
+  "selection_reason": "Exact version installed in author local entropic-rnot environment; not claimed original paper dependency.",
+  "base_dependencies": {
+    "numpy": "2.4.6",
+    "python-dateutil": "2.9.0.post0",
+    "packaging": "26.3"
+  },
+  "dependency_check": "Linux CPython3.11 requires numpy>=1.26 and python-dateutil>=2.8.2; both are present. No optional extras requested.",
+  "base_packages_mutated": false
+}

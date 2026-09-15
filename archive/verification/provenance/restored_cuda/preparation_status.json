@@ -1,0 +1,22 @@
+{
+  "status": "dependency_resolution_failed_before_installation",
+  "server": "nvidia7",
+  "remote_root": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908",
+  "python": "3.11.15",
+  "python_difference_from_documented_candidate": "Historical notebook metadata records 3.10.19; no Python3.10 interpreter found in PATH or user conda/venv environments.",
+  "requested": {
+    "jax": "0.4.35",
+    "jaxlib": "0.4.35",
+    "flax": "0.8.4",
+    "optax": "0.2.3",
+    "accelerator_extra": "jax[cuda12]"
+  },
+  "resolution_error": "jax[cuda12]==0.4.35 declares jaxlib==0.4.34, conflicting with requested jaxlib==0.4.35.",
+  "source_revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+  "source_changed": false,
+  "shared_environment_changed": false,
+  "training_launched": false,
+  "candidate_environment_created": true,
+  "packages_installed_into_candidate": false,
+  "plan": "No speculative dependency variants, force installation, or source patch."
+}

@@ -1,0 +1,73 @@
+{
+  "host": "nvidia7",
+  "pid": 509193,
+  "started_at": "2026-09-08T14:24:46.101727+00:00",
+  "status": "complete",
+  "pending": [],
+  "workers": {
+    "SO3_ours_nativeJAX435": {
+      "pid": 510216,
+      "gpu": 2,
+      "cpu_affinity": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "started_at": "2026-09-08T14:25:18.691080+00:00",
+      "exit_code": 0,
+      "status": "evaluation_only_complete",
+      "batch_count": 5,
+      "finished_at": "2026-09-08T14:26:04.861536+00:00"
+    },
+    "SE3_ours_nativeJAX435": {
+      "pid": 510217,
+      "gpu": 3,
+      "cpu_affinity": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "started_at": "2026-09-08T14:25:18.700983+00:00",
+      "exit_code": 0,
+      "status": "evaluation_only_complete",
+      "batch_count": 5,
+      "finished_at": "2026-09-08T14:26:09.980795+00:00"
+    },
+    "SO3_rcpm_gamma1_nativeJAX435": {
+      "pid": 510218,
+      "gpu": 4,
+      "cpu_affinity": [
+        16,
+        17,
+        18,
+        19
+      ],
+      "started_at": "2026-09-08T14:25:18.711418+00:00",
+      "exit_code": 0,
+      "status": "evaluation_only_complete",
+      "batch_count": 5,
+      "finished_at": "2026-09-08T14:25:54.609366+00:00"
+    },
+    "SE3_rcpm_gamma1_nativeJAX435": {
+      "pid": 510219,
+      "gpu": 5,
+      "cpu_affinity": [
+        20,
+        21,
+        22,
+        23
+      ],
+      "started_at": "2026-09-08T14:25:18.720179+00:00",
+      "exit_code": 0,
+      "status": "evaluation_only_complete",
+      "batch_count": 5,
+      "finished_at": "2026-09-08T14:26:04.863551+00:00"
+    }
+  },
+  "events": [],
+  "manifest_sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c",
+  "updated_at": "2026-09-08T14:26:09.980811+00:00",
+  "finished_at": "2026-09-08T14:26:09.989658+00:00"
+}

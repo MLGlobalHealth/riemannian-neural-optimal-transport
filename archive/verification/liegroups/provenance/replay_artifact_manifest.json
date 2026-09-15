@@ -1,0 +1,285 @@
+{
+  "files": [
+    {
+      "bytes": 2848,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/paired_comparison.md",
+      "sha256": "5aa42b8c0f1692749d1f05531ab064104feed750d37c629ccbbf255f76fac5ff"
+    },
+    {
+      "bytes": 10471,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/paired_comparison.json",
+      "sha256": "9fd218d235f2432f83fa0b842edbaf183325f1ee5dfce1bc5b7655286c560afa"
+    },
+    {
+      "bytes": 8371,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/tooling/supervise_replays.py",
+      "sha256": "2d17ce995e16d19bc1d49d1f001793184342aa599e7fe7e628034faa0af7dc41"
+    },
+    {
+      "bytes": 20333,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/tooling/evaluate_liegroup_checkpoint.py",
+      "sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e"
+    },
+    {
+      "bytes": 13466,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/tooling/verify_liegroup_run.py",
+      "sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33"
+    },
+    {
+      "bytes": 23012,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/tooling/verify_run.py",
+      "sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    },
+    {
+      "bytes": 3017,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/SE3_rcpm_gamma1_nativeJAX435.log",
+      "sha256": "18090a61d74c20a077727a3473015782874c2babae3f8a721c76d2f7466d0c78"
+    },
+    {
+      "bytes": 2893,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/SO3_rcpm_gamma1_nativeJAX435.log",
+      "sha256": "a68bd3ecbc3d57d9b519c00bee3006d07de8a181f7e1c395fcfd4eb74df39c5f"
+    },
+    {
+      "bytes": 26089,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/capacity.jsonl",
+      "sha256": "f8a45f6aeb0bedb707f7063eb3222c064fae161fd753ffb44615876b8f07d86f"
+    },
+    {
+      "bytes": 668,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/supervisor.log",
+      "sha256": "540043fc7bcf466712a4b76381aa0d611b6abceb4025f5463182eb495310e5d6"
+    },
+    {
+      "bytes": 4560,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/SE3_ours_nativeJAX435.log",
+      "sha256": "4380f16f74de745930992dfb76720887ed92c7803492ea8168947efd0c7a540e"
+    },
+    {
+      "bytes": 3748,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/logs/SO3_ours_nativeJAX435.log",
+      "sha256": "9bef7cf7c000bda84ff1bb38a4c470ea2e45fa7fd3b25fa8e756612a74b83b37"
+    },
+    {
+      "bytes": 17979,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/SO3_rcpm_gamma1_nativeJAX435_launch.json",
+      "sha256": "779c0df42e1e1a01ebbd8e3a9a282e7a3fa2e78e975d08e76881a94cbaa42d13"
+    },
+    {
+      "bytes": 209,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/freeze_verification.json",
+      "sha256": "dcf4491a5ab159e9bf76d09a96880fca35f941dbcb5eabd3192ce6e2c6fd2853"
+    },
+    {
+      "bytes": 3121,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/delivery_checksums.json",
+      "sha256": "6f2dfe7687b4dfb269ffddb6abfea9f4dade852725e81788dfc54d5fd778e8b3"
+    },
+    {
+      "bytes": 17954,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/SO3_ours_nativeJAX435_launch.json",
+      "sha256": "dca108e3679c5475c66cad6b9af26ca2cf1ed1bd0f21db0cd345c7f937c284f3"
+    },
+    {
+      "bytes": 17958,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/SE3_ours_nativeJAX435_launch.json",
+      "sha256": "b51f69b6544b54e862e736b6423c482cb817b9ca930999335b05ae18b10e5f92"
+    },
+    {
+      "bytes": 1985,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/final_release.json",
+      "sha256": "30a1e234affaa653309ad057f433c65c359097b477655ceea8e315278452324b"
+    },
+    {
+      "bytes": 3285,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/recovered_liegroup_source_manifest.json",
+      "sha256": "8ae363e44174657405556714e5b6552d50b8ae1c1c7f9b8bff97d2243af26ff1"
+    },
+    {
+      "bytes": 1803,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/supervisor_state.json",
+      "sha256": "1cff30ffb8fe9618613436d89208d2330e079293e085d9b99ad200a6e6a18699"
+    },
+    {
+      "bytes": 507,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/supervisor_launch.json",
+      "sha256": "8b49c78e7ba8f3c1cd7d17961789a2d95ce9e0df4058080d1cb60059508d6423"
+    },
+    {
+      "bytes": 17979,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/SE3_rcpm_gamma1_nativeJAX435_launch.json",
+      "sha256": "a7ec64b8161ac863bb554f1d7995f6357c3d89ea1d022b279ea1e69e574ece40"
+    },
+    {
+      "bytes": 22682,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/paired_replay_manifest.json",
+      "sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c"
+    },
+    {
+      "bytes": 973,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/prelaunch_process_owners.json",
+      "sha256": "ee5c00df5fa302e16fe7a28ffda547667da778fcd31069704159df4c4f304e3a"
+    },
+    {
+      "bytes": 1580,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/provenance/requirements_frozen.txt",
+      "sha256": "f7b7335f0a864a57487be28384442d962d2519edd54a4c4a21e6382528779171"
+    },
+    {
+      "bytes": 27339,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/results/SE3_ours_nativeJAX435/evaluation.json",
+      "sha256": "74237dfec1d66091d9bada742bdfa79ff7c726881d740d2c097a93acfa46bb46"
+    },
+    {
+      "bytes": 25582,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json",
+      "sha256": "21c46d5c606a002a19f6dd4ae5f69b70b798de10907454a7d4e3614d958e5103"
+    },
+    {
+      "bytes": 26001,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json",
+      "sha256": "3f60fd602a802184f7abb798398e8e62ff67e3809109b287d32fc5f9a80d0054"
+    },
+    {
+      "bytes": 25790,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia7/results/SO3_ours_nativeJAX435/evaluation.json",
+      "sha256": "7d144031c7955ff78f3c059f42d610a3d7c36ab8c395564a0cd6ce50c77a37b7"
+    },
+    {
+      "bytes": 8371,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/tooling/supervise_replays.py",
+      "sha256": "2d17ce995e16d19bc1d49d1f001793184342aa599e7fe7e628034faa0af7dc41"
+    },
+    {
+      "bytes": 20333,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/tooling/evaluate_liegroup_checkpoint.py",
+      "sha256": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e"
+    },
+    {
+      "bytes": 13466,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/tooling/verify_liegroup_run.py",
+      "sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33"
+    },
+    {
+      "bytes": 23012,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/tooling/verify_run.py",
+      "sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    },
+    {
+      "bytes": 3016,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/SE3_rcpm_gamma1_nativeJAX435.log",
+      "sha256": "3342cc9cc741c6fbc2bf513d5540bf2d8203ab3a95cf989da33b1536718b579a"
+    },
+    {
+      "bytes": 2893,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/SO3_rcpm_gamma1_nativeJAX435.log",
+      "sha256": "5b1ea23a51c618b092fd9399e5530b173691db5535ffb98b5fbc3ab4b86b2dba"
+    },
+    {
+      "bytes": 24634,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/capacity.jsonl",
+      "sha256": "18241276723828e4de3b0508fba65d5ca3e7f065b267ba74fd8ca5a6470ed879"
+    },
+    {
+      "bytes": 664,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/supervisor.log",
+      "sha256": "696e0cec0c24da12569b7360fb5d2218fa4b046b886104d6e409f5aa1b825b56"
+    },
+    {
+      "bytes": 4451,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/SE3_ours_nativeJAX435.log",
+      "sha256": "c37b7d8c07f19154031816c0eae3627c23af09965d6d7c203f28a6b97f218352"
+    },
+    {
+      "bytes": 3554,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/logs/SO3_ours_nativeJAX435.log",
+      "sha256": "8b447bbf13080415244f527c769206919e2f722210fa7396ef64895c518bde68"
+    },
+    {
+      "bytes": 17296,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/SO3_rcpm_gamma1_nativeJAX435_launch.json",
+      "sha256": "b4a15f535b2095099bce7c92cddb0d35dcbbdd680c557b5b96857a6fafe5bbb0"
+    },
+    {
+      "bytes": 209,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/freeze_verification.json",
+      "sha256": "1e120b6211423af50a2cf8bb7bfe606613f2c027fbf8322bdc560eded06deed8"
+    },
+    {
+      "bytes": 3121,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/delivery_checksums.json",
+      "sha256": "5982611f22ffc5b2740b4bbf60d1251b35e135e07e7f5fbce61558ddbed67977"
+    },
+    {
+      "bytes": 17271,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/SO3_ours_nativeJAX435_launch.json",
+      "sha256": "df96918aacb2cf7f821815c2b62d46b353b351e327c41e4894cec131e674abfe"
+    },
+    {
+      "bytes": 17271,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/SE3_ours_nativeJAX435_launch.json",
+      "sha256": "47b80958e3b190b34d55133cd8649a2301fa4e9512e68a6c40e83ea2f7a991aa"
+    },
+    {
+      "bytes": 1902,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/final_release.json",
+      "sha256": "269800aabd83f0a6f5cd9cd19fc30cad7eae1f2c639414ce3fb8ff947309e4c5"
+    },
+    {
+      "bytes": 3285,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/recovered_liegroup_source_manifest.json",
+      "sha256": "8ae363e44174657405556714e5b6552d50b8ae1c1c7f9b8bff97d2243af26ff1"
+    },
+    {
+      "bytes": 1800,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/supervisor_state.json",
+      "sha256": "d214c19376c03c4e59717985352f21f8dc38562f2eb71988515801f1d83947f0"
+    },
+    {
+      "bytes": 494,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/supervisor_launch.json",
+      "sha256": "7d0573bb04efc3b643b160d374c773ef23eae164e5eee66e7ef7f6d60133d432"
+    },
+    {
+      "bytes": 17300,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/SE3_rcpm_gamma1_nativeJAX435_launch.json",
+      "sha256": "804756dac8a7f93f35a20d44842043790f9928a50578860beb9a009a46dfd314"
+    },
+    {
+      "bytes": 22682,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/paired_replay_manifest.json",
+      "sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c"
+    },
+    {
+      "bytes": 133,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/prelaunch_process_owners.json",
+      "sha256": "3fef474a6391fd023f08db59fa3514a6b66b1d3d7bebfa875599b259b08b6196"
+    },
+    {
+      "bytes": 1580,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/provenance/requirements_frozen.txt",
+      "sha256": "59bf165a84bbf82fa6ddeafc4e0472fa25c74a501c4526084c6e8000cb37f559"
+    },
+    {
+      "bytes": 27089,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/results/SE3_ours_nativeJAX435/evaluation.json",
+      "sha256": "03f65f0daba24317f03d2cf26ecafef86d5f56409892f8517f8bf6afad6fe639"
+    },
+    {
+      "bytes": 25435,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json",
+      "sha256": "5e2823be880ff34bcb02f1d31375ef5c61f1fea665e81ea28413aa5c61dde947"
+    },
+    {
+      "bytes": 25853,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json",
+      "sha256": "c6408a9edd9146153832351843e7b0b483328d791b3e4beeae26916fdcc6c981"
+    },
+    {
+      "bytes": 25452,
+      "path_from_repository_root": "verification/artifacts/liegroups/evaluations/nvidia6/results/SO3_ours_nativeJAX435/evaluation.json",
+      "sha256": "826f7bfe6f4ec89fd05aecb1e6204a5768034f41f61c28eb8dfc1a13df1a9f2d"
+    }
+  ],
+  "scope": "Complete fetched replay bundle retained in ignored artifacts"
+}

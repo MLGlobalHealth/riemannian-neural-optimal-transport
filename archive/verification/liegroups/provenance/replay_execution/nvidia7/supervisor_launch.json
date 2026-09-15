@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-08T14:24:46.026650+00:00",
+  "host": "nvidia7",
+  "pid": 509193,
+  "command": [
+    "python3",
+    "-u",
+    "/data/am1118/mlgh-liegroups-replay-20260908/tooling/supervise_replays.py",
+    "--manifest",
+    "/data/am1118/mlgh-liegroups-replay-20260908/replay/provenance/paired_replay_manifest.json",
+    "--host",
+    "nvidia7"
+  ],
+  "manifest_sha256": "3b3549d6a873f6b5dd04e486bee95f6994b1f61091e24d9c72033c1e17cd3f0c",
+  "exactly_four_evaluations": true,
+  "training": false
+}

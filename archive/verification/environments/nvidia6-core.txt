@@ -1,0 +1,14 @@
+# Recorded core versions for the historical RNOT trials on nvidia6.
+# See result.json for Python, CUDA, environment flags, and device provenance.
+cartopy==0.25.0
+flax==0.10.0
+jax==0.4.38
+jax-cuda12-pjrt==0.4.38
+jax-cuda12-plugin==0.4.38
+jaxlib==0.4.38
+matplotlib==3.8.3
+numpy==1.24.4
+optax==0.2.3
+pandas==2.2.1
+scipy==1.14.1
+spherical-kde==0.1.2

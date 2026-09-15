@@ -1,0 +1,217 @@
+{
+  "at": "2026-09-08T14:07:44.301337+00:00",
+  "supervisor": {
+    "started_at": "2026-09-08T14:05:22.215525+00:00",
+    "pid": 2399354,
+    "phase": "initial",
+    "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+    "status": "running",
+    "workers": {
+      "SO3_ours_nativeJAX435": {
+        "pid": 2399388,
+        "gpu": 0,
+        "cpu_affinity": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "started_at": "2026-09-08T14:05:53.963656+00:00",
+        "exit_code": null,
+        "native_status": "training",
+        "evaluation_batch_count": 0
+      },
+      "SE3_ours_nativeJAX435": {
+        "pid": 2399389,
+        "gpu": 1,
+        "cpu_affinity": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "started_at": "2026-09-08T14:05:53.974035+00:00",
+        "exit_code": 0,
+        "native_status": "complete",
+        "evaluation_batch_count": 5,
+        "finished_at": "2026-09-08T14:07:10.769519+00:00",
+        "outcome": "finite_output"
+      },
+      "SO3_rcpm_gamma1_nativeJAX435": {
+        "pid": 2399390,
+        "gpu": 2,
+        "cpu_affinity": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "started_at": "2026-09-08T14:05:53.980201+00:00",
+        "exit_code": null,
+        "native_status": "training",
+        "evaluation_batch_count": 0
+      },
+      "SE3_rcpm_gamma1_nativeJAX435": {
+        "pid": 2399391,
+        "gpu": 3,
+        "cpu_affinity": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "started_at": "2026-09-08T14:05:53.985909+00:00",
+        "exit_code": null,
+        "native_status": "training",
+        "evaluation_batch_count": 0
+      }
+    },
+    "pending": [],
+    "events": [],
+    "updated_at": "2026-09-08T14:07:41.444304+00:00"
+  },
+  "workers": {
+    "SO3_ours_nativeJAX435": {
+      "status": "training",
+      "error": null,
+      "outcome": null,
+      "training_config": {
+        "batch_size": 256,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "learning_rate": 0.001,
+        "log_every": 1,
+        "lr_decay": false,
+        "lr_decay_alpha": 0.05,
+        "n_steps": 500,
+        "seed": 12345
+      },
+      "timings": {
+        "build": 8.826246421784163
+      },
+      "last_progress": [
+        "[    83] loss=-1.7556 | res=1.17e+00 | grad=4.51e-01 | 1.1s",
+        "[    84] loss=-1.6742 | res=1.15e+00 | grad=4.30e-01 | 1.1s"
+      ],
+      "last_log": "rad=5.30e-01 | 1.1s\n[    67] loss=-1.6548 | res=1.14e+00 | grad=4.48e-01 | 1.1s\n[    68] loss=-1.5544 | res=1.11e+00 | grad=2.03e-01 | 1.1s\n[    69] loss=-1.7298 | res=1.16e+00 | grad=6.88e-01 | 1.1s\n[    70] loss=-1.6958 | res=1.12e+00 | grad=5.92e-01 | 1.1s\n[    71] loss=-1.7351 | res=1.15e+00 | grad=6.38e-01 | 1.1s\n[    72] loss=-1.6016 | res=1.14e+00 | grad=5.39e-01 | 1.1s\n[    73] loss=-1.5874 | res=1.11e+00 | grad=5.57e-01 | 1.1s\n[    74] loss=-1.5710 | res=1.14e+00 | grad=5.99e-01 | 1.1s\n[    75] loss=-1.7360 | res=1.15e+00 | grad=6.66e-01 | 1.1s\n[    76] loss=-1.6907 | res=1.11e+00 | grad=6.51e-01 | 1.1s\n[    77] loss=-1.6741 | res=1.13e+00 | grad=5.28e-01 | 1.1s\n[    78] loss=-1.4979 | res=1.13e+00 | grad=6.07e-01 | 1.1s\n[    79] loss=-1.5511 | res=1.16e+00 | grad=2.76e-01 | 1.1s\n[    80] loss=-1.6187 | res=1.18e+00 | grad=5.64e-01 | 1.1s\n[    81] loss=-1.7068 | res=1.17e+00 | grad=4.72e-01 | 1.1s\n[    82] loss=-1.6601 | res=1.14e+00 | grad=3.88e-01 | 1.1s\n[    83] loss=-1.7556 | res=1.17e+00 | grad=4.51e-01 | 1.1s\n[    84] loss=-1.6742 | res=1.15e+00 | grad=4.30e-01 | 1.1s\n",
+      "batch_count": 0,
+      "summary": null
+    },
+    "SE3_ours_nativeJAX435": {
+      "status": "complete",
+      "error": null,
+      "outcome": "finite_output",
+      "training_config": {
+        "batch_size": 256,
+        "eval_every": null,
+        "eval_size": 1024,
+        "grad_accum_steps": 0,
+        "learning_rate": 0.001,
+        "log_every": 1,
+        "lr_decay": true,
+        "lr_decay_alpha": 0.05,
+        "n_steps": 200,
+        "seed": 12345
+      },
+      "timings": {
+        "build": 11.997604099102318,
+        "training_native_return": 33.657554919831455,
+        "training_synchronized": 33.65812389878556
+      },
+      "last_progress": [
+        "[   199] loss=-7.5760 | res=6.03e-01 | grad=8.56e-01 | 0.1s",
+        "[   200] loss=-7.2394 | res=5.62e-01 | grad=4.94e-01 | 0.1s"
+      ],
+      "last_log": "\": 0.666270060508315, \"mean_residual\": 0.5777557511925565}, \"evaluation_seconds\": 0.953106292989105, \"metric_nonfinite\": {\"kl\": false, \"ess\": false, \"ess_ratio\": false, \"mean_residual\": false}}\nLIEGROUP_COMPLETE {\"kl\": {\"mean\": 2.4051482424868995, \"se_ddof0\": 0.009306100204022637, \"se_ddof1\": 0.010404536330809639, \"raw_batches\": [2.431653640773363, 2.420545418872469, 2.373380405443525, 2.390999947993018, 2.4091617993521206]}, \"ess\": {\"mean\": 686.2309740610791, \"se_ddof0\": 2.248780125181457, \"se_ddof1\": 2.5142126131781124, \"raw_batches\": [695.8757492476933, 682.2148404665043, 685.6617956620969, 685.1419429685865, 682.2605419605146]}, \"ess_ratio\": {\"mean\": 0.6701474356065226, \"se_ddof0\": 0.002196074340997517, \"se_ddof1\": 0.0024552857550567504, \"raw_batches\": [0.6795661613747005, 0.6662254301430706, 0.6695915973262665, 0.6690839286802602, 0.666270060508315]}, \"mean_residual\": {\"mean\": 0.587406086253297, \"se_ddof0\": 0.004873077083076706, \"se_ddof1\": 0.005448265808677952, \"raw_batches\": [0.6028467959586618, 0.5953609418833864, 0.5733091331634955, 0.5877578090683853, 0.5777557511925565]}}\n",
+      "batch_count": 5,
+      "summary": {
+        "ess": {
+          "mean": 686.2309740610791,
+          "raw_batches": [
+            695.8757492476933,
+            682.2148404665043,
+            685.6617956620969,
+            685.1419429685865,
+            682.2605419605146
+          ],
+          "se_ddof0": 2.248780125181457,
+          "se_ddof1": 2.5142126131781124
+        },
+        "ess_ratio": {
+          "mean": 0.6701474356065226,
+          "raw_batches": [
+            0.6795661613747005,
+            0.6662254301430706,
+            0.6695915973262665,
+            0.6690839286802602,
+            0.666270060508315
+          ],
+          "se_ddof0": 0.002196074340997517,
+          "se_ddof1": 0.0024552857550567504
+        },
+        "kl": {
+          "mean": 2.4051482424868995,
+          "raw_batches": [
+            2.431653640773363,
+            2.420545418872469,
+            2.373380405443525,
+            2.390999947993018,
+            2.4091617993521206
+          ],
+          "se_ddof0": 0.009306100204022637,
+          "se_ddof1": 0.010404536330809639
+        },
+        "mean_residual": {
+          "mean": 0.587406086253297,
+          "raw_batches": [
+            0.6028467959586618,
+            0.5953609418833864,
+            0.5733091331634955,
+            0.5877578090683853,
+            0.5777557511925565
+          ],
+          "se_ddof0": 0.004873077083076706,
+          "se_ddof1": 0.005448265808677952
+        }
+      }
+    },
+    "SO3_rcpm_gamma1_nativeJAX435": {
+      "status": "training",
+      "error": null,
+      "outcome": null,
+      "training_config": {
+        "batch_size": 256,
+        "log_every": 500,
+        "lr": 0.001,
+        "n_iters": 5000
+      },
+      "timings": {
+        "build": 12.201254358049482
+      },
+      "last_progress": [],
+      "last_log": "LIEGROUP_RESULT /data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/result.json\nSetting GPU: 2\nNATIVE_CONFIGURATION {\"builder\": {\"gamma\": 1.0, \"n_components\": 68, \"n_transforms\": 5, \"seed\": 12345}, \"flow\": {\"n_transforms\": 5, \"single_transform_cfg\": {\"_target_\": \"flows.ExpMapFlow\", \"potential_cfg\": {\"_target_\": \"flows.InfAffine\", \"cost_gamma\": 1.0, \"init_alpha_linear_scale\": 1.0, \"init_alpha_minval\": 0.4, \"init_alpha_mode\": \"uniform\", \"init_alpha_range\": 0.01, \"min_zero_gamma\": null, \"n_components\": 68}}}, \"training\": {\"batch_size\": 256, \"log_every\": 500, \"lr\": 0.001, \"n_iters\": 5000}}\n  [  500] loss = 3.2698\n  [ 1000] loss = 2.8379\n  [ 1500] loss = 3.2340\n  [ 2000] loss = 2.9913\n  [ 2500] loss = 2.7086\n  [ 3000] loss = 2.8839\n  [ 3500] loss = 3.0662\n  [ 4000] loss = 2.7680\n  [ 4500] loss = 2.8153\n",
+      "batch_count": 0,
+      "summary": null
+    },
+    "SE3_rcpm_gamma1_nativeJAX435": {
+      "status": "training",
+      "error": null,
+      "outcome": null,
+      "training_config": {
+        "batch_size": 256,
+        "log_every": 500,
+        "lr": 0.001,
+        "n_iters": 5000
+      },
+      "timings": {
+        "build": 16.168733252678066
+      },
+      "last_progress": [],
+      "last_log": "LIEGROUP_RESULT /data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/result.json\nSetting GPU: 3\nNATIVE_CONFIGURATION {\"builder\": {\"gamma\": 1.0, \"n_components\": 68, \"n_transforms\": 5, \"seed\": 12345}, \"flow\": {\"n_transforms\": 5, \"single_transform_cfg\": {\"_target_\": \"flows.ExpMapFlow\", \"potential_cfg\": {\"_target_\": \"flows.InfAffine\", \"cost_gamma\": 1.0, \"init_alpha_linear_scale\": 1.0, \"init_alpha_minval\": 0.4, \"init_alpha_mode\": \"uniform\", \"init_alpha_range\": 0.01, \"min_zero_gamma\": null, \"n_components\": 68}}}, \"training\": {\"batch_size\": 256, \"log_every\": 500, \"lr\": 0.001, \"n_iters\": 5000}}\n  [  500] loss = 16.9038\n  [ 1000] loss = 16.6031\n  [ 1500] loss = 15.4901\n  [ 2000] loss = 15.2916\n  [ 2500] loss = 14.9638\n  [ 3000] loss = 14.2609\n  [ 3500] loss = 13.6571\n",
+      "batch_count": 0,
+      "summary": null
+    }
+  },
+  "gpu_snapshot": "0, NVIDIA GeForce RTX 3090, 317, 23936, 91\n1, NVIDIA GeForce RTX 3090, 2, 24252, 0\n2, NVIDIA GeForce RTX 3090, 431, 23822, 100\n3, NVIDIA GeForce RTX 3090, 559, 23694, 100\n4, NVIDIA GeForce RTX 3090, 2, 24252, 0\n5, NVIDIA GeForce RTX 3090, 2, 24252, 0\n6, NVIDIA GeForce RTX 3090, 2, 24252, 0\n7, NVIDIA GeForce RTX 3090, 5009, 19244, 0\n"
+}

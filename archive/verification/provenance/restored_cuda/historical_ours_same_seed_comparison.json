@@ -1,0 +1,63 @@
+{
+  "comparison": "Printed native training loss, historical stored log versus fresh candidate; not exact internal float equality",
+  "historical_git_revision": "a7327bc829837c62d5e41ba222e89ea7b4900d83",
+  "historical_file": "experiments/final_results/table_random.log",
+  "candidate_file": "S2_ours_seed12345.log",
+  "seed": 12345,
+  "compared_steps": 1000,
+  "matching_printed_losses": 974,
+  "first_mismatching_printed_loss_step": 15,
+  "first_five": {
+    "historical": [
+      [
+        "1",
+        "-0.0286"
+      ],
+      [
+        "2",
+        "-0.1538"
+      ],
+      [
+        "3",
+        "-0.2617"
+      ],
+      [
+        "4",
+        "-0.3290"
+      ],
+      [
+        "5",
+        "-0.4696"
+      ]
+    ],
+    "fresh": [
+      [
+        "1",
+        "-0.0286"
+      ],
+      [
+        "2",
+        "-0.1538"
+      ],
+      [
+        "3",
+        "-0.2617"
+      ],
+      [
+        "4",
+        "-0.3290"
+      ],
+      [
+        "5",
+        "-0.4696"
+      ]
+    ]
+  },
+  "metrics": {
+    "stored_kl": 0.0394,
+    "fresh_kl": 0.03931675014307971,
+    "stored_ess_ratio": 0.951,
+    "fresh_ess_ratio": 0.951389850537429
+  },
+  "note": "Stored historical outputs are references, not fresh results. Single-seed comparison does not reproduce the paper five-seed mean/uncertainty."
+}

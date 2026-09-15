@@ -1,0 +1,38 @@
+{
+  "verified_at": "2026-09-08T14:27:29.224051+00:00",
+  "host": "nvidia7",
+  "all_four_evaluations_complete": true,
+  "all_owned_processes_exited": true,
+  "owned_pids": [
+    509193,
+    510216,
+    510217,
+    510218,
+    510219
+  ],
+  "remaining_processes": "",
+  "no_additional_evaluations_scheduled": true,
+  "source24_unchanged": true,
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "all80pins_unchanged": true,
+  "freeze_sha256": "f7b7335f0a864a57487be28384442d962d2519edd54a4c4a21e6382528779171",
+  "verified_original_inputs": {
+    "SO3_ours_nativeJAX435": {
+      "input_result": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "checkpoint": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515"
+    },
+    "SE3_ours_nativeJAX435": {
+      "input_result": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "checkpoint": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+    },
+    "SO3_rcpm_gamma1_nativeJAX435": {
+      "input_result": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "checkpoint": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505"
+    },
+    "SE3_rcpm_gamma1_nativeJAX435": {
+      "input_result": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "checkpoint": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431"
+    }
+  },
+  "gpu_snapshot": "0, NVIDIA RTX 6000 Ada Generation, 570.195.03, 47886, 634, 0\n1, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3642, 44878, 100\n2, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n3, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n4, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n5, NVIDIA RTX 6000 Ada Generation, 570.195.03, 437, 48083, 0\n6, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3700, 44820, 24\n7, NVIDIA RTX 6000 Ada Generation, 570.195.03, 3640, 44880, 100\n"
+}

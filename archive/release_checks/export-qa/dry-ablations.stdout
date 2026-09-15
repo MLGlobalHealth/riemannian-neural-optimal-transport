@@ -1,0 +1,2199 @@
+{
+  "schema_version": 1,
+  "suite": "ablations",
+  "source_root": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport",
+  "output_dir": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations",
+  "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "gpus": [
+    "0"
+  ],
+  "recipe": {
+    "suite": "ablations",
+    "label": "historical_ablation_recipe_current_library_unverified",
+    "x64": true,
+    "manifolds": [
+      "S2",
+      "T2",
+      "S10",
+      "T10"
+    ],
+    "landmark_methods": [
+      "random"
+    ],
+    "seeds": [
+      12345
+    ],
+    "gammas": [],
+    "rnot_overrides": {
+      "model": {
+        "n_landmarks": 128
+      },
+      "training": {
+        "n_steps": 1000,
+        "grad_accum_steps": 0
+      },
+      "solver": {
+        "inner_steps": 2500,
+        "inner_lr": 0.05,
+        "min_steps": 1000,
+        "logsumexp_init": true,
+        "logsumexp_gamma": 0.1,
+        "use_adam": true,
+        "use_line_search": false
+      }
+    },
+    "historical_driver_revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+    "ablations": [
+      "baseline",
+      "no_logsumexp_init",
+      "fewer_inner_steps_500",
+      "more_inner_steps_4000",
+      "inner_lr_5e-2",
+      "inner_lr_1e-3",
+      "logsumexp_gamma_1",
+      "logsumexp_gamma_0.01",
+      "logsumexp_gamma_0.001",
+      "no_adam",
+      "landmarks_fps",
+      "landmarks_32",
+      "landmarks_64",
+      "landmarks_256",
+      "hidden_32_32",
+      "hidden_64_64",
+      "hidden_256_256",
+      "hidden_128_128_128",
+      "lr_1e-4",
+      "batch_512",
+      "batch_128"
+    ],
+    "evaluation": {
+      "n_batches": 5,
+      "batch_size": 1024,
+      "seed_offset": null,
+      "seed": 12345
+    }
+  },
+  "recipe_file": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/paper/configs/ablations.json",
+  "recipe_sha256": "c6dd1336e5cb96d822186bf7ecddb5cd21310c20aaf94508e14199e45f733f54",
+  "smoke": false,
+  "platform": "cuda",
+  "environment_overrides": {
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "True",
+    "JAX_THREEFRY_PARTITIONABLE": "False",
+    "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+    "JAX_RANDOM_SEED_OFFSET": "0",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "MPLBACKEND": "Agg",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "unfiltered_job_count": 84,
+  "jobs": [
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_baseline",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "baseline"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_baseline/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_baseline.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_baseline"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_no_logsumexp_init",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_logsumexp_init"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_no_logsumexp_init/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_no_logsumexp_init.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_no_logsumexp_init"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_fewer_inner_steps_500",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "fewer_inner_steps_500"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_fewer_inner_steps_500/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_fewer_inner_steps_500.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_fewer_inner_steps_500"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_more_inner_steps_4000",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "more_inner_steps_4000"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_more_inner_steps_4000/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_more_inner_steps_4000.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_more_inner_steps_4000"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_inner_lr_5e-2",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_5e-2"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_inner_lr_5e-2/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_inner_lr_5e-2.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_inner_lr_5e-2"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_inner_lr_1e-3",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_1e-3"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_inner_lr_1e-3/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_inner_lr_1e-3.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_inner_lr_1e-3"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_logsumexp_gamma_1",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_1"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_logsumexp_gamma_1/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_logsumexp_gamma_1.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_logsumexp_gamma_1"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_logsumexp_gamma_0.01",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.01"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_logsumexp_gamma_0.01/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_logsumexp_gamma_0.01.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_logsumexp_gamma_0.01"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_logsumexp_gamma_0.001",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.001"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_logsumexp_gamma_0.001/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_logsumexp_gamma_0.001.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_logsumexp_gamma_0.001"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_no_adam",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_adam"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_no_adam/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_no_adam.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_no_adam"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_fps_seed12345_landmarks_fps",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": "landmarks_fps"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_fps_seed12345_landmarks_fps/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_fps_seed12345_landmarks_fps.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_fps_seed12345_landmarks_fps"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_landmarks_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_landmarks_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_landmarks_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_landmarks_32"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_landmarks_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_landmarks_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_landmarks_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_landmarks_64"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_landmarks_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_landmarks_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_landmarks_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_landmarks_256"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_hidden_32_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_32_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_hidden_32_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_hidden_32_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_hidden_32_32"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_hidden_64_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_64_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_hidden_64_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_hidden_64_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_hidden_64_64"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_hidden_256_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_256_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_hidden_256_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_hidden_256_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_hidden_256_256"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_hidden_128_128_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_128_128_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_hidden_128_128_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_hidden_128_128_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_hidden_128_128_128"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_lr_1e-4",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "lr_1e-4"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_lr_1e-4/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_lr_1e-4.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_lr_1e-4"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_batch_512",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_512"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_batch_512/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_batch_512.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_batch_512"
+      ]
+    },
+    {
+      "job_id": "ablations_S2_ours_random_seed12345_batch_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S2_ours_random_seed12345_batch_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S2_ours_random_seed12345_batch_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S2_ours_random_seed12345_batch_128"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_baseline",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "baseline"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_baseline/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_baseline.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_baseline"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_no_logsumexp_init",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_logsumexp_init"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_no_logsumexp_init/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_no_logsumexp_init.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_no_logsumexp_init"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_fewer_inner_steps_500",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "fewer_inner_steps_500"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_fewer_inner_steps_500/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_fewer_inner_steps_500.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_fewer_inner_steps_500"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_more_inner_steps_4000",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "more_inner_steps_4000"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_more_inner_steps_4000/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_more_inner_steps_4000.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_more_inner_steps_4000"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_inner_lr_5e-2",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_5e-2"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_inner_lr_5e-2/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_inner_lr_5e-2.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_inner_lr_5e-2"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_inner_lr_1e-3",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_1e-3"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_inner_lr_1e-3/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_inner_lr_1e-3.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_inner_lr_1e-3"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_logsumexp_gamma_1",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_1"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_logsumexp_gamma_1/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_logsumexp_gamma_1.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_logsumexp_gamma_1"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_logsumexp_gamma_0.01",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.01"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_logsumexp_gamma_0.01/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_logsumexp_gamma_0.01.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_logsumexp_gamma_0.01"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_logsumexp_gamma_0.001",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.001"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_logsumexp_gamma_0.001/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_logsumexp_gamma_0.001.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_logsumexp_gamma_0.001"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_no_adam",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_adam"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_no_adam/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_no_adam.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_no_adam"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_fps_seed12345_landmarks_fps",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": "landmarks_fps"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_fps_seed12345_landmarks_fps/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_fps_seed12345_landmarks_fps.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_fps_seed12345_landmarks_fps"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_landmarks_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_landmarks_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_landmarks_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_landmarks_32"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_landmarks_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_landmarks_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_landmarks_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_landmarks_64"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_landmarks_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_landmarks_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_landmarks_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_landmarks_256"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_hidden_32_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_32_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_hidden_32_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_hidden_32_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_hidden_32_32"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_hidden_64_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_64_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_hidden_64_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_hidden_64_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_hidden_64_64"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_hidden_256_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_256_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_hidden_256_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_hidden_256_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_hidden_256_256"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_hidden_128_128_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_128_128_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_hidden_128_128_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_hidden_128_128_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_hidden_128_128_128"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_lr_1e-4",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "lr_1e-4"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_lr_1e-4/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_lr_1e-4.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_lr_1e-4"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_batch_512",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_512"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_batch_512/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_batch_512.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_batch_512"
+      ]
+    },
+    {
+      "job_id": "ablations_T2_ours_random_seed12345_batch_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T2_ours_random_seed12345_batch_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T2_ours_random_seed12345_batch_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T2_ours_random_seed12345_batch_128"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_baseline",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "baseline"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_baseline/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_baseline.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_baseline"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_no_logsumexp_init",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_logsumexp_init"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_no_logsumexp_init/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_no_logsumexp_init.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_no_logsumexp_init"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_fewer_inner_steps_500",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "fewer_inner_steps_500"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_fewer_inner_steps_500/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_fewer_inner_steps_500.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_fewer_inner_steps_500"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_more_inner_steps_4000",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "more_inner_steps_4000"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_more_inner_steps_4000/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_more_inner_steps_4000.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_more_inner_steps_4000"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_inner_lr_5e-2",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_5e-2"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_inner_lr_5e-2/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_inner_lr_5e-2.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_inner_lr_5e-2"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_inner_lr_1e-3",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_1e-3"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_inner_lr_1e-3/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_inner_lr_1e-3.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_inner_lr_1e-3"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_logsumexp_gamma_1",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_1"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_logsumexp_gamma_1/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_logsumexp_gamma_1.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_logsumexp_gamma_1"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_logsumexp_gamma_0.01",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.01"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_logsumexp_gamma_0.01/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_logsumexp_gamma_0.01.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_logsumexp_gamma_0.01"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_logsumexp_gamma_0.001",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.001"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_logsumexp_gamma_0.001/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_logsumexp_gamma_0.001.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_logsumexp_gamma_0.001"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_no_adam",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_adam"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_no_adam/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_no_adam.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_no_adam"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_fps_seed12345_landmarks_fps",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": "landmarks_fps"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_fps_seed12345_landmarks_fps/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_fps_seed12345_landmarks_fps.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_fps_seed12345_landmarks_fps"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_landmarks_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_landmarks_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_landmarks_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_landmarks_32"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_landmarks_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_landmarks_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_landmarks_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_landmarks_64"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_landmarks_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_landmarks_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_landmarks_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_landmarks_256"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_hidden_32_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_32_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_hidden_32_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_hidden_32_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_hidden_32_32"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_hidden_64_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_64_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_hidden_64_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_hidden_64_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_hidden_64_64"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_hidden_256_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_256_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_hidden_256_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_hidden_256_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_hidden_256_256"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_hidden_128_128_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_128_128_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_hidden_128_128_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_hidden_128_128_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_hidden_128_128_128"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_lr_1e-4",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "lr_1e-4"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_lr_1e-4/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_lr_1e-4.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_lr_1e-4"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_batch_512",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_512"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_batch_512/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_batch_512.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_batch_512"
+      ]
+    },
+    {
+      "job_id": "ablations_S10_ours_random_seed12345_batch_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_S10_ours_random_seed12345_batch_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_S10_ours_random_seed12345_batch_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_S10_ours_random_seed12345_batch_128"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_baseline",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "baseline"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_baseline/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_baseline.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_baseline"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_no_logsumexp_init",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_logsumexp_init"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_no_logsumexp_init/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_no_logsumexp_init.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_no_logsumexp_init"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_fewer_inner_steps_500",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "fewer_inner_steps_500"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_fewer_inner_steps_500/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_fewer_inner_steps_500.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_fewer_inner_steps_500"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_more_inner_steps_4000",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "more_inner_steps_4000"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_more_inner_steps_4000/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_more_inner_steps_4000.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_more_inner_steps_4000"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_inner_lr_5e-2",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_5e-2"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_inner_lr_5e-2/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_inner_lr_5e-2.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_inner_lr_5e-2"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_inner_lr_1e-3",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "inner_lr_1e-3"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_inner_lr_1e-3/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_inner_lr_1e-3.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_inner_lr_1e-3"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_logsumexp_gamma_1",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_1"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_logsumexp_gamma_1/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_logsumexp_gamma_1.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_logsumexp_gamma_1"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_logsumexp_gamma_0.01",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.01"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_logsumexp_gamma_0.01/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_logsumexp_gamma_0.01.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_logsumexp_gamma_0.01"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_logsumexp_gamma_0.001",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "logsumexp_gamma_0.001"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_logsumexp_gamma_0.001/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_logsumexp_gamma_0.001.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_logsumexp_gamma_0.001"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_no_adam",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "no_adam"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_no_adam/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_no_adam.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_no_adam"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_fps_seed12345_landmarks_fps",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": "landmarks_fps"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_fps_seed12345_landmarks_fps/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_fps_seed12345_landmarks_fps.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_fps_seed12345_landmarks_fps"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_landmarks_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_landmarks_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_landmarks_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_landmarks_32"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_landmarks_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_landmarks_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_landmarks_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_landmarks_64"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_landmarks_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "landmarks_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_landmarks_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_landmarks_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_landmarks_256"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_hidden_32_32",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_32_32"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_hidden_32_32/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_hidden_32_32.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_hidden_32_32"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_hidden_64_64",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_64_64"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_hidden_64_64/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_hidden_64_64.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_hidden_64_64"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_hidden_256_256",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_256_256"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_hidden_256_256/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_hidden_256_256.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_hidden_256_256"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_hidden_128_128_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "hidden_128_128_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_hidden_128_128_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_hidden_128_128_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_hidden_128_128_128"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_lr_1e-4",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "lr_1e-4"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_lr_1e-4/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_lr_1e-4.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_lr_1e-4"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_batch_512",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_512"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_batch_512/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_batch_512.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_batch_512"
+      ]
+    },
+    {
+      "job_id": "ablations_T10_ours_random_seed12345_batch_128",
+      "selection": {
+        "suite": "ablations",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "random",
+        "ablation": "batch_128"
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/results/ablations_T10_ours_random_seed12345_batch_128/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/logs/ablations_T10_ours_random_seed12345_batch_128.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-ablations/manifest.json",
+        "--job-id",
+        "ablations_T10_ours_random_seed12345_batch_128"
+      ]
+    }
+  ],
+  "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+  "interpretation": "historical_ablation_recipe_current_library_unverified"
+}

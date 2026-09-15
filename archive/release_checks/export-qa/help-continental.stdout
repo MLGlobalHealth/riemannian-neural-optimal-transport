@@ -1,0 +1,15 @@
+usage: continental.py [-h] --config CONFIG --output OUTPUT [--gpu GPU]
+                      [--smoke] [--dry-run]
+
+Train the recovered continental-drift recipe and export its transport samples.
+The notebook's referenced checkpoint is unavailable. This fresh recipe
+preserves its native builder/trainer and printed settings; it is not a
+reproduced figure.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --config CONFIG  Explicit continental JSON recipe.
+  --output OUTPUT  New result directory.
+  --gpu GPU        One physical CUDA GPU index; required except for dry run.
+  --smoke          Tiny execution check, not the recovered full experiment.
+  --dry-run        Validate the recipe and data without importing JAX.

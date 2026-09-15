@@ -1,0 +1,139 @@
+{
+  "zip_sha256": "8c859b4760e7121b96653110e6a385e4f9c6e706abfa9161f5b256903d680575",
+  "source": "/data/am1118/mlgh-finalMLGH-ca8eb58-20260908/archive",
+  "files": [
+    {
+      "path": "experiments/run_experiments.py",
+      "expected_sha256": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "actual_sha256": "cdbcebf8adceeac6975c20442f18ad2bbcc452e757f6f8496431c2b3b57d268a",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_experiments_highD.py",
+      "expected_sha256": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "actual_sha256": "fcf4acf7bc8ddf757352a5ede7b6e8f229ce05f3c3d6ab9f9beed7a6ee509b9d",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_table.py",
+      "expected_sha256": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "actual_sha256": "d3c276cceeb9c5152bd06719da0f314799bd6eabcf945e1985ecd4d0831a8179",
+      "matches": true
+    },
+    {
+      "path": "rcpm/LICENSE",
+      "expected_sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "actual_sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "matches": true
+    },
+    {
+      "path": "rcpm/densities.py",
+      "expected_sha256": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "actual_sha256": "ac0b2cd7c28da6074f2ce5c97da4615725206c9686abb1dce52a41a39cb1cb93",
+      "matches": true
+    },
+    {
+      "path": "rcpm/flows.py",
+      "expected_sha256": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "actual_sha256": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "matches": true
+    },
+    {
+      "path": "rcpm/manifolds.py",
+      "expected_sha256": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "actual_sha256": "7e7586c9fba123933d6e4f1d8b0e7966a45ee3e533531173f1e731e6b29ac138",
+      "matches": true
+    },
+    {
+      "path": "rcpm/requirements.txt",
+      "expected_sha256": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "actual_sha256": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "matches": true
+    },
+    {
+      "path": "rcpm/utils.py",
+      "expected_sha256": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "actual_sha256": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "matches": true
+    },
+    {
+      "path": "src/__init__.py",
+      "expected_sha256": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "actual_sha256": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "matches": true
+    },
+    {
+      "path": "src/barycenter.py",
+      "expected_sha256": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "actual_sha256": "2d1dca4122cf045192accaaa31da2c7b3ab1fdd07659cf8ccb8264ef3e308071",
+      "matches": true
+    },
+    {
+      "path": "src/base.py",
+      "expected_sha256": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "actual_sha256": "85973c982e843814a479f404e47c72497a2478ce81ecb1205e4dc022e3333801",
+      "matches": true
+    },
+    {
+      "path": "src/densities.py",
+      "expected_sha256": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "actual_sha256": "eca15fe6d7e889eefc166b105d1ffb577154de65b62b3b5b902a1f4cf0f62274",
+      "matches": true
+    },
+    {
+      "path": "src/embeddings.py",
+      "expected_sha256": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "actual_sha256": "f0fac07b8eb6657b70462b48ccc0fc1aadab302dbafbc1ec2366978bf5f1ed7b",
+      "matches": true
+    },
+    {
+      "path": "src/empirical.py",
+      "expected_sha256": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "actual_sha256": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "matches": true
+    },
+    {
+      "path": "src/losses.py",
+      "expected_sha256": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "actual_sha256": "c88015d62cf8ff3e90a7ed590d826a482006b22869ad4106200ef4d7be6c1bc6",
+      "matches": true
+    },
+    {
+      "path": "src/manifolds.py",
+      "expected_sha256": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "actual_sha256": "4dc1173e412e19e1620fb447700265fce725d23de3c4913efc05a48ecebfeaeb",
+      "matches": true
+    },
+    {
+      "path": "src/metrics.py",
+      "expected_sha256": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "actual_sha256": "a1fc4d99ef5f93d57fe75873184e29bdcf3512b2e3fba9fd5bca7740bbea43cc",
+      "matches": true
+    },
+    {
+      "path": "src/networks.py",
+      "expected_sha256": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "actual_sha256": "024ce4d4ed8b272564ba811e44900ff908b73fdb4326814e631db82424a86b9a",
+      "matches": true
+    },
+    {
+      "path": "src/solvers.py",
+      "expected_sha256": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "actual_sha256": "e41b54a82fc7fe9fe86628120a6335aacda6796ab96e1a737be13c959107160e",
+      "matches": true
+    },
+    {
+      "path": "src/trainers.py",
+      "expected_sha256": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "actual_sha256": "c922d0d44451cb32911e7ea87ffe342ee075cd3d1b8f23c2a196346fc33ce81d",
+      "matches": true
+    },
+    {
+      "path": "src/utils.py",
+      "expected_sha256": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59",
+      "actual_sha256": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59",
+      "matches": true
+    }
+  ],
+  "all_match": true
+}

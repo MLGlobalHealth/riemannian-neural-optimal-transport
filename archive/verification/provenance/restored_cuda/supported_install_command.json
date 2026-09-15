@@ -1,0 +1,14 @@
+[
+  "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+  "-m",
+  "pip",
+  "install",
+  "--report",
+  "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/supported_install_report.json",
+  "jax[cuda12]==0.4.35",
+  "flax==0.8.4",
+  "optax==0.2.3",
+  "spherical_kde",
+  "cartopy",
+  "matplotlib"
+]

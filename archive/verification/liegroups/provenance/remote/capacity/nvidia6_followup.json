@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-09-08T13:52:02.075233+00:00",
+  "gpu_snapshot": {
+    "returncode": 0,
+    "stdout": "0, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n1, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n2, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n3, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n4, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n5, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n6, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0\n7, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, NVIDIA GeForce RTX 3090, 550.90.07, 24576, 2, 24252, 0",
+    "stderr": ""
+  },
+  "gpu_compute_processes": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "gpu_process_owners": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+}

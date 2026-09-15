@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "suite": "highd",
+  "source_root": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport",
+  "output_dir": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd",
+  "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "gpus": [
+    "0"
+  ],
+  "recipe": {
+    "suite": "highd",
+    "label": "supplied_high_dimension_sweep_unverified",
+    "x64": false,
+    "manifolds": [
+      "sphere",
+      "torus"
+    ],
+    "dimensions": [
+      2,
+      5,
+      10,
+      20,
+      30,
+      40
+    ],
+    "landmark_methods": [
+      "fps"
+    ],
+    "seeds": [
+      12345
+    ],
+    "gammas": [],
+    "rnot_overrides": {},
+    "evaluation": {
+      "n_batches": 5,
+      "batch_size": 1024,
+      "seed_offset": null,
+      "seed": 12345
+    }
+  },
+  "recipe_file": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/paper/configs/highd.json",
+  "recipe_sha256": "b5655f5410ba18d391c977495e3560dfb1ac982d65369179e05b981c6c0ed070",
+  "smoke": false,
+  "platform": "cuda",
+  "environment_overrides": {
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "False",
+    "JAX_THREEFRY_PARTITIONABLE": "False",
+    "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+    "JAX_RANDOM_SEED_OFFSET": "0",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "MPLBACKEND": "Agg",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "unfiltered_job_count": 12,
+  "jobs": [
+    {
+      "job_id": "highd_S2_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S2_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S2_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S2_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_S5_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S5_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S5_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S5_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_S10_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S10_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S10_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S10_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_S20_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S20",
+        "dimension": 20,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S20_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S20_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S20_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_S30_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S30",
+        "dimension": 30,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S30_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S30_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S30_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_S40_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "S40",
+        "dimension": 40,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_S40_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_S40_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_S40_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T2_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T2_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T2_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T2_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T5_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T5_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T5_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T5_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T10_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T10_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T10_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T10_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T20_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T20",
+        "dimension": 20,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T20_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T20_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T20_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T30_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T30",
+        "dimension": 30,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T30_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T30_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T30_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "highd_T40_ours_fps_seed12345",
+      "selection": {
+        "suite": "highd",
+        "manifold": "T40",
+        "dimension": 40,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/results/highd_T40_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/logs/highd_T40_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-highd/manifest.json",
+        "--job-id",
+        "highd_T40_ours_fps_seed12345"
+      ]
+    }
+  ],
+  "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+  "interpretation": "supplied_high_dimension_sweep_unverified"
+}

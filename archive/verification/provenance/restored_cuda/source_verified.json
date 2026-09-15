@@ -1,0 +1,151 @@
+{
+  "revision": "dbf533d86b7b259b42282f0d55c95915c181add6",
+  "source": "/data/am1118/mlgh-historical-dbf533d-rcpm-20260908/source",
+  "files": [
+    {
+      "path": "environment.yml",
+      "expected_sha256": "a7604033ed20c5c6e7084c517776b8ffc8561c24b88ffbcdc196d722a4ee49f2",
+      "actual_sha256": "a7604033ed20c5c6e7084c517776b8ffc8561c24b88ffbcdc196d722a4ee49f2",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_ablations.py",
+      "expected_sha256": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+      "actual_sha256": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_experiments.py",
+      "expected_sha256": "c8fd45b8a01f3fd08bc2bf993b0660f9b73726cc84e1f9066e442eb94e8a0005",
+      "actual_sha256": "c8fd45b8a01f3fd08bc2bf993b0660f9b73726cc84e1f9066e442eb94e8a0005",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_experiments_highD.py",
+      "expected_sha256": "3d72d55acc3a6b772d328d5011ca82ce8541874574256272792834a06c1cc5b5",
+      "actual_sha256": "3d72d55acc3a6b772d328d5011ca82ce8541874574256272792834a06c1cc5b5",
+      "matches": true
+    },
+    {
+      "path": "experiments/run_table.py",
+      "expected_sha256": "aa70ca3914f7a989e2a1a60439cd56cc249378e02fc2e78c369eef8f77cbcacd",
+      "actual_sha256": "aa70ca3914f7a989e2a1a60439cd56cc249378e02fc2e78c369eef8f77cbcacd",
+      "matches": true
+    },
+    {
+      "path": "rcpm/LICENSE",
+      "expected_sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "actual_sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "matches": true
+    },
+    {
+      "path": "rcpm/densities.py",
+      "expected_sha256": "fca9ad35d914c386af35db3cb4febb434c22ffd9c2dc07c7e259e03ab6ea0261",
+      "actual_sha256": "fca9ad35d914c386af35db3cb4febb434c22ffd9c2dc07c7e259e03ab6ea0261",
+      "matches": true
+    },
+    {
+      "path": "rcpm/flows.py",
+      "expected_sha256": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "actual_sha256": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "matches": true
+    },
+    {
+      "path": "rcpm/manifolds.py",
+      "expected_sha256": "a70f112285ad82afbda76204588a034569b073bbd0defd6846a789d09b5e893f",
+      "actual_sha256": "a70f112285ad82afbda76204588a034569b073bbd0defd6846a789d09b5e893f",
+      "matches": true
+    },
+    {
+      "path": "rcpm/requirements.txt",
+      "expected_sha256": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "actual_sha256": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "matches": true
+    },
+    {
+      "path": "rcpm/utils.py",
+      "expected_sha256": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "actual_sha256": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "matches": true
+    },
+    {
+      "path": "requirements.txt",
+      "expected_sha256": "fbda9d2f62dbdec24251b43a537093dee4a998885c1efb6fb1dcdc19553ca75a",
+      "actual_sha256": "fbda9d2f62dbdec24251b43a537093dee4a998885c1efb6fb1dcdc19553ca75a",
+      "matches": true
+    },
+    {
+      "path": "src/__init__.py",
+      "expected_sha256": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "actual_sha256": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "matches": true
+    },
+    {
+      "path": "src/base.py",
+      "expected_sha256": "72d0dc2d666bd8822a244c184be196028f1e20ac99ba45c476ca00fbd93599ac",
+      "actual_sha256": "72d0dc2d666bd8822a244c184be196028f1e20ac99ba45c476ca00fbd93599ac",
+      "matches": true
+    },
+    {
+      "path": "src/densities.py",
+      "expected_sha256": "c3e5e7bdee3449d0f6eefa9555186fe567a455e038131809ca6b5550e64122da",
+      "actual_sha256": "c3e5e7bdee3449d0f6eefa9555186fe567a455e038131809ca6b5550e64122da",
+      "matches": true
+    },
+    {
+      "path": "src/embeddings.py",
+      "expected_sha256": "2e437a1d222e175f83d69169062112cd1112b83e5d6925fccf585bd9a748275f",
+      "actual_sha256": "2e437a1d222e175f83d69169062112cd1112b83e5d6925fccf585bd9a748275f",
+      "matches": true
+    },
+    {
+      "path": "src/empirical.py",
+      "expected_sha256": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "actual_sha256": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "matches": true
+    },
+    {
+      "path": "src/losses.py",
+      "expected_sha256": "a45510bb60eaa65297509304f6fdd82652a0a30d5d824fd7bac339261b8ae19a",
+      "actual_sha256": "a45510bb60eaa65297509304f6fdd82652a0a30d5d824fd7bac339261b8ae19a",
+      "matches": true
+    },
+    {
+      "path": "src/manifolds.py",
+      "expected_sha256": "84e08796d23a9f2ae8abdfb8aa4cd723e945459d503beb3aff031477bdf69a2b",
+      "actual_sha256": "84e08796d23a9f2ae8abdfb8aa4cd723e945459d503beb3aff031477bdf69a2b",
+      "matches": true
+    },
+    {
+      "path": "src/metrics.py",
+      "expected_sha256": "5293bdc3449970d22dbb448eca3fd8663fbd78b449078d5d57bfea119615e01a",
+      "actual_sha256": "5293bdc3449970d22dbb448eca3fd8663fbd78b449078d5d57bfea119615e01a",
+      "matches": true
+    },
+    {
+      "path": "src/networks.py",
+      "expected_sha256": "ee04852119bad4c8a9b5f2d86bcfd4d4474db693e7b88c188aa84d598d7e139d",
+      "actual_sha256": "ee04852119bad4c8a9b5f2d86bcfd4d4474db693e7b88c188aa84d598d7e139d",
+      "matches": true
+    },
+    {
+      "path": "src/solvers.py",
+      "expected_sha256": "fb92172659db911db1f696ef9e23ff3d63665baa53dd3a1041fb49e05448ee61",
+      "actual_sha256": "fb92172659db911db1f696ef9e23ff3d63665baa53dd3a1041fb49e05448ee61",
+      "matches": true
+    },
+    {
+      "path": "src/trainers.py",
+      "expected_sha256": "fc3c2db8b9147addf83aef5d3b317b6a508e54e3e6718f7bb26db6f661c37946",
+      "actual_sha256": "fc3c2db8b9147addf83aef5d3b317b6a508e54e3e6718f7bb26db6f661c37946",
+      "matches": true
+    },
+    {
+      "path": "src/utils.py",
+      "expected_sha256": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59",
+      "actual_sha256": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59",
+      "matches": true
+    }
+  ],
+  "all_match": true
+}

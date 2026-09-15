@@ -1,0 +1,5 @@
+{
+  "at": "2026-09-08T15:26:02.909804+00:00",
+  "gpus": "0, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n2, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n3, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n4, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n5, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n6, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n7, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n",
+  "processes": ""
+}

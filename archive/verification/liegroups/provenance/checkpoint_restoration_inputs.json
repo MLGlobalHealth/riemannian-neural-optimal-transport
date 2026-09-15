@@ -1,0 +1,173 @@
+{
+  "records": [
+    {
+      "path": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_ours_nativeJAX435/result.json",
+      "sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SE3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+      "parameter_count": 33409,
+      "parameter_dtypes": [
+        "float32"
+      ],
+      "evaluation_subkeys": [
+        [
+          2300365598,
+          2950565312
+        ],
+        [
+          949301550,
+          3196768145
+        ],
+        [
+          3188581498,
+          1498900698
+        ],
+        [
+          2696973199,
+          2132697368
+        ],
+        [
+          539786244,
+          3564729885
+        ]
+      ],
+      "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+      "wrapper_sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+      "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    },
+    {
+      "path": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+      "sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SE3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+      "parameter_count": 2720,
+      "parameter_dtypes": [
+        "float32",
+        "float64"
+      ],
+      "evaluation_subkeys": [
+        [
+          2300365598,
+          2950565312
+        ],
+        [
+          949301550,
+          3196768145
+        ],
+        [
+          3188581498,
+          1498900698
+        ],
+        [
+          2696973199,
+          2132697368
+        ],
+        [
+          539786244,
+          3564729885
+        ]
+      ],
+      "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+      "wrapper_sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+      "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    },
+    {
+      "path": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_ours_nativeJAX435/result.json",
+      "sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+      "selection": {
+        "gamma": null,
+        "landmark_method": "fps",
+        "manifold": "SO3",
+        "method": "ours",
+        "seed": 12345
+      },
+      "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+      "parameter_count": 50049,
+      "parameter_dtypes": [
+        "float32"
+      ],
+      "evaluation_subkeys": [
+        [
+          2300365598,
+          2950565312
+        ],
+        [
+          949301550,
+          3196768145
+        ],
+        [
+          3188581498,
+          1498900698
+        ],
+        [
+          2696973199,
+          2132697368
+        ],
+        [
+          539786244,
+          3564729885
+        ]
+      ],
+      "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+      "wrapper_sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+      "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    },
+    {
+      "path": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+      "sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+      "selection": {
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "SO3",
+        "method": "rcpm",
+        "seed": 12345
+      },
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+      "parameter_count": 1700,
+      "parameter_dtypes": [
+        "float32",
+        "float64"
+      ],
+      "evaluation_subkeys": [
+        [
+          2300365598,
+          2950565312
+        ],
+        [
+          949301550,
+          3196768145
+        ],
+        [
+          3188581498,
+          1498900698
+        ],
+        [
+          2696973199,
+          2132697368
+        ],
+        [
+          539786244,
+          3564729885
+        ]
+      ],
+      "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+      "wrapper_sha256": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+      "helper_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+    }
+  ],
+  "all_checkpoint_file_hashes_match": true,
+  "all_saved_evaluation_subkeys_match": true,
+  "numerical_execution_performed": false
+}

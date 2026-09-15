@@ -1,0 +1,237 @@
+{
+  "source_pdf": {
+    "filename": "Riemannian_Neural_Optimal_Transport___ICML_2026___Camera_Ready.pdf",
+    "sha256": "318386d9f934d70a7758df4f931058b68b5182b4bd60e9996b3c524b569f3e89",
+    "title": "Riemannian Neural Optimal Transport",
+    "creation_date": "D:20260528134319Z"
+  },
+  "assets": [
+    {
+      "filename": "continental-drift.png",
+      "source": "camera-ready PDF",
+      "figure": 1,
+      "pdf_page": 7,
+      "crop_points": [
+        54,
+        63,
+        543,
+        145
+      ],
+      "scale": 6,
+      "dimensions": [
+        2934,
+        492
+      ],
+      "sha256": "dcb08b518c029a0b71ab7b9af93212c5b3cd720ab7d7cb3a11823f4d32cf946b",
+      "suggested_caption": "Continental drift on the sphere: source mass distribution about 150 million years ago, present-day target, transported distribution, and learned geodesic trajectories. From Figure 1 of the paper.",
+      "note": "Unmodified paper artwork rendered in color with white background; no new experiment or visual result generated."
+    },
+    {
+      "filename": "sphere-torus-transport.png",
+      "source": "camera-ready PDF",
+      "figure": 2,
+      "pdf_page": 8,
+      "crop_points": [
+        54,
+        64,
+        543,
+        208
+      ],
+      "scale": 6,
+      "dimensions": [
+        2934,
+        864
+      ],
+      "sha256": "6e3e14d1536102b20f8b6aca56c4501fad43d2638364936c991482d794413456",
+      "suggested_caption": "Learning transport on the sphere and torus: uniform source, wrapped-normal target, learned geodesic trajectories, and pushforward distribution. From Figure 2 of the paper.",
+      "note": "Unmodified paper artwork rendered in color with white background; no new experiment or visual result generated."
+    },
+    {
+      "filename": "dimension-scaling.png",
+      "source": "camera-ready PDF",
+      "figure": 3,
+      "pdf_page": 9,
+      "crop_points": [
+        54,
+        64,
+        543,
+        211
+      ],
+      "scale": 6,
+      "dimensions": [
+        2934,
+        882
+      ],
+      "sha256": "f9a192535cf338eb258b44b97cf908f580b476581541d83efe0cb66b83bbff48",
+      "suggested_caption": "The paper\u2019s dimension-sweep comparison on spheres and tori, with KL + 1 shown on a logarithmic axis. From Figure 3 of the paper.",
+      "note": "Unmodified paper artwork rendered in color with white background; no new experiment or visual result generated."
+    },
+    {
+      "filename": "sphere-source.png",
+      "source_original_filename": "sphere_a_source_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        606,
+        606
+      ],
+      "sha256": "afc8b00a2c3366eced3165558c204f08ac3b5c21e0f426cf89b39d35dc5cf3fe",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "sphere-target.png",
+      "source_original_filename": "sphere_b_target_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        606,
+        606
+      ],
+      "sha256": "cd605775a40c489b1c05924121d4e902c91b2ec6fadb7188b3f94f8b7b07c445",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "sphere-transport.png",
+      "source_original_filename": "sphere_c_transport_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        574,
+        578
+      ],
+      "sha256": "6d6ee0665a9fba7c4219a877f5bf1e6517c33aa0363428cf9c6556b4b4a76f35",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "sphere-pushforward.png",
+      "source_original_filename": "sphere_d_pushforward_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        606,
+        606
+      ],
+      "sha256": "c5991c654ee10c2c00a2b7a15e3d7b0d34d2e699bae68452214b3a896365e342",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "torus-source.png",
+      "source_original_filename": "torus_a_source_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        853,
+        541
+      ],
+      "sha256": "f824e8e6a0c640caa2bd0c87b1e12ef16c7b6f19fe89e89a62119fd08a152631",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "torus-target.png",
+      "source_original_filename": "torus_b_target_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        853,
+        541
+      ],
+      "sha256": "fdc52f133616faca2ae8687bc81a3b83333c45eb4aad838ab25ae5c8886753ec",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "torus-transport.png",
+      "source_original_filename": "torus_c_transport_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        870,
+        560
+      ],
+      "sha256": "0b8b85d5fa803d614664dc14783feb58153835ff7b36e4d59c3c799db864f43d",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "torus-pushforward.png",
+      "source_original_filename": "torus_d_pushforward_cropped.png",
+      "source": "preexisting LaTeX figure asset",
+      "related_paper_figure": 2,
+      "dimensions": [
+        853,
+        541
+      ],
+      "sha256": "27efd98297d186febcd4328980be1b63c4d6603bf8825468c2dd3164b94888b7",
+      "note": "Original PNG copied byte-for-byte; suitable as a white figure plate."
+    },
+    {
+      "filename": "continental-transport-map.png",
+      "source": "preexisting vector figure PDF",
+      "source_original_filename": "continental_drift_transport_map.pdf",
+      "source_original_sha256": "de533fc8649e1cd51e81e602b62c4ee47e27a416ac2a51011ceb8fc0d4f29412",
+      "related_paper_figure": 1,
+      "dimensions": [
+        1474,
+        749
+      ],
+      "scale": 8,
+      "sha256": "d2080f34fc6a426d18d6a85adef99abae841521ceef56f31867d05b3c51dd5b6",
+      "note": "Unmodified original vector artwork rendered on white."
+    },
+    {
+      "filename": "figure-sphere.png",
+      "source": "camera-ready PDF",
+      "figure": 2,
+      "pdf_page": 8,
+      "crop_points": [
+        54,
+        63,
+        543,
+        136
+      ],
+      "scale": 6,
+      "dimensions": [
+        2934,
+        438
+      ],
+      "sha256": "9531949dae81581a9ff6bd2663bfa5e9209d1123c23d8a23e342c8ce82bf5cf7",
+      "note": "Direct crop of Figure 2 top row. The paper places shared panel labels below the torus row; no new labels were added here."
+    },
+    {
+      "filename": "figure-torus.png",
+      "source": "camera-ready PDF",
+      "figure": 2,
+      "pdf_page": 8,
+      "crop_points": [
+        54,
+        137,
+        543,
+        209
+      ],
+      "scale": 6,
+      "dimensions": [
+        2934,
+        432
+      ],
+      "sha256": "faa074cf882897c75488956f3b923e9121b2a8126e92ca809d9ee91ef974f9ff",
+      "note": "Direct crop of Figure 2 bottom row, including the original Source, Target, Transport and Pushforward labels."
+    },
+    {
+      "filename": "figure-drift.png",
+      "source": "byte-for-byte copy of continental-drift.png",
+      "figure": 1,
+      "pdf_page": 7,
+      "dimensions": [
+        2934,
+        492
+      ],
+      "sha256": "dcb08b518c029a0b71ab7b9af93212c5b3cd720ab7d7cb3a11823f4d32cf946b",
+      "note": "Gallery filename alias; original asset retained."
+    }
+  ],
+  "paper_download": {
+    "filename": "paper.pdf",
+    "source_original_filename": "Riemannian_Neural_Optimal_Transport___ICML_2026___Camera_Ready.pdf",
+    "sha256": "318386d9f934d70a7758df4f931058b68b5182b4bd60e9996b3c524b569f3e89",
+    "bytes": 3234211,
+    "note": "Complete camera-ready PDF copied byte-for-byte for the local Read the paper link."
+  }
+}

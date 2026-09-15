@@ -1,0 +1,77 @@
+{
+  "started_at": "2026-09-08T14:05:22.215525+00:00",
+  "pid": 2399354,
+  "phase": "initial",
+  "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+  "status": "complete",
+  "workers": {
+    "SO3_ours_nativeJAX435": {
+      "pid": 2399388,
+      "gpu": 0,
+      "cpu_affinity": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "started_at": "2026-09-08T14:05:53.963656+00:00",
+      "exit_code": 0,
+      "native_status": "complete",
+      "evaluation_batch_count": 5,
+      "finished_at": "2026-09-08T14:16:12.693261+00:00",
+      "outcome": "finite_output"
+    },
+    "SE3_ours_nativeJAX435": {
+      "pid": 2399389,
+      "gpu": 1,
+      "cpu_affinity": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "started_at": "2026-09-08T14:05:53.974035+00:00",
+      "exit_code": 0,
+      "native_status": "complete",
+      "evaluation_batch_count": 5,
+      "finished_at": "2026-09-08T14:07:10.769519+00:00",
+      "outcome": "finite_output"
+    },
+    "SO3_rcpm_gamma1_nativeJAX435": {
+      "pid": 2399390,
+      "gpu": 2,
+      "cpu_affinity": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "started_at": "2026-09-08T14:05:53.980201+00:00",
+      "exit_code": 0,
+      "native_status": "complete",
+      "evaluation_batch_count": 5,
+      "finished_at": "2026-09-08T14:08:07.039159+00:00",
+      "outcome": "finite_output"
+    },
+    "SE3_rcpm_gamma1_nativeJAX435": {
+      "pid": 2399391,
+      "gpu": 3,
+      "cpu_affinity": [
+        12,
+        13,
+        14,
+        15
+      ],
+      "started_at": "2026-09-08T14:05:53.985909+00:00",
+      "exit_code": 0,
+      "native_status": "complete",
+      "evaluation_batch_count": 5,
+      "finished_at": "2026-09-08T14:08:22.371578+00:00",
+      "outcome": "finite_output"
+    }
+  },
+  "pending": [],
+  "events": [],
+  "updated_at": "2026-09-08T14:16:12.693295+00:00",
+  "finished_at": "2026-09-08T14:16:12.693898+00:00"
+}

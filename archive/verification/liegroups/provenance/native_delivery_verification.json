@@ -1,0 +1,435 @@
+{
+  "verified_at": "2026-09-08T14:19:43.588705+00:00",
+  "native_rows": 14,
+  "training_seeds_per_row": 1,
+  "evaluation_batches_per_row": 5,
+  "finite_rows": 9,
+  "nonfinite_rows": 5,
+  "all_package_pins_and24source_unchanged": true,
+  "all_owned_workers_and_supervisors_exited": true,
+  "all_native_checkpoint_and_log_hashes_verified": true,
+  "delivery_archive_sha256": "933234a7d1acb0c6a6e016742ebd1b656233a04a2853ddcae80a746f8eb8be51",
+  "verified_file_count": 95,
+  "rows": [
+    {
+      "job_id": "SO3_ours_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 3.8013232084423216,
+        "raw_batches": [
+          3.800710474304787,
+          3.806750960694158,
+          3.785010750420053,
+          3.7648727908077455,
+          3.849271065984864
+        ],
+        "se_ddof0": 0.012527668918061109,
+        "se_ddof1": 0.014006359650197942
+      },
+      "ess_ratio": {
+        "mean": 0.7804285182217575,
+        "raw_batches": [
+          0.7950106405668615,
+          0.8117348450471582,
+          0.8181174657154106,
+          0.693256651201087,
+          0.7840229885782701
+        ],
+        "se_ddof0": 0.020223783791940644,
+        "se_ddof1": 0.02261087766051887
+      },
+      "training_seconds": 564.0932643427514,
+      "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515"
+    },
+    {
+      "job_id": "SE3_ours_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 2.4051482424868995,
+        "raw_batches": [
+          2.431653640773363,
+          2.420545418872469,
+          2.373380405443525,
+          2.390999947993018,
+          2.4091617993521206
+        ],
+        "se_ddof0": 0.009306100204022637,
+        "se_ddof1": 0.010404536330809639
+      },
+      "ess_ratio": {
+        "mean": 0.6701474356065226,
+        "raw_batches": [
+          0.6795661613747005,
+          0.6662254301430706,
+          0.6695915973262665,
+          0.6690839286802602,
+          0.666270060508315
+        ],
+        "se_ddof0": 0.002196074340997517,
+        "se_ddof1": 0.0024552857550567504
+      },
+      "training_seconds": 33.65812389878556,
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma1_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 2.820084209126242,
+        "raw_batches": [
+          2.7383265509063963,
+          2.814889677432742,
+          2.772900867061465,
+          2.940037030673155,
+          2.834266919557452
+        ],
+        "se_ddof0": 0.030677284285119302,
+        "se_ddof1": 0.0342982465133064
+      },
+      "ess_ratio": {
+        "mean": 0.7754834518905671,
+        "raw_batches": [
+          0.6844128005746217,
+          0.8405328549039083,
+          0.745201961405341,
+          0.8046679514247506,
+          0.8026016911442141
+        ],
+        "se_ddof0": 0.024518883288427485,
+        "se_ddof1": 0.02741294488265372
+      },
+      "training_seconds": 101.67293665697798,
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma1_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 13.226344406923317,
+        "raw_batches": [
+          13.172709046378376,
+          13.136370973893246,
+          13.238039928793235,
+          13.170691514384682,
+          13.413910571167056
+        ],
+        "se_ddof0": 0.04444640196949057,
+        "se_ddof1": 0.04969258807953072
+      },
+      "ess_ratio": {
+        "mean": 0.00726794836409665,
+        "raw_batches": [
+          0.00763805795883077,
+          0.006462109866306795,
+          0.007913851138727402,
+          0.007012410549382278,
+          0.0073133123072360055
+        ],
+        "se_ddof0": 0.0002254688140738152,
+        "se_ddof1": 0.00025208179753765606
+      },
+      "training_seconds": 109.18470807792619,
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.1_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 4.181860111325885,
+        "raw_batches": [
+          4.551049238213373,
+          4.157169004929507,
+          4.040569165875659,
+          4.046825636060598,
+          4.113687511550287
+        ],
+        "se_ddof0": 0.08479509567978029,
+        "se_ddof1": 0.09480379904929373
+      },
+      "ess_ratio": {
+        "mean": 0.009388591520069585,
+        "raw_batches": [
+          0.004832836919685772,
+          0.01865518771316622,
+          0.009896591712101444,
+          0.006993813756178065,
+          0.006564527499216425
+        ],
+        "se_ddof0": 0.002196297496353737,
+        "se_ddof1": 0.002455535250329776
+      },
+      "training_seconds": 106.82174461707473,
+      "checkpoint_sha256": "599f110f9357ba1b0a29345869dfb9450debac92cd552e2ddb24d63243710f39"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.1_nativeJAX435",
+      "outcome": "nonfinite_output",
+      "kl": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "ess_ratio": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "training_seconds": 118.26557168224826,
+      "checkpoint_sha256": "620ec1f05cf7a322b880309c48d390ebe9fb6929ce08121387c5b4c03c63f912"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.05_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 4.212878044111788,
+        "raw_batches": [
+          4.486105722907341,
+          4.157818771374876,
+          4.132466089434567,
+          4.054062672816589,
+          4.233936964025565
+        ],
+        "se_ddof0": 0.06627722706839866,
+        "se_ddof1": 0.07410019254256425
+      },
+      "ess_ratio": {
+        "mean": 0.007258348347495546,
+        "raw_batches": [
+          0.004401487074097425,
+          0.009297401321619696,
+          0.008661755248386282,
+          0.0014669108435040848,
+          0.01246418724987024
+        ],
+        "se_ddof0": 0.0017312475425115938,
+        "se_ddof1": 0.0019355935954676906
+      },
+      "training_seconds": 106.90492852777243,
+      "checkpoint_sha256": "52aac0550fe34933dee12db82a6c827a8ec82361d9b3507c4ad0560c8445ab8e"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.05_nativeJAX435",
+      "outcome": "nonfinite_output",
+      "kl": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "ess_ratio": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "training_seconds": 121.02764429803938,
+      "checkpoint_sha256": "48f83e4ee9fc891e1e7361395d21fbb342d386a44919c641a6f4a63ec0910971"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.01_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 3.833475093680858,
+        "raw_batches": [
+          3.931352472025599,
+          3.8922113584287845,
+          3.5633905770078282,
+          4.008057501756946,
+          3.772363559185132
+        ],
+        "se_ddof0": 0.0693366318745727,
+        "se_ddof1": 0.07752071110121161
+      },
+      "ess_ratio": {
+        "mean": 0.004164403804843924,
+        "raw_batches": [
+          0.0047867185767745905,
+          0.007781855583726524,
+          0.00437206926095911,
+          0.0010004986456029939,
+          0.0028808769571564015
+        ],
+        "se_ddof0": 0.0010034758594998402,
+        "se_ddof1": 0.0011219201178108353
+      },
+      "training_seconds": 106.98528025206178,
+      "checkpoint_sha256": "39092f4cfa406e4734eaba71aaad7eef9f057ad0801cc8065b9c64624215baf7"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.01_nativeJAX435",
+      "outcome": "nonfinite_output",
+      "kl": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "ess_ratio": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "training_seconds": 120.55836221482605,
+      "checkpoint_sha256": "48f83e4ee9fc891e1e7361395d21fbb342d386a44919c641a6f4a63ec0910971"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.005_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 5.344553890433689,
+        "raw_batches": [
+          4.70865112593203,
+          5.609522604363991,
+          5.540327004213934,
+          6.128427491576933,
+          4.735841226081556
+        ],
+        "se_ddof0": 0.2447771874708829,
+        "se_ddof1": 0.273669215263052
+      },
+      "ess_ratio": {
+        "mean": 0.0024662507139072897,
+        "raw_batches": [
+          0.0036560133143673863,
+          0.002041371523956603,
+          0.0011501481086177946,
+          0.0014299229130494242,
+          0.00405379770954524
+        ],
+        "se_ddof0": 0.0005262115245163869,
+        "se_ddof1": 0.0005883223696812191
+      },
+      "training_seconds": 110.10520869772881,
+      "checkpoint_sha256": "2870f5e52e703aa82f1b2e1ebb73d253c9ceae4eed006d59bb4ea83978fbd492"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.005_nativeJAX435",
+      "outcome": "nonfinite_output",
+      "kl": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "ess_ratio": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "training_seconds": 121.76376398419961,
+      "checkpoint_sha256": "48f83e4ee9fc891e1e7361395d21fbb342d386a44919c641a6f4a63ec0910971"
+    },
+    {
+      "job_id": "SO3_rcpm_gamma0.001_nativeJAX435",
+      "outcome": "finite_output",
+      "kl": {
+        "mean": 7.524689225368431,
+        "raw_batches": [
+          7.21760642964584,
+          7.696647405161423,
+          7.4910868724366795,
+          7.645542817458349,
+          7.572562602139864
+        ],
+        "se_ddof0": 0.07533817838881093,
+        "se_ddof1": 0.08423064408919341
+      },
+      "ess_ratio": {
+        "mean": 0.006565625278629121,
+        "raw_batches": [
+          0.0034148581016434127,
+          0.004596496660084253,
+          0.0052024859090691305,
+          0.005470608076951869,
+          0.014143677645396943
+        ],
+        "se_ddof0": 0.001723820067248688,
+        "se_ddof1": 0.0019272894256731625
+      },
+      "training_seconds": 107.63419301621616,
+      "checkpoint_sha256": "f0f405a586a9ef3af486e2a6db68b900cb24d7b2b8d8b5d4866083cc71fe3605"
+    },
+    {
+      "job_id": "SE3_rcpm_gamma0.001_nativeJAX435",
+      "outcome": "nonfinite_output",
+      "kl": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "ess_ratio": {
+        "mean": "NaN",
+        "raw_batches": [
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN",
+          "NaN"
+        ],
+        "se_ddof0": "NaN",
+        "se_ddof1": "NaN"
+      },
+      "training_seconds": 120.6215831907466,
+      "checkpoint_sha256": "48f83e4ee9fc891e1e7361395d21fbb342d386a44919c641a6f4a63ec0910971"
+    }
+  ]
+}

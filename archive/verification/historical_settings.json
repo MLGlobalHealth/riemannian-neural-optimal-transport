@@ -1,0 +1,13 @@
+{
+  "model": {"n_landmarks": 128},
+  "training": {"n_steps": 1000},
+  "solver": {
+    "inner_steps": 2500,
+    "inner_lr": 0.05,
+    "min_steps": 1000,
+    "logsumexp_init": true,
+    "logsumexp_gamma": 0.1,
+    "use_adam": true,
+    "use_line_search": false
+  }
+}

@@ -1,0 +1,781 @@
+{
+  "environment": {
+    "environment": {
+      "JAX_ENABLE_X64": "True",
+      "JAX_PLATFORMS": "cuda",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+    "hostname": "nvidia7",
+    "jax_default_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_enable_x64": true,
+    "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.8.4",
+      "jax": "0.4.35",
+      "jax-cuda12-pjrt": "0.4.35",
+      "jax-cuda12-plugin": "0.4.35",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.34",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "optax": "0.2.3",
+      "pandas": null,
+      "scipy": "1.17.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+    "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+  },
+  "generated_at": "2026-09-08T11:31:16.969301+00:00",
+  "historical_logs": {
+    "table_fps.log": {
+      "path": "/Users/alessandromicheli/Documents/dev/ml/projects/riemannian-neural-ot/experiments/final_results/table_fps.log",
+      "rows": {
+        "S2": {
+          "ess_ratio": {
+            "mean": 0.996,
+            "reported_plus_minus": 0.0
+          },
+          "kl": {
+            "mean": 0.0037,
+            "reported_plus_minus": 0.0008
+          },
+          "line": 10243,
+          "printed_text": "S2         RCPM       0.0037 \u00b1 0.0008      0.996 \u00b1 0.000        37.3 \u00b1 0.6     ",
+          "training_seconds": {
+            "mean": 37.3,
+            "reported_plus_minus": 0.6
+          }
+        },
+        "T2": {
+          "ess_ratio": {
+            "mean": 0.562,
+            "reported_plus_minus": 0.021
+          },
+          "kl": {
+            "mean": 0.862,
+            "reported_plus_minus": 0.0415
+          },
+          "line": 10245,
+          "printed_text": "T2         RCPM       0.8620 \u00b1 0.0415      0.562 \u00b1 0.021        61.4 \u00b1 0.7     ",
+          "training_seconds": {
+            "mean": 61.4,
+            "reported_plus_minus": 0.7
+          }
+        }
+      },
+      "sha256": "da31a46875cd445e2dbe438612033ef52de9264a1c815f87b22c34d325d4fe5d"
+    },
+    "table_random.log": {
+      "path": "/Users/alessandromicheli/Documents/dev/ml/projects/riemannian-neural-ot/experiments/final_results/table_random.log",
+      "rows": {
+        "S2": {
+          "ess_ratio": {
+            "mean": 0.996,
+            "reported_plus_minus": 0.0
+          },
+          "kl": {
+            "mean": 0.0037,
+            "reported_plus_minus": 0.0009
+          },
+          "line": 10203,
+          "printed_text": "S2         RCPM       0.0037 \u00b1 0.0009      0.996 \u00b1 0.000        38.7 \u00b1 0.5     ",
+          "training_seconds": {
+            "mean": 38.7,
+            "reported_plus_minus": 0.5
+          }
+        },
+        "T2": {
+          "ess_ratio": {
+            "mean": 0.548,
+            "reported_plus_minus": 0.03
+          },
+          "kl": {
+            "mean": 0.931,
+            "reported_plus_minus": 0.0172
+          },
+          "line": 10205,
+          "printed_text": "T2         RCPM       0.9310 \u00b1 0.0172      0.548 \u00b1 0.030        62.3 \u00b1 0.5     ",
+          "training_seconds": {
+            "mean": 62.3,
+            "reported_plus_minus": 0.5
+          }
+        }
+      },
+      "sha256": "3f625f12817470696d9cd8c8064b1bf13729d9aae2075e57572aa173ec84e8cc"
+    }
+  },
+  "interpretation": "Printed rounding agreement is descriptive, not a statistical equivalence test or complete paper reproduction.",
+  "label": "zip_x64_cuda_jax435",
+  "rows": {
+    "S2": {
+      "group_id": "40a2af9a69d35962e126cf622b044179823b53ffeb4b3ebed9cd3f330fa96837",
+      "historical_checks": {
+        "table_fps.log": {
+          "ess_ratio": {
+            "difference": 0.00041777156534350546,
+            "printed_mean": 0.996,
+            "rounding_interval_lower": "0.9955",
+            "rounding_interval_upper": "0.9965",
+            "rounds_as_printed": true
+          },
+          "kl": {
+            "difference": 0.00011521332702707542,
+            "printed_mean": 0.0037,
+            "rounding_interval_lower": "0.00365",
+            "rounding_interval_upper": "0.00375",
+            "rounds_as_printed": false
+          }
+        },
+        "table_random.log": {
+          "ess_ratio": {
+            "difference": 0.00041777156534350546,
+            "printed_mean": 0.996,
+            "rounding_interval_lower": "0.9955",
+            "rounding_interval_upper": "0.9965",
+            "rounds_as_printed": true
+          },
+          "kl": {
+            "difference": 0.00011521332702707542,
+            "printed_mean": 0.0037,
+            "rounding_interval_lower": "0.00365",
+            "rounding_interval_upper": "0.00375",
+            "rounds_as_printed": false
+          }
+        }
+      },
+      "identity": {
+        "configuration": {
+          "base_density": "SphereUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "S2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "SphereWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5
+        },
+        "label": "zip_x64_cuda_jax435",
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "paper_checks": {
+        "ess_ratio": {
+          "difference": 0.00041777156534350546,
+          "printed_mean": 0.996,
+          "rounding_interval_lower": "0.9955",
+          "rounding_interval_upper": "0.9965",
+          "rounds_as_printed": true
+        },
+        "kl": {
+          "difference": 0.00011521332702707542,
+          "printed_mean": 0.0037,
+          "rounding_interval_lower": "0.00365",
+          "rounding_interval_upper": "0.00375",
+          "rounds_as_printed": false
+        }
+      },
+      "paper_corresponding_historical_row": "table_fps.log",
+      "paper_target": {
+        "ess_ratio": {
+          "mean": 0.996,
+          "reported_plus_minus": 0.0
+        },
+        "kl": {
+          "mean": 0.0037,
+          "reported_plus_minus": 0.0008
+        },
+        "method": "RCPM_gamma1",
+        "training_seconds": {
+          "mean": 37.3,
+          "reported_plus_minus": 0.6
+        }
+      },
+      "runs": [
+        {
+          "actual_gpu": "4",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.9965136084187709,
+              "raw_batches": [
+                0.9974447601805323,
+                0.9955751238045315,
+                0.99775233597907,
+                0.9959064734736651,
+                0.9958893486560555
+              ]
+            },
+            "kl": {
+              "mean": 0.006768577020761767,
+              "raw_batches": [
+                0.006428905690993217,
+                0.007904307437277575,
+                -7.260026395811104e-05,
+                0.014268158531474007,
+                0.005314113708022147
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1/result.json",
+          "seed": 12345,
+          "sha256": "faabdfd661295b45bf875f2f8fb75241138b4871b2b1b08d606675aa9ec33293",
+          "task_id": "table_rcpm_S2_seed12345_zip_x64_cuda_jax435_dd37783d77d1",
+          "training_seconds": 27.04993545403704
+        },
+        {
+          "actual_gpu": "4",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.9960934175261322,
+              "raw_batches": [
+                0.996134435841878,
+                0.9957492678384033,
+                0.9968644735275708,
+                0.9962846867033684,
+                0.9954342237194402
+              ]
+            },
+            "kl": {
+              "mean": 0.0025545824345464796,
+              "raw_batches": [
+                0.0022486274328951204,
+                0.006118734356802888,
+                0.00027397002683861196,
+                -0.0018143267507580098,
+                0.005945907106953788
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5/result.json",
+          "seed": 23456,
+          "sha256": "675893e9df6d25c1e7024231ceb309ba5b8842d340c2016226f7eef5a79533d4",
+          "task_id": "table_rcpm_S2_seed23456_zip_x64_cuda_jax435_755e8cfe6fa5",
+          "training_seconds": 27.1021922940854
+        },
+        {
+          "actual_gpu": "4",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.9980802354909859,
+              "raw_batches": [
+                0.9989745603404211,
+                0.9985692431427647,
+                0.9972138857002731,
+                0.9986668150516637,
+                0.996976673219807
+              ]
+            },
+            "kl": {
+              "mean": 0.00215126763703543,
+              "raw_batches": [
+                0.0008455367606920888,
+                0.00034873359895964474,
+                0.0044096395384920686,
+                0.000495030082078759,
+                0.00465739820495459
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f/result.json",
+          "seed": 34567,
+          "sha256": "86f1654849169cc461c8c082071c2ae5e0842e94d962bd47beccda5b6088a848",
+          "task_id": "table_rcpm_S2_seed34567_zip_x64_cuda_jax435_a0af9098c89f",
+          "training_seconds": 27.139460301026702
+        },
+        {
+          "actual_gpu": "4",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.9962191078664941,
+              "raw_batches": [
+                0.996587498325451,
+                0.9970351816864605,
+                0.9956870348923378,
+                0.9960802662733081,
+                0.9957055581549135
+              ]
+            },
+            "kl": {
+              "mean": 0.00247208299369579,
+              "raw_batches": [
+                0.0020674886075591815,
+                -9.069767396166582e-07,
+                0.0026460673888425938,
+                0.0043447864477472835,
+                0.0033029795010695103
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864/result.json",
+          "seed": 45678,
+          "sha256": "fafa2993d0b3b5ba6eac1dbdd5266cb50f3e67b2e3449f4515f3c85809a6c943",
+          "task_id": "table_rcpm_S2_seed45678_zip_x64_cuda_jax435_ffab489bc864",
+          "training_seconds": 26.570844165980816
+        },
+        {
+          "actual_gpu": "4",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.9951824885243342,
+              "raw_batches": [
+                0.996371399132078,
+                0.9949464946325008,
+                0.9946615432601406,
+                0.9951924821948915,
+                0.9947405234020604
+              ]
+            },
+            "kl": {
+              "mean": 0.005129556549095912,
+              "raw_batches": [
+                0.0013291986488561227,
+                0.015696749655439296,
+                0.004193282639305932,
+                0.0014665705260813197,
+                0.0029619812757968886
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83/result.json",
+          "seed": 56789,
+          "sha256": "7ae0ea21dbc286424646e1ebdad69792a9d2205a9e83f03b6d1e57179a41030e",
+          "task_id": "table_rcpm_S2_seed56789_zip_x64_cuda_jax435_8cf0fb324f83",
+          "training_seconds": 25.598184895934537
+        }
+      ],
+      "statistics": {
+        "ess_ratio": {
+          "mean": 0.9964177715653435,
+          "raw_values": [
+            0.9965136084187709,
+            0.9960934175261322,
+            0.9980802354909859,
+            0.9962191078664941,
+            0.9951824885243342
+          ],
+          "se_ddof0": 0.000421595446177281,
+          "se_ddof1": 0.00047135803832837716
+        },
+        "kl": {
+          "mean": 0.0038152133270270756,
+          "raw_values": [
+            0.006768577020761767,
+            0.0025545824345464796,
+            0.00215126763703543,
+            0.00247208299369579,
+            0.005129556549095912
+          ],
+          "se_ddof0": 0.0008151505336194369,
+          "se_ddof1": 0.0009113660025341443
+        },
+        "training_seconds": {
+          "mean": 26.692123422212898,
+          "raw_values": [
+            27.04993545403704,
+            27.1021922940854,
+            27.139460301026702,
+            26.570844165980816,
+            25.598184895934537
+          ],
+          "se_ddof0": 0.26135847950369323,
+          "se_ddof1": 0.2922076633331218
+        }
+      },
+      "status": "complete_five_prescribed_seeds"
+    },
+    "T2": {
+      "group_id": "7d8544c3948e2328855dcefe589c4253765f3e4fa377b0f47bd986f842c4966e",
+      "historical_checks": {
+        "table_fps.log": {
+          "ess_ratio": {
+            "difference": 0.05549627275096969,
+            "printed_mean": 0.562,
+            "rounding_interval_lower": "0.5615",
+            "rounding_interval_upper": "0.5625",
+            "rounds_as_printed": false
+          },
+          "kl": {
+            "difference": 0.017900605117486923,
+            "printed_mean": 0.862,
+            "rounding_interval_lower": "0.86195",
+            "rounding_interval_upper": "0.86205",
+            "rounds_as_printed": false
+          }
+        },
+        "table_random.log": {
+          "ess_ratio": {
+            "difference": 0.0694962727509697,
+            "printed_mean": 0.548,
+            "rounding_interval_lower": "0.5475",
+            "rounding_interval_upper": "0.5485",
+            "rounds_as_printed": false
+          },
+          "kl": {
+            "difference": -0.05109939488251314,
+            "printed_mean": 0.931,
+            "rounding_interval_lower": "0.93095",
+            "rounding_interval_upper": "0.93105",
+            "rounds_as_printed": false
+          }
+        }
+      },
+      "identity": {
+        "configuration": {
+          "base_density": "TorusUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "T2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "TorusWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": "True",
+            "JAX_PLATFORMS": "cuda",
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_devices": [
+            "cuda:0"
+          ],
+          "jax_enable_x64": true,
+          "nvidia_smi": "0, NVIDIA RTX 6000 Ada Generation, GPU-90dab4df-3c71-320b-20ae-25b5c23ef1f4, 570.195.03, 49140 MiB\n1, NVIDIA RTX 6000 Ada Generation, GPU-1240d33d-4047-20ab-2f09-32bb90161931, 570.195.03, 49140 MiB\n2, NVIDIA RTX 6000 Ada Generation, GPU-ff515502-97e7-8e97-be25-82e619cfb969, 570.195.03, 49140 MiB\n3, NVIDIA RTX 6000 Ada Generation, GPU-3c96510d-4276-2ce2-9d63-084f205e2a00, 570.195.03, 49140 MiB\n4, NVIDIA RTX 6000 Ada Generation, GPU-ddda76a0-9305-3456-0656-f5035285db1c, 570.195.03, 49140 MiB\n5, NVIDIA RTX 6000 Ada Generation, GPU-76ea498e-20f7-450f-d78e-9e1e7f8f6e06, 570.195.03, 49140 MiB\n6, NVIDIA RTX 6000 Ada Generation, GPU-d7c52469-8609-e6cb-81f6-e2d3a872e06f, 570.195.03, 49140 MiB\n7, NVIDIA RTX 6000 Ada Generation, GPU-cff4935c-4806-7bea-670a-e3f396b43fa4, 570.195.03, 49140 MiB",
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.8.4",
+            "jax": "0.4.35",
+            "jax-cuda12-pjrt": "0.4.35",
+            "jax-cuda12-plugin": "0.4.35",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.4.34",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.3",
+            "pandas": null,
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]"
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5
+        },
+        "label": "zip_x64_cuda_jax435",
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "paper_checks": {
+        "ess_ratio": {
+          "difference": 0.0674962727509697,
+          "printed_mean": 0.55,
+          "rounding_interval_lower": "0.545",
+          "rounding_interval_upper": "0.555",
+          "rounds_as_printed": false
+        },
+        "kl": {
+          "difference": -0.05009939488251314,
+          "printed_mean": 0.93,
+          "rounding_interval_lower": "0.925",
+          "rounding_interval_upper": "0.935",
+          "rounds_as_printed": false
+        }
+      },
+      "paper_corresponding_historical_row": "table_random.log",
+      "paper_target": {
+        "ess_ratio": {
+          "mean": 0.55,
+          "reported_plus_minus": 0.03
+        },
+        "kl": {
+          "mean": 0.93,
+          "reported_plus_minus": 0.02
+        },
+        "method": "RCPM_gamma1",
+        "training_seconds": {
+          "mean": 62.3,
+          "reported_plus_minus": 0.5
+        }
+      },
+      "runs": [
+        {
+          "actual_gpu": "2",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.595137276527734,
+              "raw_batches": [
+                0.6077092128984438,
+                0.591989165153427,
+                0.5866402885856404,
+                0.5819272141717458,
+                0.6074205018294127
+              ]
+            },
+            "kl": {
+              "mean": 0.90038261216891,
+              "raw_batches": [
+                0.8845959215395696,
+                0.9201858711565082,
+                1.0250475309533211,
+                0.6568098886037292,
+                1.015273848591422
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810/result.json",
+          "seed": 12345,
+          "sha256": "9bec0c8db2b3d526a1baaf00ba99ac1ba5e86ed2f50e109158a791a641ea687b",
+          "task_id": "table_rcpm_T2_seed12345_zip_x64_cuda_jax435_563daa63d810",
+          "training_seconds": 43.179450216004625
+        },
+        {
+          "actual_gpu": "2",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.5979921276273072,
+              "raw_batches": [
+                0.5744606312004801,
+                0.6242064632260976,
+                0.58688983134618,
+                0.6105964780452378,
+                0.5938072343185404
+              ]
+            },
+            "kl": {
+              "mean": 0.9323565837185551,
+              "raw_batches": [
+                1.1385629892104678,
+                0.9344429738613201,
+                0.7846149870615078,
+                0.7590739466929743,
+                1.0450880217665053
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856/result.json",
+          "seed": 23456,
+          "sha256": "fc37aacec4156c42f14ab722e6750183ac6f4b3951fbc1c123d69a7a0c726941",
+          "task_id": "table_rcpm_T2_seed23456_zip_x64_cuda_jax435_7a545acb8856",
+          "training_seconds": 48.837037552148104
+        },
+        {
+          "actual_gpu": "2",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.669902713430675,
+              "raw_batches": [
+                0.6830243628345184,
+                0.6902753172829004,
+                0.6601482765492376,
+                0.681493931293994,
+                0.6345716791927246
+              ]
+            },
+            "kl": {
+              "mean": 0.8504139578269708,
+              "raw_batches": [
+                0.8333830300957519,
+                0.8859801386123981,
+                0.8977827384890663,
+                0.8257982154762449,
+                0.8091256664613933
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7/result.json",
+          "seed": 34567,
+          "sha256": "a444c72694a6b2b3e0304a36a169dfe16fe55f0aadbd8fe40157a14fa4d7c1f8",
+          "task_id": "table_rcpm_T2_seed34567_zip_x64_cuda_jax435_6864300643c7",
+          "training_seconds": 43.77458133595064
+        },
+        {
+          "actual_gpu": "2",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.5727519704961646,
+              "raw_batches": [
+                0.5238796546623568,
+                0.5684933616325385,
+                0.6156798752120323,
+                0.5862002363296394,
+                0.5695067246442557
+              ]
+            },
+            "kl": {
+              "mean": 0.9461599663113092,
+              "raw_batches": [
+                1.011326953327139,
+                0.9619082877823208,
+                0.949132118212074,
+                0.8974798455682542,
+                0.910952626666758
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f/result.json",
+          "seed": 45678,
+          "sha256": "23853a42128eade0957dc2856c9d17aa3fe16fe69a041fb8079cfc824bf1b1c1",
+          "task_id": "table_rcpm_T2_seed45678_zip_x64_cuda_jax435_87fe3a67b19f",
+          "training_seconds": 42.357966898940504
+        },
+        {
+          "actual_gpu": "2",
+          "metrics": {
+            "ess_ratio": {
+              "mean": 0.6516972756729679,
+              "raw_batches": [
+                0.6553363414422119,
+                0.6315244515294868,
+                0.6637321680586473,
+                0.6328322246897732,
+                0.6750611926447204
+              ]
+            },
+            "kl": {
+              "mean": 0.7701899055616892,
+              "raw_batches": [
+                0.8333097621022396,
+                0.8222227824517141,
+                0.8022417809144885,
+                0.7954088451364734,
+                0.5977663572035308
+              ]
+            }
+          },
+          "path": "/private/tmp/mlgh-verification/jax0435_candidate/table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97/result.json",
+          "seed": 56789,
+          "sha256": "d12e33e25fc34b1ec3a56d4435397b628e55119fce07f08711a96d8b87d31f8d",
+          "task_id": "table_rcpm_T2_seed56789_zip_x64_cuda_jax435_e9a985af4a97",
+          "training_seconds": 42.69403442600742
+        }
+      ],
+      "statistics": {
+        "ess_ratio": {
+          "mean": 0.6174962727509697,
+          "raw_values": [
+            0.595137276527734,
+            0.5979921276273072,
+            0.669902713430675,
+            0.5727519704961646,
+            0.6516972756729679
+          ],
+          "se_ddof0": 0.016490642921330765,
+          "se_ddof1": 0.018437099282385655
+        },
+        "kl": {
+          "mean": 0.8799006051174869,
+          "raw_values": [
+            0.90038261216891,
+            0.9323565837185551,
+            0.8504139578269708,
+            0.9461599663113092,
+            0.7701899055616892
+          ],
+          "se_ddof0": 0.02861282594580373,
+          "se_ddof1": 0.03199011192159343
+        },
+        "training_seconds": {
+          "mean": 44.16861408581026,
+          "raw_values": [
+            43.179450216004625,
+            48.837037552148104,
+            43.77458133595064,
+            42.357966898940504,
+            42.69403442600742
+          ],
+          "se_ddof0": 1.065471032713105,
+          "se_ddof1": 1.1912328286017024
+        }
+      },
+      "status": "complete_five_prescribed_seeds"
+    }
+  },
+  "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "schema_version": 1,
+  "scope": "Exactly five prescribed independent seeds for each RCPM row, untouched ZIP and one candidate environment.",
+  "seeds": [
+    12345,
+    23456,
+    34567,
+    45678,
+    56789
+  ],
+  "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+  "timing_note": "Training times are descriptive; NVIDIA candidate timings do not reproduce the AMD paper hardware.",
+  "uncertainty_note": "Observed SEs use independent seed means, ddof0 and ddof1. Paper confidence level/construction is unspecified."
+}

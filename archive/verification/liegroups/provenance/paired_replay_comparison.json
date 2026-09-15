@@ -1,0 +1,615 @@
+{
+  "pairs": [
+    {
+      "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+      "means": {
+        "ess_ratio": {
+          "nvidia6": 0.7804285182217575,
+          "nvidia7": 0.7804285182217576
+        },
+        "kl": {
+          "nvidia6": 3.8013232084423216,
+          "nvidia7": 3.8013232084423216
+        }
+      },
+      "nvidia6_evidence": "../evaluations/nvidia6/SO3_ours_nativeJAX435.json",
+      "nvidia7_evidence": "../evaluations/nvidia7/SO3_ours_nativeJAX435.json",
+      "original_host_all_batches_exact": true,
+      "paired_batches": [
+        {
+          "index": 0,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 814.0908959404662,
+              "nvidia7": 814.0908959404662
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.7950106405668615,
+              "nvidia7": 0.7950106405668615
+            },
+            "kl": {
+              "difference_n7_minus_n6": -4.440892098500626e-16,
+              "nvidia6": 3.800710474304787,
+              "nvidia7": 3.8007104743047866
+            }
+          },
+          "prng_key": [
+            2300365598,
+            2950565312
+          ]
+        },
+        {
+          "index": 1,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": -6.821210263296962e-13,
+              "nvidia6": 831.21648132829,
+              "nvidia7": 831.2164813282893
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": -6.661338147750939e-16,
+              "nvidia6": 0.8117348450471582,
+              "nvidia7": 0.8117348450471575
+            },
+            "kl": {
+              "difference_n7_minus_n6": 4.440892098500626e-16,
+              "nvidia6": 3.806750960694158,
+              "nvidia7": 3.8067509606941585
+            }
+          },
+          "prng_key": [
+            949301550,
+            3196768145
+          ]
+        },
+        {
+          "index": 2,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 837.7522848925804,
+              "nvidia7": 837.7522848925804
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.8181174657154106,
+              "nvidia7": 0.8181174657154106
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 3.785010750420053,
+              "nvidia7": 3.785010750420053
+            }
+          },
+          "prng_key": [
+            3188581498,
+            1498900698
+          ]
+        },
+        {
+          "index": 3,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 6.821210263296962e-13,
+              "nvidia6": 709.8948108299131,
+              "nvidia7": 709.8948108299138
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 6.661338147750939e-16,
+              "nvidia6": 0.693256651201087,
+              "nvidia7": 0.6932566512010877
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 3.7648727908077455,
+              "nvidia7": 3.7648727908077455
+            }
+          },
+          "prng_key": [
+            2696973199,
+            2132697368
+          ]
+        },
+        {
+          "index": 4,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 6.821210263296962e-13,
+              "nvidia6": 802.8395403041486,
+              "nvidia7": 802.8395403041493
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 6.661338147750939e-16,
+              "nvidia6": 0.7840229885782701,
+              "nvidia7": 0.7840229885782708
+            },
+            "kl": {
+              "difference_n7_minus_n6": 4.440892098500626e-16,
+              "nvidia6": 3.849271065984864,
+              "nvidia7": 3.8492710659848646
+            }
+          },
+          "prng_key": [
+            539786244,
+            3564729885
+          ]
+        }
+      ],
+      "paper_target": {
+        "ess_ratio_mean": 0.225,
+        "kind": "numeric",
+        "kl_mean": 2.96,
+        "kl_reported_plus_minus": 0.01
+      },
+      "restored_arrays_identical": true,
+      "row": "SO3/RNOT"
+    },
+    {
+      "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+      "means": {
+        "ess_ratio": {
+          "nvidia6": 0.7754834518905671,
+          "nvidia7": 0.7754834518905671
+        },
+        "kl": {
+          "nvidia6": 2.820084209126242,
+          "nvidia7": 2.820084209126242
+        }
+      },
+      "nvidia6_evidence": "../evaluations/nvidia6/SO3_rcpm_gamma1_nativeJAX435.json",
+      "nvidia7_evidence": "../evaluations/nvidia7/SO3_rcpm_gamma1_nativeJAX435.json",
+      "original_host_all_batches_exact": true,
+      "paired_batches": [
+        {
+          "index": 0,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 700.8387077884126,
+              "nvidia7": 700.8387077884126
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.6844128005746217,
+              "nvidia7": 0.6844128005746217
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.7383265509063963,
+              "nvidia7": 2.7383265509063963
+            }
+          },
+          "prng_key": [
+            2300365598,
+            2950565312
+          ]
+        },
+        {
+          "index": 1,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 860.7056434216021,
+              "nvidia7": 860.7056434216021
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.8405328549039083,
+              "nvidia7": 0.8405328549039083
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.814889677432742,
+              "nvidia7": 2.814889677432742
+            }
+          },
+          "prng_key": [
+            949301550,
+            3196768145
+          ]
+        },
+        {
+          "index": 2,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 763.0868084790692,
+              "nvidia7": 763.0868084790692
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.745201961405341,
+              "nvidia7": 0.745201961405341
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.772900867061465,
+              "nvidia7": 2.772900867061465
+            }
+          },
+          "prng_key": [
+            3188581498,
+            1498900698
+          ]
+        },
+        {
+          "index": 3,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 823.9799822589446,
+              "nvidia7": 823.9799822589446
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.8046679514247506,
+              "nvidia7": 0.8046679514247506
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.940037030673155,
+              "nvidia7": 2.940037030673155
+            }
+          },
+          "prng_key": [
+            2696973199,
+            2132697368
+          ]
+        },
+        {
+          "index": 4,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 821.8641317316752,
+              "nvidia7": 821.8641317316752
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.8026016911442141,
+              "nvidia7": 0.8026016911442141
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.834266919557452,
+              "nvidia7": 2.834266919557452
+            }
+          },
+          "prng_key": [
+            539786244,
+            3564729885
+          ]
+        }
+      ],
+      "paper_target": {
+        "ess_ratio_mean": 0.391,
+        "kind": "numeric",
+        "kl_mean": 2.86,
+        "kl_reported_plus_minus": 0.03
+      },
+      "restored_arrays_identical": true,
+      "row": "SO3/RCPM/1"
+    },
+    {
+      "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+      "means": {
+        "ess_ratio": {
+          "nvidia6": 0.6701474356065226,
+          "nvidia7": 0.6701474356065226
+        },
+        "kl": {
+          "nvidia6": 2.4051482424868995,
+          "nvidia7": 2.4051482424868995
+        }
+      },
+      "nvidia6_evidence": "../evaluations/nvidia6/SE3_ours_nativeJAX435.json",
+      "nvidia7_evidence": "../evaluations/nvidia7/SE3_ours_nativeJAX435.json",
+      "original_host_all_batches_exact": true,
+      "paired_batches": [
+        {
+          "index": 0,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 695.8757492476933,
+              "nvidia7": 695.8757492476933
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.6795661613747005,
+              "nvidia7": 0.6795661613747005
+            },
+            "kl": {
+              "difference_n7_minus_n6": 4.440892098500626e-16,
+              "nvidia6": 2.431653640773363,
+              "nvidia7": 2.4316536407733635
+            },
+            "mean_residual": {
+              "difference_n7_minus_n6": 1.1102230246251565e-16,
+              "nvidia6": 0.6028467959586618,
+              "nvidia7": 0.6028467959586619
+            }
+          },
+          "prng_key": [
+            2300365598,
+            2950565312
+          ]
+        },
+        {
+          "index": 1,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 682.2148404665043,
+              "nvidia7": 682.2148404665043
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.6662254301430706,
+              "nvidia7": 0.6662254301430706
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.420545418872469,
+              "nvidia7": 2.420545418872469
+            },
+            "mean_residual": {
+              "difference_n7_minus_n6": 1.1102230246251565e-16,
+              "nvidia6": 0.5953609418833864,
+              "nvidia7": 0.5953609418833865
+            }
+          },
+          "prng_key": [
+            949301550,
+            3196768145
+          ]
+        },
+        {
+          "index": 2,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 685.6617956620969,
+              "nvidia7": 685.6617956620969
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.6695915973262665,
+              "nvidia7": 0.6695915973262665
+            },
+            "kl": {
+              "difference_n7_minus_n6": 4.440892098500626e-16,
+              "nvidia6": 2.373380405443525,
+              "nvidia7": 2.3733804054435255
+            },
+            "mean_residual": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.5733091331634955,
+              "nvidia7": 0.5733091331634955
+            }
+          },
+          "prng_key": [
+            3188581498,
+            1498900698
+          ]
+        },
+        {
+          "index": 3,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 685.1419429685865,
+              "nvidia7": 685.1419429685865
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.6690839286802602,
+              "nvidia7": 0.6690839286802602
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.390999947993018,
+              "nvidia7": 2.390999947993018
+            },
+            "mean_residual": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.5877578090683853,
+              "nvidia7": 0.5877578090683853
+            }
+          },
+          "prng_key": [
+            2696973199,
+            2132697368
+          ]
+        },
+        {
+          "index": 4,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 682.2605419605146,
+              "nvidia7": 682.2605419605146
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.666270060508315,
+              "nvidia7": 0.666270060508315
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 2.4091617993521206,
+              "nvidia7": 2.4091617993521206
+            },
+            "mean_residual": {
+              "difference_n7_minus_n6": -1.1102230246251565e-16,
+              "nvidia6": 0.5777557511925565,
+              "nvidia7": 0.5777557511925564
+            }
+          },
+          "prng_key": [
+            539786244,
+            3564729885
+          ]
+        }
+      ],
+      "paper_target": {
+        "ess_ratio_mean": 0.683,
+        "kind": "numeric",
+        "kl_mean": 2.5,
+        "kl_reported_plus_minus": 0.01
+      },
+      "restored_arrays_identical": true,
+      "row": "SE3/RNOT"
+    },
+    {
+      "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+      "means": {
+        "ess_ratio": {
+          "nvidia6": 0.00726794836409665,
+          "nvidia7": 0.00726794836409665
+        },
+        "kl": {
+          "nvidia6": 13.226344406923317,
+          "nvidia7": 13.226344406923317
+        }
+      },
+      "nvidia6_evidence": "../evaluations/nvidia6/SE3_rcpm_gamma1_nativeJAX435.json",
+      "nvidia7_evidence": "../evaluations/nvidia7/SE3_rcpm_gamma1_nativeJAX435.json",
+      "original_host_all_batches_exact": true,
+      "paired_batches": [
+        {
+          "index": 0,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 7.821371349842709,
+              "nvidia7": 7.821371349842709
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.00763805795883077,
+              "nvidia7": 0.00763805795883077
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 13.172709046378376,
+              "nvidia7": 13.172709046378376
+            }
+          },
+          "prng_key": [
+            2300365598,
+            2950565312
+          ]
+        },
+        {
+          "index": 1,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 6.617200503098158,
+              "nvidia7": 6.617200503098158
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.006462109866306795,
+              "nvidia7": 0.006462109866306795
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 13.136370973893246,
+              "nvidia7": 13.136370973893246
+            }
+          },
+          "prng_key": [
+            949301550,
+            3196768145
+          ]
+        },
+        {
+          "index": 2,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 8.10378356605686,
+              "nvidia7": 8.10378356605686
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.007913851138727402,
+              "nvidia7": 0.007913851138727402
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 13.238039928793235,
+              "nvidia7": 13.238039928793235
+            }
+          },
+          "prng_key": [
+            3188581498,
+            1498900698
+          ]
+        },
+        {
+          "index": 3,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 7.180708402567452,
+              "nvidia7": 7.180708402567452
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.007012410549382278,
+              "nvidia7": 0.007012410549382278
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 13.170691514384682,
+              "nvidia7": 13.170691514384682
+            }
+          },
+          "prng_key": [
+            2696973199,
+            2132697368
+          ]
+        },
+        {
+          "index": 4,
+          "metrics": {
+            "ess": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 7.48883180260967,
+              "nvidia7": 7.48883180260967
+            },
+            "ess_ratio": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 0.0073133123072360055,
+              "nvidia7": 0.0073133123072360055
+            },
+            "kl": {
+              "difference_n7_minus_n6": 0.0,
+              "nvidia6": 13.413910571167056,
+              "nvidia7": 13.413910571167056
+            }
+          },
+          "prng_key": [
+            539786244,
+            3564729885
+          ]
+        }
+      ],
+      "paper_target": {
+        "ess_ratio_mean": 0.007,
+        "kind": "numeric",
+        "kl_mean": 14.38,
+        "kl_reported_plus_minus": 0.09
+      },
+      "restored_arrays_identical": true,
+      "row": "SE3/RCPM/1"
+    }
+  ],
+  "schema_version": 1,
+  "scope": "Four prespecified fixed models on two NVIDIA hosts; no training"
+}

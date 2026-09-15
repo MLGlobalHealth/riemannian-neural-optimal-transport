@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-09-08T15:34:05.099620+00:00",
+  "result": "pass",
+  "new_record": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/evidence/results/se3_native/results/liegroups_SE3_ours_fps_seed12345/result.json",
+  "new_record_sha256": "0f3727f84f743f98bb55556e38c270a81e95131c6c95193a3bb90de9fe2e3d91",
+  "prior_record": "/private/tmp/mlgh-liegroups-20260908/remote_evidence/results/SE3_ours_nativeJAX435/result.json",
+  "prior_record_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+  "checks": {
+    "configuration": true,
+    "density_configuration": true,
+    "geometry_configuration": true,
+    "landmark_configuration": true,
+    "summary": true,
+    "parameter_count": true,
+    "parameter_dtypes": true,
+    "parameter_nonfinite_count": true,
+    "all5_evaluation_keys_equal": true,
+    "all20_native_batch_scalar_values_equal": true,
+    "checkpoint_bytes_equal": true,
+    "all200_printed_training_losses_equal": true
+  },
+  "native_metrics": {
+    "ess": {
+      "mean": 686.2309740610791,
+      "raw_batches": [
+        695.8757492476933,
+        682.2148404665043,
+        685.6617956620969,
+        685.1419429685865,
+        682.2605419605146
+      ],
+      "se_ddof0": 2.248780125181457,
+      "se_ddof1": 2.5142126131781124
+    },
+    "ess_ratio": {
+      "mean": 0.6701474356065226,
+      "raw_batches": [
+        0.6795661613747005,
+        0.6662254301430706,
+        0.6695915973262665,
+        0.6690839286802602,
+        0.666270060508315
+      ],
+      "se_ddof0": 0.002196074340997517,
+      "se_ddof1": 0.0024552857550567504
+    },
+    "kl": {
+      "mean": 2.4051482424868995,
+      "raw_batches": [
+        2.431653640773363,
+        2.420545418872469,
+        2.373380405443525,
+        2.390999947993018,
+        2.4091617993521206
+      ],
+      "se_ddof0": 0.009306100204022637,
+      "se_ddof1": 0.010404536330809639
+    },
+    "mean_residual": {
+      "mean": 0.587406086253297,
+      "raw_batches": [
+        0.6028467959586618,
+        0.5953609418833864,
+        0.5733091331634955,
+        0.5877578090683853,
+        0.5777557511925565
+      ],
+      "se_ddof0": 0.004873077083076706,
+      "se_ddof1": 0.005448265808677952
+    }
+  },
+  "checkpoint": {
+    "bytes": 542889,
+    "file": "checkpoint.msgpack",
+    "note": "Ours key is the native builder's retained pre-training key; checkpoint supports evaluation, not exact training continuation.",
+    "sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+  },
+  "training_loss_count": 200,
+  "runtime": {
+    "build": 11.964898620266467,
+    "training_native_return": 33.63004965800792,
+    "training_synchronized": 33.63070085691288
+  },
+  "source_note": "All23 retained native source/license files have the same hashes; only historical rcpm/requirements.txt is absent from the public core manifest after its archival. No native Python file changed.",
+  "metadata_only_additions": {
+    "selection": [
+      "suite",
+      "dimension",
+      "ablation"
+    ],
+    "evaluation_config": [
+      "key_protocol"
+    ]
+  },
+  "retained_native_source_files_verified": 23,
+  "all_retained_native_source_hashes_equal": true
+}

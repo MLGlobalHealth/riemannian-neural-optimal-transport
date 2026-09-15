@@ -1,0 +1,13 @@
+cartopy
+flax
+hydra-core>=1.3.0
+ipython
+jax
+jaxlib
+matplotlib
+numpy
+omegaconf>=2.3.0
+optax
+scipy
+setproctitle
+spherical_kde

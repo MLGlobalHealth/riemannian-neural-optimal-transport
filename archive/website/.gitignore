@@ -1,0 +1,3 @@
+# These are intentional website assets, even in a parent checkout that ignores figures.
+!assets/*.png
+!assets/paper.pdf

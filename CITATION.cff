@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite Riemannian Neural Optimal Transport."
+title: "Riemannian Neural Optimal Transport"
+authors:
+  - family-names: Micheli
+    given-names: Alessandro
+  - family-names: Cao
+    given-names: Yueqi
+  - family-names: Monod
+    given-names: Anthea
+  - family-names: Bhatt
+    given-names: Samir
+url: "https://openreview.net/forum?id=ez4oLq7PR3"
+license: CC-BY-NC-4.0

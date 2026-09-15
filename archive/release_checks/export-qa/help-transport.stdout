@@ -1,0 +1,23 @@
+usage: transport.py [-h] (--input INPUT | --samples SAMPLES)
+                    [--metadata METADATA] [--checkpoint CHECKPOINT]
+                    [--source-root SOURCE_ROOT] --output OUTPUT [--gpu GPU]
+                    [--seed SEED] [--n-samples N_SAMPLES]
+
+Export native saved-model samples, or render an existing sample bundle
+offline. python -m paper.transport --input runs/results/JOB/result.json --gpu
+0 --output figures/transport python -m paper.transport --samples
+RUN/samples.npz --output figures/continental
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Completed public worker result.json for checkpoint-
+                        derived sampling.
+  --samples SAMPLES     Existing numeric sample NPZ to render with no JAX
+                        import.
+  --metadata METADATA   Defaults to samples.json beside --samples.
+  --checkpoint CHECKPOINT
+  --source-root SOURCE_ROOT
+  --output OUTPUT
+  --gpu GPU
+  --seed SEED
+  --n-samples N_SAMPLES

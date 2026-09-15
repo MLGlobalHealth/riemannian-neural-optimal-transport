@@ -1,0 +1,30 @@
+{
+  "started_at": "2026-09-08T12:26:38.192812+00:00",
+  "manifest_sha256": "756afd7bf01739c57fb65577e9a5b1da0d217ba559b57f30c5c46ea606ae2e7b",
+  "jobs": [
+    {
+      "seed": 23456,
+      "gpu": 0,
+      "supervisor_pid": 2339517,
+      "cpu_cores": "0-3"
+    },
+    {
+      "seed": 34567,
+      "gpu": 1,
+      "supervisor_pid": 2339518,
+      "cpu_cores": "4-7"
+    },
+    {
+      "seed": 45678,
+      "gpu": 2,
+      "supervisor_pid": 2339519,
+      "cpu_cores": "8-11"
+    },
+    {
+      "seed": 56789,
+      "gpu": 3,
+      "supervisor_pid": 2339520,
+      "cpu_cores": "12-15"
+    }
+  ]
+}

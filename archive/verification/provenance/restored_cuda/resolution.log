@@ -1,0 +1,58 @@
+Collecting jax==0.4.35 (from jax[cuda12]==0.4.35)
+  Downloading jax-0.4.35-py3-none-any.whl.metadata (22 kB)
+Collecting jaxlib==0.4.35
+  Downloading jaxlib-0.4.35-cp311-cp311-manylinux2014_x86_64.whl.metadata (983 bytes)
+Collecting flax==0.8.4
+  Downloading flax-0.8.4-py3-none-any.whl.metadata (10 kB)
+Collecting optax==0.2.3
+  Downloading optax-0.2.3-py3-none-any.whl.metadata (8.3 kB)
+Collecting spherical_kde
+  Using cached spherical_kde-0.1.2-py3-none-any.whl
+Collecting cartopy
+  Using cached cartopy-0.25.0-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting matplotlib
+  Using cached matplotlib-3.11.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting ml-dtypes>=0.4.0 (from jax==0.4.35->jax[cuda12]==0.4.35)
+  Downloading ml_dtypes-0.6.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting numpy>=1.24 (from jax==0.4.35->jax[cuda12]==0.4.35)
+  Using cached numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting opt-einsum (from jax==0.4.35->jax[cuda12]==0.4.35)
+  Using cached opt_einsum-3.4.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting scipy>=1.10 (from jax==0.4.35->jax[cuda12]==0.4.35)
+  Using cached scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting msgpack (from flax==0.8.4)
+  Using cached msgpack-1.2.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+Collecting orbax-checkpoint (from flax==0.8.4)
+  Using cached orbax_checkpoint-0.12.4-py3-none-any.whl.metadata (3.3 kB)
+Collecting tensorstore (from flax==0.8.4)
+  Using cached tensorstore-0.1.85-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting rich>=11.1 (from flax==0.8.4)
+  Using cached rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting typing-extensions>=4.2 (from flax==0.8.4)
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting PyYAML>=5.4.1 (from flax==0.8.4)
+  Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting absl-py>=0.7.1 (from optax==0.2.3)
+  Using cached absl_py-2.5.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting chex>=0.1.86 (from optax==0.2.3)
+  Using cached chex-0.1.92-py3-none-any.whl.metadata (19 kB)
+Collecting etils[epy] (from optax==0.2.3)
+  Using cached etils-1.14.0-py3-none-any.whl.metadata (6.5 kB)
+INFO: pip is looking at multiple versions of jax[cuda12] to determine which version is compatible with other requirements. This could take a while.
+ERROR: Cannot install jax, jax[cuda12]==0.4.35, jaxlib==0.4.35 and optax==0.2.3 because these package versions have conflicting dependencies.
+
+The conflict is caused by:
+    The user requested jaxlib==0.4.35
+    jax 0.4.35 depends on jaxlib<=0.4.35 and >=0.4.34
+    optax 0.2.3 depends on jaxlib>=0.4.27
+    jax[cuda12] 0.4.35 depends on jaxlib<=0.4.35 and >=0.4.34
+    jax[cuda12] 0.4.35 depends on jaxlib==0.4.34; extra == "cuda12"
+
+To fix this you could try to:
+1. loosen the range of package versions you've specified
+2. remove package versions to allow pip attempt to solve the dependency conflict
+
+ERROR: ResolutionImpossible: for help visit https://pip.pypa.io/en/latest/topics/dependency-resolution/#dealing-with-dependency-conflicts
+
+[notice] A new release of pip is available: 24.0 -> 26.2.1
+[notice] To update, run: /data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python -m pip install --upgrade pip

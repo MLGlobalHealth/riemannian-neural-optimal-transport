@@ -1,0 +1,27 @@
+{
+  "evaluation_only_records_verified": 8,
+  "local_markdown_links_verified": 92,
+  "native_finite_rows": 9,
+  "native_nonfinite_rows": 5,
+  "paper_target_numbers_unchanged": true,
+  "previous_raw_results_and_comparisons_unchanged": true,
+  "publication": "Local branch only; no push or deployment performed.",
+  "replay_bundle_files_verified": 56,
+  "source_files_verified": 24,
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "supplied_runners_unchanged": 2,
+  "tool_hashes": {
+    "compare_liegroup_results.py": "a226103c8f9ddc45caff5c23b04fb0eb36bd83b146b1f278ed2290718af7a434",
+    "evaluate_liegroup_checkpoint.py": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+    "verify_liegroup_run.py": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+    "verify_run.py": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589"
+  },
+  "tooling_tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s verification -p 'test_*.py'",
+    "failed": 0,
+    "passed": 34
+  },
+  "training_checkpoint_and_log_artifacts_verified": 28,
+  "training_records_verified": 14,
+  "website_unchanged": true
+}

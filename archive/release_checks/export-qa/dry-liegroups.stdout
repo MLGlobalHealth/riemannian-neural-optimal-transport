@@ -1,0 +1,413 @@
+{
+  "schema_version": 1,
+  "suite": "liegroups",
+  "source_root": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport",
+  "output_dir": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups",
+  "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "gpus": [
+    "0"
+  ],
+  "recipe": {
+    "suite": "liegroups",
+    "label": "recovered_liegroup_native",
+    "x64": true,
+    "manifolds": [
+      "SO3",
+      "SE3"
+    ],
+    "landmark_methods": [
+      "fps"
+    ],
+    "seeds": [
+      12345
+    ],
+    "gammas": [
+      1.0,
+      0.1,
+      0.05,
+      0.01,
+      0.005,
+      0.001
+    ],
+    "rnot_overrides": {},
+    "evaluation": {
+      "n_batches": 5,
+      "batch_size": 1024,
+      "seed_offset": null,
+      "seed": 12345
+    }
+  },
+  "recipe_file": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/paper/configs/liegroups.json",
+  "recipe_sha256": "7f59f273abe8a761cea3d87b40eb8709ab399631b6baca23597733cf4437a56d",
+  "smoke": false,
+  "platform": "cuda",
+  "environment_overrides": {
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "True",
+    "JAX_THREEFRY_PARTITIONABLE": "False",
+    "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+    "JAX_RANDOM_SEED_OFFSET": "0",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "MPLBACKEND": "Agg",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "unfiltered_job_count": 14,
+  "jobs": [
+    {
+      "job_id": "liegroups_SO3_ours_fps_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SO3_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SO3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SO3_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SO3_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SO3_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_ours_fps_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "liegroups_SE3_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "liegroups",
+        "manifold": "SE3",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/results/liegroups_SE3_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/logs/liegroups_SE3_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-liegroups/manifest.json",
+        "--job-id",
+        "liegroups_SE3_rcpm_gamma0.001_seed12345"
+      ]
+    }
+  ],
+  "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+  "interpretation": "recovered_liegroup_native"
+}

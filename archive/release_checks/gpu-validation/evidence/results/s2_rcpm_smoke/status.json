@@ -1,0 +1,51 @@
+{
+  "finished_at": "2026-09-08T15:29:52.226310+00:00",
+  "jobs": [
+    {
+      "command": [
+        "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/manifest.json",
+        "--job-id",
+        "tables_S2_rcpm_gamma1_seed12345",
+        "--gpu",
+        "3"
+      ],
+      "command_without_gpu": [
+        "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/manifest.json",
+        "--job-id",
+        "tables_S2_rcpm_gamma1_seed12345"
+      ],
+      "exit_code": 0,
+      "finished_at": "2026-09-08T15:29:52.225577+00:00",
+      "gpu": "3",
+      "job_id": "tables_S2_rcpm_gamma1_seed12345",
+      "log": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/logs/tables_S2_rcpm_gamma1_seed12345.log",
+      "pid": 2480266,
+      "result": "/data/am1118/mlgh-paper-release-check-20260908/results/s2_rcpm_smoke/results/tables_S2_rcpm_gamma1_seed12345/result.json",
+      "selection": {
+        "ablation": null,
+        "dimension": 2,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "manifold": "S2",
+        "method": "rcpm",
+        "seed": 12345,
+        "suite": "tables"
+      },
+      "started_at": "2026-09-08T15:29:19.894892+00:00",
+      "status": "complete"
+    }
+  ],
+  "started_at": "2026-09-08T15:29:19.894203+00:00",
+  "status": "complete",
+  "stop_reason": null
+}

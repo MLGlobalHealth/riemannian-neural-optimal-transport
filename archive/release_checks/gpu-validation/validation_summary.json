@@ -1,0 +1,194 @@
+{
+  "status": "pass",
+  "checks": {
+    "se3_native": {
+      "status": "complete",
+      "pid": 2480249,
+      "gpu": 0,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.617179+00:00",
+      "finished_at": "2026-09-08T15:30:36.138764+00:00"
+    },
+    "s2_ours_smoke": {
+      "status": "complete",
+      "pid": 2480251,
+      "gpu": 1,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.669800+00:00",
+      "finished_at": "2026-09-08T15:29:48.980310+00:00"
+    },
+    "s2_rcpm_smoke": {
+      "status": "complete",
+      "pid": 2480254,
+      "gpu": 3,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.739710+00:00",
+      "finished_at": "2026-09-08T15:29:53.057680+00:00"
+    },
+    "ablation_smoke": {
+      "status": "complete",
+      "pid": 2480258,
+      "gpu": 4,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.806557+00:00",
+      "finished_at": "2026-09-08T15:29:47.978262+00:00"
+    },
+    "continental_smoke": {
+      "status": "complete",
+      "pid": 2480263,
+      "gpu": 5,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.873971+00:00",
+      "finished_at": "2026-09-08T15:29:37.958475+00:00"
+    },
+    "embeddings_full": {
+      "status": "complete",
+      "pid": 2480267,
+      "gpu": 6,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:19.923520+00:00",
+      "finished_at": "2026-09-08T15:29:31.946401+00:00"
+    },
+    "s2_checkpoint_transport": {
+      "status": "complete",
+      "pid": 2482243,
+      "gpu": 1,
+      "exit_code": 0,
+      "started_at": "2026-09-08T15:29:49.050483+00:00",
+      "finished_at": "2026-09-08T15:30:04.077593+00:00"
+    }
+  },
+  "se3_parity_checks": {
+    "configuration": true,
+    "density_configuration": true,
+    "geometry_configuration": true,
+    "landmark_configuration": true,
+    "summary": true,
+    "parameter_count": true,
+    "parameter_dtypes": true,
+    "parameter_nonfinite_count": true,
+    "all5_evaluation_keys_equal": true,
+    "all20_native_batch_scalar_values_equal": true,
+    "checkpoint_bytes_equal": true,
+    "all200_printed_training_losses_equal": true
+  },
+  "archive_free_cli": {
+    "tables": {
+      "jobs": 30,
+      "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+      "all_commands_resolve_export": true
+    },
+    "liegroups": {
+      "jobs": 14,
+      "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+      "all_commands_resolve_export": true
+    },
+    "sweep": {
+      "jobs": 126,
+      "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+      "all_commands_resolve_export": true
+    },
+    "highd": {
+      "jobs": 12,
+      "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+      "all_commands_resolve_export": true
+    },
+    "ablations": {
+      "jobs": 84,
+      "source_root": "/private/tmp/mlgh-paper-release-20260908/gpu-validation/source",
+      "all_commands_resolve_export": true
+    }
+  },
+  "remote_integrity": {
+    "checked_at": "2026-09-08T15:31:34.294997+00:00",
+    "status": "all_complete",
+    "owned_pids": [
+      2480247,
+      2480249,
+      2480251,
+      2480254,
+      2480258,
+      2480263,
+      2480267,
+      2482243,
+      2480257,
+      2480261,
+      2480266,
+      2480269
+    ],
+    "owned_process_ps": "    PID    PPID STAT COMMAND\n",
+    "all_owned_exited_or_zombie": true,
+    "source_57_files_unchanged": true,
+    "base80_freeze_unchanged": true,
+    "checkpoint_checks": [
+      {
+        "result": "results/se3_native/results/liegroups_SE3_ours_fps_seed12345/result.json",
+        "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce"
+      },
+      {
+        "result": "results/s2_ours_smoke/results/tables_S2_ours_random_seed12345/result.json",
+        "checkpoint_sha256": "97a2f00e76087f74d382a688b971b284fe67b1638861fa83bbc8207c8cf2ec77"
+      },
+      {
+        "result": "results/s2_rcpm_smoke/results/tables_S2_rcpm_gamma1_seed12345/result.json",
+        "checkpoint_sha256": "f14b5cdbdce241a0eb0e220f594b9a28048bcf7f3c163bd39a43c62cd3194752"
+      },
+      {
+        "result": "results/ablation_smoke/results/ablations_S2_ours_random_seed12345_baseline/result.json",
+        "checkpoint_sha256": "97a2f00e76087f74d382a688b971b284fe67b1638861fa83bbc8207c8cf2ec77"
+      },
+      {
+        "result": "results/continental_smoke/result.json",
+        "checkpoint_sha256": "be28dad99c3b82d2d9fe26928911c80b2fdfb5af20e50fe16bdcf2ecce2628ea"
+      }
+    ],
+    "gpus": "0, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n2, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n3, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n4, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n5, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n6, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n7, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n",
+    "gpu_processes": ""
+  },
+  "file_delivery_verified": 56,
+  "figures": {
+    "plots/continental/transport.json": {
+      "bytes": 7576,
+      "sha256": "0af7e38810e4d861859a4c0980d00b72deb1b7cb902c9fc3fd71d957c96387ec"
+    },
+    "plots/continental/transport.pdf": {
+      "bytes": 52923,
+      "sha256": "17c27c2a77e0752ad373cf8cc19b49edb8f272eb09852d61a010f51996c80e42"
+    },
+    "plots/continental/transport.png": {
+      "bytes": 275337,
+      "sha256": "076f5c9696f747e8b0c73f94c393e421ec93c0560cd0b895f3aee180a1497cbd"
+    },
+    "plots/embeddings/embeddings.csv": {
+      "bytes": 3136,
+      "sha256": "09191effa6b1e60438592fdd11e9f5bc15d6eef73933812c15ca62b32852a306"
+    },
+    "plots/embeddings/embeddings.json": {
+      "bytes": 9616,
+      "sha256": "6a73ce99b2c645e649c88eedad2c730484f524adbc0f42c0c8fe26a32b9f140f"
+    },
+    "plots/embeddings/embeddings.pdf": {
+      "bytes": 19150,
+      "sha256": "7873510fd5e7952b1f0ddac59a5bfc58351f6cca7ebf1dcf76e671af9bbfe516"
+    },
+    "plots/embeddings/embeddings.png": {
+      "bytes": 217868,
+      "sha256": "d035255a6be55362a1077bb69575e15830385d84b18e20e634bfc7ee08d52a33"
+    },
+    "plots/s2_checkpoint/transport.json": {
+      "bytes": 9328,
+      "sha256": "ef8d18f80273608575588b36a65cf625b19f43c78f20d5a6aea9be73a0a24ff3"
+    },
+    "plots/s2_checkpoint/transport.pdf": {
+      "bytes": 53232,
+      "sha256": "7058ff4aabe3ef64652c3cb094ef30e06b689178804928637ee12939ccd8ba34"
+    },
+    "plots/s2_checkpoint/transport.png": {
+      "bytes": 309092,
+      "sha256": "1445219aa28666e16a36e2d7fc08ec8c453ce6a6760ed5573f8ec5092f3264b9"
+    }
+  },
+  "source_changes_after_freeze": false,
+  "full_continental_training": false,
+  "additional_training_outside_scope": false
+}

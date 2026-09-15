@@ -1,0 +1,7 @@
+Both complete five-seed nvidia6 torus RNOT rows are delivered. The [FPS row](fps_row_summary.md) gives KL 0.126792154795 and ESS ratio 0.926915925560, matching the paper’s displayed means 0.13 and 0.93. The [random row](random_row_summary.md) gives KL 0.222997629603 and ESS ratio 0.796680475076: KL matches the paper’s displayed 0.22; ESS rounds to 0.80 versus the paper’s 0.85.
+
+All 12 unchanged native JSON files are in the [committed host group](../../results/nvidia6_portability_jax435/): five FPS, five random, and the two first-seed RCPM checks. [Delivery checksums](delivery_checksums.json) verify every native JSON/checkpoint/training log. [Final release and environment evidence](twelve_check_release_confirmation.json) confirms no remaining jobs from this cohort and all 80 frozen package versions unchanged.
+
+The [paired comparison](paired_comparison.md) retains nvidia6 RTX 3090/driver 550.90.07 and nvidia7 RTX 6000 Ada/driver 570.195.03 as distinct host environments. Source, settings and the frozen versions match; this is not an isolated architecture experiment. The separately stored original-host checkpoint replay exactly reproduced every metric in all five original nvidia6 batches and does not count as another training seed.
+
+The [initial capacity-only decision](capacity_rebalance_decision.json), later [FPS declaration](fps_row_completion_manifest.json), and final [random declaration](random_row_completion_manifest.json) preserve the complete scheduling rationale. Every prescribed seed was retained.

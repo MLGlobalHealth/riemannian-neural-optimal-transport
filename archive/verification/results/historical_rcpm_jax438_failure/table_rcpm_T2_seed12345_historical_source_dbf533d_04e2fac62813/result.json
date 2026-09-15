@@ -1,0 +1,117 @@
+{
+  "command": [
+    "/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/tooling/verify_run.py",
+    "--source-root",
+    "/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source",
+    "--output-dir",
+    "/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/results/historical_rcpm",
+    "--suite",
+    "table",
+    "--manifold",
+    "torus",
+    "--method",
+    "rcpm",
+    "--seed",
+    "12345",
+    "--label",
+    "historical_source_dbf533d",
+    "--gpu",
+    "5"
+  ],
+  "environment": {
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "5",
+      "JAX_ENABLE_X64": null,
+      "JAX_PLATFORMS": "cuda",
+      "MPLBACKEND": "Agg",
+      "OMP_NUM_THREADS": "2",
+      "XLA_FLAGS": null,
+      "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+    },
+    "executable": "/data/am1118/mlgh-verification-20260908/venv/bin/python",
+    "hostname": "nvidia6",
+    "jax_default_backend": "gpu",
+    "jax_devices": [
+      "cuda:0"
+    ],
+    "jax_enable_x64": true,
+    "nvidia_smi": "0, NVIDIA GeForce RTX 3090, GPU-1e3c7ca5-134e-9d2b-2eab-539278545347, 550.90.07, 24576 MiB\n1, NVIDIA GeForce RTX 3090, GPU-5d9f1878-86e6-3c41-9569-07a3ee2ad3b0, 550.90.07, 24576 MiB\n2, NVIDIA GeForce RTX 3090, GPU-09a54998-1924-8565-19fb-d8d2fed32ba8, 550.90.07, 24576 MiB\n3, NVIDIA GeForce RTX 3090, GPU-dd63b322-b9cf-f6e1-7c74-ee07051428f4, 550.90.07, 24576 MiB\n4, NVIDIA GeForce RTX 3090, GPU-c46c3062-0628-69bf-00e8-76ded5dece35, 550.90.07, 24576 MiB\n5, NVIDIA GeForce RTX 3090, GPU-a6f56671-80db-a0e5-e2e9-cf7dc0af48e2, 550.90.07, 24576 MiB\n6, NVIDIA GeForce RTX 3090, GPU-a1120bea-228f-0cc7-9e86-2bdc89b9852f, 550.90.07, 24576 MiB\n7, NVIDIA GeForce RTX 3090, GPU-a782c603-cada-c82b-f23b-e0aec25f51e0, 550.90.07, 24576 MiB",
+    "packages": {
+      "cartopy": "0.25.0",
+      "flax": "0.10.0",
+      "jax": "0.4.38",
+      "jax-cuda12-pjrt": "0.4.38",
+      "jax-cuda12-plugin": "0.4.38",
+      "jax-cuda13-plugin": null,
+      "jaxlib": "0.4.38",
+      "matplotlib": "3.8.3",
+      "numpy": "1.24.4",
+      "optax": "0.2.3",
+      "pandas": "2.2.1",
+      "scipy": "1.14.1",
+      "spherical-kde": "0.1.2"
+    },
+    "platform": "Linux-5.15.0-113-generic-x86_64-with-glibc2.35",
+    "python": "3.11.7 | packaged by conda-forge | (main, Dec 23 2023, 14:43:09) [GCC 12.3.0]"
+  },
+  "error": {
+    "message": "Jax transforms and Flax models cannot be mixed. (https://flax.readthedocs.io/en/latest/api_reference/flax.errors.html#flax.errors.JaxTransformError)",
+    "traceback": "Traceback (most recent call last):\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/tooling/verify_run.py\", line 327, in main\n    exp, config, builder = build_experiment(m, args, overrides)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/tooling/verify_run.py\", line 215, in build_experiment\n    exp = m.build_rcpm_experiment(rcpm_manifold, is_torus=args.manifold == \"torus\",\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/experiments/run_table.py\", line 318, in build_rcpm_experiment\n    params = flow.init(k2, batch)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 315, in __call__\n    xs, ldj, ldj_sign = transform(xs, t = t)\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 271, in __call__\n    z, dF, J = jax.vmap(flow_and_jac)(xs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 266, in flow_and_jac\n    z = flow(xs)\n        ^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 256, in flow\n    dF = dF_riemannian(xs)\n         ^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 250, in dF_riemannian\n    dF = jax.jacfwd(self.potential)(xs)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 283, in potential\n    F = self.potential_mod(xs)\n        ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source/rcpm/flows.py\", line 104, in setup\n    self.mus = self.param(\n               ^^^^^^^^^^^\n  File \"/home/am1118/miniforge3/envs/score_sde_expfam/lib/python3.11/site-packages/flax/core/tracers.py\", line 36, in check_trace_level\n    raise errors.JaxTransformError()\nflax.errors.JaxTransformError: Jax transforms and Flax models cannot be mixed. (https://flax.readthedocs.io/en/latest/api_reference/flax.errors.html#flax.errors.JaxTransformError)\n--------------------\nFor simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.\n",
+    "type": "JaxTransformError"
+  },
+  "evaluation_batches": [],
+  "evaluation_config": {
+    "batch_size": 1024,
+    "n_batches": 5,
+    "seed": 13345
+  },
+  "explicit_overrides": {},
+  "finished_at": "2026-09-08T10:24:49.910921+00:00",
+  "label": "historical_source_dbf533d",
+  "paper_reproduction": false,
+  "paper_reproduction_note": "Numerical comparison with paper is a separate verification step; smoke runs are ineligible.",
+  "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+  "schema_version": 1,
+  "selection": {
+    "dimension": 2,
+    "gamma": 1.0,
+    "landmark_method": null,
+    "manifold": "torus",
+    "method": "rcpm",
+    "seed": 12345,
+    "suite": "table"
+  },
+  "smoke": false,
+  "source": {
+    "files": {
+      "experiments/run_ablations.py": "0d13481f1c8f250e8e9c80861bc84ada0e0820a93ec039f60fc64d682f5467ad",
+      "experiments/run_experiments.py": "c8fd45b8a01f3fd08bc2bf993b0660f9b73726cc84e1f9066e442eb94e8a0005",
+      "experiments/run_experiments_highD.py": "3d72d55acc3a6b772d328d5011ca82ce8541874574256272792834a06c1cc5b5",
+      "experiments/run_table.py": "aa70ca3914f7a989e2a1a60439cd56cc249378e02fc2e78c369eef8f77cbcacd",
+      "rcpm/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "rcpm/densities.py": "fca9ad35d914c386af35db3cb4febb434c22ffd9c2dc07c7e259e03ab6ea0261",
+      "rcpm/flows.py": "2bebc0d8f5360c0fd19339f7a7356151063af611eb7449bb782b5993a38de256",
+      "rcpm/manifolds.py": "a70f112285ad82afbda76204588a034569b073bbd0defd6846a789d09b5e893f",
+      "rcpm/requirements.txt": "a22a1d588a8d2d0d4c4d02252486c3e364c4d83ef76b3bb6deb9337ae1ec813f",
+      "rcpm/utils.py": "60a5b8b45e1b50c639b5c97a358296d55c4ee52acfed9effa22c0b6554895491",
+      "src/__init__.py": "50f0986f1ab6f16313cf9e12b016b76d1b0e3b013478fd9998f9d78e71fd7cd1",
+      "src/base.py": "72d0dc2d666bd8822a244c184be196028f1e20ac99ba45c476ca00fbd93599ac",
+      "src/densities.py": "c3e5e7bdee3449d0f6eefa9555186fe567a455e038131809ca6b5550e64122da",
+      "src/embeddings.py": "2e437a1d222e175f83d69169062112cd1112b83e5d6925fccf585bd9a748275f",
+      "src/empirical.py": "226883d629c5cc614db19e422f08adddca2e1fe09af726ddb86ddbd930bf1b7c",
+      "src/losses.py": "a45510bb60eaa65297509304f6fdd82652a0a30d5d824fd7bac339261b8ae19a",
+      "src/manifolds.py": "84e08796d23a9f2ae8abdfb8aa4cd723e945459d503beb3aff031477bdf69a2b",
+      "src/metrics.py": "5293bdc3449970d22dbb448eca3fd8663fbd78b449078d5d57bfea119615e01a",
+      "src/networks.py": "ee04852119bad4c8a9b5f2d86bcfd4d4474db693e7b88c188aa84d598d7e139d",
+      "src/solvers.py": "fb92172659db911db1f696ef9e23ff3d63665baa53dd3a1041fb49e05448ee61",
+      "src/trainers.py": "fc3c2db8b9147addf83aef5d3b317b6a508e54e3e6718f7bb26db6f661c37946",
+      "src/utils.py": "8ab87764a096be755b89ec058735829045a831cba63ed56779c29ecccca7ec59"
+    },
+    "sha256": "48b62f9f4c81b2dd410ac7c623172ece18bafd22452a041c334f8bdebc3ab23b"
+  },
+  "source_root": "/data/am1118/mlgh-verification-20260908/historical_source_dbf533d_trial/source",
+  "started_at": "2026-09-08T10:24:48.123219+00:00",
+  "status": "failed",
+  "task_id": "table_rcpm_T2_seed12345_historical_source_dbf533d_04e2fac62813",
+  "timings_seconds": {}
+}

@@ -1,0 +1,4359 @@
+{
+  "comparison_policy": {
+    "default_vs_override": "Explicit overrides are shown descriptively and cannot satisfy native-default table completeness. Complete configured groups count separately toward overall row coverage.",
+    "grouping": "Same suite, manifold/dimension, method/landmarks/gamma, label, source hash, runner hash, effective config, evaluation recipe, host and software/hardware environment. GPU index/UUID can differ only on the same host with matching model/driver/memory.",
+    "independence": "A seed contributes once; conflicting repeated seeds are excluded, never selected by performance. Identical copied JSON files are deduplicated.",
+    "publication_readiness": "No automatic publication approval; missing experiments, source-version gaps, solver reliability and timing differences remain explicit.",
+    "rounding": "Compare observed means to half-unit intervals at the printed precision. These checks do not establish statistical equivalence.",
+    "row_coverage": "Each covered row requires a complete five-seed group. Rows may use different hosts, labels, sources or environments, which remain explicit. Partial groups are never pooled. Coverage does not establish numerical agreement or full paper reproduction.",
+    "smoke": "All smoke runs excluded, even when the explicit label differs.",
+    "uncertainty": "Each run mean averages its recorded evaluation batches; ddof0 and ddof1 SE are computed over independent training seeds. Paper confidence level is not invented."
+  },
+  "duplicate_file_copies": [],
+  "environment_completeness": {
+    "209529b2ecf1cc9d": {
+      "all_six_archive_table_rows_complete": true,
+      "all_six_table_rows_complete_in_this_environment": true,
+      "complete_configured_table_rows": [],
+      "complete_native_table_rows": [
+        "S2:RCPM_gamma1",
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RCPM_gamma1",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "complete_table_rows": [
+        "S2:RCPM_gamma1",
+        "S2:RNOT_FPS",
+        "S2:RNOT_RND",
+        "T2:RCPM_gamma1",
+        "T2:RNOT_FPS",
+        "T2:RNOT_RND"
+      ],
+      "environment": {
+        "environment": {
+          "JAX_ENABLE_X64": null,
+          "JAX_PLATFORMS": null,
+          "MPLBACKEND": "Agg",
+          "OMP_NUM_THREADS": "2",
+          "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+          "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+        },
+        "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+        "hostname": "nvidia7",
+        "jax_default_backend": "gpu",
+        "jax_enable_x64": false,
+        "packages": {
+          "cartopy": "0.25.0",
+          "flax": "0.10.6",
+          "jax": "0.6.2",
+          "jax-cuda12-pjrt": "0.6.2",
+          "jax-cuda12-plugin": "0.6.2",
+          "jax-cuda13-plugin": null,
+          "jaxlib": "0.6.2",
+          "matplotlib": "3.11.1",
+          "numpy": "2.4.6",
+          "optax": "0.2.4",
+          "pandas": "3.0.5",
+          "scipy": "1.17.1",
+          "spherical-kde": "0.1.2"
+        },
+        "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+        "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+        "selected_accelerator_types": [
+          [
+            "NVIDIA RTX 6000 Ada Generation",
+            "570.195.03",
+            "49140 MiB"
+          ]
+        ]
+      },
+      "group_ids": [
+        "2fb86a384def923b",
+        "831431cdc70bd86b",
+        "5e85c2d921f8a75f",
+        "55d845eb2a613a41",
+        "a3230348aa48d1ca",
+        "8b8657bc978c1f72"
+      ],
+      "label": "zip_defaults",
+      "missing_native_table_rows": [],
+      "missing_table_rows": [],
+      "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+      "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+    }
+  },
+  "evidence_path_base": "output_directory",
+  "excluded_runs": [],
+  "generated_at": "2026-09-08T12:59:05.781363+00:00",
+  "groups": [
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 1019.9118066406251,
+          "n": 5,
+          "raw_values": [
+            1020.9744995117187,
+            1021.2439575195312,
+            1020.0793823242187,
+            1018.1943725585937,
+            1019.0668212890625
+          ],
+          "se_ddof0": 0.5136381521130884,
+          "se_ddof1": 0.5742649119811215
+        },
+        "ess_ratio": {
+          "mean": 0.9960076236724854,
+          "n": 5,
+          "raw_values": [
+            0.9970454096794128,
+            0.9973085522651672,
+            0.9961712718009949,
+            0.9943304419517517,
+            0.9951824426651001
+          ],
+          "se_ddof0": 0.0005015997579229379,
+          "se_ddof1": 0.000560805578106564
+        },
+        "kl": {
+          "mean": 0.008507697796449065,
+          "n": 5,
+          "raw_values": [
+            0.008967555686831474,
+            0.006203321111388505,
+            0.008052751398645341,
+            0.007766315760090947,
+            0.01154854502528906
+          ],
+          "se_ddof0": 0.000788035446001019,
+          "se_ddof1": 0.0008810504129688217
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "2fb86a384def923b",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "S2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "SphereWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 0.01
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": null,
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": 1.0,
+          "landmark_method": null,
+          "manifold": "sphere",
+          "method": "rcpm",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RCPM_gamma1",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 3,
+            "difference_from_printed_mean": 7.623672485412847e-06,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.996,
+            "relative_difference_percent": 0.0007654289643988802,
+            "rounding_interval": {
+              "lower_inclusive": "0.9955",
+              "upper_exclusive": "0.9965"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 4,
+            "difference_from_printed_mean": 0.004807697796449064,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0008,
+            "printed_mean": 0.0037,
+            "relative_difference_percent": 129.93777828240712,
+            "rounding_interval": {
+              "lower_inclusive": "0.00365",
+              "upper_exclusive": "0.00375"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 37.3,
+          "reported_plus_minus": 0.6
+        },
+        "scope": "archive_defaults",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1020.9744995117187,
+            "ess_ratio": 0.9970454096794128,
+            "kl": 0.008967555686831474
+          },
+          "path": "../../results/zip_defaults/table_rcpm_S2_seed12345_zip_defaults_0d945495fc09/result.json",
+          "residual_diagnostics": [],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed12345_zip_defaults_0d945495fc09",
+          "timings_seconds": {
+            "build": 11.202054071007296,
+            "training_native_return": 32.893225871026516,
+            "training_synchronized": 32.89442773303017
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1021.2439575195312,
+            "ess_ratio": 0.9973085522651672,
+            "kl": 0.006203321111388505
+          },
+          "path": "../../results/zip_defaults/table_rcpm_S2_seed23456_zip_defaults_0a5584d68448/result.json",
+          "residual_diagnostics": [],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed23456_zip_defaults_0a5584d68448",
+          "timings_seconds": {
+            "build": 11.175535327987745,
+            "training_native_return": 36.15350665291771,
+            "training_synchronized": 36.15535187302157
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1020.0793823242187,
+            "ess_ratio": 0.9961712718009949,
+            "kl": 0.008052751398645341
+          },
+          "path": "../../results/zip_defaults/table_rcpm_S2_seed34567_zip_defaults_bf35bb541692/result.json",
+          "residual_diagnostics": [],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed34567_zip_defaults_bf35bb541692",
+          "timings_seconds": {
+            "build": 11.353794384980574,
+            "training_native_return": 34.05731809209101,
+            "training_synchronized": 34.058547736145556
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1018.1943725585937,
+            "ess_ratio": 0.9943304419517517,
+            "kl": 0.007766315760090947
+          },
+          "path": "../../results/zip_defaults/table_rcpm_S2_seed45678_zip_defaults_29ad38d15ee6/result.json",
+          "residual_diagnostics": [],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed45678_zip_defaults_29ad38d15ee6",
+          "timings_seconds": {
+            "build": 11.324755768058822,
+            "training_native_return": 34.003100333036855,
+            "training_synchronized": 34.00425975793041
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 1019.0668212890625,
+            "ess_ratio": 0.9951824426651001,
+            "kl": 0.01154854502528906
+          },
+          "path": "../../results/zip_defaults/table_rcpm_S2_seed56789_zip_defaults_715416696674/result.json",
+          "residual_diagnostics": [],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_rcpm_S2_seed56789_zip_defaults_715416696674",
+          "timings_seconds": {
+            "build": 11.121648337924853,
+            "training_native_return": 35.00880957604386,
+            "training_synchronized": 35.009974932065234
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 34.42319210502319,
+          "n": 5,
+          "raw_values": [
+            32.893225871026516,
+            36.15350665291771,
+            34.05731809209101,
+            34.003100333036855,
+            35.00880957604386
+          ],
+          "se_ddof0": 0.4894108222922642,
+          "se_ddof1": 0.547177933784786
+        },
+        "training_synchronized": {
+          "mean": 34.42451240643859,
+          "n": 5,
+          "raw_values": [
+            32.89442773303017,
+            36.15535187302157,
+            34.058547736145556,
+            34.00425975793041,
+            35.009974932065234
+          ],
+          "se_ddof0": 0.4895006910832535,
+          "se_ddof1": 0.54727841014764
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 921.4159057617187,
+          "n": 5,
+          "raw_values": [
+            988.5421142578125,
+            984.9814086914063,
+            916.63837890625,
+            803.6477294921875,
+            913.2698974609375
+          ],
+          "se_ddof0": 30.003350869999608,
+          "se_ddof1": 33.54476604904829
+        },
+        "ess_ratio": {
+          "mean": 0.8998202204704284,
+          "n": 5,
+          "raw_values": [
+            0.965373158454895,
+            0.9618959069252014,
+            0.8951546669006347,
+            0.7848122358322144,
+            0.8918651342391968
+          ],
+          "se_ddof0": 0.029300147333983992,
+          "se_ddof1": 0.03275856059477372
+        },
+        "kl": {
+          "mean": 0.039682145342230794,
+          "n": 5,
+          "raw_values": [
+            0.039093632251024246,
+            0.03290243446826935,
+            0.029744068160653114,
+            0.05519462674856186,
+            0.041475965082645415
+          ],
+          "se_ddof0": 0.00394426709999663,
+          "se_ddof1": 0.0044098246785042134
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "831431cdc70bd86b",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "S2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 256,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.005,
+            "inner_steps": 500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.01,
+            "logsumexp_init": false,
+            "lr_decay": false,
+            "min_steps": 50,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": false,
+            "use_line_search": true
+          },
+          "target_density": "SphereWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 500
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 1e-08
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": {
+          "base_count": 128,
+          "fps_candidates_per_density": 4096,
+          "method": "fps",
+          "target_count": 128
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "fps",
+          "manifold": "sphere",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RNOT_FPS",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.07017977952957155,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.97,
+            "relative_difference_percent": -7.235028817481603,
+            "rounding_interval": {
+              "lower_inclusive": "0.965",
+              "upper_exclusive": "0.975"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.009682145342230795,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.03,
+            "relative_difference_percent": 32.27381780743599,
+            "rounding_interval": {
+              "lower_inclusive": "0.025",
+              "upper_exclusive": "0.035"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 986,
+          "reported_plus_minus": 2
+        },
+        "scope": "archive_defaults",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 988.5421142578125,
+            "ess_ratio": 0.965373158454895,
+            "kl": 0.039093632251024246
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed12345_zip_defaults_769765e2d52f/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05236154794692993,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0047782473266124725,
+                "0.5": 0.04937193542718887,
+                "0.9": 0.08284658193588257,
+                "0.95": 0.08952970057725906,
+                "0.99": 0.10337645560503006,
+                "1": 0.11267474293708801
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.0529923141002655,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0053961314260959625,
+                "0.5": 0.05010747164487839,
+                "0.9": 0.08370879292488098,
+                "0.95": 0.09159602969884872,
+                "0.99": 0.10788149386644363,
+                "1": 0.11686991900205612
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.0533103421330452,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.004596393089741468,
+                "0.5": 0.05081848055124283,
+                "0.9": 0.08171848207712173,
+                "0.95": 0.0905061587691307,
+                "0.99": 0.10852751135826111,
+                "1": 0.12601327896118164
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.052220847457647324,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0018087842036038637,
+                "0.5": 0.04976598918437958,
+                "0.9": 0.08196767419576645,
+                "0.95": 0.09003060311079025,
+                "0.99": 0.1075625941157341,
+                "1": 0.12412143498659134
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05303642153739929,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.004261794500052929,
+                "0.5": 0.05118166282773018,
+                "0.9": 0.08229824155569077,
+                "0.95": 0.0882713720202446,
+                "0.99": 0.10383059829473495,
+                "1": 0.11897189170122147
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed12345_zip_defaults_769765e2d52f",
+          "timings_seconds": {
+            "build": 11.632374849868938,
+            "training_native_return": 61.43082346697338,
+            "training_synchronized": 61.43160956609063
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 984.9814086914063,
+            "ess_ratio": 0.9618959069252014,
+            "kl": 0.03290243446826935
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed23456_zip_defaults_1b0b06fa631d/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.038937583565711975,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0005845855339430273,
+                "0.5": 0.03830014541745186,
+                "0.9": 0.06031407043337822,
+                "0.95": 0.06643164157867432,
+                "0.99": 0.081624336540699,
+                "1": 0.1144469827413559
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.03865953907370567,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0003642965166363865,
+                "0.5": 0.03841155767440796,
+                "0.9": 0.05978674441576004,
+                "0.95": 0.06514102220535278,
+                "0.99": 0.08476906269788742,
+                "1": 0.12195837497711182
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.03890471160411835,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0012610387057065964,
+                "0.5": 0.037689659744501114,
+                "0.9": 0.06111832335591316,
+                "0.95": 0.06787970662117004,
+                "0.99": 0.09609518200159073,
+                "1": 0.1249457523226738
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.039639607071876526,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0024697682820260525,
+                "0.5": 0.039356693625450134,
+                "0.9": 0.06045345589518547,
+                "0.95": 0.06762298196554184,
+                "0.99": 0.07921624183654785,
+                "1": 0.09712495654821396
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.038984447717666626,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0006251460872590542,
+                "0.5": 0.0382532924413681,
+                "0.9": 0.05858786031603813,
+                "0.95": 0.06593097746372223,
+                "0.99": 0.08751146495342255,
+                "1": 0.10718642175197601
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed23456_zip_defaults_1b0b06fa631d",
+          "timings_seconds": {
+            "build": 11.169210345949978,
+            "training_native_return": 58.66334699210711,
+            "training_synchronized": 58.663802864961326
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 916.63837890625,
+            "ess_ratio": 0.8951546669006347,
+            "kl": 0.029744068160653114
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed34567_zip_defaults_2a38f312eac5/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.06698578596115112,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.002289736410602927,
+                "0.5": 0.06600777059793472,
+                "0.9": 0.10451999306678772,
+                "0.95": 0.11019909381866455,
+                "0.99": 0.12067478895187378,
+                "1": 0.13203105330467224
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.06732163578271866,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0016546652186661959,
+                "0.5": 0.0665152370929718,
+                "0.9": 0.10635846108198166,
+                "0.95": 0.11263744533061981,
+                "0.99": 0.12095300853252411,
+                "1": 0.12934301793575287
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.0676087960600853,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0037510727997869253,
+                "0.5": 0.06712590157985687,
+                "0.9": 0.10594348609447479,
+                "0.95": 0.11271873861551285,
+                "0.99": 0.12397460639476776,
+                "1": 0.13447366654872894
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.06758518517017365,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0006963468622416258,
+                "0.5": 0.06669361889362335,
+                "0.9": 0.10741852223873138,
+                "0.95": 0.11244936287403107,
+                "0.99": 0.12374966591596603,
+                "1": 0.14540183544158936
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.06585679948329926,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.001105340663343668,
+                "0.5": 0.0670071691274643,
+                "0.9": 0.10222022980451584,
+                "0.95": 0.10991013050079346,
+                "0.99": 0.12428238987922668,
+                "1": 0.13304753601551056
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed34567_zip_defaults_2a38f312eac5",
+          "timings_seconds": {
+            "build": 10.935761583968997,
+            "training_native_return": 58.107300243806094,
+            "training_synchronized": 58.10772891482338
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 803.6477294921875,
+            "ess_ratio": 0.7848122358322144,
+            "kl": 0.05519462674856186
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed45678_zip_defaults_94dbb7102a5d/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05038836970925331,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0021364346612244844,
+                "0.5": 0.050608228892087936,
+                "0.9": 0.08033415675163269,
+                "0.95": 0.08702126145362854,
+                "0.99": 0.09880560636520386,
+                "1": 0.11126209050416946
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05224155634641647,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0023526661098003387,
+                "0.5": 0.052378877997398376,
+                "0.9": 0.08188499510288239,
+                "0.95": 0.08804085105657578,
+                "0.99": 0.10122628509998322,
+                "1": 0.11837480217218399
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05180395394563675,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.002155074616894126,
+                "0.5": 0.051722556352615356,
+                "0.9": 0.08077754080295563,
+                "0.95": 0.08791074901819229,
+                "0.99": 0.09995957463979721,
+                "1": 0.11194158345460892
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05180910602211952,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0010531172156333923,
+                "0.5": 0.05199164152145386,
+                "0.9": 0.08183301240205765,
+                "0.95": 0.0880335122346878,
+                "0.99": 0.0993323028087616,
+                "1": 0.1072496697306633
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.05403920263051987,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0028513146098703146,
+                "0.5": 0.05535440891981125,
+                "0.9": 0.08318065106868744,
+                "0.95": 0.0894625335931778,
+                "0.99": 0.10057012736797333,
+                "1": 0.11664759367704391
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed45678_zip_defaults_94dbb7102a5d",
+          "timings_seconds": {
+            "build": 11.42575862701051,
+            "training_native_return": 62.12326276302338,
+            "training_synchronized": 62.12365806894377
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 913.2698974609375,
+            "ess_ratio": 0.8918651342391968,
+            "kl": 0.041475965082645415
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed56789_zip_defaults_835103629fb0/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.030364301055669785,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0006453444366343319,
+                "0.5": 0.029499461874365807,
+                "0.9": 0.05022260919213295,
+                "0.95": 0.056672632694244385,
+                "0.99": 0.06258079409599304,
+                "1": 0.07132241129875183
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.03131839632987976,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0015611727721989155,
+                "0.5": 0.03034166619181633,
+                "0.9": 0.05221710354089737,
+                "0.95": 0.05766439437866211,
+                "0.99": 0.06676853448152542,
+                "1": 0.08180905878543854
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.030731113627552986,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0005805083783343434,
+                "0.5": 0.029550477862358093,
+                "0.9": 0.0512842983007431,
+                "0.95": 0.05651828646659851,
+                "0.99": 0.06434076279401779,
+                "1": 0.07929324358701706
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.031426094472408295,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0012688803253695369,
+                "0.5": 0.030203405767679214,
+                "0.9": 0.0519348606467247,
+                "0.95": 0.0575115792453289,
+                "0.99": 0.06476923078298569,
+                "1": 0.08426336199045181
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.032664839178323746,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0010734956013038754,
+                "0.5": 0.03128964826464653,
+                "0.9": 0.05344480276107788,
+                "0.95": 0.05914554372429848,
+                "0.99": 0.06841067969799042,
+                "1": 0.08064338564872742
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed56789_zip_defaults_835103629fb0",
+          "timings_seconds": {
+            "build": 10.857166504021734,
+            "training_native_return": 57.92126794415526,
+            "training_synchronized": 57.92170528299175
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 59.64920028201304,
+          "n": 5,
+          "raw_values": [
+            61.43082346697338,
+            58.66334699210711,
+            58.107300243806094,
+            62.12326276302338,
+            57.92126794415526
+          ],
+          "se_ddof0": 0.7907029514144189,
+          "se_ddof1": 0.8840327746861771
+        },
+        "training_synchronized": {
+          "mean": 59.64970093956217,
+          "n": 5,
+          "raw_values": [
+            61.43160956609063,
+            58.663802864961326,
+            58.10772891482338,
+            62.12365806894377,
+            57.92170528299175
+          ],
+          "se_ddof0": 0.7907288779099823,
+          "se_ddof1": 0.8840617613894262
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 781.4115535736084,
+          "n": 5,
+          "raw_values": [
+            945.996435546875,
+            884.3698974609375,
+            757.2447631835937,
+            469.462211227417,
+            849.9844604492188
+          ],
+          "se_ddof0": 74.9098854505927,
+          "se_ddof1": 83.75179802712387
+        },
+        "ess_ratio": {
+          "mean": 0.763097220286727,
+          "n": 5,
+          "raw_values": [
+            0.9238246440887451,
+            0.8636424779891968,
+            0.7394968390464782,
+            0.45845919065177443,
+            0.8300629496574402
+          ],
+          "se_ddof0": 0.07315418501034443,
+          "se_ddof1": 0.08178886526086315
+        },
+        "kl": {
+          "mean": 0.06784386351704598,
+          "n": 5,
+          "raw_values": [
+            0.04926144778728485,
+            0.06490588262677192,
+            0.06626407578587531,
+            0.09609814286231995,
+            0.06268976852297783
+          ],
+          "se_ddof0": 0.006874016676934965,
+          "se_ddof1": 0.007685384284046895
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "5e85c2d921f8a75f",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "SphereUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "S2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 256,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.005,
+            "inner_steps": 500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.01,
+            "logsumexp_init": false,
+            "lr_decay": false,
+            "min_steps": 50,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": false,
+            "use_line_search": true
+          },
+          "target_density": "SphereWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 500
+          }
+        },
+        "density_configuration": {
+          "base_class": "SphereUniform",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 3,
+          "class": "Sphere",
+          "components": [],
+          "jitter": 1e-08
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": {
+          "base_count": 128,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 128
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "sphere",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "S2",
+        "method": "RNOT_RND",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.18690277971327296,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.95,
+            "relative_difference_percent": -19.673976811923474,
+            "rounding_interval": {
+              "lower_inclusive": "0.945",
+              "upper_exclusive": "0.955"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.02784386351704598,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.0,
+            "printed_mean": 0.04,
+            "relative_difference_percent": 69.60965879261495,
+            "rounding_interval": {
+              "lower_inclusive": "0.035",
+              "upper_exclusive": "0.045"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1100,
+          "reported_plus_minus": 1
+        },
+        "scope": "archive_defaults",
+        "table": 1,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 945.996435546875,
+            "ess_ratio": 0.9238246440887451,
+            "kl": 0.04926144778728485
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed12345_zip_defaults_7417ab3c8c6d/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.11088906228542328,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.00047252298099920154,
+                "0.5": 0.11376335471868515,
+                "0.9": 0.15355072915554047,
+                "0.95": 0.16416046023368835,
+                "0.99": 0.1972840428352356,
+                "1": 0.2320028394460678
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.11014087498188019,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0028700900729745626,
+                "0.5": 0.11290019750595093,
+                "0.9": 0.15095171332359314,
+                "0.95": 0.1606825441122055,
+                "0.99": 0.18924249708652496,
+                "1": 0.24527862668037415
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.11230380088090897,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0007746400660835207,
+                "0.5": 0.11573517322540283,
+                "0.9": 0.15368954837322235,
+                "0.95": 0.16156868636608124,
+                "0.99": 0.18186044692993164,
+                "1": 0.2136576771736145
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.11045676469802856,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.005580878350883722,
+                "0.5": 0.11226658523082733,
+                "0.9": 0.1525254249572754,
+                "0.95": 0.1604231595993042,
+                "0.99": 0.19469740986824036,
+                "1": 0.23894810676574707
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.11141978204250336,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.008370347321033478,
+                "0.5": 0.1131700724363327,
+                "0.9": 0.152859166264534,
+                "0.95": 0.1622345745563507,
+                "0.99": 0.1795601099729538,
+                "1": 0.2571937143802643
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed12345_zip_defaults_7417ab3c8c6d",
+          "timings_seconds": {
+            "build": 8.196162133011967,
+            "training_native_return": 58.56061119702645,
+            "training_synchronized": 58.56108929309994
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 884.3698974609375,
+            "ess_ratio": 0.8636424779891968,
+            "kl": 0.06490588262677192
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed23456_zip_defaults_e4684d6e775e/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09951929748058319,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0055667744018137455,
+                "0.5": 0.09615148603916168,
+                "0.9": 0.16187171638011932,
+                "0.95": 0.1762298196554184,
+                "0.99": 0.20060628652572632,
+                "1": 0.27321523427963257
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09636443853378296,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.003454061457887292,
+                "0.5": 0.09195564687252045,
+                "0.9": 0.15807238221168518,
+                "0.95": 0.1769394725561142,
+                "0.99": 0.20641441643238068,
+                "1": 0.28777721524238586
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09766910970211029,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.006100893951952457,
+                "0.5": 0.09463419020175934,
+                "0.9": 0.15931960940361023,
+                "0.95": 0.17576219141483307,
+                "0.99": 0.20511935651302338,
+                "1": 0.3048223555088043
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09748299419879913,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0028386034537106752,
+                "0.5": 0.09391619265079498,
+                "0.9": 0.1597275286912918,
+                "0.95": 0.1773405522108078,
+                "0.99": 0.201788067817688,
+                "1": 0.2857195734977722
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09633360803127289,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.002700144425034523,
+                "0.5": 0.09354367852210999,
+                "0.9": 0.16127516329288483,
+                "0.95": 0.17779682576656342,
+                "0.99": 0.202945277094841,
+                "1": 0.2913500964641571
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed23456_zip_defaults_e4684d6e775e",
+          "timings_seconds": {
+            "build": 8.224209822015837,
+            "training_native_return": 58.274814267177135,
+            "training_synchronized": 58.275220323121175
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 757.2447631835937,
+            "ess_ratio": 0.7394968390464782,
+            "kl": 0.06626407578587531
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed34567_zip_defaults_90ad28ff6a57/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.08773300051689148,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.001184900407679379,
+                "0.5": 0.06777064502239227,
+                "0.9": 0.1714346706867218,
+                "0.95": 0.20091776549816132,
+                "0.99": 0.2698917090892792,
+                "1": 0.40425437688827515
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.0902615636587143,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0036564806941896677,
+                "0.5": 0.0686686784029007,
+                "0.9": 0.1741269826889038,
+                "0.95": 0.20829081535339355,
+                "0.99": 0.2918430268764496,
+                "1": 0.41112589836120605
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.08684566617012024,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.004223257768899202,
+                "0.5": 0.0670604407787323,
+                "0.9": 0.16990680992603302,
+                "0.95": 0.19967705011367798,
+                "0.99": 0.28027287125587463,
+                "1": 0.3882400691509247
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.08950607478618622,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0019383120816200972,
+                "0.5": 0.06963462382555008,
+                "0.9": 0.17847192287445068,
+                "0.95": 0.2022416889667511,
+                "0.99": 0.2581304907798767,
+                "1": 0.3528696298599243
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.08382296562194824,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.006276859901845455,
+                "0.5": 0.06408534944057465,
+                "0.9": 0.1693883091211319,
+                "0.95": 0.20371073484420776,
+                "0.99": 0.2793707549571991,
+                "1": 0.38517916202545166
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed34567_zip_defaults_90ad28ff6a57",
+          "timings_seconds": {
+            "build": 7.81008882005699,
+            "training_native_return": 58.909331283997744,
+            "training_synchronized": 58.910159406019375
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 469.462211227417,
+            "ess_ratio": 0.45845919065177443,
+            "kl": 0.09609814286231995
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed45678_zip_defaults_8c6b393f4297/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.1759563386440277,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.017826523631811142,
+                "0.5": 0.1695120930671692,
+                "0.9": 0.2658379077911377,
+                "0.95": 0.30186647176742554,
+                "0.99": 0.3726240396499634,
+                "1": 0.46686962246894836
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.17998859286308289,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.02473248541355133,
+                "0.5": 0.16998359560966492,
+                "0.9": 0.2787575125694275,
+                "0.95": 0.3030378818511963,
+                "0.99": 0.3752846419811249,
+                "1": 0.4837836027145386
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.17771153151988983,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.020139725878834724,
+                "0.5": 0.1694609522819519,
+                "0.9": 0.2741389274597168,
+                "0.95": 0.30203279852867126,
+                "0.99": 0.3819487988948822,
+                "1": 0.45306774973869324
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.1776028573513031,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.010360256768763065,
+                "0.5": 0.17149858176708221,
+                "0.9": 0.2761368453502655,
+                "0.95": 0.30971091985702515,
+                "0.99": 0.3707270324230194,
+                "1": 0.4515184164047241
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.17714226245880127,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0018221198115497828,
+                "0.5": 0.1718500554561615,
+                "0.9": 0.2716488242149353,
+                "0.95": 0.29146113991737366,
+                "0.99": 0.35875093936920166,
+                "1": 0.43312716484069824
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed45678_zip_defaults_8c6b393f4297",
+          "timings_seconds": {
+            "build": 8.026270833099261,
+            "training_native_return": 55.32853569299914,
+            "training_synchronized": 55.32895204494707
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 849.9844604492188,
+            "ess_ratio": 0.8300629496574402,
+            "kl": 0.06268976852297783
+          },
+          "path": "../../results/zip_defaults/table_ours_S2_seed56789_zip_defaults_ccb538400cea/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09261822700500488,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.004830004181712866,
+                "0.5": 0.08505105972290039,
+                "0.9": 0.16027837991714478,
+                "0.95": 0.21213750541210175,
+                "0.99": 0.27560940384864807,
+                "1": 0.3171216547489166
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09572768211364746,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0009281202219426632,
+                "0.5": 0.08528381586074829,
+                "0.9": 0.17135177552700043,
+                "0.95": 0.20746147632598877,
+                "0.99": 0.2883702516555786,
+                "1": 0.31779083609580994
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09215019643306732,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.001305926009081304,
+                "0.5": 0.08454082906246185,
+                "0.9": 0.1580473780632019,
+                "0.95": 0.19782574474811554,
+                "0.99": 0.2830388844013214,
+                "1": 0.3249029517173767
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09384164214134216,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.006864688824862242,
+                "0.5": 0.08502738177776337,
+                "0.9": 0.16444428265094757,
+                "0.95": 0.20174747705459595,
+                "0.99": 0.2813830077648163,
+                "1": 0.3197075128555298
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.09554426372051239,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0037223282270133495,
+                "0.5": 0.08484672755002975,
+                "0.9": 0.17249029874801636,
+                "0.95": 0.21607506275177002,
+                "0.99": 0.29630246758461,
+                "1": 0.3219779431819916
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_S2_seed56789_zip_defaults_ccb538400cea",
+          "timings_seconds": {
+            "build": 6.784633015980944,
+            "training_native_return": 57.00052897189744,
+            "training_synchronized": 57.00135335489176
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 57.61476428261958,
+          "n": 5,
+          "raw_values": [
+            58.56061119702645,
+            58.274814267177135,
+            58.909331283997744,
+            55.32853569299914,
+            57.00052897189744
+          ],
+          "se_ddof0": 0.5868670128606809,
+          "se_ddof1": 0.6561372672543628
+        },
+        "training_synchronized": {
+          "mean": 57.615354884415865,
+          "n": 5,
+          "raw_values": [
+            58.56108929309994,
+            58.275220323121175,
+            58.910159406019375,
+            55.32895204494707,
+            57.00135335489176
+          ],
+          "se_ddof0": 0.5868897866114405,
+          "se_ddof1": 0.6561627290817635
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 558.1647668457032,
+          "n": 5,
+          "raw_values": [
+            554.2047119140625,
+            630.335400390625,
+            617.150146484375,
+            540.907470703125,
+            448.2261047363281
+          ],
+          "se_ddof0": 29.04333389196717,
+          "se_ddof1": 32.471434437831064
+        },
+        "ess_ratio": {
+          "mean": 0.545082780122757,
+          "n": 5,
+          "raw_values": [
+            0.5412155389785767,
+            0.6155619144439697,
+            0.6026856899261475,
+            0.5282299518585205,
+            0.43772080540657043
+          ],
+          "se_ddof0": 0.02836263075387419,
+          "se_ddof1": 0.0317103851931944
+        },
+        "kl": {
+          "mean": 0.9335103845596313,
+          "n": 5,
+          "raw_values": [
+            1.0049230933189393,
+            0.7726993918418884,
+            1.0195032596588134,
+            0.8690840482711792,
+            1.0013421297073364
+          ],
+          "se_ddof0": 0.043408120611870375,
+          "se_ddof1": 0.048531754231825965
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "55d845eb2a613a41",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "cost_gamma": 1.0,
+          "init_alpha_linear_scale": 1.0,
+          "init_alpha_minval": 0.4,
+          "init_alpha_mode": "uniform",
+          "init_alpha_range": 0.01,
+          "manifold_name": "T2",
+          "min_zero_gamma": null,
+          "n_components": 68,
+          "n_transforms": 5,
+          "target_density": "TorusWrappedNormal",
+          "target_scale": 0.3,
+          "training": {
+            "batch_size": 256,
+            "log_every": 5000,
+            "lr": 0.001,
+            "n_iters": 5000
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 0.01
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 0.01
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": null,
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": 1.0,
+          "landmark_method": null,
+          "manifold": "torus",
+          "method": "rcpm",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": true,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RCPM_gamma1",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.004917219877243029,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.03,
+            "printed_mean": 0.55,
+            "relative_difference_percent": -0.8940399776805505,
+            "rounding_interval": {
+              "lower_inclusive": "0.545",
+              "upper_exclusive": "0.555"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.0035103845596312633,
+            "observed_mean_in_rounding_interval": true,
+            "paper_reported_plus_minus": 0.02,
+            "printed_mean": 0.93,
+            "relative_difference_percent": 0.37746070533669496,
+            "rounding_interval": {
+              "lower_inclusive": "0.925",
+              "upper_exclusive": "0.935"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 62.3,
+          "reported_plus_minus": 0.5
+        },
+        "scope": "archive_defaults",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 554.2047119140625,
+            "ess_ratio": 0.5412155389785767,
+            "kl": 1.0049230933189393
+          },
+          "path": "../../results/zip_defaults/table_rcpm_T2_seed12345_zip_defaults_95923f3cebeb/result.json",
+          "residual_diagnostics": [],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed12345_zip_defaults_95923f3cebeb",
+          "timings_seconds": {
+            "build": 14.563959609949961,
+            "training_native_return": 66.93599887308665,
+            "training_synchronized": 66.93745356309228
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 630.335400390625,
+            "ess_ratio": 0.6155619144439697,
+            "kl": 0.7726993918418884
+          },
+          "path": "../../results/zip_defaults/table_rcpm_T2_seed23456_zip_defaults_3426d08ce645/result.json",
+          "residual_diagnostics": [],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed23456_zip_defaults_3426d08ce645",
+          "timings_seconds": {
+            "build": 13.17581973504275,
+            "training_native_return": 60.40764194796793,
+            "training_synchronized": 60.40905135194771
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 617.150146484375,
+            "ess_ratio": 0.6026856899261475,
+            "kl": 1.0195032596588134
+          },
+          "path": "../../results/zip_defaults/table_rcpm_T2_seed34567_zip_defaults_8f9d82f2563c/result.json",
+          "residual_diagnostics": [],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed34567_zip_defaults_8f9d82f2563c",
+          "timings_seconds": {
+            "build": 13.113417319953442,
+            "training_native_return": 65.32259740890004,
+            "training_synchronized": 65.3239366619382
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 540.907470703125,
+            "ess_ratio": 0.5282299518585205,
+            "kl": 0.8690840482711792
+          },
+          "path": "../../results/zip_defaults/table_rcpm_T2_seed45678_zip_defaults_8c04b6f4d9b3/result.json",
+          "residual_diagnostics": [],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed45678_zip_defaults_8c04b6f4d9b3",
+          "timings_seconds": {
+            "build": 13.268990508979186,
+            "training_native_return": 59.697250727098435,
+            "training_synchronized": 59.69861044711433
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 448.2261047363281,
+            "ess_ratio": 0.43772080540657043,
+            "kl": 1.0013421297073364
+          },
+          "path": "../../results/zip_defaults/table_rcpm_T2_seed56789_zip_defaults_97ba2753c811/result.json",
+          "residual_diagnostics": [],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_rcpm_T2_seed56789_zip_defaults_97ba2753c811",
+          "timings_seconds": {
+            "build": 13.29887816007249,
+            "training_native_return": 66.95232571195811,
+            "training_synchronized": 66.95372096309438
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 63.86316293380223,
+          "n": 5,
+          "raw_values": [
+            66.93599887308665,
+            60.40764194796793,
+            65.32259740890004,
+            59.697250727098435,
+            66.95232571195811
+          ],
+          "se_ddof0": 1.4200091008766194,
+          "se_ddof1": 1.5876184391142385
+        },
+        "training_synchronized": {
+          "mean": 63.86455459743738,
+          "n": 5,
+          "raw_values": [
+            66.93745356309228,
+            60.40905135194771,
+            65.3239366619382,
+            59.69861044711433,
+            66.95372096309438
+          ],
+          "se_ddof0": 1.4200147357153245,
+          "se_ddof1": 1.5876247390554319
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 812.4363454437256,
+          "n": 5,
+          "raw_values": [
+            851.3980590820313,
+            825.7787475585938,
+            871.74384765625,
+            658.7437389373779,
+            854.517333984375
+          ],
+          "se_ddof0": 34.98893627064993,
+          "se_ddof1": 39.11881998079061
+        },
+        "ess_ratio": {
+          "mean": 0.7933948685973883,
+          "n": 5,
+          "raw_values": [
+            0.8314434170722962,
+            0.8064245581626892,
+            0.8513123512268066,
+            0.6433044325560331,
+            0.8344895839691162
+          ],
+          "se_ddof0": 0.03416888307680657,
+          "se_ddof1": 0.03820197263749083
+        },
+        "kl": {
+          "mean": 0.425911762714386,
+          "n": 5,
+          "raw_values": [
+            0.3657603144645691,
+            0.43679836988449094,
+            0.46541803479194643,
+            0.4654227375984192,
+            0.39615935683250425
+          ],
+          "se_ddof0": 0.017599753711617382,
+          "se_ddof1": 0.01967712284321535
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "a3230348aa48d1ca",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 256,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.005,
+            "inner_steps": 500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.01,
+            "logsumexp_init": false,
+            "lr_decay": false,
+            "min_steps": 50,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": false,
+            "use_line_search": true
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 500
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": {
+          "base_count": 128,
+          "fps_candidates_per_density": 4096,
+          "method": "fps",
+          "target_count": 128
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "fps",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RNOT_FPS",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.13660513140261177,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.93,
+            "relative_difference_percent": -14.688723806732447,
+            "rounding_interval": {
+              "lower_inclusive": "0.925",
+              "upper_exclusive": "0.935"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.295911762714386,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.01,
+            "printed_mean": 0.13,
+            "relative_difference_percent": 227.62443285722,
+            "rounding_interval": {
+              "lower_inclusive": "0.125",
+              "upper_exclusive": "0.135"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1022,
+          "reported_plus_minus": 10
+        },
+        "scope": "archive_defaults",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 851.3980590820313,
+            "ess_ratio": 0.8314434170722962,
+            "kl": 0.3657603144645691
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed12345_zip_defaults_f2f9a924eaf9/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011107370257377625,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.547172516642604e-05,
+                "0.5": 0.007123935967683792,
+                "0.9": 0.02759436145424843,
+                "0.95": 0.03455088287591934,
+                "0.99": 0.052757058292627335,
+                "1": 0.07592103630304337
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01210278645157814,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.679513949668035e-05,
+                "0.5": 0.007922504097223282,
+                "0.9": 0.029187528416514397,
+                "0.95": 0.03795158490538597,
+                "0.99": 0.05733053386211395,
+                "1": 0.08073490858078003
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01136783417314291,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 5.5142805649666116e-05,
+                "0.5": 0.007259306497871876,
+                "0.9": 0.028531517833471298,
+                "0.95": 0.036952387541532516,
+                "0.99": 0.05328557267785072,
+                "1": 0.0815795511007309
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011732976883649826,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.3482973119826056e-05,
+                "0.5": 0.00774264894425869,
+                "0.9": 0.02801813930273056,
+                "0.95": 0.03567389026284218,
+                "0.99": 0.05420404300093651,
+                "1": 0.08750274032354355
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012047532014548779,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.535684512229636e-05,
+                "0.5": 0.007723245769739151,
+                "0.9": 0.028528060764074326,
+                "0.95": 0.03789747878909111,
+                "0.99": 0.06452339142560959,
+                "1": 0.08978582173585892
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed12345_zip_defaults_f2f9a924eaf9",
+          "timings_seconds": {
+            "build": 12.02004905208014,
+            "training_native_return": 60.952193754026666,
+            "training_synchronized": 60.95303373597562
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 825.7787475585938,
+            "ess_ratio": 0.8064245581626892,
+            "kl": 0.43679836988449094
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed23456_zip_defaults_8f24e5513209/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012950051575899124,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 9.578245226293802e-06,
+                "0.5": 0.007294587790966034,
+                "0.9": 0.03191142901778221,
+                "0.95": 0.04629351571202278,
+                "0.99": 0.07911358028650284,
+                "1": 0.10698523372411728
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014097116887569427,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.2490908526815474e-05,
+                "0.5": 0.008200998418033123,
+                "0.9": 0.0333574041724205,
+                "0.95": 0.04839424043893814,
+                "0.99": 0.09136109799146652,
+                "1": 0.1140032410621643
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.013157263398170471,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.4829086467216257e-05,
+                "0.5": 0.007771286182105541,
+                "0.9": 0.03253473341464996,
+                "0.95": 0.044685158878564835,
+                "0.99": 0.08652997016906738,
+                "1": 0.1264231652021408
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01260048896074295,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.768345282471273e-05,
+                "0.5": 0.006923315115272999,
+                "0.9": 0.032127611339092255,
+                "0.95": 0.044572118669748306,
+                "0.99": 0.07953011244535446,
+                "1": 0.10527622699737549
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014327582903206348,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.255040064686909e-05,
+                "0.5": 0.00819355621933937,
+                "0.9": 0.036486584693193436,
+                "0.95": 0.04952484741806984,
+                "0.99": 0.0849042683839798,
+                "1": 0.12424113601446152
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed23456_zip_defaults_8f24e5513209",
+          "timings_seconds": {
+            "build": 11.86406727693975,
+            "training_native_return": 61.32147506787442,
+            "training_synchronized": 61.32223505084403
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 871.74384765625,
+            "ess_ratio": 0.8513123512268066,
+            "kl": 0.46541803479194643
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed34567_zip_defaults_6b38c5f27d6a/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011501811444759369,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.676684223639313e-05,
+                "0.5": 0.006082962267100811,
+                "0.9": 0.028986765071749687,
+                "0.95": 0.041610799729824066,
+                "0.99": 0.0778154581785202,
+                "1": 0.16908679902553558
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011134430766105652,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.1973421098664403e-05,
+                "0.5": 0.005951878614723682,
+                "0.9": 0.028097016736865044,
+                "0.95": 0.03722550719976425,
+                "0.99": 0.07107773423194885,
+                "1": 0.2035519927740097
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.010705651715397835,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.3416409274213947e-05,
+                "0.5": 0.006515607237815857,
+                "0.9": 0.025422772392630577,
+                "0.95": 0.03408442810177803,
+                "0.99": 0.0603155717253685,
+                "1": 0.13339774310588837
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01148259174078703,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.9902823623851873e-05,
+                "0.5": 0.006218118593096733,
+                "0.9": 0.028971334919333458,
+                "0.95": 0.04013439267873764,
+                "0.99": 0.07019029557704926,
+                "1": 0.12498730421066284
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011496402323246002,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 5.125629104441032e-05,
+                "0.5": 0.006581057794392109,
+                "0.9": 0.029307330027222633,
+                "0.95": 0.039406437426805496,
+                "0.99": 0.06704635918140411,
+                "1": 0.1155976802110672
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed34567_zip_defaults_6b38c5f27d6a",
+          "timings_seconds": {
+            "build": 12.143397455103695,
+            "training_native_return": 61.88937678001821,
+            "training_synchronized": 61.89035701286048
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 658.7437389373779,
+            "ess_ratio": 0.6433044325560331,
+            "kl": 0.4654227375984192
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed45678_zip_defaults_3b69daa7bc32/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.015380620956420898,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.176216341671534e-05,
+                "0.5": 0.008721984922885895,
+                "0.9": 0.038730476051568985,
+                "0.95": 0.05338490381836891,
+                "0.99": 0.0855611190199852,
+                "1": 0.12835846841335297
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.015721092000603676,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.769434260902926e-05,
+                "0.5": 0.008763289079070091,
+                "0.9": 0.040362708270549774,
+                "0.95": 0.05522441491484642,
+                "0.99": 0.08719006925821304,
+                "1": 0.1356915831565857
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.015296638943254948,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.2037441997090355e-05,
+                "0.5": 0.00888073444366455,
+                "0.9": 0.037404730916023254,
+                "0.95": 0.04962441697716713,
+                "0.99": 0.08378403633832932,
+                "1": 0.11700063198804855
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.016380934044718742,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.6874275388545357e-05,
+                "0.5": 0.010176138952374458,
+                "0.9": 0.04072323068976402,
+                "0.95": 0.053408995270729065,
+                "0.99": 0.09783881157636642,
+                "1": 0.14559607207775116
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01696593500673771,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.2761212929035537e-05,
+                "0.5": 0.009450037032365799,
+                "0.9": 0.044606730341911316,
+                "0.95": 0.061361245810985565,
+                "0.99": 0.09129674732685089,
+                "1": 0.12581630051136017
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed45678_zip_defaults_3b69daa7bc32",
+          "timings_seconds": {
+            "build": 11.754547666059807,
+            "training_native_return": 60.49774331902154,
+            "training_synchronized": 60.49811799405143
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 854.517333984375,
+            "ess_ratio": 0.8344895839691162,
+            "kl": 0.39615935683250425
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed56789_zip_defaults_1984dd02271e/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011875423602759838,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.282785761868581e-05,
+                "0.5": 0.007476002909243107,
+                "0.9": 0.028134023770689964,
+                "0.95": 0.039590299129486084,
+                "0.99": 0.05647226795554161,
+                "1": 0.08085960894823074
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012182626873254776,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.0235873055062257e-05,
+                "0.5": 0.007825114764273167,
+                "0.9": 0.028794772922992706,
+                "0.95": 0.039260879158973694,
+                "0.99": 0.06379573792219162,
+                "1": 0.09802025556564331
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012186256237328053,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4951801353599876e-05,
+                "0.5": 0.007641981355845928,
+                "0.9": 0.03036186471581459,
+                "0.95": 0.037871360778808594,
+                "0.99": 0.06254773586988449,
+                "1": 0.08609849959611893
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012912513688206673,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.072552863159217e-05,
+                "0.5": 0.008169863373041153,
+                "0.9": 0.03165804222226143,
+                "0.95": 0.043766897171735764,
+                "0.99": 0.08072898536920547,
+                "1": 0.10595729202032089
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012151730246841908,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.9100954887107946e-05,
+                "0.5": 0.007312213070690632,
+                "0.9": 0.031085290014743805,
+                "0.95": 0.04051385819911957,
+                "0.99": 0.06206000968813896,
+                "1": 0.1080438569188118
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed56789_zip_defaults_1984dd02271e",
+          "timings_seconds": {
+            "build": 11.924189950106665,
+            "training_native_return": 60.912347899982706,
+            "training_synchronized": 60.91318256012164
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 61.114627364184706,
+          "n": 5,
+          "raw_values": [
+            60.952193754026666,
+            61.32147506787442,
+            61.88937678001821,
+            60.49774331902154,
+            60.912347899982706
+          ],
+          "se_ddof0": 0.20888946496937166,
+          "se_ddof1": 0.233545521727538
+        },
+        "training_synchronized": {
+          "mean": 61.11538527077064,
+          "n": 5,
+          "raw_values": [
+            60.95303373597562,
+            61.32223505084403,
+            61.89035701286048,
+            60.49811799405143,
+            60.91318256012164
+          ],
+          "se_ddof0": 0.2089622818124477,
+          "se_ddof1": 0.2336269334330505
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    },
+    {
+      "across_seed_statistics": {
+        "ess": {
+          "mean": 717.2326988220215,
+          "n": 5,
+          "raw_values": [
+            816.3573852539063,
+            743.2958129882812,
+            591.1959167480469,
+            799.7111572265625,
+            635.6032218933105
+          ],
+          "se_ddof0": 39.928099088371376,
+          "se_ddof1": 44.64097188697289
+        },
+        "ess_ratio": {
+          "mean": 0.7004225574433803,
+          "n": 5,
+          "raw_values": [
+            0.7972240090370178,
+            0.7258748173713684,
+            0.5773397624492645,
+            0.7809679269790649,
+            0.6207062713801861
+          ],
+          "se_ddof0": 0.03899228426598767,
+          "se_ddof1": 0.043594699108371965
+        },
+        "kl": {
+          "mean": 0.4715888488292694,
+          "n": 5,
+          "raw_values": [
+            0.4220570147037506,
+            0.4843824923038483,
+            0.5282326757907867,
+            0.5232876062393188,
+            0.39998445510864256
+          ],
+          "se_ddof0": 0.02334570946095281,
+          "se_ddof1": 0.026101296668825227
+        }
+      },
+      "duplicate_seeds": [],
+      "exact_shipped_seed_set": true,
+      "group_id": "8b8657bc978c1f72",
+      "identity": {
+        "builder": "native_archive_builder",
+        "configuration_without_seed": {
+          "base_density": "TorusUniform",
+          "jax_platform": "gpu",
+          "manifold_name": "T2",
+          "model": {
+            "activation": "silu",
+            "hidden_dims": [
+              128,
+              128
+            ],
+            "last_scale": 0.01,
+            "leaky_slope": 0.01,
+            "max_dist": 3.14159,
+            "n_landmarks": 256,
+            "network_type": "mlp",
+            "softplus_beta": 1,
+            "use_layernorm": true
+          },
+          "solver": {
+            "adam_beta1": 0.9,
+            "adam_beta2": 0.999,
+            "grad_clip": null,
+            "inner_lr": 0.005,
+            "inner_steps": 500,
+            "line_search_steps": [
+              0.5,
+              0.1,
+              0.05,
+              0.01,
+              0.005,
+              0.001,
+              0.0005,
+              0.0001,
+              5e-05,
+              1e-05
+            ],
+            "logsumexp_gamma": 0.01,
+            "logsumexp_init": false,
+            "lr_decay": false,
+            "min_steps": 50,
+            "momentum": 0.0,
+            "tolerance": 1e-06,
+            "use_adam": false,
+            "use_line_search": true
+          },
+          "target_density": "TorusWrappedNormal",
+          "training": {
+            "batch_size": 256,
+            "eval_every": null,
+            "eval_size": 1024,
+            "grad_accum_steps": 0,
+            "learning_rate": 0.001,
+            "log_every": 1,
+            "lr_decay": false,
+            "lr_decay_alpha": 0.05,
+            "n_steps": 500
+          }
+        },
+        "density_configuration": {
+          "base_class": "ProductUniformComponents",
+          "target_class": "WrappedNormal",
+          "target_loc": [
+            -1.0,
+            0.0,
+            -1.0,
+            0.0
+          ],
+          "target_scale": [
+            0.30000001192092896,
+            0.30000001192092896
+          ]
+        },
+        "environment": {
+          "environment": {
+            "JAX_ENABLE_X64": null,
+            "JAX_PLATFORMS": null,
+            "MPLBACKEND": "Agg",
+            "OMP_NUM_THREADS": "2",
+            "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+            "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+          },
+          "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+          "hostname": "nvidia7",
+          "jax_default_backend": "gpu",
+          "jax_enable_x64": false,
+          "packages": {
+            "cartopy": "0.25.0",
+            "flax": "0.10.6",
+            "jax": "0.6.2",
+            "jax-cuda12-pjrt": "0.6.2",
+            "jax-cuda12-plugin": "0.6.2",
+            "jax-cuda13-plugin": null,
+            "jaxlib": "0.6.2",
+            "matplotlib": "3.11.1",
+            "numpy": "2.4.6",
+            "optax": "0.2.4",
+            "pandas": "3.0.5",
+            "scipy": "1.17.1",
+            "spherical-kde": "0.1.2"
+          },
+          "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+          "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+          "selected_accelerator_types": [
+            [
+              "NVIDIA RTX 6000 Ada Generation",
+              "570.195.03",
+              "49140 MiB"
+            ]
+          ]
+        },
+        "evaluation_recipe": {
+          "batch_size": 1024,
+          "n_batches": 5,
+          "seed_rule": {
+            "training_seed_offset": 1000.0
+          }
+        },
+        "explicit_overrides": {},
+        "geometry_configuration": {
+          "ambient_dimension": 4,
+          "class": "Product",
+          "components": [
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            },
+            {
+              "ambient_dimension": 2,
+              "class": "Sphere",
+              "jitter": 1e-08
+            }
+          ],
+          "jitter": null
+        },
+        "label": "zip_defaults",
+        "landmark_configuration": {
+          "base_count": 128,
+          "fps_candidates_per_density": null,
+          "method": "random",
+          "target_count": 128
+        },
+        "parameter_dtypes": [
+          "float32"
+        ],
+        "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+        "selection": {
+          "dimension": 2,
+          "gamma": null,
+          "landmark_method": "random",
+          "manifold": "torus",
+          "method": "ours",
+          "suite": "table"
+        },
+        "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0"
+      },
+      "independent_valid_seed_count": 5,
+      "is_primary_environment": null,
+      "missing_shipped_seeds": [],
+      "paper_comparison": {
+        "both_metric_means_round_as_printed": false,
+        "complete_five_seed_comparison": true,
+        "configured_five_seed_comparison": false,
+        "interpretation": "Rounded-mean agreement is descriptive, not proof of statistical equivalence or complete paper reproduction.",
+        "manifold": "T2",
+        "method": "RNOT_RND",
+        "native_default_five_seed_comparison": true,
+        "numerical_checks": {
+          "ess_ratio": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": -0.14957744255661964,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.02,
+            "printed_mean": 0.85,
+            "relative_difference_percent": -17.597346183131723,
+            "rounding_interval": {
+              "lower_inclusive": "0.845",
+              "upper_exclusive": "0.855"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          },
+          "kl": {
+            "boundary_note": "At exact half-unit ties, original rounding convention is unspecified.",
+            "decimal_places": 2,
+            "difference_from_printed_mean": 0.25158884882926935,
+            "observed_mean_in_rounding_interval": false,
+            "paper_reported_plus_minus": 0.04,
+            "printed_mean": 0.22,
+            "relative_difference_percent": 114.35856764966788,
+            "rounding_interval": {
+              "lower_inclusive": "0.215",
+              "upper_exclusive": "0.225"
+            },
+            "uncertainty_interpretation": "Confidence level/construction unspecified; neither observed SE is assumed equivalent to paper uncertainty."
+          }
+        },
+        "paper_training_seconds": {
+          "mean": 1057,
+          "reported_plus_minus": 1
+        },
+        "scope": "archive_defaults",
+        "table": 2,
+        "timing_comparison": "Descriptive only: paper hardware AMD MI300X 192GB; device/software and fresh-process compilation affect runtime."
+      },
+      "runs": [
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 816.3573852539063,
+            "ess_ratio": 0.7972240090370178,
+            "kl": 0.4220570147037506
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed12345_zip_defaults_37c3ecb52ad2/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01176101341843605,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.2311081920634024e-05,
+                "0.5": 0.007390490733087063,
+                "0.9": 0.028253115713596344,
+                "0.95": 0.03633037954568863,
+                "0.99": 0.06585020571947098,
+                "1": 0.10052298754453659
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01020811963826418,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.4059274184983224e-05,
+                "0.5": 0.006297267973423004,
+                "0.9": 0.023948119953274727,
+                "0.95": 0.03286832943558693,
+                "0.99": 0.05483410879969597,
+                "1": 0.0995856299996376
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011266171932220459,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.300092354649678e-05,
+                "0.5": 0.007274444680660963,
+                "0.9": 0.027308214455842972,
+                "0.95": 0.03597560152411461,
+                "0.99": 0.06446018815040588,
+                "1": 0.10006672143936157
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011543892323970795,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5379147448111326e-05,
+                "0.5": 0.007479164749383926,
+                "0.9": 0.028031980618834496,
+                "0.95": 0.038232460618019104,
+                "0.99": 0.05642872303724289,
+                "1": 0.1432170271873474
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.010486384853720665,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.406355088169221e-05,
+                "0.5": 0.006726821884512901,
+                "0.9": 0.02491181343793869,
+                "0.95": 0.03267408534884453,
+                "0.99": 0.04975341260433197,
+                "1": 0.10040215402841568
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 12345,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed12345_zip_defaults_37c3ecb52ad2",
+          "timings_seconds": {
+            "build": 9.267540383152664,
+            "training_native_return": 61.06447634403594,
+            "training_synchronized": 61.064826257992536
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 743.2958129882812,
+            "ess_ratio": 0.7258748173713684,
+            "kl": 0.4843824923038483
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed23456_zip_defaults_043f35be1d9b/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014010943472385406,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.187700687907636e-05,
+                "0.5": 0.00763902859762311,
+                "0.9": 0.033179350197315216,
+                "0.95": 0.04840446636080742,
+                "0.99": 0.09783006459474564,
+                "1": 0.13775844871997833
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014897797256708145,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.8213103582384065e-05,
+                "0.5": 0.007757754065096378,
+                "0.9": 0.036327868700027466,
+                "0.95": 0.054527923464775085,
+                "0.99": 0.114901103079319,
+                "1": 0.1994999647140503
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014405015856027603,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 0.0001298753486480564,
+                "0.5": 0.008060755208134651,
+                "0.9": 0.03359030932188034,
+                "0.95": 0.05329272896051407,
+                "0.99": 0.09871657192707062,
+                "1": 0.18932121992111206
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.013347331434488297,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.789708327734843e-05,
+                "0.5": 0.007871844805777073,
+                "0.9": 0.032324351370334625,
+                "0.95": 0.04416201636195183,
+                "0.99": 0.08601298928260803,
+                "1": 0.2147398144006729
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014157421886920929,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.0330307961557992e-05,
+                "0.5": 0.007818887010216713,
+                "0.9": 0.035127945244312286,
+                "0.95": 0.051988888531923294,
+                "0.99": 0.09620913118124008,
+                "1": 0.20033583045005798
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 23456,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed23456_zip_defaults_043f35be1d9b",
+          "timings_seconds": {
+            "build": 8.5755925020203,
+            "training_native_return": 60.549547760980204,
+            "training_synchronized": 60.55037670512684
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 591.1959167480469,
+            "ess_ratio": 0.5773397624492645,
+            "kl": 0.5282326757907867
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed34567_zip_defaults_aff3fb3af70f/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01688528060913086,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.371041748323478e-05,
+                "0.5": 0.008640763349831104,
+                "0.9": 0.04202450439333916,
+                "0.95": 0.06168607994914055,
+                "0.99": 0.10703754425048828,
+                "1": 0.2335960566997528
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.01770474761724472,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.6172388970735483e-05,
+                "0.5": 0.00941513478755951,
+                "0.9": 0.043365318328142166,
+                "0.95": 0.06878797709941864,
+                "0.99": 0.11701207607984543,
+                "1": 0.16280589997768402
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.017111029475927353,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.5605735572753474e-05,
+                "0.5": 0.010146575048565865,
+                "0.9": 0.042051829397678375,
+                "0.95": 0.06663087010383606,
+                "0.99": 0.10487845540046692,
+                "1": 0.1778867244720459
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.016343334689736366,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 7.647870916116517e-06,
+                "0.5": 0.008187813684344292,
+                "0.9": 0.04338713735342026,
+                "0.95": 0.06054485961794853,
+                "0.99": 0.10670878738164902,
+                "1": 0.16611115634441376
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.017622554674744606,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.2455231121275574e-05,
+                "0.5": 0.009588759392499924,
+                "0.9": 0.04526505246758461,
+                "0.95": 0.06027986481785774,
+                "0.99": 0.1132267490029335,
+                "1": 0.14762502908706665
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 34567,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed34567_zip_defaults_aff3fb3af70f",
+          "timings_seconds": {
+            "build": 8.5332341180183,
+            "training_native_return": 60.32554418803193,
+            "training_synchronized": 60.326382235158235
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 799.7111572265625,
+            "ess_ratio": 0.7809679269790649,
+            "kl": 0.5232876062393188
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed45678_zip_defaults_b1eb64252e9a/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014614583924412727,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5996381484437734e-05,
+                "0.5": 0.008226263336837292,
+                "0.9": 0.03628699108958244,
+                "0.95": 0.05572080612182617,
+                "0.99": 0.08802866190671921,
+                "1": 0.15837526321411133
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014121199026703835,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.5818215110339224e-05,
+                "0.5": 0.007644258439540863,
+                "0.9": 0.036668561398983,
+                "0.95": 0.050372250378131866,
+                "0.99": 0.08803840726613998,
+                "1": 0.12100783735513687
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.015043975785374641,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.8616176425421145e-06,
+                "0.5": 0.00866883434355259,
+                "0.9": 0.038247302174568176,
+                "0.95": 0.05320822447538376,
+                "0.99": 0.07787346839904785,
+                "1": 0.15047995746135712
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014888371340930462,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.33446935453685e-05,
+                "0.5": 0.007710540667176247,
+                "0.9": 0.036799412220716476,
+                "0.95": 0.05845290422439575,
+                "0.99": 0.0907173603773117,
+                "1": 0.13864679634571075
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.014523725025355816,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 6.876414408907294e-05,
+                "0.5": 0.007240993902087212,
+                "0.9": 0.03812641277909279,
+                "0.95": 0.05197881534695625,
+                "0.99": 0.08130429685115814,
+                "1": 0.13347116112709045
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 45678,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed45678_zip_defaults_b1eb64252e9a",
+          "timings_seconds": {
+            "build": 8.711346592986956,
+            "training_native_return": 60.93705315608531,
+            "training_synchronized": 60.93746467400342
+          },
+          "valid_for_aggregation": true
+        },
+        {
+          "errors": [],
+          "metrics": {
+            "ess": 635.6032218933105,
+            "ess_ratio": 0.6207062713801861,
+            "kl": 0.39998445510864256
+          },
+          "path": "../../results/zip_defaults/table_ours_T2_seed56789_zip_defaults_52314f1198b4/result.json",
+          "residual_diagnostics": [
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012067698873579502,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 3.6075925891054794e-05,
+                "0.5": 0.006029508542269468,
+                "0.9": 0.03059738501906395,
+                "0.95": 0.04713580757379532,
+                "0.99": 0.07657142728567123,
+                "1": 0.14755681157112122
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011824511922895908,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.2884241843712516e-05,
+                "0.5": 0.006169878877699375,
+                "0.9": 0.029329339042305946,
+                "0.95": 0.045813772827386856,
+                "0.99": 0.08115088194608688,
+                "1": 0.13234184682369232
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.011760931462049484,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 1.8316311980015598e-05,
+                "0.5": 0.006495859008282423,
+                "0.9": 0.028865724802017212,
+                "0.95": 0.04096555337309837,
+                "0.99": 0.08722352236509323,
+                "1": 0.1135973334312439
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012015148997306824,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 2.1666422981070355e-05,
+                "0.5": 0.005934634245932102,
+                "0.9": 0.029270082712173462,
+                "0.95": 0.04453957453370094,
+                "0.99": 0.08602210879325867,
+                "1": 0.12497072666883469
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            },
+            {
+              "fraction_at_tolerance": 0.0,
+              "mean_finite": 0.012091843411326408,
+              "n": 1024,
+              "nonfinite_count": 0,
+              "quantiles_finite": {
+                "0": 4.798280497197993e-05,
+                "0.5": 0.00645039975643158,
+                "0.9": 0.02964213490486145,
+                "0.95": 0.04644031077623367,
+                "0.99": 0.07672330737113953,
+                "1": 0.12632809579372406
+              },
+              "tolerance": 1e-06,
+              "transport_nonfinite_count": 0
+            }
+          ],
+          "seed": 56789,
+          "status": "complete",
+          "task_id": "table_ours_T2_seed56789_zip_defaults_52314f1198b4",
+          "timings_seconds": {
+            "build": 8.577326986007392,
+            "training_native_return": 60.394867081195116,
+            "training_synchronized": 60.39575223508291
+          },
+          "valid_for_aggregation": true
+        }
+      ],
+      "status": "complete_five_seeds",
+      "training_timings_seconds": {
+        "training_native_return": {
+          "mean": 60.6542977060657,
+          "n": 5,
+          "raw_values": [
+            61.06447634403594,
+            60.549547760980204,
+            60.32554418803193,
+            60.93705315608531,
+            60.394867081195116
+          ],
+          "se_ddof0": 0.13184124321298732,
+          "se_ddof1": 0.14740299103116122
+        },
+        "training_synchronized": {
+          "mean": 60.654960421472786,
+          "n": 5,
+          "raw_values": [
+            61.064826257992536,
+            60.55037670512684,
+            60.326382235158235,
+            60.93746467400342,
+            60.39575223508291
+          ],
+          "se_ddof0": 0.1317404901739699,
+          "se_ddof1": 0.1472903457090699
+        }
+      },
+      "valid_seeds": [
+        12345,
+        23456,
+        34567,
+        45678,
+        56789
+      ]
+    }
+  ],
+  "input_result_files": 30,
+  "input_roots": [
+    "../../results/zip_defaults"
+  ],
+  "missing_implementations_and_coverage": {
+    "continental_drift": "runner and original point clouds absent",
+    "figures_3_5": "dimension sweep runners available; defaults conflict; raw figure values absent",
+    "table_1_2_RCNF_Moser": "code absent",
+    "table_1_2_RNOT_RCPM": "runners available; defaults conflict with paper",
+    "table_3": "absent from ZIP; historical driver recovered in verification/snapshots/dbf533d; no fresh ablation rerun",
+    "table_4": "semi-dual RCPM experiment runner absent",
+    "table_5": "SO3/SE3 geometry components present but experiment runners absent"
+  },
+  "paper_title": "Riemannian Neural Optimal Transport",
+  "primary_host": null,
+  "read_errors": [],
+  "schema_version": 1,
+  "table_row_coverage": {
+    "all_six_rows_have_complete_five_seed_group": true,
+    "complete_configured_table_rows": [],
+    "complete_native_table_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "complete_table_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "expected_rows": [
+      "S2:RNOT_FPS",
+      "S2:RNOT_RND",
+      "S2:RCPM_gamma1",
+      "T2:RNOT_FPS",
+      "T2:RNOT_RND",
+      "T2:RCPM_gamma1"
+    ],
+    "missing_table_rows": [],
+    "rows": {
+      "S2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "2fb86a384def923b"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "2fb86a384def923b",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "S2:RNOT_FPS": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "831431cdc70bd86b"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "831431cdc70bd86b",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "S2:RNOT_RND": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "5e85c2d921f8a75f"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "5e85c2d921f8a75f",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RCPM_gamma1": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "55d845eb2a613a41"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "55d845eb2a613a41",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RNOT_FPS": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "a3230348aa48d1ca"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "a3230348aa48d1ca",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      },
+      "T2:RNOT_RND": {
+        "complete_configured_group_ids": [],
+        "complete_native_group_ids": [
+          "8b8657bc978c1f72"
+        ],
+        "covered_by_complete_five_seed_group": true,
+        "groups": [
+          {
+            "complete_five_seed_comparison": true,
+            "environment": {
+              "environment": {
+                "JAX_ENABLE_X64": null,
+                "JAX_PLATFORMS": null,
+                "MPLBACKEND": "Agg",
+                "OMP_NUM_THREADS": "2",
+                "XLA_FLAGS": " --xla_gpu_enable_command_buffer= --xla_gpu_graph_level=0",
+                "XLA_PYTHON_CLIENT_PREALLOCATE": "false"
+              },
+              "executable": "/home/am1118/mlgh-finalMLGH-ca8eb58-20260908/venv/bin/python",
+              "hostname": "nvidia7",
+              "jax_default_backend": "gpu",
+              "jax_enable_x64": false,
+              "packages": {
+                "cartopy": "0.25.0",
+                "flax": "0.10.6",
+                "jax": "0.6.2",
+                "jax-cuda12-pjrt": "0.6.2",
+                "jax-cuda12-plugin": "0.6.2",
+                "jax-cuda13-plugin": null,
+                "jaxlib": "0.6.2",
+                "matplotlib": "3.11.1",
+                "numpy": "2.4.6",
+                "optax": "0.2.4",
+                "pandas": "3.0.5",
+                "scipy": "1.17.1",
+                "spherical-kde": "0.1.2"
+              },
+              "platform": "Linux-6.11.0-1014-lowlatency-x86_64-with-glibc2.39",
+              "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+              "selected_accelerator_types": [
+                [
+                  "NVIDIA RTX 6000 Ada Generation",
+                  "570.195.03",
+                  "49140 MiB"
+                ]
+              ]
+            },
+            "environment_id": "209529b2ecf1cc9d",
+            "group_id": "8b8657bc978c1f72",
+            "hostname": "nvidia7",
+            "independent_valid_seed_count": 5,
+            "label": "zip_defaults",
+            "runner_sha256": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+            "scope": "archive_defaults",
+            "source_sha256": "5205da3999ed08aa6e58e0201096d77bad38a85a02525c5443b4728b4e07a9c0",
+            "status": "complete_five_seeds",
+            "valid_seeds": [
+              12345,
+              23456,
+              34567,
+              45678,
+              56789
+            ]
+          }
+        ]
+      }
+    },
+    "scope": "Six main-table rows implemented by the archive; row coverage may span environments without pooling seeds."
+  },
+  "version_assessment": {
+    "blocker": "OpenReview web challenge and public API1/API2 HTTP 403",
+    "camera_ready_has_additional_tables_4_5": true,
+    "current_live_openreview_equals_local_camera_ready": "not established",
+    "historical_requested_url_copy_verified_by_download_metadata": true,
+    "live_openreview_pdf_retrieved": false,
+    "tables_1_2_3_same_in_all_three_sources": true
+  }
+}

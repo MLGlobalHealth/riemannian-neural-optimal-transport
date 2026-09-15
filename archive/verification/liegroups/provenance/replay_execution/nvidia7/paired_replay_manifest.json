@@ -1,0 +1,564 @@
+{
+  "schema_version": 1,
+  "declared_at": "2026-09-08T14:23:34.117451+00:00",
+  "scope": "Exactly8 evaluation-only runs: four prespecified common checkpoints on each of two hosts, all5 original keys. No training.",
+  "source_sha256": "e2747129c7ba97bf95f2dde665334d25450562a1a75048c27d09d8935a8b9e85",
+  "tool_hashes": {
+    "verify_run.py": "cd3671a45ecca9b55542d75353991ad591c61b5f18f2e3cc3a855875a61d7589",
+    "verify_liegroup_run.py": "a5cd6e5eae86918a5ebb788e6249bd65f9def4b52edfa12bf624870e54a1da33",
+    "evaluate_liegroup_checkpoint.py": "dae24f203584329953951d5d28749d32ae85dfb89ac59dcfc3de1aedf95e9c0e",
+    "supervise_replays.py": "2d17ce995e16d19bc1d49d1f001793184342aa599e7fe7e628034faa0af7dc41"
+  },
+  "hosts": {
+    "nvidia6": {
+      "root": "/data/am1118/mlgh-liegroups-20260908",
+      "python": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+      "requirements": "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+      "requirements_sha256": "59bf165a84bbf82fa6ddeafc4e0472fa25c74a501c4526084c6e8000cb37f559",
+      "capacity_max_used_mib": 2,
+      "capacity_note": "Fresh >=30s sampled window, >=16GB free, <=5%util. Nvidia7 persistent foreign contexts allowed and recorded; no intervention.",
+      "environment": {
+        "CUDA_ROOT": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "MPLBACKEND": "Agg"
+      },
+      "jobs": [
+        {
+          "job_id": "SO3_ours_nativeJAX435",
+          "gpu": 0,
+          "cpu_affinity": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-20260908/results/SO3_ours_nativeJAX435/result.json",
+          "input_result_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+          "checkpoint": "/data/am1118/mlgh-liegroups-20260908/results/SO3_ours_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+          "output": "/data/am1118/mlgh-liegroups-20260908/replay/results/SO3_ours_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "0,1,2,3",
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-20260908/results/SO3_ours_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-20260908/results/SO3_ours_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "0",
+            "--output",
+            "/data/am1118/mlgh-liegroups-20260908/replay/results/SO3_ours_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SE3_ours_nativeJAX435",
+          "gpu": 1,
+          "cpu_affinity": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-20260908/results/SE3_ours_nativeJAX435/result.json",
+          "input_result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+          "checkpoint": "/data/am1118/mlgh-liegroups-20260908/results/SE3_ours_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+          "output": "/data/am1118/mlgh-liegroups-20260908/replay/results/SE3_ours_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "4,5,6,7",
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-20260908/results/SE3_ours_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-20260908/results/SE3_ours_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "1",
+            "--output",
+            "/data/am1118/mlgh-liegroups-20260908/replay/results/SE3_ours_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SO3_rcpm_gamma1_nativeJAX435",
+          "gpu": 2,
+          "cpu_affinity": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+          "input_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+          "checkpoint": "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+          "output": "/data/am1118/mlgh-liegroups-20260908/replay/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "8,9,10,11",
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-20260908/results/SO3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "2",
+            "--output",
+            "/data/am1118/mlgh-liegroups-20260908/replay/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SE3_rcpm_gamma1_nativeJAX435",
+          "gpu": 3,
+          "cpu_affinity": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+          "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+          "checkpoint": "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+          "output": "/data/am1118/mlgh-liegroups-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "12,13,14,15",
+            "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-20260908/results/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "3",
+            "--output",
+            "/data/am1118/mlgh-liegroups-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        }
+      ]
+    },
+    "nvidia7": {
+      "root": "/data/am1118/mlgh-liegroups-replay-20260908",
+      "python": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+      "requirements": "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+      "requirements_sha256": "f7b7335f0a864a57487be28384442d962d2519edd54a4c4a21e6382528779171",
+      "capacity_max_used_mib": 1024,
+      "capacity_note": "Fresh >=30s sampled window, >=16GB free, <=5%util. Nvidia7 persistent foreign contexts allowed and recorded; no intervention.",
+      "environment": {
+        "CUDA_ROOT": "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+        "JAX_PLATFORMS": "cuda",
+        "JAX_ENABLE_X64": "True",
+        "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+        "OMP_NUM_THREADS": "2",
+        "OPENBLAS_NUM_THREADS": "2",
+        "MKL_NUM_THREADS": "2",
+        "NUMEXPR_NUM_THREADS": "2",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "MPLBACKEND": "Agg"
+      },
+      "jobs": [
+        {
+          "job_id": "SO3_ours_nativeJAX435",
+          "gpu": 2,
+          "cpu_affinity": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_ours_nativeJAX435/result.json",
+          "input_result_sha256": "92a8ee4da7897a737a7c5793d8c11f20504d2811b257d549177cfaf8755a60ab",
+          "checkpoint": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_ours_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+          "output": "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SO3_ours_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "8,9,10,11",
+            "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-replay-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_ours_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_ours_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "3616d5e54fa401359cfa1f2e88cb75f10dfc8d51c2158b74d144787b72659515",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "2",
+            "--output",
+            "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SO3_ours_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SE3_ours_nativeJAX435",
+          "gpu": 3,
+          "cpu_affinity": [
+            12,
+            13,
+            14,
+            15
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_ours_nativeJAX435/result.json",
+          "input_result_sha256": "072b769614159236cc4956ed97642c6bb0a1f76b53bd831413337d96fb39b076",
+          "checkpoint": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_ours_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+          "output": "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SE3_ours_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "12,13,14,15",
+            "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-replay-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_ours_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_ours_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "59e80f9a35633e3f853025a928e83cbb7c6781d1cfd97251f0948d47b4faa0ce",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "3",
+            "--output",
+            "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SE3_ours_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SO3_rcpm_gamma1_nativeJAX435",
+          "gpu": 4,
+          "cpu_affinity": [
+            16,
+            17,
+            18,
+            19
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_rcpm_gamma1_nativeJAX435/result.json",
+          "input_result_sha256": "bc20a6097fa5de278a1eaa9064f46a9735c4d9978c5f04280bd9e25866e7003b",
+          "checkpoint": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+          "output": "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "16,17,18,19",
+            "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-replay-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_rcpm_gamma1_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SO3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "9036c7126dea621a8568b08dd29e7a3dff3bb9bcf44b28c5031cc6c9e4089505",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "4",
+            "--output",
+            "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SO3_rcpm_gamma1_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        },
+        {
+          "job_id": "SE3_rcpm_gamma1_nativeJAX435",
+          "gpu": 5,
+          "cpu_affinity": [
+            20,
+            21,
+            22,
+            23
+          ],
+          "input_result": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/result.json",
+          "input_result_sha256": "5ea08e1f85d4cc38ccdbc6389827ba29d78386691ee7b8385e48aa1a7d6b33be",
+          "checkpoint": "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+          "checkpoint_sha256": "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+          "output": "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json",
+          "command": [
+            "taskset",
+            "-c",
+            "20,21,22,23",
+            "/data/am1118/mlgh-dbf533d-jax0435-candidate-20260908/venv/bin/python",
+            "-u",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/evaluate_liegroup_checkpoint.py",
+            "--source-root",
+            "/data/am1118/mlgh-liegroups-replay-20260908/source",
+            "--input-result",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/result.json",
+            "--checkpoint",
+            "/data/am1118/mlgh-liegroups-replay-20260908/inputs/SE3_rcpm_gamma1_nativeJAX435/checkpoint.msgpack",
+            "--expected-checkpoint-sha256",
+            "dfa1ac331886085f8267d18619edc3f7817abefd4884253108d7461c58c39431",
+            "--helper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_run.py",
+            "--wrapper",
+            "/data/am1118/mlgh-liegroups-replay-20260908/tooling/verify_liegroup_run.py",
+            "--requirements",
+            "/data/am1118/mlgh-liegroups-replay-20260908/provenance/requirements_frozen.txt",
+            "--gpu",
+            "5",
+            "--output",
+            "/data/am1118/mlgh-liegroups-replay-20260908/replay/results/SE3_rcpm_gamma1_nativeJAX435/evaluation.json"
+          ],
+          "evaluation_keys": [
+            [
+              2300365598,
+              2950565312
+            ],
+            [
+              949301550,
+              3196768145
+            ],
+            [
+              3188581498,
+              1498900698
+            ],
+            [
+              2696973199,
+              2132697368
+            ],
+            [
+              539786244,
+              3564729885
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "total_evaluations": 8,
+  "additional_replays_authorized": false
+}

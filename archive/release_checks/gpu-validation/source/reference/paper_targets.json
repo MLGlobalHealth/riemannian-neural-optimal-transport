@@ -1,0 +1,708 @@
+{
+  "paper_title": "Riemannian Neural Optimal Transport",
+  "citation": {
+    "authors": [
+      "Alessandro Micheli",
+      "Yueqi Cao",
+      "Anthea Monod",
+      "Samir Bhatt"
+    ],
+    "year": 2026,
+    "arxiv": "https://arxiv.org/abs/2602.03566",
+    "openreview": "https://openreview.net/pdf?id=ez4oLq7PR3",
+    "reference_version": "Local ICML2026 camera-ready PDF, 2026-05-28",
+    "pdf_sha256": "318386d9f934d70a7758df4f931058b68b5182b4bd60e9996b3c524b569f3e89"
+  },
+  "origin": "Published numerical targets; not newly reproduced outputs. Source IDs in tables are retained for attribution to the archived full target manifest.",
+  "tables": [
+    {
+      "number": 1,
+      "sources": [
+        "arxiv_v1",
+        "openreview_download_2026_03_10",
+        "local_camera_ready_2026_05_28"
+      ],
+      "manifold": "S2",
+      "independent_training_runs": 5,
+      "uncertainty_label": "confidence intervals; confidence level and construction not specified in paper",
+      "rows": [
+        {
+          "method": "RNOT_FPS",
+          "kl": {
+            "mean": 0.03,
+            "reported_plus_minus": 0.0
+          },
+          "ess_ratio": {
+            "mean": 0.97,
+            "reported_plus_minus": 0.0
+          },
+          "training_seconds": {
+            "mean": 986,
+            "reported_plus_minus": 2
+          }
+        },
+        {
+          "method": "RNOT_RND",
+          "kl": {
+            "mean": 0.04,
+            "reported_plus_minus": 0.0
+          },
+          "ess_ratio": {
+            "mean": 0.95,
+            "reported_plus_minus": 0.0
+          },
+          "training_seconds": {
+            "mean": 1100,
+            "reported_plus_minus": 1
+          }
+        },
+        {
+          "method": "RCPM_gamma1",
+          "kl": {
+            "mean": 0.0037,
+            "reported_plus_minus": 0.0008
+          },
+          "ess_ratio": {
+            "mean": 0.996,
+            "reported_plus_minus": 0.0
+          },
+          "training_seconds": {
+            "mean": 37.3,
+            "reported_plus_minus": 0.6
+          }
+        },
+        {
+          "method": "RCNF",
+          "kl": {
+            "mean": 2.38,
+            "reported_plus_minus": 0.1
+          },
+          "ess_ratio": {
+            "mean": 0.48,
+            "reported_plus_minus": 0.02
+          },
+          "training_seconds": {
+            "mean": 352,
+            "reported_plus_minus": 6
+          }
+        },
+        {
+          "method": "Moser_Flow",
+          "kl": {
+            "mean": 1.16,
+            "reported_plus_minus": 0.03
+          },
+          "ess_ratio": {
+            "mean": 0.82,
+            "reported_plus_minus": 0.0
+          },
+          "training_seconds": {
+            "mean": 758,
+            "reported_plus_minus": 16
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sources": [
+        "arxiv_v1",
+        "openreview_download_2026_03_10",
+        "local_camera_ready_2026_05_28"
+      ],
+      "manifold": "T2",
+      "independent_training_runs": 5,
+      "uncertainty_label": "confidence intervals; confidence level and construction not specified in paper",
+      "rows": [
+        {
+          "method": "RNOT_FPS",
+          "kl": {
+            "mean": 0.13,
+            "reported_plus_minus": 0.01
+          },
+          "ess_ratio": {
+            "mean": 0.93,
+            "reported_plus_minus": 0.01
+          },
+          "training_seconds": {
+            "mean": 1022,
+            "reported_plus_minus": 10
+          }
+        },
+        {
+          "method": "RNOT_RND",
+          "kl": {
+            "mean": 0.22,
+            "reported_plus_minus": 0.04
+          },
+          "ess_ratio": {
+            "mean": 0.85,
+            "reported_plus_minus": 0.02
+          },
+          "training_seconds": {
+            "mean": 1057,
+            "reported_plus_minus": 1
+          }
+        },
+        {
+          "method": "RCPM_gamma1",
+          "kl": {
+            "mean": 0.93,
+            "reported_plus_minus": 0.02
+          },
+          "ess_ratio": {
+            "mean": 0.55,
+            "reported_plus_minus": 0.03
+          },
+          "training_seconds": {
+            "mean": 62.3,
+            "reported_plus_minus": 0.5
+          }
+        },
+        {
+          "method": "RCNF",
+          "kl": {
+            "mean": 6.31,
+            "reported_plus_minus": 0.56
+          },
+          "ess_ratio": {
+            "mean": 0.36,
+            "reported_plus_minus": 0.04
+          },
+          "training_seconds": {
+            "mean": 265,
+            "reported_plus_minus": 6
+          }
+        },
+        {
+          "method": "Moser_Flow",
+          "kl": {
+            "mean": 6.84,
+            "reported_plus_minus": 0.21
+          },
+          "ess_ratio": {
+            "mean": 0.56,
+            "reported_plus_minus": 0.01
+          },
+          "training_seconds": {
+            "mean": 769,
+            "reported_plus_minus": 5
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sources": [
+        "arxiv_v1",
+        "openreview_download_2026_03_10",
+        "local_camera_ready_2026_05_28"
+      ],
+      "metric": "kl",
+      "evaluation_batches": 5,
+      "samples_per_evaluation_batch": 1024,
+      "rows": [
+        {
+          "ablation": "baseline",
+          "overrides": {},
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.125,
+            "S10": 0.048,
+            "T10": 1.07
+          }
+        },
+        {
+          "ablation": "no_logsumexp_init",
+          "overrides": {
+            "logsumexp_init": false
+          },
+          "targets": {
+            "S2": 0.043,
+            "T2": 0.27,
+            "S10": 0.048,
+            "T10": 3.79
+          }
+        },
+        {
+          "ablation": "inner_steps_500",
+          "overrides": {
+            "inner_steps": 500
+          },
+          "targets": {
+            "S2": 0.041,
+            "T2": 0.129,
+            "S10": 0.048,
+            "T10": 1.11
+          }
+        },
+        {
+          "ablation": "inner_steps_4000",
+          "overrides": {
+            "inner_steps": 4000
+          },
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.122,
+            "S10": 0.048,
+            "T10": 1.06
+          }
+        },
+        {
+          "ablation": "inner_lr_0.001",
+          "overrides": {
+            "inner_lr": 0.001
+          },
+          "targets": {
+            "S2": 0.055,
+            "T2": 0.775,
+            "S10": 0.048,
+            "T10": 13.13
+          }
+        },
+        {
+          "ablation": "lse_gamma_1.0",
+          "overrides": {
+            "logsumexp_gamma": 1.0
+          },
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.124,
+            "S10": 0.048,
+            "T10": 1.24
+          }
+        },
+        {
+          "ablation": "lse_gamma_0.01",
+          "overrides": {
+            "logsumexp_gamma": 0.01
+          },
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.127,
+            "S10": 0.048,
+            "T10": 1.07
+          }
+        },
+        {
+          "ablation": "lse_gamma_0.001",
+          "overrides": {
+            "logsumexp_gamma": 0.001
+          },
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.126,
+            "S10": 0.048,
+            "T10": 1.06
+          }
+        },
+        {
+          "ablation": "no_adam",
+          "overrides": {
+            "use_adam": false
+          },
+          "targets": {
+            "S2": 0.046,
+            "T2": 0.219,
+            "S10": 0.048,
+            "T10": 1.44
+          }
+        },
+        {
+          "ablation": "landmarks_fps",
+          "overrides": {
+            "landmark_method": "fps"
+          },
+          "targets": {
+            "S2": 0.019,
+            "T2": 0.083,
+            "S10": 0.035,
+            "T10": 0.03
+          }
+        },
+        {
+          "ablation": "landmarks_32",
+          "overrides": {
+            "n_landmarks": 32
+          },
+          "targets": {
+            "S2": 0.036,
+            "T2": 0.099,
+            "S10": 0.054,
+            "T10": 3.71
+          }
+        },
+        {
+          "ablation": "landmarks_64",
+          "overrides": {
+            "n_landmarks": 64
+          },
+          "targets": {
+            "S2": 0.041,
+            "T2": 0.203,
+            "S10": 0.048,
+            "T10": 1.47
+          }
+        },
+        {
+          "ablation": "landmarks_256",
+          "overrides": {
+            "n_landmarks": 256
+          },
+          "targets": {
+            "S2": 0.036,
+            "T2": 0.036,
+            "S10": 0.053,
+            "T10": null
+          }
+        },
+        {
+          "ablation": "hidden_32_32",
+          "overrides": {
+            "hidden_dims": [
+              32,
+              32
+            ]
+          },
+          "targets": {
+            "S2": 0.046,
+            "T2": 0.202,
+            "S10": 0.04,
+            "T10": 1.16
+          }
+        },
+        {
+          "ablation": "hidden_64_64",
+          "overrides": {
+            "hidden_dims": [
+              64,
+              64
+            ]
+          },
+          "targets": {
+            "S2": 0.034,
+            "T2": 0.17,
+            "S10": 0.044,
+            "T10": 1.23
+          }
+        },
+        {
+          "ablation": "hidden_256_256",
+          "overrides": {
+            "hidden_dims": [
+              256,
+              256
+            ]
+          },
+          "targets": {
+            "S2": 0.037,
+            "T2": 0.104,
+            "S10": 0.045,
+            "T10": 1.04
+          }
+        },
+        {
+          "ablation": "hidden_128_128_128",
+          "overrides": {
+            "hidden_dims": [
+              128,
+              128,
+              128
+            ]
+          },
+          "targets": {
+            "S2": 0.04,
+            "T2": 0.128,
+            "S10": 0.047,
+            "T10": 1.19
+          }
+        },
+        {
+          "ablation": "outer_lr_0.0001",
+          "overrides": {
+            "learning_rate": 0.0001
+          },
+          "targets": {
+            "S2": 0.067,
+            "T2": 0.184,
+            "S10": 0.06,
+            "T10": 1.59
+          }
+        },
+        {
+          "ablation": "batch_512",
+          "overrides": {
+            "batch_size": 512
+          },
+          "targets": {
+            "S2": 0.036,
+            "T2": 0.118,
+            "S10": 0.034,
+            "T10": 1.15
+          }
+        },
+        {
+          "ablation": "batch_128",
+          "overrides": {
+            "batch_size": 128
+          },
+          "targets": {
+            "S2": 0.072,
+            "T2": 0.183,
+            "S10": 0.04,
+            "T10": 1.16
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sources": [
+        "local_camera_ready_2026_05_28"
+      ],
+      "title": "RCPM trained with Kantorovich semi-dual loss",
+      "rows": [
+        {
+          "manifold": "S10",
+          "kl": {
+            "RNOT": {
+              "mean": 0.04,
+              "reported_plus_minus": 0.0
+            },
+            "RCPM_gamma0.01": {
+              "mean": 5.29,
+              "reported_plus_minus": 0.06
+            },
+            "RCPM_gamma0.005": {
+              "mean": 5.34,
+              "reported_plus_minus": 0.07
+            },
+            "RCPM_gamma0.001": {
+              "mean": 5.4,
+              "reported_plus_minus": 0.06
+            }
+          }
+        },
+        {
+          "manifold": "S20",
+          "kl": {
+            "RNOT": {
+              "mean": 0.02,
+              "reported_plus_minus": 0.0
+            },
+            "RCPM_gamma0.01": {
+              "mean": 8.81,
+              "reported_plus_minus": 0.03
+            },
+            "RCPM_gamma0.005": {
+              "mean": 8.81,
+              "reported_plus_minus": 0.03
+            },
+            "RCPM_gamma0.001": {
+              "mean": 8.82,
+              "reported_plus_minus": 0.03
+            }
+          }
+        },
+        {
+          "manifold": "S30",
+          "kl": {
+            "RNOT": {
+              "mean": 0.03,
+              "reported_plus_minus": 0.0
+            },
+            "RCPM_gamma0.01": {
+              "mean": 13.46,
+              "reported_plus_minus": 0.01
+            },
+            "RCPM_gamma0.005": {
+              "mean": 13.47,
+              "reported_plus_minus": 0.02
+            },
+            "RCPM_gamma0.001": {
+              "mean": 13.44,
+              "reported_plus_minus": 0.02
+            }
+          }
+        },
+        {
+          "manifold": "T10",
+          "kl": {
+            "RNOT": {
+              "mean": 0.92,
+              "reported_plus_minus": 0.02
+            },
+            "RCPM_gamma0.01": {
+              "mean": 46.15,
+              "reported_plus_minus": 0.41
+            },
+            "RCPM_gamma0.005": {
+              "mean": 45.92,
+              "reported_plus_minus": 0.4
+            },
+            "RCPM_gamma0.001": {
+              "mean": 45.59,
+              "reported_plus_minus": 0.38
+            }
+          }
+        },
+        {
+          "manifold": "T20",
+          "kl": {
+            "RNOT": {
+              "mean": 5.25,
+              "reported_plus_minus": 0.08
+            },
+            "RCPM_gamma0.01": {
+              "mean": 83.77,
+              "reported_plus_minus": 0.39
+            },
+            "RCPM_gamma0.005": {
+              "mean": 83.73,
+              "reported_plus_minus": 0.4
+            },
+            "RCPM_gamma0.001": {
+              "mean": 83.7,
+              "reported_plus_minus": 0.42
+            }
+          }
+        },
+        {
+          "manifold": "T30",
+          "kl": {
+            "RNOT": {
+              "mean": 3.21,
+              "reported_plus_minus": 0.1
+            },
+            "RCPM_gamma0.01": {
+              "mean": 126.66,
+              "reported_plus_minus": 0.44
+            },
+            "RCPM_gamma0.005": {
+              "mean": 126.74,
+              "reported_plus_minus": 0.43
+            },
+            "RCPM_gamma0.001": {
+              "mean": 126.75,
+              "reported_plus_minus": 0.44
+            }
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sources": [
+        "local_camera_ready_2026_05_28"
+      ],
+      "rows": [
+        {
+          "manifold": "SO3",
+          "method": "RNOT",
+          "kl": {
+            "mean": 2.96,
+            "reported_plus_minus": 0.01
+          },
+          "ess_ratio": {
+            "mean": 0.225
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma1.0",
+          "kl": {
+            "mean": 2.86,
+            "reported_plus_minus": 0.03
+          },
+          "ess_ratio": {
+            "mean": 0.391
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma0.1",
+          "kl": {
+            "mean": 3.29,
+            "reported_plus_minus": 0.1
+          },
+          "ess_ratio": {
+            "mean": 0.002
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma0.05",
+          "kl": {
+            "mean": 3.54,
+            "reported_plus_minus": 0.06
+          },
+          "ess_ratio": {
+            "mean": 0.006
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma0.01",
+          "kl": {
+            "mean": 2.83,
+            "reported_plus_minus": 0.1
+          },
+          "ess_ratio": {
+            "mean": 0.003
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma0.005",
+          "kl": {
+            "mean": 3.72,
+            "reported_plus_minus": 0.1
+          },
+          "ess_ratio": {
+            "mean": 0.004
+          }
+        },
+        {
+          "manifold": "SO3",
+          "method": "RCPM_gamma0.001",
+          "kl": {
+            "mean": 5.9,
+            "reported_plus_minus": 0.06
+          },
+          "ess_ratio": {
+            "mean": 0.004
+          }
+        },
+        {
+          "manifold": "SE3",
+          "method": "RNOT",
+          "kl": {
+            "mean": 2.5,
+            "reported_plus_minus": 0.01
+          },
+          "ess_ratio": {
+            "mean": 0.683
+          }
+        },
+        {
+          "manifold": "SE3",
+          "method": "RCPM_gamma1.0",
+          "kl": {
+            "mean": 14.38,
+            "reported_plus_minus": 0.09
+          },
+          "ess_ratio": {
+            "mean": 0.007
+          }
+        }
+      ],
+      "non_numeric_claims": [
+        {
+          "manifold": "SE3",
+          "method": "RCPM_gamma_below1",
+          "result": "Numerically unstable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "pandas": "3.0.2",
+  "pandas_path": "/data/am1118/mlgh-paper-release-check-20260908/pandas-overlay/pandas/__init__.py",
+  "numpy": "2.4.6",
+  "numpy_path": "/data/am1118/mlgh-zip-jax0435-restored-20260908/venv/lib/python3.11/site-packages/numpy/__init__.py",
+  "requirements": [
+    {
+      "requirement": "numpy>=1.26.0; python_version < \"3.14\"",
+      "installed": "2.4.6"
+    },
+    {
+      "requirement": "python-dateutil>=2.8.2",
+      "installed": "2.9.0.post0"
+    }
+  ],
+  "csv_smoke": "pass",
+  "jax_imported": false,
+  "base_80_freeze_unchanged": true,
+  "base_freeze_sha256": "59bf165a84bbf82fa6ddeafc4e0472fa25c74a501c4526084c6e8000cb37f559",
+  "checked_at": "2026-09-08T15:17:48.278003+00:00",
+  "gpu": "0, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n1, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n2, NVIDIA GeForce RTX 3090, 5253 MiB, 19000 MiB, 54 %\n3, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n4, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n5, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n6, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n7, NVIDIA GeForce RTX 3090, 2 MiB, 24252 MiB, 0 %\n"
+}

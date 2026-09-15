@@ -1,0 +1,4 @@
+# Exclude local research history from distributable source archives.
+/archive export-ignore
+/tests export-ignore
+/.gitattributes export-ignore

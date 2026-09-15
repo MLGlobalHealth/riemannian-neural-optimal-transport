@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-08T14:05:22.166245+00:00",
+  "pid": 2399354,
+  "command": [
+    "python3",
+    "-u",
+    "/data/am1118/mlgh-liegroups-20260908/tooling/supervise_liegroups.py",
+    "--root",
+    "/data/am1118/mlgh-liegroups-20260908",
+    "--phase",
+    "initial"
+  ],
+  "log": "/data/am1118/mlgh-liegroups-20260908/logs/initial_supervisor.log",
+  "manifest_sha256": "10ebad7eecb3dfd7a942d3133bd24935ab1b95c8b831451e559ca80eb4882813",
+  "only_initial4_authorized": true,
+  "pending10_have_no_supervisor": true
+}

@@ -1,0 +1,3224 @@
+{
+  "schema_version": 1,
+  "suite": "sweep",
+  "source_root": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport",
+  "output_dir": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep",
+  "python": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "gpus": [
+    "0"
+  ],
+  "recipe": {
+    "suite": "sweep",
+    "label": "supplied_dimension_sweep_unverified",
+    "x64": false,
+    "manifolds": [
+      "sphere",
+      "torus"
+    ],
+    "dimensions": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "landmark_methods": [
+      "fps"
+    ],
+    "seeds": [
+      12345
+    ],
+    "gammas": [
+      1.0,
+      0.1,
+      0.05,
+      0.01,
+      0.005,
+      0.001
+    ],
+    "rnot_overrides": {},
+    "evaluation": {
+      "n_batches": 5,
+      "batch_size": 1024,
+      "seed_offset": null,
+      "seed": 12345
+    }
+  },
+  "recipe_file": "/private/tmp/mlgh-paper-release-20260908/extracted-release/riemannian-neural-optimal-transport/paper/configs/sweep.json",
+  "recipe_sha256": "ae055f26e79bf3d941d1b7b46572ac3fab8465e384435cd58cd205e0be57328e",
+  "smoke": false,
+  "platform": "cuda",
+  "environment_overrides": {
+    "JAX_PLATFORMS": "cuda",
+    "JAX_ENABLE_X64": "False",
+    "JAX_THREEFRY_PARTITIONABLE": "False",
+    "JAX_DEFAULT_PRNG_IMPL": "threefry2x32",
+    "JAX_RANDOM_SEED_OFFSET": "0",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "2",
+    "MKL_NUM_THREADS": "2",
+    "NUMEXPR_NUM_THREADS": "2",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "false",
+    "MPLBACKEND": "Agg",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "unfiltered_job_count": 126,
+  "jobs": [
+    {
+      "job_id": "sweep_S2_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S2_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S2_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S2_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S2_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S3_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S3_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S3_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S3_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S4_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S4_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S4_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S4_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S5_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S5_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S5_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S5_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S6_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S6_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S6_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S6_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S7_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S7_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S7_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S7_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S8_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S8_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S8_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S8_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S9_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S9_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S9_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S9_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_S10_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "S10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_S10_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_S10_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_S10_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T2_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T2",
+        "dimension": 2,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T2_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T2_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T2_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T3_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T3",
+        "dimension": 3,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T3_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T3_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T3_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T4_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T4",
+        "dimension": 4,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T4_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T4_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T4_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T5_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T5",
+        "dimension": 5,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T5_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T5_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T5_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T6_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T6",
+        "dimension": 6,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T6_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T6_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T6_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T7_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T7",
+        "dimension": 7,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T7_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T7_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T7_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T8_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T8",
+        "dimension": 8,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T8_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T8_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T8_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T9_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T9",
+        "dimension": 9,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T9_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T9_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T9_rcpm_gamma0.001_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_ours_fps_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "ours",
+        "seed": 12345,
+        "gamma": null,
+        "landmark_method": "fps",
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_ours_fps_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_ours_fps_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_ours_fps_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 1.0,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma0.1_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.1,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma0.1_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma0.1_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma0.1_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma0.05_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.05,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma0.05_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma0.05_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma0.05_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma0.01_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.01,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma0.01_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma0.01_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma0.01_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma0.005_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.005,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma0.005_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma0.005_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma0.005_seed12345"
+      ]
+    },
+    {
+      "job_id": "sweep_T10_rcpm_gamma0.001_seed12345",
+      "selection": {
+        "suite": "sweep",
+        "manifold": "T10",
+        "dimension": 10,
+        "method": "rcpm",
+        "seed": 12345,
+        "gamma": 0.001,
+        "landmark_method": null,
+        "ablation": null
+      },
+      "result": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/results/sweep_T10_rcpm_gamma0.001_seed12345/result.json",
+      "log": "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/logs/sweep_T10_rcpm_gamma0.001_seed12345.log",
+      "command_without_gpu": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-u",
+        "-m",
+        "paper.worker",
+        "--manifest",
+        "/private/tmp/mlgh-paper-release-20260908/export-qa/never-created-sweep/manifest.json",
+        "--job-id",
+        "sweep_T10_rcpm_gamma0.001_seed12345"
+      ]
+    }
+  ],
+  "execution_note": "One native configuration per fresh process; historical in-process compilation/cache order is not recreated.",
+  "interpretation": "supplied_dimension_sweep_unverified"
+}
